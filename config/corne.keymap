@@ -11,16 +11,33 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
-
-/* layer and key shortcuts */
-
-#define ___ &trans
-
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
 #define NAV 1
 #define NUM 2
 
-#include "includes/combos.dtsi"
+#include "includes/combos.dtsi" // needs to be below layer defines
+
+#define XXX &none
+#define ___ &trans
+
+/* Global settings */
+
+#define QUICK_TAP_MS 175
+
+&sk {  // sticky-key config
+    release-after-ms = <900>;  // release after 0.6s
+    quick-release;             // no double capitalization when rolling keys
+};
+
+&sl {  // sticky-layer config
+    ignore-modifiers;          // allow chording sticky mods & layers
+};
+
+&lt {  // layer-tap config
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
 
 /* Homerow mods */
 
@@ -28,7 +45,7 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 // right hand
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
 
-#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
+#define MAKE_HRM( HOLD, TAP, TRIGGER_POS) \
     ZMK_BEHAVIOR(NAME, hold_tap, \
         flavor = "balanced"; \
         tapping-term-ms = <280>; \
@@ -38,6 +55,7 @@
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
     )
+
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
@@ -47,13 +65,13 @@ MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
 /* custom behaviors */
 
-// homerow mods
-ZMK_BEHAVIOR(hrm, hold_tap,
-    flavor = "balanced";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <125>;
-    bindings = <&kp>, <&kp>;
-)
+// // homerow mods
+// ZMK_BEHAVIOR(hrm, hold_tap,
+//     flavor = "balanced";
+//     tapping-term-ms = <280>;
+//     quick-tap-ms = <125>;
+//     bindings = <&kp>, <&kp>;
+// )
 
 // tap: sticky shift | double tap: capsword
 ZMK_BEHAVIOR(ss_cw, tap_dance,
