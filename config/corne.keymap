@@ -11,7 +11,6 @@
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
-#include "includes/combos.dtsi"
 
 /* layer and key shortcuts */
 
@@ -20,6 +19,8 @@
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
 #define NAV 1
 #define NUM 2
+
+#include "includes/combos.dtsi"
 
 /* Homerow mods */
 
