@@ -85,6 +85,18 @@ ZMK_BEHAVIOR(bs_del_num, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
+// tap: left-parenthesis | shft + tap: less-than
+ZMK_BEHAVIOR(lpar_lt, mod_morph,
+    bindings = <&kp LPAR>, <&kp LT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+// tap: right-parenthesis | shft + tap: greater-than
+ZMK_BEHAVIOR(rpar_gt, mod_morph,
+    bindings = <&kp RPAR>, <&kp GT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
 // // windows sleep macro
 // ZMK_BEHAVIOR(win_sleep, macro,
 //     wait-ms = <100>;
