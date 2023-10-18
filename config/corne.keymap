@@ -118,6 +118,12 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 // )
 //
 
+ZMK_BEHAVIOR(cmd_grave, macro,
+    wait-ms = <10>;
+    tap-ms = <5>;
+    bindings = <&tog CMDTABL &kp LG(GRAVE)>;
+)
+
 ZMK_BEHAVIOR(cmd_tab, macro,
     wait-ms = <10>;
     tap-ms = <5>;
@@ -227,7 +233,7 @@ ZMK_LAYER(num_layer,
 
 ZMK_LAYER(cmd_tab_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-        &ctaboff   &kp Q         &kp W         &kp F         &ctaboff      &ctaboff          &ctaboff      &ctaboff      &ctaboff      &ctaboff      &ctaboff        &ctaboff
+        &kp RIGHT  &kp LEFT      &kp W         &kp F         &ctaboff      &ctaboff          &ctaboff      &ctaboff      &ctaboff      &ctaboff      &ctaboff        &ctaboff
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &kp RIGHT  &kp LEFT      &ctaboff      &kp S         &ctaboff      &ctaboff          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &ctaboff        &ctaboff
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
