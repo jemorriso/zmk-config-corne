@@ -14,7 +14,7 @@
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
 #define NAV 1
 #define NUM 2
-#define TABL 3
+#define CMDTABL 3
 
 #include "includes/combos.dtsi" // needs to be below layer defines
 
@@ -93,46 +93,47 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 /* Custom behaviors */
 
 // Alt+Tab swapper, requires PR #1366
-ZMK_BEHAVIOR(swapper, tri_state,
-    bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-    ignored-key-positions = <RM1>;
-    ignored-layers = <0 1 2 3>;
-)
-
-ZMK_BEHAVIOR(gswapper, tri_state,
-    bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
-    ignored-key-positions = <RM1>;
-)
-
-ZMK_BEHAVIOR(cswapper, tri_state,
-    bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-    ignored-key-positions = <RM1>;
-)
-
-ZMK_BEHAVIOR(tab_macro, macro,
-    wait-ms = <100>;
-    tap-ms = <5>;
-    bindings = <&tog TABL &kp U &tog TABL>;
-)
+// ZMK_BEHAVIOR(swapper, tri_state,
+//     bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
+//     ignored-key-positions = <RM1>;
+//     ignored-layers = <0 1 2 3>;
+// )
+//
+// ZMK_BEHAVIOR(gswapper, tri_state,
+//     bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
+//     ignored-key-positions = <RM1>;
+// )
+//
+// ZMK_BEHAVIOR(cswapper, tri_state,
+//     bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
+//     ignored-key-positions = <RM1>;
+// )
+//
+// ZMK_BEHAVIOR(tab_macro, macro,
+//     wait-ms = <100>;
+//     tap-ms = <5>;
+//     bindings = <&tog TABL &kp U &tog TABL>;
+// )
+//
 
 ZMK_BEHAVIOR(cmd_tab, macro,
-    wait-ms = <100>;
+    wait-ms = <5>;
     tap-ms = <5>;
-    bindings = <&tog TABL &kt LGUI &kp TAB>;
+    bindings = <&tog CMDTABL &kp LGUI(BSPC)>;
 )
 
-ZMK_BEHAVIOR(taboff, macro,
-    wait-ms = <100>;
+ZMK_BEHAVIOR(ctaboff, macro,
+    wait-ms = <5>;
     tap-ms = <5>;
-    bindings = <&tog TABL &kt LGUI>;
+    bindings = <&tog CMDTABL &kp SPACE>;
 )
 
 
-ZMK_BEHAVIOR(swap_macro, macro,
-    wait-ms = <100>;
-    tap-ms = <5>;
-    bindings = <&tog TABL &swapper>;
-)
+// ZMK_BEHAVIOR(swap_macro, macro,
+//     wait-ms = <100>;
+//     tap-ms = <5>;
+//     bindings = <&tog TABL &swapper>;
+// )
 
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
 ZMK_BEHAVIOR(bs_del, mod_morph,
@@ -195,15 +196,15 @@ ZMK_LAYER(num_layer,
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
-ZMK_LAYER(tab_layer,
+ZMK_LAYER(cmd_tab_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-        &kp TAB    &kp LS(TAB)   ___           ___           ___           ___               ___           ___           &taboff       ___           ___             ___
+        &ctaboff   &kp Q         &kp W         &kp F         &ctaboff      &ctaboff          &ctaboff      &ctaboff      &ctaboff      &ctaboff      &ctaboff        &ctaboff
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-        &kp TAB    &kp LS(TAB)   ___           ___           ___           ___               ___           ___           ___           ___           ___             ___
+        &kp RIGHT  &kp LEFT      &ctaboff      &kp S         &ctaboff      &ctaboff          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &ctaboff        &ctaboff
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-        &kp TAB    &kp LS(TAB)   ___           ___           ___           ___               ___           ___           ___           ___           ___             ___
+        &ctaboff   &ctaboff      &ctaboff      &ctaboff      &ctaboff      &ctaboff          &ctaboff      &ctaboff      &ctaboff      &ctaboff      &ctaboff        &ctaboff
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
-                                               ___           ___           ___               ___           ___           ___
+                                               &ctaboff      &ctaboff      &ctaboff          &ctaboff      &ctaboff      &ctaboff
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 /* vim: set ft=c tw=174: */
