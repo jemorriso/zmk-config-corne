@@ -12,6 +12,10 @@
 
 ZMK_COMBO(esc,   HRC_ESC,       LM2 LM3,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(enter, HRC_RET,       LM1 LM2,     DEF NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(left,  &kp LEFT,      LB3 LB4,     DEF NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(up,    &kp UP,        LB2 LB3,     DEF NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(down,  &kp DOWN,      LB1 LB2,     DEF NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(right, &kp RIGHT,     LB0 LB1,     DEF NAV NUM, COMBO_TERM_FAST)
 
 ZMK_COMBO(lpar,  &kp LPAR,      RT0 RT1,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(rpar,  HRC_RPAR,      RT1 RT2,     DEF NAV NUM, COMBO_TERM_FAST)
@@ -41,7 +45,7 @@ ZMK_COMBO(under, &kp UNDER,     RM0 RT0,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(minus, &kp MINUS,     RM1 RT1,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(equal, &kp EQUAL,     RM2 RT2,     DEF NAV NUM, COMBO_TERM_SLOW)
 ZMK_COMBO(plus,  &kp PLUS,      RM3 RT3,     DEF NAV NUM, COMBO_TERM_SLOW)
-ZMK_COMBO(slash, &kp SLASH,     RT4 RT5,     DEF NAV NUM, COMBO_TERM_SLOW)
+ZMK_COMBO(slash, &kp SLASH,     RT3 RT4,     DEF NAV NUM, COMBO_TERM_SLOW)
 
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 // #define HRC_TAB    &hml         LA(LCTRL) TAB
