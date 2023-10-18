@@ -10,6 +10,12 @@
 #define HRC_RET    &hml         LS(LGUI) RET
 #define HRC_RBRC   &hmr         RS(LGUI) RBRC
 
+ZMK_COMBO(hammer_vim, &kp LA(LG(ESC)), LH1 LH2, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(homerow, &kp LA(LC(LS(R))), LH0 LH1, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(homerow_search, &kp LA(LC(LS(SLASH))), LH1 LB0, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(homerow_scroll, &kp LG(LA(LC(LS(SLASH)))), LH2 LB1, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(raycast, LA(SPACE), RH0 RH1, ALL, COMBO_TERM_FAST)
+
 ZMK_COMBO(esc,   HRC_ESC,       LM2 LM3,     ALL, COMBO_TERM_FAST)
 ZMK_COMBO(enter, HRC_RET,       LM1 LM2,     ALL, COMBO_TERM_FAST)
 ZMK_COMBO(left,  &kp LEFT,      LB3 LB4,     ALL, COMBO_TERM_FAST)
