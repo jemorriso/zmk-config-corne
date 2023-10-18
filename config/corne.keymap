@@ -19,8 +19,8 @@
 
 #define XXX &none
 #define ___ &trans
-#define MEH LC(LA(LGUI))
-#define HYPER LS(LC(LA(LGUI)))
+#define MEH LC(LA(LSHIFT))
+#define HYPER LG(LC(LA(LSHIFT)))
 
 /* Global settings */
 
