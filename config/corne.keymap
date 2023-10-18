@@ -14,6 +14,7 @@
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
 #define NAV 1
 #define NUM 2
+#define TAB 3
 
 #include "includes/combos.dtsi" // needs to be below layer defines
 
@@ -95,19 +96,16 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 ZMK_BEHAVIOR(swapper, tri_state,
     bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
     ignored-key-positions = <RM1>;
-    timeout-ms = <400>;
 )
 
 ZMK_BEHAVIOR(gswapper, tri_state,
     bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
     ignored-key-positions = <RM1>;
-    timeout-ms = <400>;
 )
 
 ZMK_BEHAVIOR(cswapper, tri_state,
     bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
     ignored-key-positions = <RM1>;
-    timeout-ms = <400>;
 )
 
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
@@ -137,7 +135,7 @@ ZMK_BEHAVIOR(qexcl, mod_morph,
 
 ZMK_LAYER(default_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-        &gswapper  &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SQT         ___
+        &gswapper  &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SQT         &tog TAB
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &swapper   &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr RSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    ___
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
@@ -171,4 +169,15 @@ ZMK_LAYER(num_layer,
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
+ZMK_LAYER(tab_layer,
+     // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+          ___      ___           ___           ___           ___           ___               ___           ___           ___           ___           &kp Z           &tog TAB
+     // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+          ___      ___           ___           ___           ___           ___               ___           ___           ___           ___           ___             ___
+     // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+          ___      ___           ___           ___           ___           ___               ___           ___           ___           ___           ___             ___
+     // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
+                                               ___           ___           ___               ___           ___           ___
+     //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
 /* vim: set ft=c tw=174: */
