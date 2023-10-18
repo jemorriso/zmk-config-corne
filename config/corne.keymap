@@ -145,14 +145,13 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
 
 ZMK_LAYER(default_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-          ___      &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SEMI        ___
+        &kp GRAVE  &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SEMI        &kp EQUAL
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-          ___      &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr RSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &kp SQT
+        &kp ESC    &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr RSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &kp SQT
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-          ___      &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH       ___
+        &kp MINUS  &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH       &kp BSLSH
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
-                                               &kp ESC       &lt NAV SPACE &kp TAB           &kp RET       &bs_del_num   &ss_cw
-                                               &kp ESC       &lt NAV SPACE &kp TAB           &bs_del_num   &ss_cw        &ss_cw
+                                               &kp RET       &lt NAV SPACE &kp TAB           &bs_del       &smart_shft   &smart_num
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
