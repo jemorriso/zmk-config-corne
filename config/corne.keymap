@@ -16,6 +16,7 @@
 #define NUM 2
 #define CMDTABL 3
 #define CTRLTABL 4
+#define WARP 5
 
 #include "includes/combos.dtsi" // needs to be below layer defines
 
@@ -130,16 +131,29 @@ ZMK_BEHAVIOR(ctaboff, macro,
 )
 
 ZMK_BEHAVIOR(ctrl_tab, macro,
-    wait-ms = <5>;
+    wait-ms = <10>;
     tap-ms = <5>;
     bindings = <&tog CTRLTABL &kt LCTRL &kp TAB>;
 )
 
 ZMK_BEHAVIOR(cttaboff, macro,
-    wait-ms = <5>;
+    wait-ms = <10>;
     tap-ms = <5>;
     bindings = <&tog CTRLTABL &kt LCTRL>;
 )
+
+ZMK_BEHAVIOR(warp_on, macro,
+    wait-ms = <10>;
+    tap-ms = <5>;
+    bindings = <&tog WARP &kp LG(LA(C))>;
+)
+
+ZMK_BEHAVIOR(warp_off, macro,
+    wait-ms = <10>;
+    tap-ms = <5>;
+    bindings = <&tog WARP &kp ESC>;
+)
+
 
 
 
@@ -181,9 +195,9 @@ ZMK_LAYER(default_layer,
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &cmd_tab   &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr RSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    ___
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-          ___      &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &csemi        &dcol         &qexcl          ___
+        &ctrl_tab  &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &csemi        &dcol         &qexcl          ___
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
-                                               ___           &lt NAV SPACE &kp TAB           &bs_del       &smart_shft   SMART_NUM
+                                               &warp_on      &lt NAV SPACE &kp TAB           &bs_del       &smart_shft   SMART_NUM
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -229,9 +243,21 @@ ZMK_LAYER(ctrl_tab_layer,
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &cttaboff  &cttaboff     &cttaboff     &cttaboff     &cttaboff     &cttaboff         &cttaboff     &cttaboff     &cttaboff     &cttaboff     &cttaboff       &cttaboff
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-        &kp TAB    &kp LSHFT(TAB) &cttaboff     &cttaboff     &cttaboff     &cttaboff         &cttaboff     &cttaboff     &cttaboff     &cttaboff     &cttaboff       &cttaboff
+        &kp TAB    &kp LS(TAB)   &cttaboff    &cttaboff     &cttaboff     &cttaboff         &cttaboff     &cttaboff     &cttaboff     &cttaboff     &cttaboff       &cttaboff
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
                                                &cttaboff     &cttaboff     &cttaboff         &cttaboff     &cttaboff     &cttaboff
+     //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
+
+ZMK_LAYER(warp_layer,
+     // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+          ___      ___           ___           ___           ___           ___               ___           ___           ___           ___           ___             ___
+     // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+          ___      ___           ___           ___           ___           ___               ___           &kp N         &kp E         &kp I         ___             ___
+     // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+          ___      ___           ___           ___           ___           ___               ___           ___           ___           ___           ___             ___
+     // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
+                                               &warp_off     &kp SPACE     ___               &kp RET       &kp BSPC      &kp DEL
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 /* vim: set ft=c tw=174: */
