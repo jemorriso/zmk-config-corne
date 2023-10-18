@@ -173,12 +173,9 @@ ZMK_BEHAVIOR(warp_off, macro,
 // )
 
 ZMK_BEHAVIOR(rcmd, macro_one_param,
-            wait-ms = <30>;
-            tap-ms = <5>;
-            bindings =
-                <&kt LG(LC(LSHFT))>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&kt LG(LC(LSHFT))>,
+    wait-ms = <30>;
+    tap-ms = <5>;
+    bindings = <&kt LG(LC(LSHFT))>, <&macro_param_1to1 &kp MACRO_PLACEHOLDER>, <&kt LG(LC(LSHFT))>;
 )
 
 
