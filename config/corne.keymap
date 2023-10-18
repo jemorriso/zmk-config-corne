@@ -160,8 +160,26 @@ ZMK_BEHAVIOR(warp_off, macro,
     bindings = <&tog WARP &kp ESC>;
 )
 
+// ZMK_BEHAVIOR(rcmd_on, macro,
+//     wait-ms = <10>;
+//     tap-ms = <5>;
+//     bindings = <&tog RCMD>;
+// )
+//
+// ZMK_BEHAVIOR(rcmd_off, macro,
+//     wait-ms = <10>;
+//     tap-ms = <5>;
+//     bindings = <&tog RCMD &kp ESC>;
+// )
 
-
+ZMK_BEHAVIOR(rcmd, macro_one_param,
+            wait-ms = <30>;
+            tap-ms = <5>;
+            bindings =
+                <&kt LG(LC(LSHFT))>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&kt LG(LC(LSHFT))>,
+)
 
 
 // ZMK_BEHAVIOR(swap_macro, macro,
@@ -197,7 +215,7 @@ ZMK_BEHAVIOR(qexcl, mod_morph,
 
 ZMK_LAYER(default_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-        &cmd_grave &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SQT         ___
+        &cmd_grave &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SQT         &rcmd A
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &cmd_tab   &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr RSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &sk LC(LG(LSHFT))
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
