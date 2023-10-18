@@ -104,28 +104,28 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 // )
 
 // tap: sticky shift | double tap: capsword
-ZMK_BEHAVIOR(ss_cw, tap_dance,
-    tapping-term-ms = <200>;
-    bindings = <&sk LSHFT>, <&caps_word>;
-)
+// ZMK_BEHAVIOR(ss_cw, tap_dance,
+//     tapping-term-ms = <200>;
+//     bindings = <&sk LSHFT>, <&caps_word>;
+// )
 
 // tap: backspace | shift + tap: delete | hold: num layer
-ZMK_BEHAVIOR(bs_del_num, mod_morph,
-    bindings = <&lt NUM BSPC>, <&kp DEL>;
+ZMK_BEHAVIOR(bs_del, mod_morph,
+    bindings = <&kp BSPC>, <&kp DEL>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
 // tap: left-parenthesis | shft + tap: less-than
-ZMK_BEHAVIOR(lpar_lt, mod_morph,
-    bindings = <&kp LPAR>, <&kp LT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-// tap: right-parenthesis | shft + tap: greater-than
-ZMK_BEHAVIOR(rpar_gt, mod_morph,
-    bindings = <&kp RPAR>, <&kp GT>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
+// ZMK_BEHAVIOR(lpar_lt, mod_morph,
+//     bindings = <&kp LPAR>, <&kp LT>;
+//     mods = <(MOD_LSFT|MOD_RSFT)>;
+// )
+//
+// // tap: right-parenthesis | shft + tap: greater-than
+// ZMK_BEHAVIOR(rpar_gt, mod_morph,
+//     bindings = <&kp RPAR>, <&kp GT>;
+//     mods = <(MOD_LSFT|MOD_RSFT)>;
+// )
 
 // // windows sleep macro
 // ZMK_BEHAVIOR(win_sleep, macro,
