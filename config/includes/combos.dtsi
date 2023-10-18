@@ -7,12 +7,14 @@
 
 // make homerow combos tap-only (so HRMs can be chorded instantaneously)
 #define HRC_ESC    &hml         LA(LGUI) ESC
+#define HRC_RET    &hml         LS(LGUI) RET
+#define HRC_RPAR   &hmr         RS(LGUI) RPAR
 
 ZMK_COMBO(esc,   HRC_ESC,       LM2 LM3,     DEF NAV NUM, COMBO_TERM_FAST)
-ZMK_COMBO(enter, &kp RET,       LM1 LM2,     DEF NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(enter, HRC_RET,       LM1 LM2,     DEF NAV NUM, COMBO_TERM_FAST)
 
 ZMK_COMBO(lpar,  &kp LPAR,      RT0 RT1,     DEF NAV NUM, COMBO_TERM_FAST)
-ZMK_COMBO(rpar,  &kp RPAR,      RT1 RT2,     DEF NAV NUM, COMBO_TERM_FAST)
+ZMK_COMBO(rpar,  HRC_RPAR,      RT1 RT2,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(lbrc,  &kp LBRC,      RM0 RM1,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(rbrc,  &kp RBRC,      RM1 RM2,     DEF NAV NUM, COMBO_TERM_FAST)
 ZMK_COMBO(lbkt,  &kp LBKT,      RB0 RB1,     DEF NAV NUM, COMBO_TERM_FAST)
