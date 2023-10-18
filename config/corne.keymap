@@ -103,7 +103,7 @@ ZMK_BEHAVIOR(gswapper, tri_state,
 )
 
 ZMK_BEHAVIOR(cswapper, tri_state,
-    bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
+    bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
     ignored-key-positions = <RH1>;
 )
 
