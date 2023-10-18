@@ -89,6 +89,15 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
 
+/* Custom behaviors */
+
+// tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
+ZMK_BEHAVIOR(bs_del, mod_morph,
+    bindings = <&kp BSPC>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    keep-mods = <MOD_RSFT>;
+)
+
 /* keymap */
 
 ZMK_LAYER(default_layer,
@@ -99,7 +108,7 @@ ZMK_LAYER(default_layer,
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &kp MINUS  &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH       &kp BACKSLASH
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
-                                               &kp RET       &lt NAV SPACE &kp TAB           &kp BSPC      &sk LSHFT     &sl NUM
+                                               &kp RET       &lt NAV SPACE &kp TAB           &bs_del       &smart_shft   SMART_NUM
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
