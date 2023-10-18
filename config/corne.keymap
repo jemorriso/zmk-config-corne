@@ -117,13 +117,13 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 //
 
 ZMK_BEHAVIOR(cmd_tab, macro,
-    wait-ms = <5>;
+    wait-ms = <10>;
     tap-ms = <5>;
-    bindings = <&tog CMDTABL &kp LGUI(BSPC)>;
+    bindings = <&tog CMDTABL &kp LG(BSPC)>;
 )
 
 ZMK_BEHAVIOR(ctaboff, macro,
-    wait-ms = <5>;
+    wait-ms = <10>;
     tap-ms = <5>;
     bindings = <&tog CMDTABL &kp SPACE>;
 )
