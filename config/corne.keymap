@@ -95,16 +95,19 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 ZMK_BEHAVIOR(swapper, tri_state,
     bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
     ignored-key-positions = <RH1>;
+    timeout-ms = <200>;
 )
 
 ZMK_BEHAVIOR(gswapper, tri_state,
     bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
     ignored-key-positions = <RH1>;
+    timeout-ms = <200>;
 )
 
 ZMK_BEHAVIOR(cswapper, tri_state,
     bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
     ignored-key-positions = <RH1>;
+    timeout-ms = <200>;
 )
 
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
