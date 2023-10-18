@@ -14,7 +14,7 @@
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
 #define NAV 1
 #define NUM 2
-#define TAB 3
+#define TABL 3
 
 #include "includes/combos.dtsi" // needs to be below layer defines
 
@@ -111,7 +111,7 @@ ZMK_BEHAVIOR(cswapper, tri_state,
 ZMK_BEHAVIOR(tab_macro, macro,
     wait-ms = <100>;
     tap-ms = <5>;
-    bindings = <&tog TAB &kp U &tog TAB>;
+    bindings = <&tog TABL &kp U &tog TABL>;
 )
 
 // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete
@@ -141,7 +141,7 @@ ZMK_BEHAVIOR(qexcl, mod_morph,
 
 ZMK_LAYER(default_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-        &gswapper  &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SQT         &tog TAB
+        &gswapper  &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SQT         &tog TABL
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &swapper   &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr RSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &tab_macro
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
@@ -177,7 +177,7 @@ ZMK_LAYER(num_layer,
 
 ZMK_LAYER(tab_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-          ___      ___           ___           ___           ___           ___               ___           ___           ___           ___           &kp Z           &tog TAB
+          ___      ___           ___           ___           ___           ___               ___           ___           ___           ___           &kp Z           &tog TABL
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
           ___      ___           ___           ___           ___           ___               ___           ___           ___           ___           ___             ___
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
