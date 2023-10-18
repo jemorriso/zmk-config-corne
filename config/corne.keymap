@@ -15,6 +15,7 @@
 #define NAV 1
 #define NUM 2
 #define CMDTABL 3
+#define CTRLTABL 4
 
 #include "includes/combos.dtsi" // needs to be below layer defines
 
@@ -128,6 +129,20 @@ ZMK_BEHAVIOR(ctaboff, macro,
     bindings = <&tog CMDTABL &kp SPACE>;
 )
 
+ZMK_BEHAVIOR(ctrl_tab, macro,
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <&tog CTRLTABL &kt LCTRL &kp TAB>;
+)
+
+ZMK_BEHAVIOR(cttaboff, macro,
+    wait-ms = <5>;
+    tap-ms = <5>;
+    bindings = <&tog CTRLTABL &kt LCTRL>;
+)
+
+
+
 
 // ZMK_BEHAVIOR(swap_macro, macro,
 //     wait-ms = <100>;
@@ -205,6 +220,18 @@ ZMK_LAYER(cmd_tab_layer,
         &ctaboff   &ctaboff      &ctaboff      &ctaboff      &ctaboff      &ctaboff          &ctaboff      &ctaboff      &ctaboff      &ctaboff      &ctaboff        &ctaboff
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
                                                &ctaboff      &ctaboff      &ctaboff          &ctaboff      &ctaboff      &ctaboff
+     //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
+
+ZMK_LAYER(ctrl_tab_layer,
+     // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+        &cttaboff  &cttaboff     &cttaboff     &cttaboff     &cttaboff     &cttaboff         &cttaboff     &cttaboff     &cttaboff     &cttaboff     &cttaboff       &cttaboff
+     // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+        &cttaboff  &cttaboff     &cttaboff     &cttaboff     &cttaboff     &cttaboff         &cttaboff     &cttaboff     &cttaboff     &cttaboff     &cttaboff       &cttaboff
+     // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+        &kp TAB    &kp LSHFT(TAB) &cttaboff     &cttaboff     &cttaboff     &cttaboff         &cttaboff     &cttaboff     &cttaboff     &cttaboff     &cttaboff       &cttaboff
+     // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
+                                               &cttaboff     &cttaboff     &cttaboff         &cttaboff     &cttaboff     &cttaboff
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 /* vim: set ft=c tw=174: */
