@@ -17,6 +17,7 @@
 #define CMDTABL 3
 #define CTRLTABL 4
 #define WARP 5
+#define RCMDL 6
 
 #include "includes/combos.dtsi" // needs to be below layer defines
 
@@ -118,32 +119,32 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 // )
 //
 
-ZMK_BEHAVIOR(rcmd_a, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp A &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_b, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp B &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_c, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp C &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_d, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp D &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_e, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp E &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_f, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp F &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_g, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp G &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_h, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp H &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_i, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp I &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_j, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp J &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_k, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp K &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_l, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp L &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_m, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp M &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_n, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp N &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_o, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp O &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_p, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp P &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_q, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp Q &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_r, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp R &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_s, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp S &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_t, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp T &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_u, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp U &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_v, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp V &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_w, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp W &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_x, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp X &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_y, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp Y &kt RGUI>;)
-ZMK_BEHAVIOR(rcmd_z, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp Z &kt RGUI>;)
+ZMK_BEHAVIOR(rcmd_a, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp A &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_b, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp B &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_c, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp C &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_d, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp D &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_e, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp E &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_f, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp F &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_g, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp G &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_h, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp H &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_i, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp I &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_j, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp J &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_k, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp K &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_l, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp L &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_m, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp M &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_n, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp N &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_o, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp O &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_p, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp P &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_q, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp Q &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_r, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp R &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_s, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp S &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_t, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp T &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_u, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp U &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_v, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp V &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_w, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp W &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_x, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp X &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_y, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp Y &kt RGUI &tog RCMDL>;)
+ZMK_BEHAVIOR(rcmd_z, macro, wait-ms = <10>; tap-ms = <5>; bindings = <&kt RGUI &kp Z &kt RGUI &tog RCMDL>;)
 
 ZMK_BEHAVIOR(cmd_grave, macro,
     wait-ms = <10>;
@@ -249,7 +250,7 @@ ZMK_LAYER(default_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
         &cmd_grave &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SQT         ___
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-        &cmd_tab   &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr LSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &kp RGUI
+        &cmd_tab   &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr LSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &tog RCMDL
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &ctrl_tab  &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &csemi        &dcol         &qexcl          ___
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
@@ -314,6 +315,18 @@ ZMK_LAYER(warp_layer,
           ___      ___           ___           ___           ___           ___               ___           ___           ___           ___           ___             ___
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
                                                &warp_off     &kp SPACE     ___               &kp RET       &kp BSPC      &kp DEL
+     //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
+
+ZMK_LAYER(rcmd_layer,
+     // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+        &tog RCMDL &rcmd_q       &rcmd_w       &rcmd_f       &rcmd_p       &rcmd_b           &rcmd_j       &rcmd_l       &rcmd_u       &rcmd_y       &tog RCMDL      &tog RCMDL
+     // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+        &tog RCMDL &rcmd_a       &rcmd_r       &rcmd_s       &rcmd_t       &rcmd_g           &rcmd_m       &rcmd_n       &rcmd_e       &rcmd_i       &rcmd_o         &tog RCMDL
+     // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+        &tog RCMDL &rcmd_z       &rcmd_x       &rcmd_c       &rcmd_d       &rcmd_v           &rcmd_k       &rcmd_h       &tog RCMDL    &tog RCMDL    &tog RCMDL      &tog RCMDL
+     // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
+                                               &tog RCMDL    &tog RCMDL    &tog RCMDL        &tog RCMDL    &tog RCMDL    &tog RCMDL
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 /* vim: set ft=c tw=174: */
