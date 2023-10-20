@@ -10,6 +10,8 @@
 #define HRC_RET    &hml         LS(LGUI) RET
 #define HRC_RBRC   &hmr         LS(LGUI) RBRC
 
+#define p_up  "RT2 RT3"
+
 // ZMK_COMBO(rcmd_f, &rcmd2 F, LH1 LT2, ALL, COMBO_TERM_FAST)
 // ZMK_COMBO(rcmd_s, &rcmd2 S, LH1 LM2, ALL, COMBO_TERM_FAST)
 // ZMK_COMBO(rcmd_o, &rcmd O, LH1 RM4, ALL, COMBO_TERM_FAST)
@@ -159,7 +161,7 @@ ZMK_COMBO(end, &kp END,       RB1 RB2,     ALL, COMBO_TERM_FAST)
 // ********************************************************
 // right horizontal middle + ring fingers
 // ********************************************************
-ZMK_COMBO(up,   &kp UP,       RT2 RT3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(up,   &kp UP,       p_up,     ALL, COMBO_TERM_FAST)
 ZMK_COMBO(down,   &kp DOWN,       RM2 RM3,     ALL, COMBO_TERM_FAST)
 // ZMK_COMBO(esc,   HRC_ESC,       RB2 RB3,     ALL, COMBO_TERM_FAST)
 
