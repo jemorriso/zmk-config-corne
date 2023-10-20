@@ -138,7 +138,7 @@ ZMK_COMBO(enter, HRC_RET,       LM1 LM2,     ALL, COMBO_TERM_FAST)
 // ********************************************************
 // left horizontal middle + ring fingers
 // ********************************************************
-ZMK_COMBO(esc,   &kp TAB,       LT2 LT3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(tab,   &kp TAB,       LT2 LT3,     ALL, COMBO_TERM_FAST)
 ZMK_COMBO(esc,   HRC_ESC,       LM2 LM3,     ALL, COMBO_TERM_FAST)
 // ZMK_COMBO(esc,   HRC_ESC,       LB2 LB3,     ALL, COMBO_TERM_FAST)
 
