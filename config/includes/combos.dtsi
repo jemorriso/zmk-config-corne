@@ -230,7 +230,7 @@ ZMK_COMBO(bri_dn,   &kp C_BRI_DN,       LM1 LM2 LM3,     ALL, COMBO_TERM_FAST)
 // right horizontal index + middle + ring fingers
 // ********************************************************
 ZMK_COMBO(vol_up,   &kp C_VOL_UP,       RT1 RT2 RT3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(vol_dn    &kp C_VOL_DN,       RM1 RM2 RM3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(vol_dn,    &kp C_VOL_DN,       RM1 RM2 RM3,     ALL, COMBO_TERM_FAST)
 ZMK_COMBO(mute,   &kp C_MUTE,       RM1 RB2 RB3,     ALL, COMBO_TERM_FAST)
 
 // ********************************************************
