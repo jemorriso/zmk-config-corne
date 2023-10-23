@@ -12,13 +12,13 @@
 #include "../zmk-nodefree-config/keypos_def/keypos_42keys.h"
 
 #define DEF 0  // layer shortcuts, must match order in which they are defined below
-// #define NAV 1
-#define NUM 1
-#define FUN 2
-#define CMDTABL 3
-#define CTRLTABL 4
-#define WARP 5
-#define RCMDL 6
+#define NAV 1
+#define NUM 2
+#define FUN 3
+#define CMDTABL 4
+#define CTRLTABL 5
+#define WARP 6
+#define RCMDL 7
 
 #include "includes/combos.dtsi" // needs to be below layer defines
 
@@ -56,19 +56,19 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5 // right hand
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
 
-// #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
-//     ZMK_BEHAVIOR(NAME, hold_tap, \
-//         flavor = "balanced"; \
-//         tapping-term-ms = <280>; \
-//         quick-tap-ms = <QUICK_TAP_MS>; \
-//         require-prior-idle-ms = <150>; \
-//         bindings = <HOLD>, <TAP>; \
-//         hold-trigger-key-positions = <TRIGGER_POS>; \
-//         hold-trigger-on-release; \
-//     )
-//
-// MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
-// MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
+#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
+    ZMK_BEHAVIOR(NAME, hold_tap, \
+        flavor = "balanced"; \
+        tapping-term-ms = <280>; \
+        quick-tap-ms = <QUICK_TAP_MS>; \
+        require-prior-idle-ms = <150>; \
+        bindings = <HOLD>, <TAP>; \
+        hold-trigger-key-positions = <TRIGGER_POS>; \
+        hold-trigger-on-release; \
+    )
+
+MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
+MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 /* Caps-word, num-word and smart-mouse */
 
@@ -253,9 +253,9 @@ ZMK_BEHAVIOR(qexcl, mod_morph,
 
 ZMK_LAYER(default_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-        &cmd_grave &kp Q         &kp W         &kp F         &kp P         &kp B             &kp J         &kp L         &kp U         &kp Y         &kp SQT         ___
+        &cmd_grave &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SQT         ___
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-        &cmd_tab   &kp A         &kp R         &kp S         &kp T         &kp G             &kp M         &kp N         &kp E         &kp I         &kp O           &tog RCMDL
+        &cmd_tab   &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr LSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &tog RCMDL
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &ctrl_tab  &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &csemi        &dcol         &qexcl          ___
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
@@ -275,17 +275,17 @@ ZMK_LAYER(nav_layer,
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
-// ZMK_LAYER(num_layer,
-//      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-//           ___      ___           &kp N7        &kp N8        &kp N9        ___               ___           ___           &sk MEH       &sk HYPER     ___             ___
-//      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-//           ___      &kp N0        &kp N4        &kp N5        &kp N6        ___               ___           &sk LSHFT     &sk LGUI      &sk LALT      &sk LCTRL       ___
-//      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-//           ___      ___           &kp N1        &kp N2        &kp N3        ___               ___           ___           ___           ___           ___             ___
-//      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
-//                                                ___           ___           ___               ___           ___           ___
-//      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
-// )
+ZMK_LAYER(num_layer,
+     // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
+          ___      ___           &kp N7        &kp N8        &kp N9        ___               ___           ___           &sk MEH       &sk HYPER     ___             ___
+     // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+          ___      &kp N0        &kp N4        &kp N5        &kp N6        ___               ___           &sk LSHFT     &sk LGUI      &sk LALT      &sk LCTRL       ___
+     // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
+          ___      ___           &kp N1        &kp N2        &kp N3        ___               ___           ___           ___           ___           ___             ___
+     // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
+                                               ___           ___           ___               ___           ___           ___
+     //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
 
 ZMK_LAYER(fun_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
