@@ -10,7 +10,6 @@
                 LEFT DOWN UP RIGHT
                 PG_UP PG_DN
             >;
-            ignore-modifiers;  // modifiers don't deactivate the layer
         };
     };
 };
