@@ -21,6 +21,7 @@
 #define RCMDL 7
 
 #include "includes/combos.dtsi" // needs to be below layer defines
+#include "includes/behaviours.dtsi"
 
 #define XXX &none
 #define ___ &trans
@@ -70,7 +71,7 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
-/* Caps-word, num-word and smart-mouse */
+/* Caps-word, num-word and nav-word */
 
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
 ZMK_BEHAVIOR(smart_shft, mod_morph,
@@ -80,6 +81,11 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
 &caps_word {  // mods deactivate caps-word, requires PR #1451
     /delete-property/ ignore-modifiers;
 };
+
+ZMK_BEHAVIOR(nav_word, caps_word,
+    tapping-term-ms = <200>;
+    bindings = <&caps_word>, <&nav_word>;
+)
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUM 0
@@ -259,7 +265,7 @@ ZMK_LAYER(default_layer,
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &ctrl_tab  &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &csemi        &dcol         &qexcl          ___
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
-                                               &warp_on      &lt NAV SPACE &key_repeat       &bs_del       &smart_shft   SMART_NUM
+                                               &nav_word     &lt NAV SPACE &key_repeat       &bs_del       &smart_shft   SMART_NUM
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
