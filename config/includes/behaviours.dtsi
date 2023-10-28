@@ -1,15 +1,6 @@
 / {
 
     behaviors {
-        /*
-        * Tap dancing nav layer
-        *
-        * Usage: &td_nav_layer NAV 0
-        * Tap: RET
-        * Double Tap: NAV_WORD layer
-        * Triple-Tap-Hold: RET repeated
-        * Hold: NAV layer
-        */
         nav_word: nav_word {
             compatible = "zmk,behavior-caps-word";
             label = "NAV_WORD";
