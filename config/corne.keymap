@@ -82,11 +82,6 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
     /delete-property/ ignore-modifiers;
 };
 
-ZMK_BEHAVIOR(nav_word, caps_word,
-    tapping-term-ms = <200>;
-    bindings = <&caps_word>, <&nav_word>;
-)
-
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUM 0
 ZMK_BEHAVIOR(smart_num, hold_tap,
