@@ -197,9 +197,11 @@ ZMK_BEHAVIOR(warp_off, macro,
 ZMK_BEHAVIOR(warp_tap, macro,
     wait-ms = <10>;
     tap-ms = <5>;
-    bindings = <macro_press &mo WARP &kp LG(LA(C))>,
+    bindings = <macro_press &mo WARP>,
+             <&kp LG(LA(C))>,
       <&macro_pause_for_release>,
-      <&macro_release &mo WARP &kp ESC>;
+             <&kp ESC>,
+      <&macro_release &mo WARP>;
 )
 // ZMK_BEHAVIOR(rcmd_on, macro,
 //     wait-ms = <10>;
