@@ -135,7 +135,10 @@ ZMK_COMBO(enter, &kp ENTER, LM1 LM2, ALL, COMBO_TERM_FAST)
 // left horizontal middle + ring fingers
 // ********************************************************
 ZMK_COMBO(tab, &kp TAB, LT2 LT3, ALL, COMBO_TERM_FAST)
-ZMK_COMBO(esc, &kp ESC, LM2 LM3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(esc, &kp ESC, LM2 LM3, DEF NAV NUM FUN, COMBO_TERM_FAST)
+ZMK_COMBO(warp_off_combo, &warp_off, LM2 LM3, WARP, COMBO_TERM_FAST)
+ZMK_COMBO(at_esc_combo, &at_esc, LM2 LM3, ALT_TAB, COMBO_TERM_FAST)
+ZMK_COMBO(ct_esc_combo, &ct_esc, LM2 LM3, CTRL_TAB, COMBO_TERM_FAST)
 // ZMK_COMBO(esc, &kp ESC, LB2 LB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
