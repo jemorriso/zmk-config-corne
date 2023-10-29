@@ -309,3 +309,8 @@ ZMK_COMBO(ff, &kp C_FF, RB1 RM2 RB3, ALL, COMBO_TERM_FAST)
 // ********************************************************
 // ZMK_COMBO(esc, &kp ESC, RM1 RT2 RT3 RM4, ALL, COMBO_TERM_FAST)
 // ZMK_COMBO(esc, &kp ESC, RB1 RM2 RM3 RB4, ALL, COMBO_TERM_FAST)
+
+// ****************************************************************************
+// positonal sticky combos
+// ****************************************************************************
+ZMK_COMBO(l_shft, &sk LSHFT, LH1 LM1, ALL, COMBO_TERM_FAST)
