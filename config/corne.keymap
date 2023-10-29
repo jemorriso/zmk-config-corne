@@ -312,7 +312,7 @@ ZMK_LAYER(fun_layer,
 
 ZMK_LAYER(cmd_tab_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-        &kp RIGHT  &kp LEFT      &kp W         &kp F         &ctaboff      &ctaboff          &ctaboff      &ctaboff      &ctaboff      &ctaboff      &ctaboff        &ctaboff
+        &kp RIGHT  &kp Q         &kp W         &kp F         &ctaboff      &ctaboff          &ctaboff      &ctaboff      &ctaboff      &ctaboff      &ctaboff        &ctaboff
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &kp RIGHT  &kp LEFT      &ctaboff      &kp S         &ctaboff      &ctaboff          &kp LEFT      &kp DOWN      &kp UP        &kp RIGHT     &ctaboff        &ctaboff
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
