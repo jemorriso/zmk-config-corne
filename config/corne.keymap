@@ -167,19 +167,19 @@ ZMK_BEHAVIOR(at_esc, macro,
 ZMK_BEHAVIOR(ct_tab, macro,
     wait-ms = <10>;
     tap-ms = <5>;
-    bindings = <&tog ct_tab &kt LCTRL &kp TAB>;
+    bindings = <&tog CTRL_TAB &kt LCTRL &kp TAB>;
 )
 
 ZMK_BEHAVIOR(ct_off, macro,
     wait-ms = <10>;
     tap-ms = <5>;
-    bindings = <&tog ct_tab &kt LCTRL>;
+    bindings = <&tog CTRL_TAB &kt LCTRL>;
 )
 
 ZMK_BEHAVIOR(ct_esc, macro,
     wait-ms = <10>;
     tap-ms = <5>;
-    bindings = <&tog ct_tab &kp ESC &kt LCTRL>;
+    bindings = <&tog CTRL_TAB &kp ESC &kt LCTRL>;
 )
 
 ZMK_BEHAVIOR(warp_on, macro,
