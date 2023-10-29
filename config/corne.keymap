@@ -83,7 +83,6 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
 };
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
-// #define SMART_NUM &smart_num NUM 0
 ZMK_BEHAVIOR(smart_num, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -109,31 +108,8 @@ ZMK_BEHAVIOR(nav_dance, tap_dance,
     tapping-term-ms = <200>;
     bindings = <&nav_word>, <&sl NAV>;  // reverse this for sticky-num on single tap
 )
-/* Custom behaviors */
 
-// Alt+Tab swapper, requires PR #1366
-// ZMK_BEHAVIOR(swapper, tri_state,
-//     bindings = <&kt LGUI>, <&kp TAB>, <&kt LGUI>;
-//     ignored-key-positions = <RM1>;
-//     ignored-layers = <0 1 2 3>;
-// )
-//
-// ZMK_BEHAVIOR(gswapper, tri_state,
-//     bindings = <&kt LGUI>, <&kp GRAVE>, <&kt LGUI>;
-//     ignored-key-positions = <RM1>;
-// )
-//
-// ZMK_BEHAVIOR(cswapper, tri_state,
-//     bindings = <&kt LCTRL>, <&kp TAB>, <&kt LCTRL>;
-//     ignored-key-positions = <RM1>;
-// )
-//
-// ZMK_BEHAVIOR(tab_macro, macro,
-//     wait-ms = <100>;
-//     tap-ms = <5>;
-//     bindings = <&tog TABL &kp U &tog TABL>;
-// )
-//
+/* Custom behaviors */
 
 ZMK_BEHAVIOR(rcmd_a, macro, wait-ms = <30>; tap-ms = <5>; bindings = <&kt RGUI>, <&kp A>, <&kt RGUI>, <&tog RCMDL>;)
 ZMK_BEHAVIOR(rcmd_b, macro, wait-ms = <30>; tap-ms = <5>; bindings = <&kt RGUI>, <&kp B>, <&kt RGUI>, <&tog RCMDL>;)
@@ -270,7 +246,7 @@ ZMK_LAYER(default_layer,
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &ctrl_tab  &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &csemi        &dcol         &qexcl          ___
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
-                                           &smart_nav NAV 0  &kp SPACE     &key_repeat       &bs_del       &smart_shft   &smart_num NUM 0
+                                           &smart_nav NAV 0  &lt NAV SPACE &key_repeat       &bs_del       &smart_shft   &smart_num NUM 0
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
