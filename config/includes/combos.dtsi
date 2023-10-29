@@ -130,14 +130,14 @@ ZMK_COMBO(under, &kp UNDER, RB0 RB1, ALL, COMBO_TERM_SLOW)
 // left horizontal index + middle fingers
 // ********************************************************
 // ZMK_COMBO(enter, &kp ENTER, LT1 LT2, ALL, COMBO_TERM_FAST)
-ZMK_COMBO(enter, &kp ENTER, LM1 LM2, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(enter, &hml LG(LSHFT) ENTER, LM1 LM2, ALL, COMBO_TERM_FAST)
 // ZMK_COMBO(enter, &kp ENTER, LB1 LB2, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // left horizontal middle + ring fingers
 // ********************************************************
 ZMK_COMBO(tab, &kp TAB, LT2 LT3, ALL, COMBO_TERM_FAST)
-ZMK_COMBO(esc, &kp ESC, LM2 LM3, DEF NAV NUM FUN, COMBO_TERM_FAST)
+ZMK_COMBO(esc, &hml LG(LALT) ESC, LM2 LM3, DEF NAV NUM FUN, COMBO_TERM_FAST)
 ZMK_COMBO(warp_off_combo, &warp_off, LM2 LM3, WARP, COMBO_TERM_FAST)
 ZMK_COMBO(at_esc_combo, &at_esc, LM2 LM3, ALT_TAB, COMBO_TERM_FAST)
 ZMK_COMBO(ct_esc_combo, &ct_esc, LM2 LM3, CTRL_TAB, COMBO_TERM_FAST)
@@ -154,14 +154,14 @@ ZMK_COMBO(ct_esc_combo, &ct_esc, LM2 LM3, CTRL_TAB, COMBO_TERM_FAST)
 // right horizontal index + middle fingers
 // ********************************************************
 ZMK_COMBO(up, &kp UP, RT1 RT2, ALL, COMBO_TERM_FAST)
-ZMK_COMBO(down, &kp DOWN, RM1 RM2, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(down, &hmr LG(LSHFT) DOWN, RM1 RM2, ALL, COMBO_TERM_FAST)
 ZMK_COMBO(home, &kp HOME, RB1 RB2, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right horizontal middle + ring fingers
 // ********************************************************
 ZMK_COMBO(cancel, &kp K_CANCEL, RT2 RT3, ALL, COMBO_TERM_FAST)
-ZMK_COMBO(slash, &kp SLASH, RM2 RM3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(slash, &hmr LG(LALT) SLASH, RM2 RM3, ALL, COMBO_TERM_FAST)
 ZMK_COMBO(end, &kp END, RB2 RB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
