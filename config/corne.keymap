@@ -194,6 +194,13 @@ ZMK_BEHAVIOR(warp_off, macro,
     bindings = <&tog WARP &kp ESC>;
 )
 
+ZMK_BEHAVIOR(warp_tap, macro,
+    wait-ms = <10>;
+    tap-ms = <5>;
+    bindings = <macro_press &mo WARP &kp LG(LA(C))>,
+      <&macro_pause_for_release>,
+      <&macro_release &mo WARP &kp ESC>;
+)
 // ZMK_BEHAVIOR(rcmd_on, macro,
 //     wait-ms = <10>;
 //     tap-ms = <5>;
@@ -258,7 +265,7 @@ ZMK_LAYER(default_layer,
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &at_bspc   &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr LSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &tog RCMDL
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-        &ct_tab    &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &comma_semi   &dot_colon    &qmark_excl     ___
+        &ct_tab    &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &comma_semi   &dot_colon    &qmark_excl     &warp_tap
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
                                            &smart_nav NAV 0  &lt NAV SPACE &key_repeat       &bspc_del     &smart_shft   &smart_num NUM 0
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
