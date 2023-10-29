@@ -47,7 +47,8 @@
 // left thumb horizontal
 // ********************************************************
 // ZMK_COMBO(hammer_vim, &kp LA(LG(ESC)), LH1 LH2, ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(warp_combo, &warp_on, LH1 LH2, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(warp_combo, &warp_on, LH1 LH2, DEF NAV NUM FUN, COMBO_TERM_SLOW)
+ZMK_COMBO(warp_off_combo, &warp_off, LH1 LH2, WARP, COMBO_TERM_SLOW)
 ZMK_COMBO(homerow, &kp LA(LC(LS(R))), LH0 LH1, ALL, COMBO_TERM_SLOW)
 
 // ********************************************************
