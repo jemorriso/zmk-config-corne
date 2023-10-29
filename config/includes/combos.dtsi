@@ -74,52 +74,52 @@ ZMK_COMBO(mo_fun, &mo FUN, RH1 RH2, ALL, COMBO_TERM_SLOW)
 // ********************************************************
 // left vertical middle + bottom rows: left number row symbols
 // ********************************************************
-// ZMK_COMBO(excl,  &kp EXCL,      LB4 LM4,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(at,    &kp AT,        LB3 LM3,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(hash,  &kp HASH,      LB2 LM2,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(dllr,  &kp DLLR,      LB1 LM1,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(prcnt, &kp PRCNT,     LB0 LM0,     ALL, COMBO_TERM_SLOW)
+// ZMK_COMBO(excl, &kp EXCL, LB4 LM4, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(at, &kp AT, LB3 LM3, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(hash, &kp HASH, LB2 LM2, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(dllr, &kp DLLR, LB1 LM1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(prcnt, &kp PRCNT, LB0 LM0, ALL, COMBO_TERM_SLOW)
 
 // ********************************************************
 // right vertical middle + bottom rows: right number row symbols
 // ********************************************************
-ZMK_COMBO(caret, &kp CARET,     RB0 RM0,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(amps,  &kp AMPS,      RB1 RM1,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(star,  &kp STAR,      RB2 RM2,     ALL, COMBO_TERM_SLOW)
-// ZMK_COMBO(star,  &kp STAR,      RB3 RM3,     ALL, COMBO_TERM_SLOW)
-// ZMK_COMBO(star,  &kp STAR,      RB4 RM4,     ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(caret, &kp CARET, RB0 RM0, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(amps, &kp AMPS, RB1 RM1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(star, &kp STAR, RB2 RM2, ALL, COMBO_TERM_SLOW)
+// ZMK_COMBO(star, &kp STAR, RB3 RM3, ALL, COMBO_TERM_SLOW)
+// ZMK_COMBO(star, &kp STAR, RB4 RM4, ALL, COMBO_TERM_SLOW)
 
 // ********************************************************
 // left vertical middle + top rows: other symbols
 // ********************************************************
-// ZMK_COMBO(tilde, &kp TILDE,     LM4 LT4,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(tilde, &kp TILDE,     LM3 LT3,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(grave, &kp GRAVE,     LM2 LT2,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(bslh,  &kp BSLH,      LM1 LT1,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(pipe,  &kp PIPE,      LM0 LT0,     ALL, COMBO_TERM_SLOW)
+// ZMK_COMBO(tilde, &kp TILDE, LM4 LT4, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(tilde, &kp TILDE, LM3 LT3, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(grave, &kp GRAVE, LM2 LT2, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(bslh, &kp BSLH, LM1 LT1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(pipe, &kp PIPE, LM0 LT0, ALL, COMBO_TERM_SLOW)
 
 // ********************************************************
 // right vertical middle + top rows: other symbols
 // ********************************************************
-// ZMK_COMBO(home, &kp HOME,     RM0 RT1,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(left, &kp LEFT,     RM1 RT1,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(right, &kp RIGHT,     RM2 RT2,     ALL, COMBO_TERM_SLOW)
-// ZMK_COMBO(end,  &kp END,      RM3 RT3,     ALL, COMBO_TERM_SLOW)
-// ZMK_COMBO(plus,  &kp PLUS,      RM4 RT4,     ALL, COMBO_TERM_SLOW)
+// ZMK_COMBO(home, &kp HOME, RM0 RT1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(left, &kp LEFT, RM1 RT1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(right, &kp RIGHT, RM2 RT2, ALL, COMBO_TERM_SLOW)
+// ZMK_COMBO(end, &kp END, RM3 RT3, ALL, COMBO_TERM_SLOW)
+// ZMK_COMBO(plus, &kp PLUS, RM4 RT4, ALL, COMBO_TERM_SLOW)
 
 // ********************************************************
 // left horizontal index finger
 // ********************************************************
-// ZMK_COMBO(slash, &kp SLASH,     LT0 LT1,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(equal, &kp EQUAL,     LM0 LM1,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(plus, &kp PLUS,     LB0 LB1,     ALL, COMBO_TERM_SLOW)
+// ZMK_COMBO(slash, &kp SLASH, LT0 LT1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(equal, &kp EQUAL, LM0 LM1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(plus, &kp PLUS, LB0 LB1, ALL, COMBO_TERM_SLOW)
 
 // ********************************************************
 // right horizontal index finger
 // ********************************************************
-// ZMK_COMBO(slash, &kp SLASH,     RT0 RT1,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(minus, &kp MINUS,     RM0 RM1,     ALL, COMBO_TERM_SLOW)
-ZMK_COMBO(under, &kp UNDER,     RB0 RB1,     ALL, COMBO_TERM_SLOW)
+// ZMK_COMBO(slash, &kp SLASH, RT0 RT1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(minus, &kp MINUS, RM0 RM1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(under, &kp UNDER, RB0 RB1, ALL, COMBO_TERM_SLOW)
 
 // ****************************************************************************
 // two finger horizontal combos
@@ -127,44 +127,44 @@ ZMK_COMBO(under, &kp UNDER,     RB0 RB1,     ALL, COMBO_TERM_SLOW)
 // ********************************************************
 // left horizontal index + middle fingers
 // ********************************************************
-// ZMK_COMBO(enter, &kp ENTER,       LT1 LT2,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(enter, &kp ENTER,       LM1 LM2,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(enter, &kp ENTER,       LB1 LB2,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(enter, &kp ENTER, LT1 LT2, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(enter, &kp ENTER, LM1 LM2, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(enter, &kp ENTER, LB1 LB2, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // left horizontal middle + ring fingers
 // ********************************************************
-ZMK_COMBO(tab,   &kp TAB,       LT2 LT3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(esc,   &kp ESC,       LM2 LM3,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LB2 LB3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(tab, &kp TAB, LT2 LT3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(esc, &kp ESC, LM2 LM3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LB2 LB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // left horizontal pinky + ring fingers
 // ********************************************************
-// ZMK_COMBO(esc,   &kp ESC,       LT4 LT3,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LM4 LM3,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LB4 LB3,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LT4 LT3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LM4 LM3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LB4 LB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right horizontal index + middle fingers
 // ********************************************************
-ZMK_COMBO(up, &kp UP,       RT1 RT2,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(down, &kp DOWN,       RM1 RM2,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(home, &kp HOME,       RB1 RB2,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(up, &kp UP, RT1 RT2, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(down, &kp DOWN, RM1 RM2, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(home, &kp HOME, RB1 RB2, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right horizontal middle + ring fingers
 // ********************************************************
-// ZMK_COMBO(home,   &kp UP,       RT2 RT3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(slash,   &kp SLASH,       RM2 RM3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(end, &kp END,       RB2 RB3,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(home, &kp UP, RT2 RT3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(slash, &kp SLASH, RM2 RM3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(end, &kp END, RB2 RB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right horizontal pinky + ring fingers
 // ********************************************************
-ZMK_COMBO(pg_up,   &kp PG_UP,       RT4 RT3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(pg_dn,   &kp RIGHT,       RM4 RM3,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(pg_dn,   &kp PG_DN,       RB4 RB3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(pg_up, &kp PG_UP, RT4 RT3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(pg_dn, &kp RIGHT, RM4 RM3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(pg_dn, &kp PG_DN, RB4 RB3, ALL, COMBO_TERM_FAST)
 
 // ****************************************************************************
 // two finger diagonal combos
@@ -172,38 +172,38 @@ ZMK_COMBO(pg_dn,   &kp RIGHT,       RM4 RM3,     ALL, COMBO_TERM_FAST)
 // ********************************************************
 // left diagonal index + middle fingers
 // ********************************************************
-ZMK_COMBO(rbrc,   &kp RBRC,       LT2 LM1,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(rbkt,   &kp RBKT,       LM2 LB1,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(rbrc, &kp RBRC, LT2 LM1, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(rbkt, &kp RBKT, LM2 LB1, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // left diagonal ring + middle fingers
 // ********************************************************
-ZMK_COMBO(lbrc,   &kp LBRC,       LT2 LM3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(lbkt,   &kp LBKT,       LM2 LB3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(lbrc, &kp LBRC, LT2 LM3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(lbkt, &kp LBKT, LM2 LB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // left diagonal ring + pinky fingers
 // ********************************************************
-ZMK_COMBO(space,   &kp SPACE,       LT3 LM4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LM3 LB4,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(space, &kp SPACE, LT3 LM4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LM3 LB4, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right diagonal index + middle fingers
 // ********************************************************
-ZMK_COMBO(lpar,   &kp LPAR,       RT2 RM1,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(lt,   &kp LT,       RM2 RB1,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(lpar, &kp LPAR, RT2 RM1, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(lt, &kp LT, RM2 RB1, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right diagonal ring + middle fingers
 // ********************************************************
-ZMK_COMBO(rpar,   &kp RPAR,       RT2 RM3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(gt,   &kp GT,       RM2 RB3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(rpar, &kp RPAR, RT2 RM3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(gt, &kp GT, RM2 RB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right diagonal ring + pinky fingers
 // ********************************************************
-ZMK_COMBO(bspc,   &kp BSPC,       RT3 RM4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       RM3 RB4,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(bspc, &kp BSPC, RT3 RM4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, RM3 RB4, ALL, COMBO_TERM_FAST)
 
 // ****************************************************************************
 // three finger horizontal combos
@@ -211,60 +211,60 @@ ZMK_COMBO(bspc,   &kp BSPC,       RT3 RM4,     ALL, COMBO_TERM_FAST)
 // ********************************************************
 // left horizontal index + middle + ring fingers
 // ********************************************************
-ZMK_COMBO(bri_up,   &kp C_BRI_UP,       LT1 LT2 LT3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(bri_dn,   &kp C_BRI_DN,       LM1 LM2 LM3,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LM1 LB2 LB3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(bri_up, &kp C_BRI_UP, LT1 LT2 LT3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(bri_dn, &kp C_BRI_DN, LM1 LM2 LM3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LM1 LB2 LB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // left horizontal middle + ring + pinky fingers
 // ********************************************************
-// ZMK_COMBO(esc,   &kp ESC,       LT2 LT3 LT4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LM2 LM3 LM4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LM2 LB3 LB4,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LT2 LT3 LT4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LM2 LM3 LM4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LM2 LB3 LB4, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right horizontal index + middle + ring fingers
 // ********************************************************
-ZMK_COMBO(vol_up,   &kp C_VOL_UP,       RT1 RT2 RT3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(vol_dn,    &kp C_VOL_DN,       RM1 RM2 RM3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(mute,   &kp C_MUTE,       RB1 RB2 RB3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(vol_up, &kp C_VOL_UP, RT1 RT2 RT3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(vol_dn, &kp C_VOL_DN, RM1 RM2 RM3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(mute, &kp C_MUTE, RB1 RB2 RB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right horizontal middle + ring + pinky fingers
 // ********************************************************
-ZMK_COMBO(prev,   &kp C_PREV,       RT2 RT3 RT4,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(next,   &kp C_NEXT,       RM2 RM3 RM4,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(pp,   &kp C_PP,       RM2 RB3 RB4,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(prev, &kp C_PREV, RT2 RT3 RT4, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(next, &kp C_NEXT, RM2 RM3 RM4, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(pp, &kp C_PP, RM2 RB3 RB4, ALL, COMBO_TERM_FAST)
 
 // ****************************************************************************
 // three finger lowered index or pinky combos
 // ****************************************************************************
 // left index + middle + ring fingers
-// ZMK_COMBO(esc,   &kp ESC,       LM1 LT2 LT3,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LB1 LM2 LM3,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LM1 LT2 LT3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LB1 LM2 LM3, ALL, COMBO_TERM_FAST)
 
 // left pinky + middle + ring fingers
-// ZMK_COMBO(esc,   &kp ESC,       LT2 LT3 LM4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LM2 LM3 LB4,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LT2 LT3 LM4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LM2 LM3 LB4, ALL, COMBO_TERM_FAST)
 
 // right index + middle + ring fingers
-// ZMK_COMBO(esc,   &kp ESC,       RM1 RT2 RT3,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       RB1 RM2 RM3,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, RM1 RT2 RT3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, RB1 RM2 RM3, ALL, COMBO_TERM_FAST)
 
 // right pinky + middle + ring fingers
-// ZMK_COMBO(esc,   &kp ESC,       RT2 RT3 RM4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       RM2 RM3 RB4,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, RT2 RT3 RM4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, RM2 RM3 RB4, ALL, COMBO_TERM_FAST)
 
 // ****************************************************************************
 // three finger raised middle finger combos
 // ****************************************************************************
 // left index + middle + ring fingers
-// ZMK_COMBO(esc,   &kp ESC,       LM1 LT2 LM3,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LB1 LM2 LB3,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LM1 LT2 LM3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LB1 LM2 LB3, ALL, COMBO_TERM_FAST)
 
 // right index + middle + ring fingers
-ZMK_COMBO(rw,   &kp C_RW,       RM1 RT2 RM3,     ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ff,   &kp C_FF,       RB1 RM2 RB3,     ALL, COMBO_TERM_FAST)
+ZMK_COMBO(rw, &kp C_RW, RM1 RT2 RM3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(ff, &kp C_FF, RB1 RM2 RB3, ALL, COMBO_TERM_FAST)
 
 // ****************************************************************************
 // four finger horizontal combos
@@ -272,16 +272,16 @@ ZMK_COMBO(ff,   &kp C_FF,       RB1 RM2 RB3,     ALL, COMBO_TERM_FAST)
 // ********************************************************
 // left horizontal
 // ********************************************************
-// ZMK_COMBO(esc,   &kp ESC,       LT1 LT2 LT3 LT4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LM1 LM2 LM3 LM4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LB1 LB2 LB3 LB4,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LT1 LT2 LT3 LT4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LM1 LM2 LM3 LM4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LB1 LB2 LB3 LB4, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right horizontal
 // ********************************************************
-// ZMK_COMBO(esc,   &kp ESC,       RT1 RT2 RT3 RT4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       RM1 RM2 RM3 RM4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       RB1 RB2 RB3 RB4,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, RT1 RT2 RT3 RT4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, RM1 RM2 RM3 RM4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, RB1 RB2 RB3 RB4, ALL, COMBO_TERM_FAST)
 
 // ****************************************************************************
 // four finger diagonal combos
@@ -289,11 +289,11 @@ ZMK_COMBO(ff,   &kp C_FF,       RB1 RM2 RB3,     ALL, COMBO_TERM_FAST)
 // ********************************************************
 // left
 // ********************************************************
-// ZMK_COMBO(esc,   &kp ESC,       LM1 LT2 LT3 LM4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       LB1 LM2 LM3 LB4,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LM1 LT2 LT3 LM4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, LB1 LM2 LM3 LB4, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right
 // ********************************************************
-// ZMK_COMBO(esc,   &kp ESC,       RM1 RT2 RT3 RM4,     ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(esc,   &kp ESC,       RB1 RM2 RM3 RB4,     ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, RM1 RT2 RT3 RM4, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(esc, &kp ESC, RB1 RM2 RM3 RB4, ALL, COMBO_TERM_FAST)
