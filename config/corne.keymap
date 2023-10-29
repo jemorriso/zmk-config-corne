@@ -109,6 +109,12 @@ ZMK_BEHAVIOR(nav_dance, tap_dance,
     bindings = <&nav_word>, <&sl NAV>;  // reverse this for sticky-num on single tap
 )
 
+ZMK_BEHAVIOR(z_warp, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    bindings = <&mo>, <&warp_tap>;
+)
 /* Custom behaviors */
 
 ZMK_BEHAVIOR(rcmd_a, macro, wait-ms = <30>; tap-ms = <5>; bindings = <&kt RGUI>, <&kp A>, <&kt RGUI>, <&tog RCMDL>;)
@@ -197,7 +203,7 @@ ZMK_BEHAVIOR(warp_off, macro,
 ZMK_BEHAVIOR(warp_tap, macro,
     wait-ms = <10>;
     tap-ms = <5>;
-    bindings = <macro_press &mo WARP>,
+    bindings = <&macro_press &mo WARP>,
              <&kp LG(LA(C))>,
       <&macro_pause_for_release>,
              <&kp ESC>,
@@ -267,7 +273,7 @@ ZMK_LAYER(default_layer,
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &at_bspc   &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr LSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &tog RCMDL
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-        &ct_tab    &kp Z         &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &comma_semi   &dot_colon    &qmark_excl     &warp_tap
+        &ct_tab    &z_warp Z 0   &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &comma_semi   &dot_colon    &qmark_excl     &warp_tap
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
                                            &smart_nav NAV 0  &lt NAV SPACE &key_repeat       &bspc_del     &smart_shft   &smart_num NUM 0
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
