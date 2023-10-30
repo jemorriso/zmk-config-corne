@@ -260,6 +260,7 @@ ZMK_BEHAVIOR(comma_semi, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
+// TODO not using
 // tap: qmark | shift + tap: excl
 ZMK_BEHAVIOR(qmark_excl, mod_morph,
     bindings = <&kp QMARK>, <&kp EXCL>;
@@ -274,7 +275,7 @@ ZMK_LAYER(default_layer,
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
         &at_bspc   &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr LSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &tog RCMDL
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-        &ct_tab    &z_warp 0 Z   &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &comma_semi   &dot_colon    &qmark_excl     ___
+        &ct_tab    &z_warp 0 Z   &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &comma_semi   &dot_colon    &kp SLASH       ___
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
                                            &smart_nav NAV 0  &lt NAV SPACE &key_repeat       &bspc_del     &smart_shft   &smart_num NUM 0
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯

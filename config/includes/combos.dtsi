@@ -76,7 +76,7 @@ ZMK_COMBO(mo_fun, &mo FUN, RH1 RH2, ALL, COMBO_TERM_SLOW)
 // ********************************************************
 // left vertical middle + bottom rows: left number row symbols
 // ********************************************************
-// ZMK_COMBO(excl, &kp EXCL, LB4 LM4, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(excl, &kp EXCL, LB4 LM4, ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(at, &kp AT, LB3 LM3, ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(hash, &kp HASH, LB2 LM2, ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(dllr, &kp DLLR, LB1 LM1, ALL, COMBO_TERM_SLOW)
@@ -160,8 +160,9 @@ ZMK_COMBO(home, &kp HOME, RB1 RB2, ALL, COMBO_TERM_FAST)
 // ********************************************************
 // right horizontal middle + ring fingers
 // ********************************************************
-ZMK_COMBO(cancel, &kp K_CANCEL, RT2 RT3, ALL, COMBO_TERM_FAST)
-ZMK_COMBO(slash, &hmr LG(LALT) SLASH, RM2 RM3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(cancel, &kp K_CANCEL, RT2 RT3, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(cancel, &kp K_CANCEL, RM2 RM3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(slash, &hmr LG(LALT) SLASH, RM2 RM3, ALL, COMBO_TERM_FAST)
 ZMK_COMBO(end, &kp END, RB2 RB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
