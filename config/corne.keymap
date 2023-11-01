@@ -272,15 +272,15 @@ ZMK_BEHAVIOR(qmark_excl, mod_morph,
 ZMK_LAYER(default_layer,
      // ╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
           //&kp TAB  &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SQT         &tog RCMDL
-          &kp TAB  &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SQT         &bspc_del  
+          &kp TAB  &kp Q         &hml HYPER W  &hml MEH F    &kp P         &kp B             &kp J         &kp L         &hmr MEH U    &hmr HYPER Y  &kp SEMICOLON  &at_bspc  
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
           //&kp ESC  &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr LSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &at_bspc
-          &bspc_del &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr LSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &at_bspc
+          &bspc_del &hml LCTRL A  &hml LALT R   &hml LGUI S   &hml LSHFT T  &kp G             &kp M         &hmr LSHFT N  &hmr LGUI E   &hmr LALT I   &hmr LCTRL O    &kp SQT
      // ├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-          &warp_on &z_warp 0 Z   &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &comma_semi   &dot_colon    &kp SLASH       &ct_tab
+          &warp_on &z_warp 0 Z   &kp X         &kp C         &kp D         &kp V             &kp K         &kp H         &kp COMMA     &kp DOT       &kp SLASH       &ct_tab
      // ╰──────╯ ╰─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╰──────╯
                                                //&bspc_del     &lt NAV SPACE &smart_nav NAV 0  &kp ENTER     &smart_shft   &smart_num NUM 0
-                                               &bspc_del     &lt NAV SPACE &bspc_del         &bspc_del     &smart_shft   &bspc_del       
+                                               &kp ESC     &lt NAV SPACE &smart_nav NAV 0 &smart_num NUM 0 &smart_shft   &kp ENTER
      //                                      ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
