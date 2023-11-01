@@ -103,7 +103,7 @@ ZMK_COMBO(prcnt, &kp PRCNT, LM0 LT0, ALL, COMBO_TERM_SLOW)
 // ********************************************************
 // right vertical middle + top rows
 // ********************************************************
-ZMK_COMBO(caret, &kp CARET, RM0 RT1, ALL, COMBO_TERM_SLOW)
+ZMK_COMBO(caret, &kp CARET, RM0 RT0, ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(amps, &kp AMPS, RM1 RT1, ALL, COMBO_TERM_SLOW)
 ZMK_COMBO(star, &kp STAR, RM2 RT2, ALL, COMBO_TERM_SLOW)
 // ZMK_COMBO(end, &kp END, RM3 RT3, ALL, COMBO_TERM_SLOW)
