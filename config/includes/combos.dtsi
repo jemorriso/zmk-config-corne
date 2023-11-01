@@ -130,7 +130,7 @@ ZMK_COMBO(under, &kp UNDER, RB0 RB1, ALL, COMBO_TERM_SLOW)
 // left horizontal index + middle fingers
 // ********************************************************
 // ZMK_COMBO(enter, &kp ENTER, LT1 LT2, ALL, COMBO_TERM_FAST)
-// ZMK_COMBO(enter, &hml LG(LSHFT) ENTER, LM1 LM2, ALL, COMBO_TERM_FAST)
+ZMK_COMBO(enter, &hml LG(LSHFT) ENTER, LM1 LM2, ALL, COMBO_TERM_FAST)
 // ZMK_COMBO(enter, &kp ENTER, LB1 LB2, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
@@ -146,9 +146,9 @@ ZMK_COMBO(under, &kp UNDER, RB0 RB1, ALL, COMBO_TERM_SLOW)
 // ********************************************************
 // left horizontal pinky + ring fingers
 // ********************************************************
-ZMK_COMBO(at_grave, &at_grave, LT4 LT3, ALL, COMBO_TERM_FAST)
-ZMK_COMBO(at_bspc, &at_bspc, LM4 LM3, ALL, COMBO_TERM_FAST)
-ZMK_COMBO(ct_tab, &ct_tab, LB4 LB3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(at_grave, &at_grave, LT4 LT3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(at_bspc, &at_bspc, LM4 LM3, ALL, COMBO_TERM_FAST)
+// ZMK_COMBO(ct_tab, &ct_tab, LB4 LB3, ALL, COMBO_TERM_FAST)
 
 // ********************************************************
 // right horizontal index + middle fingers
