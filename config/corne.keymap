@@ -22,28 +22,28 @@
 
         num_sym {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp GRAVE      &kp N7  &kp N8  &kp N9  &trans    &trans        &kp LS(PLUS)   &kp LS(LPAR)  &kp LS(RPAR)  &kp EQUAL      &trans
+&trans  &kp N0         &kp N4  &kp N5  &kp N6  &trans    &kp LS(PIPE)  &kp MINUS      &kp LBKT      &kp RBKT      &kp SEMI       &trans
+&trans  &kp LS(TILDE)  &kp N1  &kp N2  &kp N3  &trans    &kp BSLH      &kp LS(UNDER)  &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(COLON)  &trans
+                               &trans  &trans  &trans    &trans        &trans         &trans
             >;
         };
 
         sym_nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans        &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &trans    &trans    &trans     &trans     &trans     &trans  &trans
+&trans  &kp LS(RPAR)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
+&trans  &trans        &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
+                                    &trans         &trans         &trans    &trans    &trans     &trans
             >;
         };
 
         fun_med {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans    &trans      &trans        &trans        &trans      &trans  &trans
+&trans  &kp F10  &kp F4  &kp F5  &kp F6  &trans    &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT  &trans  &trans
+&trans  &kp F11  &kp F1  &kp F2  &kp F3  &trans    &kp C_MUTE  &kp C_BRI_DN  &kp C_BRI_UP  &kp C_PP    &trans  &trans
+                         &trans  &trans  &trans    &trans      &trans        &trans
             >;
         };
     };
