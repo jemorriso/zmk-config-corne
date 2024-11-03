@@ -8,6 +8,19 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        hml: hml {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HML";
+            bindings = <&mt>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <125>;
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
