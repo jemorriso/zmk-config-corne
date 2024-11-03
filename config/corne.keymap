@@ -9,15 +9,28 @@
 
 / {
     behaviors {
-        hml: hml {
+        lhr: lhr {
             compatible = "zmk,behavior-hold-tap";
-            label = "HML";
+            label = "LHR";
             bindings = <&mt>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             require-prior-idle-ms = <125>;
             tapping-term-ms = <200>;
+            hold-trigger-key-positions = <6 7 20 9 10 11 21 22 23 33 34 35 6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+        };
+
+        rhr: rhr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RHR";
+            bindings = <&mt>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <125>;
+            tapping-term-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
     };
 
@@ -26,10 +39,10 @@
 
         base {
             bindings = <
-&trans  &kp Q        &kp W       &kp E       &kp R        &kp T      &kp Y    &kp U        &kp I       &kp O       &kp P          &trans
-&trans  &mt LCTRL A  &mt LALT S  &mt LGUI D  &mt LSHFT F  &kp G      &kp H    &mt LSHFT J  &mt LGUI K  &mt LALT L  &mt LCTRL SQT  &trans
-&trans  &kp Z        &kp X       &kp C       &kp V        &kp B      &kp N    &kp M        &kp COMMA   &kp DOT     &kp FSLH       &trans
-                                 &trans      &kp SPACE    &kp TAB    &kp RET  &kp BSPC     &trans
+&trans  &kp Q         &kp W        &kp E        &kp R         &kp T      &kp Y    &kp U         &kp I        &kp O        &kp P           &trans
+&trans  &lhr LCTRL A  &lhr LALT S  &lhr LGUI D  &lhr LSHFT F  &kp G      &kp H    &rhr LSHFT J  &rhr LGUI K  &rhr LALT L  &rhr LCTRL SQT  &trans
+&trans  &kp Z         &kp X        &kp C        &kp V         &kp B      &kp N    &kp M         &kp COMMA    &kp DOT      &kp FSLH        &trans
+                                   &trans       &kp SPACE     &kp TAB    &kp RET  &kp BSPC      &trans
             >;
         };
 
