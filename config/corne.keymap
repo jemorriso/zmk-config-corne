@@ -32,6 +32,16 @@
             tapping-term-ms = <200>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
         };
+
+        rpi: require_prior_idle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        }; 
     };
 
     keymap {
@@ -39,8 +49,8 @@
 
         base {
             bindings = <
-&trans  &kp Q         &mt  LA(LCTRL) W  &mt  LG(LCTRL) E  &kp R         &kp T        &kp Y      &kp U         &mt  LG(LCTRL) I  &mt  LA(LCTRL) O  &kp P           &trans
-&trans  &mt  LCTRL A  &mt  LALT S       &mt  LGUI D       &mt  LSHFT F  &kp G        &kp H      &mt  LSHFT J  &mt  LGUI K       &mt  LALT L       &mt  LCTRL SQT  &trans
+&trans  &kp Q         &rpi LA(LCTRL) W  &rpi LG(LCTRL) E  &kp R         &kp T        &kp Y      &kp U         &rpi LG(LCTRL) I  &rpi LA(LCTRL) O  &kp P           &trans
+&trans  &rpi LCTRL A  &rpi LALT S       &rpi LGUI D       &rpi LSHFT F  &kp G        &kp H      &rpi LSHFT J  &rpi LGUI K       &rpi LALT L       &rpi LCTRL SQT  &trans
 &trans  &kp Z         &kp X             &kp C             &kp V         &kp B        &kp N      &kp M         &kp COMMA         &kp DOT           &kp FSLH        &trans
                                         &trans            &lt 1 SPACE   &lt 2 TAB    &lt 2 RET  &lt 1 BSPC    &trans
             >;
@@ -51,7 +61,7 @@
 &trans  &kp GRAVE      &kp N7  &kp N8  &kp N9  &trans    &trans        &kp LS(PLUS)   &kp LS(LPAR)  &kp LS(RPAR)  &kp EQUAL      &trans
 &trans  &kp N0         &kp N4  &kp N5  &kp N6  &trans    &kp LS(PIPE)  &kp MINUS      &kp LBKT      &kp RBKT      &kp SEMI       &trans
 &trans  &kp LS(TILDE)  &kp N1  &kp N2  &kp N3  &trans    &kp BSLH      &kp LS(UNDER)  &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(COLON)  &trans
-                               &trans  &trans  &trans    &trans        &trans         &trans
+                               &trans  &kp ESC &trans    &trans        &kp ESC        &trans
             >;
         };
 
