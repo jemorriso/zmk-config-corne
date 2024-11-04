@@ -37,7 +37,6 @@
 
         lhsft: lhsft {
             compatible = "zmk,behavior-hold-tap";
-            label = "LHR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -49,7 +48,6 @@
 
         rhsft: rhsft {
             compatible = "zmk,behavior-hold-tap";
-            label = "RHR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
