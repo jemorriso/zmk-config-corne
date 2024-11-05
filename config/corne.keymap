@@ -124,5 +124,14 @@
                          &trans  &trans  &trans    &trans      &trans        &trans
             >;
         };
+
+        space {
+            bindings = <
+&trans  &kp N1    &kp N2   &kp N3   &kp N4   &kp N5    &kp N6      &kp N7        &kp N8        &kp N9      &kp N0  &trans
+&trans  &kp grave &kp lbrc &kp lbkt &kp lpar &trans    &kp left    &kp down      &kp up        &kp right   &trans  &trans
+&trans  &trans    &kp rbrc &kp rbkt &kp rpar &trans    &trans      &kp minus     &kp equal     &kp bslh    &trans  &trans
+                         &trans  &trans  &trans    &trans      &trans        &trans
+            >;
+        };
     };
 };
