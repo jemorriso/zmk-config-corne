@@ -19,7 +19,7 @@
             require-prior-idle-ms = <125>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 13 14 15 16>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 13 14 15 16 37 36 38>;
         };
 
         rhr: rhr {
@@ -32,7 +32,7 @@
             require-prior-idle-ms = <125>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 19 20 21 22>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 19 20 21 22 39 41 40>;
         };
 
         lhsft: lhsft {
@@ -100,19 +100,19 @@
 
         num_sym {
             bindings = <
-&trans  &kp GRAVE      &lhr LA(LCTRL) N7 &lhr LG(LCTRL) N8 &kp N9   &trans    &trans        &kp LS(PLUS)   &rhr LG(LCTRL) LS(LPAR)  &rhr LA(LCTRL) LS(RPAR)  &kp EQUAL      &trans
-&trans  &lhr LCTRL N0  &lhr LALT N4  &lhr LGUI N5  &lhr LSHFT N6   &trans    &kp LS(PIPE)  &rhr LSHFT MINUS      &rhr LGUI LBKT      &rhr LALT RBKT      &rhr LCTRL SEMI       &trans
-&trans  &kp LS(TILDE)  &kp N1  &kp N2  &kp N3   &trans    &kp BSLH      &kp LS(UNDER)  &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(COLON)  &trans
-                               &trans  &kp ESC  &trans    &trans        &kp ESC        &trans
+&trans  &kp GRAVE      &lhr LA(LCTRL) N7  &lhr LG(LCTRL) N8  &kp N9         &trans    &trans        &kp LS(PLUS)      &rhr LG(LCTRL) LS(LPAR)  &rhr LA(LCTRL) LS(RPAR)  &kp EQUAL        &trans
+&trans  &lhr LCTRL N0  &lhr LALT N4       &lhr LGUI N5       &lhr LSHFT N6  &trans    &kp LS(PIPE)  &rhr LSHFT MINUS  &rhr LGUI LBKT           &rhr LALT RBKT           &rhr LCTRL SEMI  &trans
+&trans  &kp LS(TILDE)  &kp N1             &kp N2             &kp N3         &trans    &kp BSLH      &kp LS(UNDER)     &kp LS(LBRC)             &kp LS(RBRC)             &kp LS(COLON)    &trans
+                                          &trans             &kp ESC        &trans    &trans        &kp ESC           &trans
             >;
         };
 
         sym_nav {
             bindings = <
-&trans  &trans        &lhr LA(LCTRL) LS(AMPS)  &lhr LG(LCTRL) LS(STAR)   &kp LS(LPAR)   &trans    &trans    &trans     &trans     &trans     &trans  &trans
-&trans  &lhr LCTRL LS(RPAR)  &lhr LALT LS(DLLR)  &lhr LGUI LS(PRCNT)  &lhr LSHFT LS(CARET)  &trans    &kp LEFT  &rhr LSHFT DOWN   &rhr LGUI UP     &rhr LALT RIGHT  &trans  &trans
-&trans  &trans        &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &trans    &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &trans  &trans
-                                    &trans         &trans         &trans    &trans    &trans     &trans
+&trans  &trans               &lhr LA(LCTRL) LS(AMPS)  &lhr LG(LCTRL) LS(STAR)  &kp LS(LPAR)          &trans    &trans    &trans           &trans        &trans           &trans  &trans
+&trans  &lhr LCTRL LS(RPAR)  &lhr LALT LS(DLLR)       &lhr LGUI LS(PRCNT)      &lhr LSHFT LS(CARET)  &trans    &kp LEFT  &rhr LSHFT DOWN  &rhr LGUI UP  &rhr LALT RIGHT  &trans  &trans
+&trans  &trans               &kp LS(EXCL)             &kp LS(AT)               &kp LS(POUND)         &trans    &kp HOME  &kp PG_DN        &kp PG_UP     &kp END          &trans  &trans
+                                                      &trans                   &trans                &trans    &trans    &trans           &trans
             >;
         };
 
