@@ -77,14 +77,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            bindings = <&none>;
-            key-positions = <2 3>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -94,7 +87,7 @@
 &trans  &kp Q         &lhr LA(LCTRL) W  &lhr LG(LCTRL) E  &kp R           &kp T          &kp Y        &kp U           &rhr LG(LCTRL) I  &rhr LA(LCTRL) O  &kp P           &trans
 &trans  &lhr LCTRL A  &lhr LALT S       &lhr LGUI D       &lhsft LSHFT F  &kp G          &kp H        &rhsft LSHFT J  &rhr LGUI K       &rhr LALT L       &rhr LCTRL SQT  &trans
 &trans  &kp Z         &kp X             &kp C             &kp V           &kp B          &kp N        &kp M           &kp COMMA         &kp DOT           &kp FSLH        &trans
-                                        &trans            &ltqt 1 SPACE   &ltqt 2 TAB    &ltqt 2 RET  &ltqt 1 BSPC    &trans
+                                        &kp ESC           &ltqt 1 SPACE   &ltqt 2 TAB    &ltqt 2 RET  &ltqt 1 BSPC    &mo 2
             >;
         };
 
@@ -127,19 +120,19 @@
 
         space {
             bindings = <
-&trans  &kp N1    &kp N2   &kp N3   &kp N4   &kp N5    &kp N6      &kp N7        &kp N8        &kp N9      &kp N0  &trans
-&trans  &kp grave &kp lbrc &kp lbkt &kp lpar &trans    &kp left    &kp down      &kp up        &kp right   &trans  &trans
-&trans  &trans    &kp rbrc &kp rbkt &kp rpar &trans    &trans      &kp minus     &kp equal     &kp bslh    &trans  &trans
-                         &trans  &trans  &trans    &trans      &trans        &trans
+&trans  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0  &trans
+&trans  &kp grave  &kp lbrc  &kp lbkt  &kp lpar  &trans    &kp left  &kp down   &kp up     &kp right  &trans  &trans
+&trans  &trans     &kp rbrc  &kp rbkt  &kp rpar  &trans    &trans    &kp minus  &kp equal  &kp bslh   &trans  &trans
+                             &trans    &trans    &trans    &trans    &trans     &trans
             >;
         };
 
         num_row {
             bindings = <
-&trans  &kp grave &kp lbrc &kp lbkt &kp lpar &trans    &kp left    &kp down      &kp up        &kp right   &trans  &trans
-&trans  &kp N1    &kp N2   &kp N3   &kp N4   &kp N5    &kp N6      &kp N7        &kp N8        &kp N9      &kp N0  &trans
-&trans  &trans    &kp rbrc &kp rbkt &kp rpar &trans    &trans      &kp minus     &kp equal     &kp bslh    &trans  &trans
-                         &trans  &trans  &trans    &trans      &trans        &trans
+&trans  &kp grave  &kp lbrc  &kp lbkt  &kp lpar  &trans    &kp left  &kp down   &kp up     &kp right  &trans  &trans
+&trans  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0  &trans
+&trans  &trans     &kp rbrc  &kp rbkt  &kp rpar  &trans    &trans    &kp minus  &kp equal  &kp bslh   &trans  &trans
+                             &trans    &trans    &trans    &trans    &trans     &trans
             >;
         };
     };
