@@ -87,7 +87,7 @@
 &trans  &kp Q         &lhr LA(LCTRL) W  &lhr LG(LCTRL) E  &kp R           &kp T          &kp Y        &kp U           &rhr LG(LCTRL) I  &rhr LA(LCTRL) O  &kp P           &trans
 &trans  &lhr LCTRL A  &lhr LALT S       &lhr LGUI D       &lhsft LSHFT F  &kp G          &kp H        &rhsft LSHFT J  &rhr LGUI K       &rhr LALT L       &rhr LCTRL SQT  &trans
 &trans  &kp Z         &kp X             &kp C             &kp V           &kp B          &kp N        &kp M           &kp COMMA         &kp DOT           &kp FSLH        &trans
-                                        &kp ESC           &ltqt 1 SPACE   &ltqt 2 TAB    &ltqt 2 RET  &ltqt 1 BSPC    &mo 2
+                                        &lt 4 ESC         &ltqt 1 SPACE   &ltqt 2 TAB    &ltqt 2 RET  &ltqt 1 BSPC    &mo 2
             >;
         };
 
@@ -120,10 +120,10 @@
 
         space {
             bindings = <
-&trans  &kp N1    &kp N2   &kp N3   &kp N4   &kp N5    &kp N6      &kp N7        &kp N8        &kp N9      &kp N0  &trans
-&trans  &kp GRAVE &kp LBRC &kp LBKT &kp LPAR &trans    &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT   &trans  &trans
-&trans  &trans    &kp RBRC &kp RBKT &kp RPAR &trans    &trans      &kp MINUS     &kp EQUAL     &kp BSLH    &trans  &trans
-                         &trans  &trans  &trans    &trans      &trans        &trans
+&trans  &kp N1     &kp N2    &kp N3    &kp N4    &kp N5    &kp N6    &kp N7     &kp N8     &kp N9     &kp N0  &trans
+&trans  &kp GRAVE  &kp LBRC  &kp LBKT  &kp LPAR  &trans    &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans  &trans
+&trans  &trans     &kp RBRC  &kp RBKT  &kp RPAR  &trans    &trans    &kp MINUS  &kp EQUAL  &kp BSLH   &trans  &trans
+                             &trans    &trans    &trans    &trans    &trans     &trans
             >;
         };
     };
