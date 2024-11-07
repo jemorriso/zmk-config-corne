@@ -138,10 +138,10 @@
 
         fun_med {
             bindings = <
-&trans          &kp F12       &lhr LA(LCTRL) F7  &lhr LG(LCTRL) F8  &kp F9  &trans        &trans               &trans              &trans            &trans  &trans  &trans
-&lhr LCTRL F10  &lhr LALT F4  &lhr LGUI F5       &lhr LSHFT F6      &trans  &kp C_PREV    &rhr LSHFT C_VOL_DN  &rhr LGUI C_VOL_UP  &rhr LALT C_NEXT  &trans  &trans  &trans
-&kp F11         &kp F1        &kp F2             &kp F3             &trans  &kp C_MUTE    &kp C_BRI_DN         &kp C_BRI_UP        &kp C_PP          &trans  &trans  &trans
-                                                 &trans             &trans  &trans        &trans               &trans
+&trans &kp F12         &lhr LA(LCTRL) F7  &lhr LG(LCTRL) F8  &kp F9             &trans        &trans        &trans               &trans              &trans            &trans  &trans
+&trans &lhr LCTRL F10  &lhr LALT F4       &lhr LGUI F5       &lhr LSHFT F6      &trans        &kp C_PREV    &rhr LSHFT C_VOL_DN  &rhr LGUI C_VOL_UP  &rhr LALT C_NEXT  &trans  &trans
+&trans &kp F11         &kp F1             &kp F2             &kp F3             &trans        &kp C_MUTE    &kp C_BRI_DN         &kp C_BRI_UP        &kp C_PP          &trans  &trans 
+                                                 &trans             &trans  &trans        &trans               &trans &trans
             >;
         };
     };
