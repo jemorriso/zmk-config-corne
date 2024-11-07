@@ -87,7 +87,7 @@
 &trans  &kp Q         &lhr LA(LCTRL) W  &lhr LG(LCTRL) E  &kp R           &kp T          &kp Y        &kp U           &rhr LG(LCTRL) I  &rhr LA(LCTRL) O  &kp P           &trans
 &trans  &lhr LCTRL A  &lhr LALT S       &lhr LGUI D       &lhsft LSHFT F  &kp G          &kp H        &rhsft LSHFT J  &rhr LGUI K       &rhr LALT L       &rhr LCTRL SQT  &trans
 &trans  &kp Z         &kp X             &kp C             &kp V           &kp B          &kp N        &kp M           &kp COMMA         &kp DOT           &kp FSLH        &trans
-                                        &lt 1 ESC         &ltqt 2 SPACE   &ltqt 3 TAB    &ltqt 3 RET  &ltqt 1 BSPC    &mo 2
+                                        &lt 1 ESC         &ltqt 2 SPACE   &ltqt 3 TAB    &ltqt 3 RET  &ltqt 1 BSPC    &ltqt 2 DEL
             >;
         };
 
