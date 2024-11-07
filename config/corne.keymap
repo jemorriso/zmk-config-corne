@@ -100,7 +100,7 @@
             >;
         };
 
-        sym_nav {
+        nav {
             bindings = <
 &trans  &trans               &trans                   &trans                   &trans                &trans    &trans    &trans           &trans        &trans           &trans  &trans
 &trans  &trans               &trans                   &trans                   &trans                &trans    &kp LEFT  &rhr LSHFT DOWN  &rhr LGUI UP  &rhr LALT RIGHT  &trans  &trans
