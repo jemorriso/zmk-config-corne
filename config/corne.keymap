@@ -120,10 +120,10 @@
 
         num_sym {
             bindings = <
-&trans  &kp DLLR         &lhr LA(LCTRL) N7  &lhr LG(LCTRL) N8  &kp N9         &kp EQUAL    &kp PRCNT  &kp AMPS         &rhr LG(LCTRL) UNDER  &rhr LA(LCTRL) HASH  &trans           &trans
-&trans  &lhr LCTRL STAR  &lhr LALT N4       &lhr LGUI N5       &lhr LSHFT N6  &kp MINUS    &kp LT     &rhr LSHFT LPAR  &rhr LGUI LBKT        &rhr LALT LBRC       &rhr LCTRL PIPE  &trans
-&trans  &kp FSLH         &kp N1             &kp N2             &kp N3         &kp PLUS     &kp GT     &kp RPAR         &kp RBKT              &kp RBRC             &kp BSLH         &trans
-                                            &kp N0             &kp DOT        &kp GRAVE    &kp AT     &kp TILDE        &kp CARET
+&trans  &kp DLLR         &lhr LA(LCTRL) N7  &lhr LG(LCTRL) N8  &kp N9         &kp EQUAL    &kp PRCNT  &kp AMPS         &rhr LG(LCTRL) STAR  &trans          &trans           &trans
+&trans  &lhr LCTRL HASH  &lhr LALT N4       &lhr LGUI N5       &lhr LSHFT N6  &kp MINUS    &kp LT     &rhr LSHFT LPAR  &rhr LGUI LBKT       &rhr LALT LBRC  &rhr LCTRL PIPE  &trans
+&trans  &kp AT           &kp N1             &kp N2             &kp N3         &kp PLUS     &kp GT     &kp RPAR         &kp RBKT             &kp RBRC        &kp CARET        &trans
+                                            &kp N0             &kp UNDER      &kp GRAVE    &kp TILDE  &kp FSLH         &kp BSLH
             >;
         };
 
