@@ -114,16 +114,16 @@
 &trans  &kp Q         &lhr LA(LCTRL) W  &lhr LG(LCTRL) E  &kp R           &kp T          &kp Y        &kp U           &rhr LG(LCTRL) I  &rhr LA(LCTRL) O  &kp P           &trans
 &trans  &lhr LCTRL A  &lhr LALT S       &lhr LGUI D       &lhsft LSHFT F  &kp G          &kp H        &rhsft LSHFT J  &rhr LGUI K       &rhr LALT L       &rhr LCTRL SQT  &trans
 &trans  &kp Z         &kp X             &kp C             &kp V           &kp B          &kp N        &kp M           &comma_semi       &dot_colon        &qmark_excl     &trans
-                                        &lt 3 ESC         &ltqt 1 SPACE   &ltqt 2 TAB    &ltqt 2 RET  &ltqt 1 BSPC    &ltqt 3 DEL
+                                        &ltqt 3 ESC       &ltqt 1 SPACE   &ltqt 2 TAB    &ltqt 2 RET  &ltqt 1 BSPC    &ltqt 3 DEL
             >;
         };
 
         num_sym {
             bindings = <
-&trans  &kp DLLR         &lhr LA(LCTRL) N7  &lhr LG(LCTRL) N8  &kp N9         &kp EQUAL    &kp PRCNT  &kp AMPS          &rhr LG(LCTRL) UNDER &rhr LA(LCTRL) HASH  &trans           &trans
-&trans  &lhr LCTRL STAR  &lhr LALT N4       &lhr LGUI N5       &lhr LSHFT N6  &kp MINUS    &kp LT     &rhr LSHFT LPAR   &rhr LGUI LBKT       &rhr LALT LBRC       &rhr LCTRL PIPE  &trans
-&trans  &kp FSLH         &kp N1             &kp N2             &kp N3         &kp PLUS     &kp GT     &kp RPAR          &kp RBKT             &kp RBRC             &kp BSLH         &trans
-                                            &kp N0             &kp DOT        &kp GRAVE    &kp AT     &kp TILDE         &kp CARET
+&trans  &kp DLLR         &lhr LA(LCTRL) N7  &lhr LG(LCTRL) N8  &kp N9         &kp EQUAL    &kp PRCNT  &kp AMPS         &rhr LG(LCTRL) STAR  &trans          &trans           &trans
+&trans  &lhr LCTRL HASH  &lhr LALT N4       &lhr LGUI N5       &lhr LSHFT N6  &kp MINUS    &kp LT     &rhr LSHFT LPAR  &rhr LGUI LBKT       &rhr LALT LBRC  &rhr LCTRL PIPE  &trans
+&trans  &kp AT           &kp N1             &kp N2             &kp N3         &kp PLUS     &kp GT     &kp RPAR         &kp RBKT             &kp RBRC        &kp CARET        &trans
+                                            &kp N0             &kp UNDER      &kp GRAVE    &kp TILDE  &kp FSLH         &kp BSLH
             >;
         };
 
@@ -138,10 +138,10 @@
 
         fun_med {
             bindings = <
-&trans &kp F12         &lhr LA(LCTRL) F7  &lhr LG(LCTRL) F8  &kp F9             &trans        &trans        &trans               &trans              &trans            &trans  &trans
-&trans &lhr LCTRL F10  &lhr LALT F4       &lhr LGUI F5       &lhr LSHFT F6      &trans        &kp C_PREV    &rhr LSHFT C_VOL_DN  &rhr LGUI C_VOL_UP  &rhr LALT C_NEXT  &trans  &trans
-&trans &kp F11         &kp F1             &kp F2             &kp F3             &trans        &kp C_MUTE    &kp C_BRI_DN         &kp C_BRI_UP        &kp C_PP          &trans  &trans 
-                                                 &trans             &trans  &trans        &trans               &trans &trans
+&trans  &kp F12         &lhr LA(LCTRL) F7  &lhr LG(LCTRL) F8  &kp F9         &trans    &trans      &trans               &trans              &trans            &trans  &trans
+&trans  &lhr LCTRL F10  &lhr LALT F4       &lhr LGUI F5       &lhr LSHFT F6  &trans    &kp C_PREV  &rhr LSHFT C_VOL_DN  &rhr LGUI C_VOL_UP  &rhr LALT C_NEXT  &trans  &trans
+&trans  &kp F11         &kp F1             &kp F2             &kp F3         &trans    &kp C_MUTE  &kp C_BRI_DN         &kp C_BRI_UP        &kp C_PP          &trans  &trans
+                                           &trans             &trans         &trans    &trans      &trans               &trans
             >;
         };
     };
