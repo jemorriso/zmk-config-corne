@@ -9,30 +9,32 @@
 
 / {
     behaviors {
-        lhr: lhr {
+        lhhr: lhhr {
             compatible = "zmk,behavior-hold-tap";
-            label = "LHR";
+            label = "LHHR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <100>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 13 14 15 16 37 36 38>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-on-release;
         };
 
-        rhr: rhr {
+        rhhr: rhhr {
             compatible = "zmk,behavior-hold-tap";
-            label = "RHR";
+            label = "RHHR";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <100>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 19 20 21 22 39 41 40>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-on-release;
         };
 
         lhsft: lhsft {
@@ -43,7 +45,8 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41 13 14 15 16>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-on-release;
         };
 
         rhsft: rhsft {
@@ -54,17 +57,8 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 19 20 21 22>;
-        };
-
-        rpi: require_prior_idle {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-on-release;
         };
 
         ltqt: lt_quick_tap {
@@ -84,37 +78,37 @@
 
         base {
             bindings = <
-&trans  &kp Q         &lhr LA(LCTRL) W  &lhr LG(LCTRL) E  &kp R           &kp T          &kp Y        &kp U           &rhr LG(LCTRL) I  &rhr LA(LCTRL) O  &kp P           &trans
-&trans  &lhr LCTRL A  &lhr LALT S       &lhr LGUI D       &lhsft LSHFT F  &kp G          &kp H        &rhsft LSHFT J  &rhr LGUI K       &rhr LALT L       &rhr LCTRL SQT  &trans
-&trans  &kp Z         &kp X             &kp C             &kp V           &kp B          &kp N        &kp M           &kp COMMA         &kp DOT           &kp FSLH        &trans
-                                        &ltqt 3 ESC       &ltqt 1 SPACE   &ltqt 2 TAB    &ltqt 2 RET  &ltqt 1 BSPC    &ltqt 3 DEL
+&trans  &kp Q          &lhhr LA(LCTRL) W  &lhhr LG(LCTRL) E  &kp R           &kp T          &kp Y        &kp U           &rhhr LG(LCTRL) I  &rhhr LA(LCTRL) O  &kp P            &trans
+&trans  &lhhr LCTRL A  &lhhr LALT S       &lhhr LGUI D       &lhsft LSHFT F  &kp G          &kp H        &rhsft LSHFT J  &rhhr LGUI K       &rhhr LALT L       &rhhr LCTRL SQT  &trans
+&trans  &kp Z          &kp X              &kp C              &kp V           &kp B          &kp N        &kp M           &kp COMMA          &kp DOT            &kp FSLH         &trans
+                                          &ltqt 3 ESC        &ltqt 1 SPACE   &ltqt 2 TAB    &ltqt 2 RET  &ltqt 1 BSPC    &ltqt 3 DEL
             >;
         };
 
         num_nav {
             bindings = <
-&trans  &trans         &lhr LA(LCTRL) N7  &lhr LG(LCTRL) N8  &kp N9         &trans       &trans     &trans           &trans        &trans           &trans           &trans
-&trans  &lhr LCTRL N0  &lhr LALT N4       &lhr LGUI N5       &lhr LSHFT N6  &trans       &kp LEFT   &rhr LSHFT DOWN  &rhr LGUI UP  &rhr LALT RIGHT  &rhr LCTRL PIPE  &trans
-&trans  &trans         &kp N1             &kp N2             &kp N3         &trans       &kp HOME   &kp PG_DN        &kp PG_UP     &kp END          &kp CARET        &trans
-                                          &trans             &trans         &trans       &trans     &trans           &trans    
+&trans  &trans          &lhhr LA(LCTRL) N7  &lhhr LG(LCTRL) N8  &kp N9          &trans    &trans    &trans            &trans         &trans            &trans            &trans
+&trans  &lhhr LCTRL N0  &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6  &trans    &kp LEFT  &rhhr LSHFT DOWN  &rhhr LGUI UP  &rhhr LALT RIGHT  &rhhr LCTRL PIPE  &trans
+&trans  &trans          &kp N1              &kp N2              &kp N3          &trans    &kp HOME  &kp PG_DN         &kp PG_UP      &kp END           &kp CARET         &trans
+                                            &trans              &trans          &trans    &trans    &trans            &trans
             >;
         };
 
         symbol {
             bindings = <
-&trans  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT &kp CARET    &kp AMPS           &kp LPAR        &kp RPAR           &trans  &trans
-&trans  &kp GRAVE &kp BSLH &kp EQUAL &kp MINUS &trans    &kp STAR     &kp SEMI           &kp LBKT        &kp RBKT           &trans  &trans
-&trans  &kp TILDE &kp PIPE &kp PLUS  &kp UNDER &trans    &trans       &kp COLON          &kp LBRC        &kp RBRC           &trans  &trans
-                        &trans  &trans  &trans    &trans    &trans           &trans
+&trans  &kp EXCL   &kp AT    &kp HASH   &kp DLLR   &kp PRCNT    &kp CARET  &kp AMPS   &kp LPAR  &kp RPAR  &trans  &trans
+&trans  &kp GRAVE  &kp BSLH  &kp EQUAL  &kp MINUS  &trans       &kp STAR   &kp SEMI   &kp LBKT  &kp RBKT  &trans  &trans
+&trans  &kp TILDE  &kp PIPE  &kp PLUS   &kp UNDER  &trans       &trans     &kp COLON  &kp LBRC  &kp RBRC  &trans  &trans
+                             &trans     &trans     &trans       &trans     &trans     &trans
             >;
         };
 
         fun_med {
             bindings = <
-&trans  &kp F12         &lhr LA(LCTRL) F7  &lhr LG(LCTRL) F8  &kp F9         &trans    &trans      &trans               &trans              &trans            &trans  &trans
-&trans  &lhr LCTRL F10  &lhr LALT F4       &lhr LGUI F5       &lhr LSHFT F6  &trans    &kp C_PREV  &rhr LSHFT C_VOL_DN  &rhr LGUI C_VOL_UP  &rhr LALT C_NEXT  &trans  &trans
-&trans  &kp F11         &kp F1             &kp F2             &kp F3         &trans    &kp C_MUTE  &kp C_BRI_DN         &kp C_BRI_UP        &kp C_PP          &trans  &trans
-                                           &trans             &trans         &trans    &trans      &trans               &trans
+&trans  &kp F12          &lhhr LA(LCTRL) F7  &lhhr LG(LCTRL) F8  &kp F9          &trans    &trans      &trans                &trans               &trans             &trans  &trans
+&trans  &lhhr LCTRL F10  &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6  &trans    &kp C_PREV  &rhhr LSHFT C_VOL_DN  &rhhr LGUI C_VOL_UP  &rhhr LALT C_NEXT  &trans  &trans
+&trans  &kp F11          &kp F1              &kp F2              &kp F3          &trans    &kp C_MUTE  &kp C_BRI_DN          &kp C_BRI_UP         &kp C_PP           &trans  &trans
+                                             &trans              &trans          &trans    &trans      &trans                &trans
             >;
         };
     };
