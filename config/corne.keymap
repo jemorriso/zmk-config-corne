@@ -7,6 +7,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define MEH LC(LA(LSHIFT))
+#define HYPER LG(LC(LA(LSHIFT)))
+
 / {
     behaviors {
         lhhr: lhhr {
