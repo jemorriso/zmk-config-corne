@@ -13,6 +13,7 @@
 #define HYPER LA(LC(LG(LSHFT)))
 #define RAY LA(LC(LGUI))
 #define LAUNCH LA(LG(LSHFT))
+#define WARPD LC(LG(LSHFT))
 
 #define LAUNCHPAD LA(LC(LG(LS(F3))))
 #define SPOTLIGHT LA(LC(LG(LS(F4))))
@@ -136,7 +137,7 @@ ___                 ___                 &kp N1              &kp N2              
 ___                 &kp EXCL            &lhhr HYPER AT      &lhhr MEH HASH      &kp DLLR            &kp PRCNT           &kp CARET           &kp AMPS            &kp LPAR            &kp RPAR            ___                 ___   
 ___                 &lhhr LCTRL GRAVE   &lhhr LALT BSLH     &lhhr LGUI EQUAL    &lhhr LSHFT MINUS   ___                 &kp STAR            &rhhr LSHFT SEMI    &rhhr LGUI LBKT     &rhhr LALT RBKT     ___                 ___   
 ___                 &kp TILDE           &kp PIPE            &kp PLUS            &kp UNDER           ___                 ___                 &kp COLON           &kp LBRC            &kp RBRC            ___                 ___   
-                                                            ___                 ___                 ___                 ___                 ___                 ___   
+                                                            ___                 ___                 &kp GRAVE           ___                 ___                 ___   
             >;
         };
 
@@ -145,6 +146,24 @@ ___                 &kp TILDE           &kp PIPE            &kp PLUS            
 ___                 &kp F12             &lhhr HYPER F7      &lhhr MEH F8        &kp F9              ___                 ___                 &kp LAUNCHPAD       &kp SPOTLIGHT       &kp DICTATION       &kp DO_NOT_DISTURB  ___   
 ___                 &lhhr LCTRL F10     &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6      ___                 &kp C_PREV         &rhhr LSHFT C_VOL_DN &rhhr LGUI C_VOL_UP &rhhr LALT C_NEXT   ___                 ___   
 ___                 &kp F11             &kp F1              &kp F2              &kp F3              ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___                 ___   
+                                                            ___                 ___                 ___                 ___                 ___                 ___   
+            >;
+        };
+
+        warpd {
+            bindings = <
+___                 &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___   
+___                 &kp A               &kp S               &kp D               &kp F               &kp G               &kp H               &kp J               &kp K               &kp L               &kp '               ___   
+___                 &kp Z               &kp X               &kp C               &kp V               &kp B               &kp N               &kp M               &kp COMMA           &kp DOT             &kp FLSH            ___   
+                                                            &kp ESC             &kp SPACE           &kp TAB             &kp RET             &kp BSPC            &kp DEL            
+            >;
+        };
+
+        empty {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
                                                             ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
