@@ -75,33 +75,6 @@
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
         };
-
-        qmark_excl: qmark_excl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "QMARK_EXCL";
-            bindings = <&kp QMARK>, <&kp EXCL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        comma_semi: comma_semi {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_SEMI";
-            bindings = <&kp COMMA>, <&kp SEMI>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        dot_colon: dot_colon {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_COLON";
-            bindings = <&kp DOT>, <&kp COLON>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -113,25 +86,25 @@
             bindings = <
 &trans  &kp Q         &lhr LA(LCTRL) W  &lhr LG(LCTRL) E  &kp R           &kp T          &kp Y        &kp U           &rhr LG(LCTRL) I  &rhr LA(LCTRL) O  &kp P           &trans
 &trans  &lhr LCTRL A  &lhr LALT S       &lhr LGUI D       &lhsft LSHFT F  &kp G          &kp H        &rhsft LSHFT J  &rhr LGUI K       &rhr LALT L       &rhr LCTRL SQT  &trans
-&trans  &kp Z         &kp X             &kp C             &kp V           &kp B          &kp N        &kp M           &kp COMMA         &kp DOT           &kp FSLH        &trans
-                                        &ltqt 3 ESC       &ltqt 1 SPACE   &ltqt 2 TAB    &ltqt 2 RET  &ltqt 1 BSPC    &ltqt 3 DEL
+&trans  &kp Z         &kp X             &kp C             &lhsft 2 V      &kp B          &kp N        &rhsft 2 M      &kp COMMA         &kp DOT           &kp FSLH        &trans
+                                        &ltqt 3 ESC       &ltqt 1 SPACE   &kp TAB        &kp RET      &ltqt 1 BSPC    &ltqt 3 DEL
             >;
         };
 
-        num_sym {
+        num_nav {
             bindings = <
-&trans  &trans         &lhr LA(LCTRL) N7  &lhr LG(LCTRL) N8  &kp N9         &kp EQUAL    &kp PRCNT  &kp AMPS         &rhr LG(LCTRL) STAR  &trans          &trans           &trans
-&trans  &lhr LCTRL N0  &lhr LALT N4       &lhr LGUI N5       &lhr LSHFT N6  &kp MINUS    &kp LT     &rhr LSHFT LPAR  &rhr LGUI LBKT       &rhr LALT LBRC  &rhr LCTRL PIPE  &trans
-&trans  &trans         &kp N1             &kp N2             &kp N3         &kp PLUS     &kp GT     &kp RPAR         &kp RBKT             &kp RBRC        &kp CARET        &trans
-                                          &trans             &kp UNDER      &kp GRAVE    &kp TILDE  &kp FSLH         &kp BSLH
+&trans  &trans         &lhr LA(LCTRL) N7  &lhr LG(LCTRL) N8  &kp N9         &trans       &trans     &trans           &trans        &trans           &trans           &trans
+&trans  &lhr LCTRL N0  &lhr LALT N4       &lhr LGUI N5       &lhr LSHFT N6  &trans       &kp LEFT   &rhr LSHFT DOWN  &rhr LGUI UP  &rhr LALT RIGHT  &rhr LCTRL PIPE  &trans
+&trans  &trans         &kp N1             &kp N2             &kp N3         &trans       &kp HOME   &kp PG_DN        &kp PG_UP     &kp END          &kp CARET        &trans
+                                          &trans             &trans         &trans       &trans     &trans           &trans    
             >;
         };
 
-        nav {
+        symbol {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans           &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &rhr LSHFT DOWN  &rhr LGUI UP  &rhr LALT RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp HOME  &kp PG_DN        &kp PG_UP     &kp END          &trans  &trans
+&trans  &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT &kp CARET    &kp AMPS           &kp LPAR        &kp RPAR           &trans  &trans
+&trans  &kp GRAVE &kp BSLH &kp EQUAL &kp MINUS &trans    &kp STAR     &kp SEMI           &kp LBKT        &kp RBKT           &trans  &trans
+&trans  &kp TILDE &kp PIPE &kp PLUS  &kp UNDER &trans    &trans       &kp COLON          &kp LBRC        &kp RBRC           &trans  &trans
                         &trans  &trans  &trans    &trans    &trans           &trans
             >;
         };
