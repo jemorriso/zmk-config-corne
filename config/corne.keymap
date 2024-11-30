@@ -7,8 +7,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-#define MEH LC(LA(LSHIFT))
-#define HYPER LG(LC(LA(LSHIFT)))
+#define MEH LA(LC(LSHFT))
+#define HYPER LA(LC(LG(LSHFT)))
+#define RAY LA(LC(LGUI))
+#define LAUNCH LA(LG(LSHFT))
 
 / {
     behaviors {
@@ -40,7 +42,7 @@
             hold-trigger-on-release;
         };
 
-        lhsft: lhsft {
+        lhshft: lhsft {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
@@ -52,12 +54,40 @@
             hold-trigger-on-release;
         };
 
-        rhsft: rhsft {
+        rhshft: rhsft {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-on-release;
+        };
+
+        lhlt: lhlt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LHLT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <100>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-on-release;
+        };
+
+        rhlt: rhlt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RHLT";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <100>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
@@ -72,34 +102,6 @@
             quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
         };
-
-        lhsym: lhsym {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LHSYM";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <100>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
-            hold-trigger-on-release;
-        };
-
-        rhsym: rhsym {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RHSYM";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <100>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-            hold-trigger-on-release;
-        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -109,9 +111,9 @@
 
         base {
             bindings = <
-&trans              &kp Q               &lhhr HYPER W       &lhhr MEH E         &kp R               &kp T               &kp Y               &kp U               &rhhr MEH I         &rhhr HYPER O       &kp P               &trans
-&trans              &lhhr LCTRL A       &lhhr LALT S        &lhhr LGUI D        &lhsft LSHFT F      &kp G               &kp H               &rhsft LSHFT J      &rhhr LGUI K        &rhhr LALT L        &rhhr LCTRL SQT     &trans
-&trans              &kp Z               &kp X               &kp C               &lhsym 2 V          &kp B               &kp N               &rhsym 2 M          &kp COMMA           &kp DOT             &kp FSLH            &trans
+&trans              &kp Q               &lhhr HYPER W       &lhhr MEH E         &lhhr LAUNCH R      &kp T               &kp Y               &rhhr LAUNCH U      &rhhr MEH I         &rhhr HYPER O       &kp P               &trans
+&trans              &lhhr LCTRL A       &lhhr LALT S        &lhhr LGUI D        &lhshft LSHFT F     &kp G               &kp H               &rhshft LSHFT J     &rhhr LGUI K        &rhhr LALT L        &rhhr LCTRL SQT     &trans
+&trans              &lhhr RAY Z         &kp X               &kp C               &lhlt 2 V           &kp B               &kp N               &rhlt 2 M           &kp COMMA           &kp DOT             &rhhr RAY FSLH      &trans
                                                             &ltqt 3 ESC         &ltqt 1 SPACE       &ltqt 2 TAB         &ltqt 2 RET         &ltqt 1 BSPC        &ltqt 3 DEL
             >;
         };
