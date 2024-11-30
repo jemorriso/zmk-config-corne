@@ -30,6 +30,15 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+
+        warpd_hint: warpd_hint {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LG(LC(X))>
+                , <&tog 5>
+                ;
+        };
     };
 };
 
