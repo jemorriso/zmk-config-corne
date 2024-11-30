@@ -13,7 +13,7 @@
 #define HYPER LA(LC(LG(LSHFT)))
 #define RAY LA(LC(LGUI))
 #define LAUNCH LA(LG(LSHFT))
-#define WARPD LC(LG(LSHFT))
+#define WARPD LC(LGUI)
 
 #define LAUNCHPAD LA(LC(LG(LS(F3))))
 #define SPOTLIGHT LA(LC(LG(LS(F4))))
@@ -79,7 +79,6 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            require-prior-idle-ms = <100>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
@@ -87,6 +86,31 @@
         };
 
         rhlt: rhlt {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+            hold-trigger-on-release;
+        };
+
+        lhlt_rpi: lhlt_rpi {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <100>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+            hold-trigger-on-release;
+        };
+
+        rhlt_rpi: rhlt_rpi {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
 
@@ -146,6 +170,15 @@ ___                 &kp TILDE           &kp PIPE            &kp PLUS            
 ___                 &kp F12             &lhhr HYPER F7      &lhhr MEH F8        &kp F9              ___                 ___                 &kp LAUNCHPAD       &kp SPOTLIGHT       &kp DICTATION       &kp DO_NOT_DISTURB  ___   
 ___                 &lhhr LCTRL F10     &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6      ___                 &kp C_PREV         &rhhr LSHFT C_VOL_DN &rhhr LGUI C_VOL_UP &rhhr LALT C_NEXT   ___                 ___   
 ___                 &kp F11             &kp F1              &kp F2              &kp F3              ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___                 ___   
+                                                            ___                 ___                 ___                 ___                 ___                 ___   
+            >;
+        };
+
+        to_warpd {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
+___                 ___                 &kp LC(LG(S))       ___                 &kp LSHFT           &kp LC(LG(G))       &kp LC(LG(H))       &kp LSHFT           ___                 &kp LC(LG(L))       ___                 ___   
+___                 ___                 &kp LC(LG(X))       &kp LC(LG(C))       ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
                                                             ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
