@@ -109,7 +109,7 @@
 
         base {
             bindings = <
-&trans  &kp Q          &lhhr LA(LCTRL) W  &lhhr LG(LCTRL) E  &kp R           &kp T          &kp Y        &kp U           &rhhr LG(LCTRL) I  &rhhr LA(LCTRL) O  &kp P            &trans
+&trans  &kp Q          &lhhr HYPER W      &lhhr MEH E        &kp R           &kp T          &kp Y        &kp U           &rhhr LG(LCTRL) I  &rhhr LA(LCTRL) O  &kp P            &trans
 &trans  &lhhr LCTRL A  &lhhr LALT S       &lhhr LGUI D       &lhsft LSHFT F  &kp G          &kp H        &rhsft LSHFT J  &rhhr LGUI K       &rhhr LALT L       &rhhr LCTRL SQT  &trans
 &trans  &kp Z          &kp X              &kp C              &lhsym 2 V      &kp B          &kp N        &rhsym 2 M      &kp COMMA          &kp DOT            &kp FSLH         &trans
                                           &ltqt 3 ESC        &ltqt 1 SPACE   &ltqt 2 TAB    &ltqt 2 RET  &ltqt 1 BSPC    &ltqt 3 DEL
