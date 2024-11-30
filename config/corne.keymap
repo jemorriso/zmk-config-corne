@@ -120,7 +120,7 @@
 &trans              &trans              &lhhr HYPER N7      &lhhr MEH N8        &kp N9              &trans              &trans              &trans              &trans              &trans              &trans              &trans
 &trans              &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &trans              &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    &rhhr LCTRL PIPE    &trans
 &trans              &trans              &kp N1              &kp N2              &kp N3              &trans              &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp CARET           &trans
-                                                            &trans              &trans              &trans              &trans              &trans              &trans
+                                                            &trans              &caps_word          &trans              &trans              &trans              &trans
             >;
         };
 
