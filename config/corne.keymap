@@ -35,9 +35,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp LG(LC(X))>
-                , <&tog 5>
-                ;
+                = <&tog 5 &kp LG(LC(X))>;
         };
     };
 };
@@ -200,7 +198,7 @@ ___                 &kp F11             &kp F1              &kp F2              
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
 ___                 ___                 &kp LC(LG(S))       ___                 &kp LSHFT           &kp LC(LG(G))       &kp LC(LG(H))       &kp LSHFT           ___                 &kp LC(LG(L))       ___                 ___   
-___                 ___                 &kp LC(LG(X))       &kp LC(LG(C))       ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
+___                 ___                 &warpd_hint         &kp LC(LG(C))       ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
                                                             ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
