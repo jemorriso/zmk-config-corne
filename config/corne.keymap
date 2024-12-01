@@ -37,6 +37,13 @@
             bindings
                 = <&tog 5 &kp LG(LC(X))>;
         };
+
+        warpd_off: warpd_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&tog 5 &kp ESC)>;
+        };
     };
 };
 
@@ -208,7 +215,7 @@ ___                 ___                 &warpd_hint         &kp LC(LG(C))       
 ___                 &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___   
 ___                 &kp A               &kp S               &kp D               &kp F               &kp G               &kp H               &kp J               &kp K               &kp L               &kp SQT             ___   
 ___                 &kp Z               &kp X               &kp C               &kp V               &kp B               &kp N               &kp M               &kp COMMA           &kp DOT             &kp FSLH            ___   
-                                                            &kp ESC             &kp SPACE           &kp TAB             &kp RET             &kp BSPC            &kp DEL            
+                                                            &warpd_off          &kp SPACE           &kp TAB             &kp RET             &kp BSPC            &kp DEL            
             >;
         };
 
