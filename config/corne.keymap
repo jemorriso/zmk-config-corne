@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&tog 5 &kp ESC)>;
+                = <&tog 5 &kp ESC>;
         };
     };
 };
