@@ -38,6 +38,41 @@
                 = <&tog 5 &kp LG(LC(X))>;
         };
 
+        warpd_on: warpd_on {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&tog 5 &kp LG(LC(C))>;
+        };
+
+        warpd_grid: warpd_grid {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&tog 5 &kp LG(LC(G))>;
+        };
+
+        warpd_hist: warpd_hist {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&tog 5 &kp LG(LC(H))>;
+        };
+
+        warpd_screen: warpd_screen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&tog 5 &kp LG(LC(S))>;
+        };
+
+        warpd_1shot: warpd_1shot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&tog 5 &kp LG(LC(L))>;
+        };
+
         warpd_off: warpd_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -204,8 +239,8 @@ ___                 &kp F11             &kp F1              &kp F2              
         to_warpd {
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
-___                 ___                 &kp LC(LG(S))       ___                 &kp LSHFT           &kp LC(LG(G))       &kp LC(LG(H))       &kp LSHFT           ___                 &kp LC(LG(L))       ___                 ___   
-___                 ___                 &warpd_hint         &kp LC(LG(C))       ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
+___                 ___                 &warpd_screen       ___                 &kp LSHFT           &warpd_grid         &warpd_hist         &kp LSHFT           ___                 &warpd_1shot        ___                 ___   
+___                 ___                 &warpd_hint         &warpd_on           ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
                                                             ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
