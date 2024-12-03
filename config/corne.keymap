@@ -214,7 +214,19 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <40>;
+            key-positions = <15 16>;
+            bindings = <&mt (LGUI | LSHIFT) ESC>;
+        };
+        combo_caps_word {
+            timeout-ms = <40>;
+            key-positions = <27 28>;
+            bindings = <&caps_word>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
