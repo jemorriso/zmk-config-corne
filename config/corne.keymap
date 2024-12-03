@@ -220,6 +220,7 @@
             timeout-ms = <40>;
             key-positions = <15 16>;
             bindings = <&mt (LGUI | LSHIFT) ESC>;
+            layers = <0 1 2 3 4>;
         };
         combo_warpd_off {
             timeout-ms = <40>;
