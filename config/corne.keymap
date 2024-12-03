@@ -221,6 +221,12 @@
             key-positions = <15 16>;
             bindings = <&mt (LGUI | LSHIFT) ESC>;
         };
+        combo_warpd_off {
+            timeout-ms = <40>;
+            key-positions = <15 16>;
+            bindings = <&warpd_off>;
+            layers = <5>;
+        };
         combo_caps_word {
             timeout-ms = <40>;
             key-positions = <27 28>;
