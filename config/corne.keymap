@@ -198,8 +198,7 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            // try and seed this up a bit because the macro will only fire when the tapping term expires
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <200>;
             bindings = <&warpd_macro>, <&kp>;
         };
@@ -243,6 +242,7 @@
             timeout-ms = <40>;
             key-positions = <37 40>;
             bindings = <&kp RCTRL>;
+            slow-release;
         };
     };
 
