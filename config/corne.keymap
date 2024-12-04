@@ -253,7 +253,7 @@ ___                 &lhhr_rpi RAY Z     &kp X               &kp C               
 ___                 ___                 &lhhr HYPER N7      &lhhr MEH N8        &kp N9              ___                 ___                 ___                 ___                 ___                 ___                 ___   
 ___                 &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___   
 ___                 ___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___                 ___   
-                                                            ___                 &caps_word          ___                 ___                 ___                 ___   
+                                                            ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
 
