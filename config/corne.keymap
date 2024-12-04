@@ -224,6 +224,11 @@
             key-positions = <27 28>;
             bindings = <&caps_word>;
         };
+        combo_caps_lock {
+            timeout-ms = <40>;
+            key-positions = <26 28>;
+            bindings = <&kp CAPS>;
+        };
         combo_fun_med_lh {
             timeout-ms = <50>;
             key-positions = <37 38>;
@@ -233,6 +238,11 @@
             timeout-ms = <50>;
             key-positions = <39 40>;
             bindings = <&mo 3>;
+        };
+        combo_superkey {
+            timeout-ms = <40>;
+            key-positions = <37 40>;
+            bindings = <&kp RCTRL>;
         };
     };
 
