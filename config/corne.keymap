@@ -254,7 +254,7 @@
 ___                 &lhlt_rpi 4 Q       &lhhr_rpi HYPER W   &lhhr_rpi MEH E     &lhhr_rpi LAUNCH R  &kp T               &kp Y               &rhhr_rpi LAUNCH U  &rhhr_rpi MEH I     &rhhr_rpi HYPER O   &rhlt_rpi 4 P       ___   
 ___                 &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SQT ___   
 ___                 &lhhr_rpi RAY Z     &kp X               &kp C               &lhlt 2 V           &kp B               &kp N               &rhlt 2 M           &kp COMMA           &kp DOT             &rhhr_rpi RAY FSLH  ___   
-                                                            &ltqt 3 ESC         &ltqt 1 SPACE       &warpd_lt 0 TAB     &ltqt 2 RET         &ltqt 1 BSPC        &ltqt 3 DEL
+                                                            &ltqt 3 ESC         &ltqt 1 SPACE       &warpd_lt 0 TAB     &ltqt 2 RET         &ltqt 1 BSPC        &ltqt 3 SEMI
             >;
         };
 
@@ -263,7 +263,7 @@ ___                 &lhhr_rpi RAY Z     &kp X               &kp C               
 ___                 ___                 &lhhr HYPER N7      &lhhr MEH N8        &kp N9              ___                 ___                 ___                 ___                 ___                 ___                 ___   
 ___                 &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___   
 ___                 ___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___                 ___   
-                                                            ___                 ___                 ___                 ___                 ___                 ___   
+                                                            ___                 ___                 ___                 ___                 &kp DEL             ___   
             >;
         };
 
