@@ -206,18 +206,6 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <40>;
-            key-positions = <15 16>;
-            bindings = <&mt (LGUI | LSHIFT) ESC>;
-            layers = <0 1 2 3 4>;
-        };
-        combo_warpd_off {
-            timeout-ms = <40>;
-            key-positions = <15 16>;
-            bindings = <&warpd_off>;
-            layers = <5>;
-        };
         combo_caps_word {
             timeout-ms = <40>;
             key-positions = <27 28>;
@@ -227,16 +215,6 @@
             timeout-ms = <40>;
             key-positions = <26 28>;
             bindings = <&kp CAPS>;
-        };
-        combo_fun_med_lh {
-            timeout-ms = <50>;
-            key-positions = <37 38>;
-            bindings = <&mo 3>;
-        };
-        combo_fun_med_rh {
-            timeout-ms = <50>;
-            key-positions = <39 40>;
-            bindings = <&mo 3>;
         };
         combo_superkey {
             timeout-ms = <40>;
@@ -269,7 +247,7 @@ ___                 &kp TILDE           &kp N1              &kp N2              
 
         fun_nav {
             bindings = <
-___                 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___                 ___   
+___                 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 &caps_word          &kp CAPS            ___                 ___   
 ___                 &lhhr LCTRL F10     &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6      ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___   
 ___                 &kp F11             &kp F1              &kp F2              &lhhr MEH F3        ___                 &kp HOME            &rhhr MEH PG_DN     &kp PG_UP           &kp END             ___                 ___   
                                                             ___                 ___                 ___                 ___                 &kp DEL             ___   
@@ -279,7 +257,7 @@ ___                 &kp F11             &kp F1              &kp F2              
         med {
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 &kp LAUNCHPAD       &kp SPOTLIGHT       &kp DICTATION       &kp DO_NOT_DISTURB  ___   
-___                 ___                 ___                 ___                 ___                 ___                 &kp C_PREV         &rhhr LSHFT C_VOL_DN &rhhr LGUI C_VOL_UP &rhhr LALT C_NEXT   ___                 ___   
+___                 ___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___                 ___   
 ___                 ___                 ___                 ___                 ___                 ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___                 ___   
                                                             ___                 ___                 ___                 ___                 ___                 ___   
             >;
