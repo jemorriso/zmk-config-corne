@@ -160,7 +160,7 @@
 ___                 &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp I               &kp P               ___   
 ___                 &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___   
 ___                 &lhhr_rpi RAY Z     &lhlt_rpi 4 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH       &kp B               &kp N               &rhhr_rpi MEH       &rhhr_rpi LAUNCH COMMA &rhlt_rpi 4 DOT  &rhhr_rpi RAY FSLH  ___   
-                                                            &ltqt 3 ESC         &ltqt 2 SPACE       &warpd_lt 0 TAB     &kp RET             &ltqt 1 BSPC        &kp SQT
+                                                            &ltqt 3 ESC         &ltqt 2 SPACE       &kp TAB             &kp RET             &ltqt 1 BSPC        &kp SQT
             >;
         };
 
