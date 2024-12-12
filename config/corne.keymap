@@ -206,18 +206,6 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <40>;
-            key-positions = <15 16>;
-            bindings = <&mt (LGUI | LSHIFT) ESC>;
-            layers = <0 1 2 3 4>;
-        };
-        combo_warpd_off {
-            timeout-ms = <40>;
-            key-positions = <15 16>;
-            bindings = <&warpd_off>;
-            layers = <5>;
-        };
         combo_caps_word {
             timeout-ms = <40>;
             key-positions = <27 28>;
@@ -227,16 +215,6 @@
             timeout-ms = <40>;
             key-positions = <26 28>;
             bindings = <&kp CAPS>;
-        };
-        combo_fun_med_lh {
-            timeout-ms = <50>;
-            key-positions = <37 38>;
-            bindings = <&mo 3>;
-        };
-        combo_fun_med_rh {
-            timeout-ms = <50>;
-            key-positions = <39 40>;
-            bindings = <&mo 3>;
         };
         combo_superkey {
             timeout-ms = <40>;
@@ -284,42 +262,6 @@ ___                 ___                 ___                 ___                 
                                                             ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
-
-//        base {
-//            bindings = <
-//___                 &lhlt_rpi 4 Q       &lhhr_rpi HYPER W   &lhhr_rpi MEH E     &lhhr_rpi LAUNCH R  &kp T               &kp Y               &rhhr_rpi LAUNCH U  &rhhr_rpi MEH I     &rhhr_rpi HYPER O   &rhlt_rpi 4 P       ___   
-//___                 &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SQT ___   
-//___                 &lhhr_rpi RAY Z     &kp X               &kp C               &lhlt 2 V           &kp B               &kp N               &rhlt 2 M           &kp COMMA           &kp DOT             &rhhr_rpi RAY FSLH  ___   
-//                                                            &ltqt 3 ESC         &ltqt 1 SPACE       &warpd_lt 0 TAB     &ltqt 2 RET         &ltqt 1 BSPC        &ltqt 3 SEMI
-//            >;
-//        };
-
-//        num_nav {
-//            bindings = <
-//___                 ___                 &lhhr HYPER N7      &lhhr MEH N8        &kp N9              ___                 ___                 ___                 ___                 ___                 ___                 ___   
-//___                 &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___   
-//___                 ___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___                 ___   
-//                                                            ___                 ___                 ___                 ___                 &kp DEL             ___   
-//            >;
-//        };
-
-//        symbol {
-//            bindings = <
-//___                 &kp EXCL            &lhhr HYPER AT      &lhhr MEH HASH      &kp DLLR            &kp PRCNT           &kp CARET           &kp AMPS            &kp LPAR            &kp RPAR            ___                 ___   
-//___                 &lhhr LCTRL GRAVE   &lhhr LALT BSLH     &lhhr LGUI EQUAL    &lhhr LSHFT MINUS   ___                 &kp STAR            &rhhr LSHFT SEMI    &rhhr LGUI LBKT     &rhhr LALT RBKT     ___                 ___   
-//___                 &kp TILDE           &kp PIPE            &kp PLUS            &kp UNDER           ___                 ___                 &kp COLON           &kp LBRC            &kp RBRC            ___                 ___   
-//                                                            ___                 ___                 &kp GRAVE           ___                 ___                 ___   
-//            >;
-//        };
-
-//        fun_med {
-//            bindings = <
-//___                 &kp F12             &lhhr HYPER F7      &lhhr MEH F8        &kp F9              ___                 ___                 &kp LAUNCHPAD       &kp SPOTLIGHT       &kp DICTATION       &kp DO_NOT_DISTURB  ___   
-//___                 &lhhr LCTRL F10     &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6      ___                 &kp C_PREV         &rhhr LSHFT C_VOL_DN &rhhr LGUI C_VOL_UP &rhhr LALT C_NEXT   ___                 ___   
-//___                 &kp F11             &kp F1              &kp F2              &kp F3              ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___                 ___   
-//                                                            ___                 ___                 ___                 ___                 ___                 ___   
-//            >;
-//        };
 
         to_warpd {
             bindings = <
