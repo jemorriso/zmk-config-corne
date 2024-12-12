@@ -254,14 +254,14 @@
 ___                 &lhlt_rpi 4 Q       &lhhr_rpi HYPER W   &lhhr_rpi MEH E     &lhhr_rpi LAUNCH R  &kp T               &kp Y               &rhhr_rpi LAUNCH U  &rhhr_rpi MEH I     &rhhr_rpi HYPER O   &rhlt_rpi 4 P       ___   
 ___                 &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___   
 ___                 &lhhr_rpi RAY Z     &kp X               &kp C               &lhlt 1 V           &kp B               &kp N               &rhlt 1 M           &kp COMMA           &kp DOT             &rhhr_rpi RAY FSLH  ___   
-                                                            &warpd_lt 0 ESC     &ltqt 2 SPACE       &ltqt 1 TAB         &kp RET             &ltqt 1 BSPC        &ltqt 3 SQT
+                                                            &warpd_lt 0 ESC     &ltqt 1 SPACE       &ltqt 2 TAB         &kp RET             &ltqt 1 BSPC        &ltqt 3 SQT
             >;
         };
 
         num_sym {
             bindings = <
-___                 &kp EXCL            &lhhr HYPER N7      &lhhr MEH N8        &kp N9              &kp PRCNT           &kp CARET           &kp PLUS            &kp LPAR            &kp RPAR            &kp AMPS            ___   
-___                 &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp HASH            &kp STAR            &rhhr LSHFT MINUS   &rhhr LGUI LBKT     &rhhr LALT RBKT     &kp BSLH            ___   
+___                 &kp EXCL            &lhhr HYPER N7      &lhhr MEH N8        &kp N9              &kp PRCNT           &kp CARET           &kp PLUS            &rhhr MEH LPAR      &rhhr HYPER RPAR    &kp AMPS            ___   
+___                 &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp HASH            &kp STAR            &rhhr LSHFT MINUS   &rhhr LGUI LBKT     &rhhr LALT RBKT     &rhhr LCTRL BSLH    ___   
 ___                 &kp TILDE           &kp N1              &kp N2              &kp N3              &kp DLLR            ___                 &kp EQUAL           &kp LBRC            &kp RBRC            &kp PIPE            ___   
                                                             &kp AT              &kp UNDER           &kp GRAVE           ___                 ___                 ___   
             >;
