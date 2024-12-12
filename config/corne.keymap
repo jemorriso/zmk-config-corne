@@ -260,18 +260,18 @@ ___                 &lhhr_rpi RAY Z     &lhlt_rpi 4 X       &lhhr_rpi LAUNCH C  
 
         num_sym {
             bindings = <
-___                 &kp EXCL            &lhhr MEH N7        &kp N8              &kp N9              &kp PRCNT           &kp CARET           &kp PLUS            &rhhr MEH LPAR      &rhhr HYPER RPAR    &kp AMPS            ___   
+___                 &kp EXCL            &kp N7              &kp N8              &kp N9              &kp PRCNT           &kp CARET           &kp PLUS            &kp LPAR            &kp RPAR            &kp AMPS            ___   
 ___                 &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp HASH            &kp STAR            &rhhr LSHFT MINUS   &rhhr LGUI LBKT     &rhhr LALT RBKT     &rhhr LCTRL BSLH    ___   
-___                 &kp TILDE           &kp N1              &kp N2              &kp N3              &kp DLLR            ___                 &kp EQUAL           &kp LBRC            &kp RBRC            &kp PIPE            ___   
+___                 &kp TILDE           &kp N1              &kp N2              &lhhr MEH N3        &kp DLLR            ___                 &rhhr MEH EQUAL     &kp LBRC            &kp RBRC            &kp PIPE            ___   
                                                             &kp AT              &kp UNDER           &kp GRAVE           ___                 ___                 ___   
             >;
         };
 
         fun_nav {
             bindings = <
-___                 &kp F12             &lhhr MEH F7        &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___                 ___   
+___                 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___                 ___   
 ___                 &lhhr LCTRL F10     &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6      ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___   
-___                 &kp F11             &kp F1              &kp F2              &kp F3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___                 ___   
+___                 &kp F11             &kp F1              &kp F2              &lhhr MEH F3        ___                 &kp HOME            &rhhr MEH PG_DN     &kp PG_UP           &kp END             ___                 ___   
                                                             ___                 ___                 ___                 ___                 &kp DEL             ___   
             >;
         };
