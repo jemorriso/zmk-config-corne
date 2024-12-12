@@ -258,29 +258,29 @@ ___                 &lhhr_rpi RAY Z     &lhlt_rpi 4 X       &lhhr_rpi LAUNCH C  
             >;
         };
 
-        num_nav {
+        num_sym {
             bindings = <
-___                 ___                 &lhhr HYPER N7      &lhhr MEH N8        &kp N9              ___                 ___                 ___                 &caps_word          &kp CAPS            ___                 ___   
-___                 &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___   
-___                 ___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___                 ___   
+___                 &kp EXCL            &kp N7              &kp N8              &kp N9              &kp PRCNT           &kp CARET           &kp PLUS            &kp LPAR            &kp RPAR            &kp AMPS            ___   
+___                 &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp HASH            &kp STAR            &rhhr LSHFT MINUS   &rhhr LGUI LBKT     &rhhr LALT RBKT     &rhhr LCTRL BSLH    ___   
+___                 &kp TILDE           &kp N1              &kp N2              &lhhr MEH N3        &kp DLLR            ___                 &rhhr MEH EQUAL     &kp LBRC            &kp RBRC            &kp PIPE            ___   
+                                                            &kp AT              &kp UNDER           &kp GRAVE           ___                 ___                 ___   
+            >;
+        };
+
+        fun_nav {
+            bindings = <
+___                 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___                 ___   
+___                 &lhhr LCTRL F10     &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6      ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___   
+___                 &kp F11             &kp F1              &kp F2              &lhhr MEH F3        ___                 &kp HOME            &rhhr MEH PG_DN     &kp PG_UP           &kp END             ___                 ___   
                                                             ___                 ___                 ___                 ___                 &kp DEL             ___   
             >;
         };
 
-        symbol {
+        med {
             bindings = <
-___                 &kp EXCL            &lhhr HYPER AT      &lhhr MEH HASH      &kp DLLR            &kp PRCNT           &kp CARET           &kp AMPS            &kp LPAR            &kp RPAR            ___                 ___   
-___                 &lhhr LCTRL GRAVE   &lhhr LALT BSLH     &lhhr LGUI EQUAL    &lhhr LSHFT MINUS   ___                 &kp STAR            &rhhr LSHFT SEMI    &rhhr LGUI LBKT     &rhhr LALT RBKT     ___                 ___   
-___                 &kp TILDE           &kp PIPE            &kp PLUS            &kp UNDER           ___                 ___                 &kp COLON           &kp LBRC            &kp RBRC            ___                 ___   
-                                                            ___                 ___                 &kp GRAVE           ___                 ___                 ___   
-            >;
-        };
-
-        fun_med {
-            bindings = <
-___                 &kp F12             &lhhr HYPER F7      &lhhr MEH F8        &kp F9              ___                 ___                 &kp LAUNCHPAD       &kp SPOTLIGHT       &kp DICTATION       &kp DO_NOT_DISTURB  ___   
-___                 &lhhr LCTRL F10     &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6      ___                 &kp C_PREV         &rhhr LSHFT C_VOL_DN &rhhr LGUI C_VOL_UP &rhhr LALT C_NEXT   ___                 ___   
-___                 &kp F11             &kp F1              &kp F2              &kp F3              ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___                 ___   
+___                 ___                 ___                 ___                 ___                 ___                 ___                 &kp LAUNCHPAD       &kp SPOTLIGHT       &kp DICTATION       &kp DO_NOT_DISTURB  ___   
+___                 ___                 ___                 ___                 ___                 ___                 &kp C_PREV         &rhhr LSHFT C_VOL_DN &rhhr LGUI C_VOL_UP &rhhr LALT C_NEXT   ___                 ___   
+___                 ___                 ___                 ___                 ___                 ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___                 ___   
                                                             ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
