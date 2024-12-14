@@ -229,64 +229,64 @@
 
         base {
             bindings = <
-___                 &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___   
-___                 &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___   
-___                 &lhhr_rpi RAY Z     &lhlt_rpi 4 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V     &kp B               &kp N               &rhhr_rpi MEH M     &rhhr_rpi LAUNCH COMMA &rhlt_rpi 4 DOT  &rhhr_rpi RAY FSLH  ___   
-                                                            &ltqt 3 ESC         &ltqt 2 SPACE       &warpd_lt 0 TAB     &kp RET             &ltqt 1 BSPC        &kp SQT
+___ &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___
+___ &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___
+___ &lhhr_rpi RAY Z     &lhlt_rpi 4 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V     &kp B               &kp N               &rhhr_rpi MEH M     &rhhr_rpi LAUNCH COMMA &rhlt_rpi 4 DOT  &rhhr_rpi RAY FSLH  ___
+                                            &ltqt 3 ESC         &ltqt 2 SPACE       &warpd_lt 0 TAB     &kp RET             &ltqt 1 BSPC        &kp SQT
             >;
         };
 
         num_sym {
             bindings = <
-___                 &kp EXCL            &kp N7              &kp N8              &kp N9              &kp PRCNT           &kp CARET           &kp PLUS            &kp LPAR            &kp RPAR            &kp AMPS            ___   
-___                 &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp HASH            &kp STAR            &rhhr LSHFT MINUS   &rhhr LGUI LBKT     &rhhr LALT RBKT     &rhhr LCTRL BSLH    ___   
-___                 &kp TILDE           &kp N1              &kp N2              &lhhr MEH N3        &kp DLLR            ___                 &rhhr MEH EQUAL     &kp LBRC            &kp RBRC            &kp PIPE            ___   
-                                                            &kp AT              &kp UNDER           &kp GRAVE           ___                 ___                 ___   
+___ &kp EXCL            &kp N7              &kp N8              &kp N9              &kp PRCNT           &kp CARET           &kp PLUS            &kp LPAR            &kp RPAR            &kp AMPS            ___
+___ &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp HASH            &kp STAR            &rhhr LSHFT MINUS   &rhhr LGUI LBKT     &rhhr LALT RBKT     &rhhr LCTRL BSLH    ___
+___ &kp TILDE           &kp N1              &kp N2              &lhhr MEH N3        &kp DLLR            ___                 &rhhr MEH EQUAL     &kp LBRC            &kp RBRC            &kp PIPE            ___
+                                            &kp AT              &kp UNDER           &kp GRAVE           ___                 ___                 ___   
             >;
         };
 
         fun_nav {
             bindings = <
-___                 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 &caps_word          &kp CAPS            ___                 ___   
-___                 &lhhr LCTRL F10     &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6      ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___   
-___                 &kp F11             &kp F1              &kp F2              &lhhr MEH F3        ___                 &kp HOME            &rhhr MEH PG_DN     &kp PG_UP           &kp END             ___                 ___   
-                                                            ___                 ___                 ___                 ___                 &kp DEL             ___   
+___ &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 &caps_word          &kp CAPS            ___                 ___
+___ &lhhr LCTRL F10     &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6      ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___
+___ &kp F11             &kp F1              &kp F2              &lhhr MEH F3        ___                 &kp HOME            &rhhr MEH PG_DN     &kp PG_UP           &kp END             ___                 ___
+                                            ___                 ___                 ___                 ___                 &kp DEL             ___   
             >;
         };
 
         med {
             bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 &kp LAUNCHPAD       &kp SPOTLIGHT       &kp DICTATION       &kp DO_NOT_DISTURB  ___   
-___                 ___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___                 ___   
-___                 ___                 ___                 ___                 ___                 ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___                 ___   
-                                                            ___                 ___                 ___                 ___                 ___                 ___   
+___ ___                 ___                 ___                 ___                 ___                 ___                 &kp LAUNCHPAD       &kp SPOTLIGHT       &kp DICTATION       &kp DO_NOT_DISTURB  ___
+___ ___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___                 ___
+___ ___                 ___                 ___                 ___                 ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___                 ___
+                                            ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
 
         to_warpd {
             bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
-___                 ___                 &warpd_screen       ___                 ___                 &warpd_grid         &warpd_hist         ___                 ___                 &warpd_1shot        ___                 ___   
-___                 ___                 &warpd_hint         &warpd_on           ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
-                                                            ___                 ___                 ___                 ___                 ___                 ___   
+___ ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___ ___                 &warpd_screen       ___                 ___                 &warpd_grid         &warpd_hist         ___                 ___                 &warpd_1shot        ___                 ___
+___ ___                 &warpd_hint         &warpd_on           ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                            ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
 
         warpd {
             bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
-___                 ___                 ___                 ___                 ___                 ___                 &kp H               &kp J               &kp K               &kp L               ___                 ___   
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
-                                                            &warpd_off          ___                 ___                 ___                 ___                 ___   
+___ ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___ ___                 ___                 ___                 ___                 ___                 &kp H               &kp J               &kp K               &kp L               ___                 ___
+___ ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                            &warpd_off          ___                 ___                 ___                 ___                 ___   
             >;
         };
 
         empty {
             bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___   
-                                                            ___                 ___                 ___                 ___                 ___                 ___   
+___ ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___ ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___ ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                            ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
     };
