@@ -289,24 +289,5 @@ ___ ___                 ___                 ___                 ___             
                                             ___                 ___                 ___                 ___                 ___                 ___   
             >;
         };
-
-;;        backspace {
-;;            bindings = <
-;;___ ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LPAR            &kp RPAR            &kp PIPE            ___
-;;___ &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      ___                 &kp STAR            &rhhr LSHFT MINUS   &rhhr LGUI LBKT     &rhhr LALT RBKT     &rhhr LCTRL BSLH    ___
-;;___ &kp TILDE           &kp N1              &kp N2              &lhhr MEH N3        ___                 &kp PLUS            &rhhr MEH EQUAL     &kp LBRC            &kp RBRC            ___                 ___
-;;                                            ___                 &kp UNDER           &kp GRAVE           ___                 ___                 ___   
-;;            >;
-;;        };
-;;
-;;        space {
-;;            bindings = <
-;;___ ___                 &kp AMPS            ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-;;___ ___                 &lhhr LALT DLLR     &lhhr LGUI PRCNT    &lhhr LSHFT CARET   ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___
-;;___ ___                 &kp EXCL            &kp AT              &lhhr MEH HASH      ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___                 ___                 ___
-;;                                            ___                 ___                 ___                 ___                 ___                 ___   
-;;            >;
-;;        };
-
     };
 };
