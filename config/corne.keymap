@@ -231,7 +231,7 @@
             bindings = <
 ___ &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___
 ___ &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___
-___ &lhhr_rpi RAY Z     &lhlt_rpi 4 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V     &kp B               &kp N               &rhhr_rpi MEH M     &rhhr_rpi LAUNCH COMMA &rhlt_rpi 4 DOT  &rhhr_rpi RAY FSLH  ___
+&tog 7 &lhhr_rpi RAY Z     &lhlt_rpi 4 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V     &kp B               &kp N               &rhhr_rpi MEH M     &rhhr_rpi LAUNCH COMMA &rhlt_rpi 4 DOT  &rhhr_rpi RAY FSLH  ___
                                             &ltqt 3 ESC         &ltqt 2 SPACE       &warpd_lt 0 TAB     &kp RET             &ltqt 1 BSPC        &kp SQT
             >;
         };
@@ -278,6 +278,24 @@ ___ ___                 ___                 ___                 ___             
 ___ ___                 ___                 ___                 ___                 ___                 &kp H               &kp J               &kp K               &kp L               ___                 ___
 ___ ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
                                             &warpd_off          ___                 ___                 ___                 ___                 ___   
+            >;
+        };
+
+        base_test {
+            bindings = <
+___ &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___
+___ &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___
+___ &lhhr_rpi RAY Z     &lhlt_rpi 4 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V     &kp B               &kp N               &rhhr_rpi MEH M     &rhhr_rpi LAUNCH COMMA &rhlt_rpi 4 DOT  &rhhr_rpi RAY FSLH  ___
+                                            &kp ESC             &ltqt 8 SPACE       &warpd_lt 0 TAB     &kp RET             &ltqt 8 BSPC        &kp SQT
+            >;
+        };
+
+        space {
+            bindings = <
+___ ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp N9              &kp N0              ___                 ___
+___ &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp MINUS           &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___
+___ ___                 &kp N1              &kp N2              &lhhr MEH N3        &kp EQUAL           ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH            ___
+                                            ___                 ___                 &kp GRAVE           ___                 ___                 ___   
             >;
         };
 
