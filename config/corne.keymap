@@ -25,58 +25,58 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&tog 5 &kp LG(LC(X))>;
+                = <&tog 6 &kp LG(LC(X))>;
         };
 
         warpd_on: warpd_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&tog 5 &kp LG(LC(C))>;
+                = <&tog 6 &kp LG(LC(C))>;
         };
 
         warpd_grid: warpd_grid {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&tog 5 &kp LG(LC(G))>;
+                = <&tog 6 &kp LG(LC(G))>;
         };
 
         warpd_hist: warpd_hist {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&tog 5 &kp LG(LC(H))>;
+                = <&tog 6 &kp LG(LC(H))>;
         };
 
         warpd_screen: warpd_screen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&tog 5 &kp LG(LC(S))>;
+                = <&tog 6 &kp LG(LC(S))>;
         };
 
         warpd_1shot: warpd_1shot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&tog 5 &kp LG(LC(L))>;
+                = <&tog 6 &kp LG(LC(L))>;
         };
 
         warpd_off: warpd_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&tog 5 &kp ESC>;
+                = <&tog 6 &kp ESC>;
         };
 
         warpd_macro: warpd_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&tog 5 &kp LG(LC(C))>
+                = <&tog 6 &kp LG(LC(C))>
                 , <&macro_pause_for_release>
-                , <&tog 5 &kp ESC>
+                , <&tog 6 &kp ESC>
                 ;
         };
     };
