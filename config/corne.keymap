@@ -293,8 +293,8 @@ ___ ___                 ___                 ___                 ___             
         space {
             bindings = <
 ___ &kp N9              &kp N7              &kp N8              &kp N9              &kp N0              ___                 ___                 ___                 ___                 ___                 ___
-___ &lhhr LCTRL LBKT    &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp RBKT            &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___
-___ &kp MINUS           &kp N1              &kp N2              &lhhr MEH N3        &kp EQUAL           &kp HOME            &rhhr MEH PG_DN     &kp PG_UP           &kp END             ___                 ___
+___ &lhhr LCTRL EQUAL   &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp MINUS           &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___
+___ &kp LBKT            &kp N1              &kp N2              &lhhr MEH N3        &kp RBKT            &kp HOME            &rhhr MEH PG_DN     &kp PG_UP           &kp END             ___                 ___
                                             &kp BSLH            &kp N0              &kp GRAVE           ___                 &caps_word          &kp CAPS
             >;
         };
