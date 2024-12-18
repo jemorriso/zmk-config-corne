@@ -232,7 +232,7 @@
 ___    &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___
 ___    &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___
 &tog 1 &lhhr_rpi RAY Z     &lhlt_rpi 5 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V     &kp B               &kp N               &rhhr_rpi MEH M     &rhhr_rpi LAUNCH COMMA &rhlt_rpi 5 DOT  &rhhr_rpi RAY FSLH  ___
-                                               &warpd_lt 0 ESC     &ltqt 2 SPACE       &ltqt 3 TAB         &kp RET             &ltqt 2 BSPC        &ltqt 4 SQT
+                                               &warpd_lt 0 ESC     &ltqt 3 SPACE       &warpd_lt 0 ESC     &kp RET             &ltqt 2 BSPC        &ltqt 4 SQT
             >;
         };
 
@@ -247,9 +247,9 @@ ___ &lhhr_rpi RAY Z     &lhlt_rpi 5 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V 
 
         num_sym {
             bindings = <
-___ &kp DLLR            &kp N7              &kp N8              &kp N9              &kp PRCNT           ___                 &kp AMPS            &kp LPAR            &kp RPAR            &kp PIPE            ___
+___ &kp EXCL            &kp N7              &kp N8              &kp N9              &kp PRCNT           &kp CARET           &kp AMPS            &kp LPAR            &kp RPAR            &kp PIPE            ___
 ___ &lhhr LCTRL EQUAL   &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp MINUS           ___                 &rhhr LSHFT UNDER   &rhhr LGUI LBKT     &rhhr LALT RBKT     &rhhr LCTRL BSLH    ___
-___ &kp STAR            &kp N1              &kp N2              &lhhr MEH N3        &kp PLUS            ___                 &rhhr MEH HASH      &kp LBRC            &kp RBRC            &kp EXCL            ___
+___ &kp STAR            &kp N1              &kp N2              &lhhr MEH N3        &kp PLUS            ___                 &rhhr MEH HASH      &kp LBRC            &kp RBRC            ___                 ___
                                             &kp CARET           &kp N0              &kp GRAVE           &kp TILDE           ___                 &kp AT
             >;
         };
@@ -292,10 +292,10 @@ ___ ___                 ___                 ___                 ___             
 
         space {
             bindings = <
-___ ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp N9              &kp N0              ___                 ___
+___ ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LPAR            &kp RPAR            &kp PIPE            ___
 ___ &lhhr LCTRL EQUAL   &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp MINUS           &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    &kp BSLH            ___
-___ ___                 &kp N1              &kp N2              &lhhr MEH N3        ___                 ___                 ___                 &kp LBKT            &kp RBKT            ___                 ___
-                                            ___                 &kp N0              &kp GRAVE           ___                 &caps_word          &kp CAPS
+___ &kp PLUS            &kp N1              &kp N2              &lhhr MEH N3        &kp UNDER           ___                 &rhhr MEH LBKT      &kp LBRC            &kp RBRC            &kp RBKT            ___
+                                            ___                 &kp N0              &kp GRAVE           &kp TILDE           &caps_word          &kp CAPS
             >;
         };
 
