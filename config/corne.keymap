@@ -247,10 +247,10 @@ ___ &lhhr_rpi RAY Z     &lhlt_rpi 5 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V 
 
         num_sym {
             bindings = <
-___ &kp EXCL            &kp N7              &kp N8              &kp N9              &kp PRCNT           &kp CARET           &kp AMPS            &kp LPAR            &kp RPAR            &kp PIPE            ___
-___ &lhhr LCTRL N0      &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp HASH            &kp STAR            &rhhr LSHFT MINUS   &rhhr LGUI LBKT     &rhhr LALT RBKT     &rhhr LCTRL BSLH    ___
-___ &kp TILDE           &kp N1              &kp N2              &lhhr MEH N3        &kp DLLR            &kp PLUS            &rhhr MEH EQUAL     &kp LBRC            &kp RBRC            ___                 ___
-                                            &kp AT              &kp UNDER           &kp GRAVE           ___                 ___                 ___   
+___ &kp DLLR            &kp N7              &kp N8              &kp N9              &kp PRCNT           ___                 &kp AMPS            &kp LPAR            &kp RPAR            &kp PIPE            ___
+___ &lhhr LCTRL EQUAL   &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp MINUS           ___                 &rhhr LSHFT UNDER   &rhhr LGUI LBKT     &rhhr LALT RBKT     &rhhr LCTRL BSLH    ___
+___ &kp STAR            &kp N1              &kp N2              &lhhr MEH N3        &kp PLUS            ___                 &rhhr MEH HASH      &kp LBRC            &kp RBRC            &kp EXCL            ___
+                                            &kp CARET           &kp N0              &kp GRAVE           &kp TILDE           ___                 &kp AT
             >;
         };
 
