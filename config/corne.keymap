@@ -301,10 +301,10 @@ ___ &kp PLUS            &kp N1              &kp N2              &lhhr MEH N3    
 
         space_shifted {
             bindings = <
-___ ___                 &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___                 ___
-___ &lhhr LCTRL PLUS    &lhhr LALT DLLR     &lhhr LGUI PRCNT    &lhhr LSHFT CARET   &kp UNDER           &kp HOME            &rhhr LSHFT PG_DN   &rhhr LGUI PG_UP    &rhhr LALT END      &kp PIPE            ___
-___ ___                 &kp EXCL            &kp AMPS            &lhhr MEH HASH      ___                 ___                 ___                 &kp LBRC            &kp RBRC            ___                 ___
-                                            ___                 &kp RPAR            &kp TILDE           ___                 ___                 ___       
+___ ___                 &kp AMPS            &kp STAR            ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___ ___                 &lhhr LALT DLLR     &lhhr LGUI PRCNT    &lhhr LSHFT CARET   ___                 &kp HOME            &rhhr LSHFT PG_DN   &rhhr LGUI PG_UP    &rhhr LALT END      ___                 ___
+___ ___                 &kp EXCL            &kp AMPS            &lhhr MEH HASH      ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                            ___                 ___                 ___                 ___                 ___                 ___       
             >;
         };
 
