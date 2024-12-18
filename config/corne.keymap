@@ -229,10 +229,10 @@
 
         base {
             bindings = <
-___ &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___
-___ &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___
+___    &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___
+___    &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___
 &tog 1 &lhhr_rpi RAY Z     &lhlt_rpi 5 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V     &kp B               &kp N               &rhhr_rpi MEH M     &rhhr_rpi LAUNCH COMMA &rhlt_rpi 5 DOT  &rhhr_rpi RAY FSLH  ___
-                                            &ltqt 4 ESC         &ltqt 3 SPACE       &warpd_lt 0 TAB     &kp RET             &ltqt 2 BSPC        &kp SQT
+                                               &warpd_lt 0 ESC     &ltqt 2 SPACE       &ltqt 3 TAB         &kp RET             &ltqt 2 BSPC        &ltqt 4 SQT
             >;
         };
 
