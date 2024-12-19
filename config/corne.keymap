@@ -18,6 +18,7 @@
 #define SPOTLIGHT LA(LC(LG(LS(F4))))
 #define DICTATION LA(LC(LG(LS(F5))))
 #define DO_NOT_DISTURB LA(LC(LG(LS(F6))))
+#define BSPC_WORD LA(BSPC)
 
 / {
     macros {
@@ -240,7 +241,7 @@
 ___    &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___
 ___    &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___
 &tog 1 &lhhr_rpi RAY Z     &lhlt_rpi 5 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V     &kp B               &kp N               &rhhr_rpi MEH M     &rhhr_rpi LAUNCH COMMA &rhlt_rpi 5 DOT  &rhhr_rpi RAY FSLH  ___
-                                               &warpd_lt 0 ESC     &ltnoqt 2 SPACE     &ltqt 3 TAB         &kp RET             &ltnoqt 2 BSPC      &ltqt 4 SQT
+                                               &warpd_lt 0 ESC     &ltnoqt 2 SPACE     &ltqt 3 TAB         &ltqt 3 RET         &ltnoqt 2 BSPC      &ltqt 4 SQT
             >;
         };
 
@@ -267,7 +268,7 @@ ___ &kp STAR            &kp N1              &kp N2              &lhhr MEH N3    
 ___ ___                 &kp AMPS            &kp STAR            ___                 ___                 ___                 ___                 &caps_word          &kp CAPS            ___                 ___
 ___ ___                 &lhhr LALT DLLR     &lhhr LGUI PRCNT    &lhhr LSHFT CARET   ___                 &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    ___                 ___
 ___ ___                 &kp EXCL            &kp AT              &lhhr MEH HASH      ___                 &kp HOME            &rhhr MEH PG_DN     &kp PG_UP           &kp END             ___                 ___
-                                            ___                 ___                 ___                 ___                 &kp DEL             ___   
+                                            ___                 &kp SPACE           ___                 &kp BSPC            &kp BSPC_WORD       &kp DEL
             >;
         };
 
