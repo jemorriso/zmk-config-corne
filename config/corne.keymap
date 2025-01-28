@@ -166,10 +166,10 @@
 
         base {
             bindings = <
-&kp TAB          &kp Q            &kp W            &ltqt 4 E        &kp R            &kp T            &kp Y            &kp U            &ltqt 5 I        &kp O            &kp P            &kp BSPC
+&kp TAB          &kp Q            &kp W            &ltqt 4 E        &kp R            &kp T            &kp Y            &kp U            &ltqt 3 I        &kp O            &kp P            &kp BSPC
 &kp ESC          &lmti LALT A     &lmti LCTRL S    &lmti LGUI D     &lmt LSHFT F     &kp G            &kp H            &rmt LSHFT J     &rmti LGUI K     &rmti LCTRL L    &rmti LALT SQT   &kp RET
 ___              &lmti RAY Z      &kp X            &lmti APP C      &lmti MEH V      &kp B            &kp N            &rmti MEH M      &rmti APP COMMA  &kp DOT          &rmti RAY FSLH   ___
-                                                   &ltqt 6 ESC      &ltqt 2 SPACE    ___              ___              &ltqt 1 BSPC     &ltqt 5 RET
+                                                   &ltqt 6 TAB      &ltqt 2 SPACE    &kp ESC          &kp RET          &ltqt 1 BSPC     &ltqt 5 DEL
             >;
         };
 
