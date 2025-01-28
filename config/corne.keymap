@@ -12,7 +12,7 @@
 #define MEH LA(LC(LSHFT))
 #define HYPER LA(LC(LG(LSHFT)))
 #define RAY LA(LC(LGUI))
-#define LAUNCH LA(LG(LSHFT))
+#define APP LA(LG(LSHFT))
 
 #define LAUNCHPAD LA(LC(LG(LS(F3))))
 #define SPOTLIGHT LA(LC(LG(LS(F4))))
@@ -85,7 +85,8 @@
 
 / {
     behaviors {
-        lhhr: lhhr {
+        // left mod-tap
+        lmt: lmt {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
@@ -97,7 +98,8 @@
             hold-trigger-on-release;
         };
 
-        rhhr: rhhr {
+        // right mod-tap
+        rmt: rmt {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
@@ -109,7 +111,8 @@
             hold-trigger-on-release;
         };
 
-        lhhr_rpi: lhhr_rpi {
+        // left mod-tap require prior idle
+        lmti: lmti {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
@@ -122,7 +125,8 @@
             hold-trigger-on-release;
         };
 
-        rhhr_rpi: rhhr_rpi {
+        // right mod-tap require prior idle
+        rmti: rmti {
             compatible = "zmk,behavior-hold-tap";
             label = "RHHR_RPI";
             bindings = <&kp>, <&kp>;
@@ -136,7 +140,8 @@
             hold-trigger-on-release;
         };
 
-        lhlt: lhlt {
+        // left layer-tap
+        llt: llt {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
 
@@ -148,7 +153,8 @@
             hold-trigger-on-release;
         };
 
-        rhlt: rhlt {
+        // right layer-tap
+        rlt: rlt {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
 
@@ -160,7 +166,8 @@
             hold-trigger-on-release;
         };
 
-        lhlt_rpi: lhlt_rpi {
+        // left layer-tap require prior idle
+        llti: llti {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
 
@@ -173,7 +180,8 @@
             hold-trigger-on-release;
         };
 
-        rhlt_rpi: rhlt_rpi {
+        // right layer-tap require prior idle
+        rlti: rlti {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
 
@@ -186,6 +194,7 @@
             hold-trigger-on-release;
         };
 
+        // layer-tap with quick tap
         ltqt: ltqt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -195,7 +204,8 @@
             bindings = <&mo>, <&kp>;
         };
 
-        ltnoqt: ltnoqt {
+        // layer-tap (no quick tap)
+        lt: lt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -238,28 +248,64 @@
 
         base {
             bindings = <
-___ &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P               ___
-___ &lhhr_rpi LCTRL A   &lhhr_rpi LALT S    &lhhr_rpi LGUI D    &lhhr LSHFT F       &kp G               &kp H               &rhhr LSHFT J       &rhhr_rpi LGUI K    &rhhr_rpi LALT L    &rhhr_rpi LCTRL SEMI ___
-___ &lhhr_rpi RAY Z     &lhlt_rpi 3 X       &lhhr_rpi LAUNCH C  &lhhr_rpi MEH V     &kp B               &kp N               &rhhr_rpi MEH M     &rhhr_rpi LAUNCH COMMA &rhlt_rpi 3 DOT  &rhhr_rpi RAY FSLH  ___
-                                            &warpd_lt 0 ESC     &ltnoqt 1 SPACE     &ltqt 2 TAB         &ltqt 2 SQT         &ltnoqt 1 BSPC      &kp RET
+&kp TAB          &kp Q            &kp W            &kp E            &kp R            &kp T            &kp Y            &kp U            &kp I            &kp O            &kp P            &kp BSPC
+&kp ESC          &lmti LCTRL A    &lmti LALT S     &lmti LGUI D     &lhhr LSHFT F    &kp G            &kp H            &rhhr LSHFT J    &rmti LGUI K     &rmti LALT L     &rmti LCTRL SEMI &kp RET
+___              &lmti RAY Z      &lhlt_rpi 3 X    &lmti APP C      &lmti MEH V      &kp B            &kp N            &rmti MEH M      &rmti APP COMMA  &rhlt_rpi 3 DOT  &rmti RAY FSLH   ___
+                                                   &lt 0 ESC        &lt 1 SPACE      ___              ___              &lt 1 BSPC       &kp RET
             >;
         };
 
-        num_sym {
+        num {
             bindings = <
-___ &kp PIPE            &kp N7              &kp N8              &kp N9              &kp AMPS            ___                 &kp CARET           &kp LPAR            &kp RPAR            &kp DLLR            ___
-___ &lhhr LCTRL EQUAL   &lhhr LALT N4       &lhhr LGUI N5       &lhhr LSHFT N6      &kp MINUS           ___                 &rhhr LSHFT UNDER   &rhhr LGUI LBKT     &rhhr LALT RBKT     &rhhr LCTRL BSLH    ___
-___ &kp STAR            &kp N1              &kp N2              &lhhr MEH N3        &kp PLUS            ___                 &rhhr MEH HASH      &kp LBRC            &kp RBRC            &kp EXCL            ___
-                                            &kp PRCNT           &kp N0              &kp GRAVE           &kp TILDE           ___                 &kp AT
+___              ___              &kp N7           &kp N8           &kp N9           ___              ___              ___              ___              ___              ___              ___              
+___              ___              &kp N4           &kp N5           &kp N6           ___              ___              ___              ___              ___              ___              ___              
+___              ___              &kp N1           &kp N2           &kp N3           ___              ___              ___              ___              ___              ___              ___              
+                                                   ___              &kp N0           ___              ___              ___              ___              
             >;
         };
 
-        fun_nav_med {
+        nav {
             bindings = <
-___ &kp F12             &kp F7              &kp F8              &kp F9              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          &kp C_PP            ___
-___ &lhhr LCTRL F10     &lhhr LALT F4       &lhhr LGUI F5       &lhhr LSHFT F6      &kp C_BRI_UP        &kp LEFT            &rhhr LSHFT DOWN    &rhhr LGUI UP       &rhhr LALT RIGHT    &kp C_MUTE          ___
-___ &kp F11             &kp F1              &kp F2              &lhhr MEH F3        &kp C_BRI_DN        &kp HOME            &rhhr MEH PG_DN     &kp PG_UP           &kp END             ___                 ___
-                                            &kp CAPS            &kp SPACE           &caps_word          &kp BSPC_WORD       &kp BSPC            &kp DEL
+___              ___              ___              ___              ___              ___              ___              &kp BSPC_WORD    &caps_word       &kp CAPS         ___              ___              
+___              ___              ___              ___              ___              ___              &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        ___              ___              
+___              ___              ___              ___              ___              ___              &kp HOME         &kp PG_DN        &kp PG_UP        &kp END          ___              ___              
+                                                   ___              ___              ___              ___              ___              ___              
+            >;
+        };
+
+        lsym {
+            bindings = <
+___              &kp EXCL         &kp AT           &kp HASH         &kp DLLR         ___              ___              ___              ___              ___              ___              ___              
+___              &kp TILDE        &kp CARET        &kp EQUAL        &kp MINUS        ___              ___              ___              ___              ___              ___              ___              
+___              &kp PIPE         &kp AMPS         &kp STAR         &kp PLUS         ___              ___              ___              ___              ___              ___              ___              
+                                                   ___              ___              ___              ___              ___              ___              
+            >;
+        };
+
+        rsym {
+            bindings = <
+___              ___              ___              ___              ___              ___              ___              &kp GRAVE        &kp LPAR         &kp RPAR         &kp PRCNT        ___              
+___              ___              ___              ___              ___              ___              ___              &kp COLON        &kp LBKT         &kp RBKT         &kp SEMI         ___              
+___              ___              ___              ___              ___              ___              ___              &kp UNDER        &kp LBRC         &kp RBRC         &kp BSLH         ___              
+                                                   ___              ___              ___              ___              ___              ___              
+            >;
+        };
+
+        fun {
+            bindings = <
+___              &kp F12          &kp F7           &kp F8           &kp F9           ___              ___              ___              ___              ___              ___              ___              
+___              &kp F11          &kp F4           &kp F5           &kp F6           ___              ___              ___              ___              ___              ___              ___              
+___              &kp F10          &kp F1           &kp F2           &kp F3           ___              ___              ___              ___              ___              ___              ___              
+                                                   ___              ___              ___              ___              ___              ___              
+            >;
+        };
+
+        med {
+            bindings = <
+___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              
+___              ___              ___              ___              ___              ___              &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       ___              ___              
+___              ___              ___              ___              ___              ___              &kp C_PP         &kp C_BRI_DN     &kp C_BRI_UP     &kp C_MUTE       ___              ___              
+                                                   ___              ___              ___              ___              ___              ___              
             >;
         };
 
@@ -287,6 +333,16 @@ ___ ___                 ___                 ___                 ___             
 ___ ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___ ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
                                             ___                 ___                 ___                 ___                 ___                 ___   
+            >;
+        };
+
+        // 17 characters for each key works for my macbook screen
+        empty {
+            bindings = <
+___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              
+___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              
+___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              
+                                                   ___              ___              ___              ___              ___              ___              
             >;
         };
     };
