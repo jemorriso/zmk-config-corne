@@ -31,6 +31,20 @@
 #define MOUSE LA(M)
 
 / {
+    macros {
+        mouseless: mouseless {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp M>
+                , <&macro_release &kp LALT>
+                ;
+        };
+    };
+};
+
+/ {
     behaviors {
         // left mod-tap
         lmt: lmt {
@@ -186,7 +200,7 @@ ___              ___              &kp N1           &kp N2           &kp N3      
             bindings = <
 ___              ___              ___              &kp SUPERKEY     ___              ___              ___              &kp BSPC_WORD    &caps_word       &kp CAPS         ___              ___              
 ___              ___              &lmt LALT HRF    &lmt LGUI HRS    &lmt LSHFT HRH   ___              &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        ___              ___              
-___              ___              ___              ___              &lmt MEH MOUSE   ___              &kp HOME         &kp PG_DN        &kp PG_UP        &kp END          ___              ___              
+___              ___              ___              ___              &mouseless       ___              &kp HOME         &kp PG_DN        &kp PG_UP        &kp END          ___              ___              
                                                    ___              ___              ___              ___              &kp TAB          &kp DEL          
             >;
         };
