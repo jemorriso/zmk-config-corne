@@ -16,7 +16,7 @@
 &trans &kp Q &kp W &kp E &kp R &kp T &kp U &kp I &kp O &kp P &kp LBKT &trans
 &trans &kp A &kp S &kp D &kp F &kp G &kp J &kp K &kp L &kp SEMI &kp APOSTROPHE &trans
 &trans &kp LSHFT &kp Z &kp X &kp C &kp V &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT &trans
-&kp LCMD &kp SPACE &kp LALT &kp LEFT &kp RCMD &kp RALT
+&kp LCMD &kp SPACE &kp CAPS &kp RET &kp RCMD &kp RALT
             >;
         };
     };
