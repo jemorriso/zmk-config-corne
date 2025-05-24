@@ -17,7 +17,7 @@
         combo_esc {
             timeout-ms = <40>;
             key-positions = <12 13>;
-            bindings = <&mt LG(LSHFT) ESC>;
+            bindings = <&mt LG(LALT) ESC>;
         };
         combo_tab {
             timeout-ms = <40>;
@@ -27,7 +27,7 @@
         combo_ret {
             timeout-ms = <40>;
             key-positions = <16 17>;
-            bindings = <&mt LG(LSHFT) RET>;
+            bindings = <&mt LG(LALT) RET>;
         };
     };
 };
@@ -90,7 +90,7 @@
         base { // 0
             bindings = <
 &kp Q            &kp W            &kp E            &kp R            &kp T            &kp Y            &kp U            &kp I            &kp O            &kp P
-&lmt LALT A      &lmt LCTRL S     &lmt LGUI D      &lmt LSHFT F     &kp G            &kp H            &rmt LSHFT J     &rmt LGUI K      &rmt LCTRL L     &rmt LALT SQT
+&lmt LSHFT A     &lmt LCTRL S     &lmt LALT D      &lmt LGUI F      &kp G            &kp H            &rmt LGUI J      &rmt LALT K      &rmt LCTRL L     &rmt LSHFT SQT
 &ltqt 5 Z        &kp X            &kp C            &kp V            &kp B            &kp N            &kp M            &kp COMMA        &kp DOT          &kp FSLH      
                                   &mo 6            &ltqt 2 SPACE    &mo 3            &kp LSHFT        &ltqt 1 BSPC     &mo 4         
             >;
@@ -117,7 +117,7 @@ ___              ___              ___              ___              ___         
         sym { // 3
             bindings = <
 &kp EXCL         &kp AT           &kp HASH         &kp DLLR         ___              ___              &kp GRAVE        &kp LPAR         &kp RPAR         &kp PRCNT
-&lmt LALT TILDE  &lmt LCTRL CARET &lmt LGUI EQUAL  &lmt LSHFT MINUS ___              ___              &rmt LSHFT COLON &rmt LGUI LBKT   &rmt LCTRL RBKT  &rmt LALT SEMI
+&lmt LSHFT TILDE &lmt LCTRL CARET &lmt LALT EQUAL  &lmt LGUI MINUS  ___              ___              &rmt LGUI COLON  &rmt LALT LBKT   &rmt LCTRL RBKT  &rmt LSHFT SEMI
 &kp PIPE         &kp AMPS         &kp STAR         &kp PLUS         ___              ___              &kp UNDER        &kp LBRC         &kp RBRC         &kp BSLH
                                   ___              ___              ___              ___              ___              ___              
             >;
