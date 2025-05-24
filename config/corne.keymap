@@ -6,268 +6,85 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/bt.h>
 
-#define ___ &trans
 
-#define MEH LA(LC(LSHFT))
-#define HYPER LA(LC(LG(LSHFT)))
-#define RAY LA(LC(LGUI))
-#define APP LA(LG(LSHFT))
-
-#define LAUNCHPAD LA(LC(LG(LS(F3))))
-#define SPOTLIGHT LA(LC(LG(LS(F4))))
-#define DICTATION LA(LC(LG(LS(F5))))
-#define DO_NOT_DISTURB LA(LC(LG(LS(F6))))
-
-#define BSPC_WORD LA(BSPC)
-#define SUPERKEY LA(LG(SPACE))
-// homerow scroll
-#define HRS LA(ESC)
-// homerow hints
-#define HRH LA(SPACE)
-// homerow find
-#define HRF LA(FSLH)
+#define AS(keycode) &as LS(keycode) keycode
 
 / {
-    macros {
-        mouseless: mouseless {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp M>
-                , <&macro_release &kp LALT>
-                ;
-        };
+    chosen {
+        zmk,physical-layout = &foostan_corne_5col_layout;
     };
-};
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <40>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-    };
-};
-
-/ {
     behaviors {
-        // left mod-tap
-        lmt: lmt {
+        as: auto_shift {
             compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
-            hold-trigger-on-release;
-        };
-
-        // right mod-tap
-        rmt: rmt {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-            hold-trigger-on-release;
-        };
-
-        // left mod-tap require prior idle
-        lmti: lmti {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <125>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
-            hold-trigger-on-release;
-        };
-
-        // right mod-tap require prior idle
-        rmti: rmti {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RHHR_RPI";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <125>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-            hold-trigger-on-release;
-        };
-
-        // left layer-tap
-        llt: llt {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
-            hold-trigger-on-release;
-        };
-
-        // right layer-tap
-        rlt: rlt {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-            hold-trigger-on-release;
-        };
-
-        // left layer-tap require prior idle
-        llti: llti {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <125>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
-            hold-trigger-on-release;
-        };
-
-        // right layer-tap require prior idle
-        rlti: rlti {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <125>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
-            hold-trigger-on-release;
-        };
-
-        // layer-tap with quick tap
-        ltqt: ltqt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            bindings = <&mo>, <&kp>;
-        };
-
-        // layer-tap (no quick tap)
-        lt: lt {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            bindings = <&mo>, <&kp>;
         };
     };
+        keymap {
+                compatible = "zmk,keymap";
 
-    keymap {
-        compatible = "zmk,keymap";
+                default_layer {
+// -----------------------------------------------------------------------------------------
+// |  Q  |  W  |  E  |  R  |  T  |     |  Y  |  U   |  I   |  O   | P |
+// |  A  |  S  |  D  |  F  |  G  |     |  H  |  J   |  K   |  L   | ' | 
+// |  Z  |  X  |  C  |  V  |  B  |     |  N  |  M   | CTRL | META | . |
+//             | GUI | LWR | SPC |     | ENT | RSE  | BSPC |
+                        display-name = "Base";
+                        bindings = <
+   AS(Q) AS(W) AS(E) AS(R) AS(T)     AS(Y)   AS(U)  AS(I)     AS(O)     AS(P)
+   AS(A) AS(S) AS(D) AS(F) AS(G)     AS(H)   AS(J)  AS(K)     AS(L)     AS(SQT)
+   AS(Z) AS(X) AS(C) AS(V) AS(B)     AS(N)   AS(M)  &kp LCTL  &kp RALT  AS(DOT)
+        &kp LGUI &mo 1 &kp SPACE     AS(RET) &mo 2  &kp BSPC
+                        >;
+                };
 
-        base { // 0
-            bindings = <
-___              &kp Q            &kp W            &kp E            &kp R            &kp T            &kp Y            &kp U            &kp I            &kp O            &kp P            ___           
-___              &lmti LALT A     &lmti LCTRL S    &lmti LGUI D     &lmt LSHFT F     &kp G            &kp H            &rmt LSHFT J     &rmti LGUI K     &rmti LCTRL L    &rmti LALT SQT   ___           
-___              &lmti RAY Z      &kp X            &lmti APP C      &lmti MEH V      &kp B            &kp N            &rmti MEH M      &rmti APP COMMA  &kp DOT          &rmti RAY FSLH   ___
-                                                   ___              &ltqt 2 SPACE    ___              &kp LSHFT        &ltqt 1 BSPC     ___           
-            >;
+                lower_layer {
+// -----------------------------------------------------------------------------------------
+// | !     |  @  |  #  |  $  |  %  |     |  ^  |  &  |  *  |  (  |  )  |
+// | BT1   | BT2 | BT3 | BT4 | BT5 |     | LFT | DWN |  UP | RGT |     |
+// | BTCLR |     |     |     |     |     |     |     |     |     |     |
+//               | GUI |     | SPC |     | ENT | ESC | TAB |
+                        display-name = "Lower";
+                        bindings = <
+   &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR
+   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &kp LEFT  &kp DOWN  &kp UP          &kp RIGHT &trans 
+   &bt BT_CLR   &trans       &trans       &trans       &trans           &trans    &trans    &trans          &trans    &trans 
+                             &kp LGUI     &trans       &kp SPACE        AS(RET)   &kp ESC   &kp TAB
+                        >;
+                };
+
+                raise_layer {
+// -----------------------------------------------------------------------------------------
+// | 1! |  2@ |  3# |  4$ |  5% |     |  6^ |  7& |  8* |  9(  |  0)  |
+// | -_ |  =+ |  {  |  [  |  (  |     |  )  |  ]  |  }  |  /?  |  \|  |
+// | `~ |     |     |  ,< |  :  |     |  ;  |  .> | CTRL| META |      |
+//            | GUI | ESC | SPC |     | ENT |     | TAB |
+                        display-name = "Raise";
+                        bindings = <
+
+   AS(N1)    AS(N2)    AS(N3)    AS(N4)    AS(N5)        AS(N6)    AS(N7)    AS(N8)    AS(N9)   AS(N0)
+   AS(MINUS) AS(EQUAL) &kp LBRC  &kp LBKT  &kp LPAR      &kp RPAR  &kp RBKT  &kp RBRC  AS(FSLH) AS(BSLH)
+   AS(GRAVE) &trans    &trans    AS(COMMA) &kp COLON     &kp SEMI  AS(DOT)   &kp LCTRL &kp RALT &trans
+                       &kp LGUI  &kp ESC   &kp SPACE     AS(RET)   &trans    &kp TAB
+                        >;
+                };
+
+                extra_1 {
+                        status = "reserved";
+                };
+
+                extra_2 {
+                        status = "reserved";
+                };
+
+                extra_3 {
+                        status = "reserved";
+                };
         };
-
-        num { // 1
-            bindings = <
-___              ___              &kp N7           &kp N8           &kp N9           ___              ___              ___              ___              ___              ___              ___              
-___              ___              &kp N4           &kp N5           &kp N6           ___              ___              ___              ___              ___              ___              ___              
-___              ___              &kp N1           &kp N2           &kp N3           ___              ___              ___              ___              ___              ___              ___              
-                                                   ___              &kp N0           ___              ___              ___              ___              
-            >;
-        };
-
-        nav { // 2
-            bindings = <
-___              ___              ___              &kp SUPERKEY     ___              ___              ___              &kp BSPC_WORD    &caps_word       &kp CAPS         ___              ___              
-___              ___              &lmt LALT HRF    &lmt LGUI HRS    &lmt LSHFT HRH   ___              &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        ___              ___              
-___              ___              ___              ___              &mouseless       ___              &kp HOME         &kp PG_DN        &kp PG_UP        &kp END          ___              ___              
-                                                   ___              ___              ___              ___              &kp TAB          &kp DEL          
-            >;
-        };
-
-        lsym { // 3
-            bindings = <
-___              &kp EXCL         &kp AT           &kp HASH         &kp DLLR         ___              ___              ___              ___              ___              ___              ___              
-___              &kp TILDE        &kp CARET        &kp EQUAL        &kp MINUS        ___              ___              ___              ___              ___              ___              ___              
-___              &kp PIPE         &kp AMPS         &kp STAR         &kp PLUS         ___              ___              ___              ___              ___              ___              ___              
-                                                   ___              ___              ___              ___              ___              ___              
-            >;
-        };
-
-        rsym { // 4
-            bindings = <
-___              ___              ___              ___              ___              ___              ___              &kp GRAVE        &kp LPAR         &kp RPAR         &kp PRCNT        ___              
-___              ___              ___              ___              ___              ___              ___              &kp COLON        &kp LBKT         &kp RBKT         &kp SEMI         ___              
-___              ___              ___              ___              ___              ___              ___              &kp UNDER        &kp LBRC         &kp RBRC         &kp BSLH         ___              
-                                                   ___              ___              ___              ___              ___              ___              
-            >;
-        };
-
-        fun { // 5
-            bindings = <
-___              &kp F12          &kp F7           &kp F8           &kp F9           ___              ___              ___              ___              ___              ___              ___              
-___              &kp F11          &kp F4           &kp F5           &kp F6           ___              ___              ___              ___              ___              ___              ___              
-___              &kp F10          &kp F1           &kp F2           &kp F3           ___              ___              ___              ___              ___              ___              ___              
-                                                   ___              ___              ___              ___              ___              ___              
-            >;
-        };
-
-        med { // 6
-            bindings = <
-___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              
-___              ___              ___              ___              ___              ___              &kp C_PREV       &kp C_VOL_DN     &kp C_VOL_UP     &kp C_NEXT       ___              ___              
-___              ___              ___              ___              ___              ___              &kp C_PP         &kp C_BRI_DN     &kp C_BRI_UP     &kp C_MUTE       ___              ___              
-                                                   ___              ___              ___              ___              ___              ___              
-            >;
-        };
-
-        mouse { // 7
-            bindings = <
-___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              
-___              ___              ___              ___              ___              ___              &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP     &mmv MOVE_RIGHT  ___              ___              
-___              ___              ___              ___              ___              ___              &msc SCRL_LEFT   &msc SCRL_UP     &msc SCRL_DOWN   &msc SCRL_RIGHT  ___              ___              
-                                                   ___              ___              ___              &mkp RCLK        &mkp LCLK        &mkp MCLK        
-            >;
-        };
-
-        // 17 characters for each key works for my macbook screen
-        empty { // 8
-            bindings = <
-___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              
-___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              
-___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              ___              
-                                                   ___              ___              ___              ___              ___              ___              
-            >;
-        };
-    };
 };
