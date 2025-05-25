@@ -116,9 +116,9 @@ ___              ___              ___              ___              ___         
 
         sym { // 3
             bindings = <
-&kp EXCL         &kp AT           &kp HASH         &kp DLLR         ___              ___              &kp GRAVE        &kp LPAR         &kp RPAR         &kp PRCNT
-&lmt LSHFT TILDE &lmt LCTRL CARET &lmt LALT EQUAL  &lmt LGUI MINUS  ___              ___              &rmt LGUI COLON  &rmt LALT LBKT   &rmt LCTRL RBKT  &rmt LSHFT SEMI
-&kp PIPE         &kp AMPS         &kp STAR         &kp PLUS         ___              ___              &kp UNDER        &kp LBRC         &kp RBRC         &kp BSLH
+&kp PIPE         &kp AMPS         &kp STAR         &kp PLUS         ___              ___              &kp GRAVE        &kp LPAR         &kp RPAR         &kp TILDE
+&lmt LSHFT CARET &lmt LCTRL DLLR  &lmt LALT EQUAL  &lmt LGUI MINUS  ___              ___              &rmt LGUI COLON  &rmt LALT LBKT   &rmt LCTRL RBKT  &rmt LSHFT SEMI
+&kp PRCNT        &kp EXCL         &kp AT           &kp HASH         ___              ___              &kp UNDER        &kp LBRC         &kp RBRC         &kp BSLH
                                   ___              ___              ___              ___              ___              ___              
             >;
         };
