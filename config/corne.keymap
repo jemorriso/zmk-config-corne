@@ -16,27 +16,23 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <40>;
-            key-positions = <22 23>;
-            // bindings = <&mt LG(LALT) ESC>;
-            bindings = <&kp ESC>;
+            key-positions = <12 13>;
+            bindings = <&mt LG(LALT) ESC>;
         };
         combo_tab {
             timeout-ms = <40>;
-            key-positions = <12 13>;
-            // bindings = <&kp TAB>;
-            bindings = <&mt LG(LALT) TAB>;
+            key-positions = <22 23>;
+            bindings = <&kp TAB>;
         };
         combo_ret {
             timeout-ms = <40>;
-            key-positions = <26 27>;
-            // bindings = <&mt LG(LALT) RET>;
-            bindings = <&kp RET>;
+            key-positions = <16 17>;
+            bindings = <&mt LG(LALT) RET>;
         };
         combo_repeat {
             timeout-ms = <40>;
-            key-positions = <16 17>;
-            // bindings = <&mt LG(LALT) RET>;
-            bindings = <&mt_repeat LG(LALT) 0>;
+            key-positions = <23 31>;
+            bindings = <&key_repeat>;
         };
     };
 };
@@ -187,6 +183,7 @@
             >;
         };
 
+        // mod-taps on left
         space { // 1
             bindings = <
 &kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &lparlt             &rpargt             ___
@@ -196,6 +193,7 @@ ___                 &kp N1              &kp N2              &kp N3              
             >;
         };
 
+        // mod-taps on right
         backspace { // 2
             bindings = <
 &kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &lparlt             &rpargt             ___
