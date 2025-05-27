@@ -138,10 +138,11 @@ ___                 &kp N1              &kp N2              &kp N3              
         };
 
         // mod-taps on right
+        // TODO use rlt instead of rmt
         backspace_l { // 2
             bindings = <
 &kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
-&kp EQUAL           &kp N4              &kp N5              &kp N6              &kp MINUS           &kp LEFT            &rlt 3 DOWN         &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
+&kp EQUAL           &kp N4              &kp N5              &kp N6              &kp MINUS           &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
 ___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
                                         ___                 &kp N0              ___                 ___                 &kp DEL             ___              
             >;
