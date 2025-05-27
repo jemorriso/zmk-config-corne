@@ -121,7 +121,7 @@
         base { // 0
             bindings = <
 &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P
-&lmt LCTRL A        &lmt LALT S         &lmt LGUI D         &lmt LSHFT F        &kp G               &kp H               &rmt LSHFT J        &rmt LGUI K         &rmt LALT L         &rmt LCTRL SQT
+&lmt LCTRL A        &lmt LALT S         &lmt LGUI D         &lmt LSHIFT F       &kp G               &kp H               &rmt LSHIFT J       &rmt LGUI K         &rmt LALT L         &rmt LCTRL SQT
 &kp Z               &kp X               &kp C               &kp V               &kp B               &kp N               &kp M               &kp COMMA           &kp DOT             &kp FSLH      
                                         &ltqt 5 TAB         &ltqt 1 SPACE       &ltqt 6 ESC         &ltqt 4 RET         &ltqt 2 BSPC        &caps_word    
             >;
@@ -151,7 +151,7 @@ ___                 &kp N1              &kp N2              &kp N3              
         space_sft { // 3
             bindings = <
 &kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LT              &kp GT              ___
-&lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &lmt LSHFT CARET    &kp UNDER           &kp HOME            &rmt LSHFT PG_DN    &rmt LSHFT PG_UP    &rmt LALT END       &rmt LCTRL COLON
+&lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &lmt LSHIFT CARET   &kp UNDER           &kp HOME            &rmt LSHIFT PG_DN   &rmt LGUI PG_UP     &rmt LALT END       &rmt LCTRL COLON
 ___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 &kp LBRC            &kp RBRC            &kp PIPE
                                         ___                 &kp RPAR            ___                 ___                 &kp LS(DEL)         ___              
             >;
