@@ -128,7 +128,7 @@
         };
 
         // mod-taps on left
-        space { // 1
+        space_l { // 1
             bindings = <
 &kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
 &lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &llt 3 N6           &kp MINUS           &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp SEMI       
@@ -138,7 +138,7 @@ ___                 &kp N1              &kp N2              &kp N3              
         };
 
         // mod-taps on right
-        backspace { // 2
+        backspace_l { // 2
             bindings = <
 &kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
 &kp EQUAL           &kp N4              &kp N5              &kp N6              &kp MINUS           &kp LEFT            &rlt 3 DOWN         &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
@@ -148,7 +148,7 @@ ___                 &kp N1              &kp N2              &kp N3              
         };
 
         // use shifted layer instead of mod-morph because of karabiner issue with mod-morphs
-        space_sft { // 3
+        space_l_shifted { // 3
             bindings = <
 &kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LT              &kp GT              ___
 &lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &lmt LSHIFT CARET   &kp UNDER           &kp HOME            &rmt LSHIFT PG_DN   &rmt LGUI PG_UP     &rmt LALT END       &rmt LCTRL COLON
