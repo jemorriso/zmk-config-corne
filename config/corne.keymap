@@ -16,18 +16,27 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <40>;
-            key-positions = <12 13>;
-            bindings = <&mt LG(LALT) ESC>;
+            key-positions = <22 23>;
+            // bindings = <&mt LG(LALT) ESC>;
+            bindings = <&kp ESC>;
         };
         combo_tab {
             timeout-ms = <40>;
-            key-positions = <22 23>;
-            bindings = <&kp TAB>;
+            key-positions = <12 13>;
+            // bindings = <&kp TAB>;
+            bindings = <&mt LG(LALT) TAB>;
         };
         combo_ret {
             timeout-ms = <40>;
+            key-positions = <26 27>;
+            // bindings = <&mt LG(LALT) RET>;
+            bindings = <&kp RET>;
+        };
+        combo_repeat {
+            timeout-ms = <40>;
             key-positions = <16 17>;
-            bindings = <&mt LG(LALT) RET>;
+            // bindings = <&mt LG(LALT) RET>;
+            bindings = <&mt_repeat LG(LALT) 0>;
         };
     };
 };
@@ -55,7 +64,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            // quick-tap-ms = <200>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
             hold-trigger-on-release;
         };
@@ -68,7 +77,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            // quick-tap-ms = <200>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
@@ -79,7 +88,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            // quick-tap-ms = <200>;
             bindings = <&mo>, <&kp>;
         };
 
@@ -127,7 +136,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            // quick-tap-ms = <200>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
@@ -138,7 +147,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            // quick-tap-ms = <200>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
@@ -149,7 +158,18 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            // quick-tap-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+            hold-trigger-on-release;
+        };
+        mt_repeat: mt_repeat {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            // quick-tap-ms = <200>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
@@ -163,20 +183,29 @@
 &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P
 &lmt LCTRL A        &lmt LALT S         &lmt LGUI D         &lmt LSHFT F        &kp G               &kp H               &rmt LSHFT J        &rmt LGUI K         &rmt LALT L         &rmt LCTRL SQT
 &kp Z               &kp X               &kp C               &kp V               &kp B               &kp N               &kp M               &kp COMMA           &kp DOT             &kp FSLH      
-                                        &ltqt 3 TAB         &ltqt 1 SPACE       &ltqt 4 ESC         &ltqt 2 RET         &ltqt 1 BSPC        &caps_word    
+                                        &ltqt 4 TAB         &ltqt 1 SPACE       &ltqt 5 ESC         &ltqt 3 RET         &ltqt 2 BSPC        &caps_word    
             >;
         };
 
         space { // 1
             bindings = <
 &kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &lparlt             &rpargt             ___
-&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &lmt LSHFT N6       &kp MINUS           &lhome              &mt_dpgdn LSHFT 0   &mt_upgup LGUI 0    &mt_rend LALT 0     &rmt LCTRL SEMI
+&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &lmt LSHFT N6       &kp MINUS           &lhome              &dpgdn              &upgup              &rend               &rmt LCTRL SEMI
 ___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
                                         ___                 &kp N0              ___                 ___                 &kp DEL             ___              
             >;
         };
 
-        fun { // 2
+        backspace { // 2
+            bindings = <
+&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &lparlt             &rpargt             ___
+&kp EQUAL           &kp N4              &kp N5              &kp N6              &kp MINUS           &lhome              &mt_dpgdn LSHFT 0   &mt_upgup LGUI 0    &mt_rend LALT 0     &rmt LCTRL SEMI
+___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
+                                        ___                 &kp N0              ___                 ___                 &kp DEL             ___              
+            >;
+        };
+
+        fun { // 3
             bindings = <
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___              
 &kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___              
@@ -185,7 +214,7 @@ ___                 &kp N1              &kp N2              &kp N3              
             >;
         };
 
-        med { // 3
+        med { // 4
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___              
 ___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___              
@@ -194,7 +223,7 @@ ___                 ___                 ___                 ___                 
             >;
         };
 
-        mouse { // 4
+        mouse { // 5
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___              
 ___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     ___              
