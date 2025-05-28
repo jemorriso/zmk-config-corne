@@ -184,7 +184,7 @@ ___                 ___                 ___                 ___                 
         space_dup { // 6
             bindings = <
 &kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
-&lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &llt 1 CARET        &kp UNDER           &kp LEFT            &rlt 2 DOWN         &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
+&kp PLUS            &kp DLLR            &kp PRCNT           &kp CARET           &kp UNDER           &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp SEMI         
 ___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
                                         ___                 &kp RPAR            ___                 ___                 &kp DEL             ___              
             >;
