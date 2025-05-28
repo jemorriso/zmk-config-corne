@@ -135,7 +135,6 @@
             >;
         };
 
-        // TODO use rlt instead of rmt on down arrow
         space { // 1
             bindings = <
 &kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
@@ -145,11 +144,10 @@ ___                 &kp N1              &kp N2              &kp N3              
             >;
         };
 
-        // use shifted layer instead of mod-morph because of karabiner issue with mod-morphs
-        space_shifted { // 2
+        backspace { // 2
             bindings = <
 &kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LT              &kp GT              ___
-&lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &lmt LSHIFT CARET   &kp UNDER           &kp HOME            &rmt LSHIFT PG_DN   &rmt LGUI PG_UP     &rmt LALT END       &rmt LCTRL COLON
+&lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &llt 1 CARET        &kp UNDER           &kp HOME            &rmt LSHIFT PG_DN   &rmt LGUI PG_UP     &rmt LALT END       &rmt LCTRL COLON
 ___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 &kp LBRC            &kp RBRC            &kp PIPE
                                         ___                 &kp RPAR            ___                 ___                 &kp LS(DEL)         ___              
             >;
