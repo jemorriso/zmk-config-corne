@@ -57,8 +57,7 @@
     };
 
     behaviors {
-        // left mod-tap
-        lmt: lmt {
+        lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
@@ -70,8 +69,7 @@
             hold-trigger-on-release;
         };
 
-        // right mod-tap
-        rmt: rmt {
+        rmt: right_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
@@ -83,8 +81,7 @@
             hold-trigger-on-release;
         };
 
-        // right layer-tap
-        whatthe: whatthe {
+        whatthe: right_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
 
@@ -95,8 +92,7 @@
             hold-trigger-on-release;
         };
 
-        // left layer-tap
-        llt: llt {
+        llt: left_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&mo>, <&kp>;
 
@@ -108,8 +104,7 @@
             hold-trigger-on-release;
         };
 
-        // layer-tap with quick tap
-        ltqt: ltqt {
+        ltqt: layer_tap_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -118,7 +113,7 @@
             bindings = <&mo>, <&kp>;
         };
 
-        blt: blt {
+        blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
