@@ -118,7 +118,7 @@
             bindings = <&mo>, <&kp>;
         };
 
-        lt: lt {
+        blt: blt {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -135,7 +135,7 @@
 &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P
 &lmt LCTRL A        &lmt LALT S         &lmt LGUI D         &lmt LSHIFT F       &kp G               &kp H               &rmt LSHIFT J       &rmt LGUI K         &rmt LALT L         &rmt LCTRL SQT
 &kp Z               &kp X               &kp C               &kp V               &kp B               &kp N               &kp M               &kp COMMA           &kp DOT             &kp FSLH      
-                                        &lt 4 TAB           &lt 1 SPACE         &lt 5 ESC           &lt 3 RET           &lt 1 BSPC          &key_repeat
+                                        &blt 4 TAB          &blt 1 SPACE        &blt 5 ESC          &blt 3 RET          &blt 1 BSPC         &key_repeat
             >;
         };
 
