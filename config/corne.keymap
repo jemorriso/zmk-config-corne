@@ -113,6 +113,7 @@
             bindings = <&mo>, <&kp>;
         };
 
+        // lt: layer_tap is default behavior, we make a blt to avoid overriding it 🥪
         blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -138,7 +139,7 @@
         space { // 1
             bindings = <
 &kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
-&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &llt 2 N6           &kp MINUS           &kp LEFT            &whatthe 2 DOWN     &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
+&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &llt 2 N6           &kp MINUS           &kp LEFT            &rlt 2 DOWN         &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
 ___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
                                         ___                 &kp N0              ___                 ___                 &kp DEL             ___              
             >;
