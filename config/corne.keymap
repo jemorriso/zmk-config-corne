@@ -135,21 +135,39 @@
             >;
         };
 
+//        space { // 1
+//            bindings = <
+//&kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
+//&lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &llt 2 CARET        &kp UNDER           &kp LEFT            &rlt 2 DOWN         &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
+//___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
+//                                        ___                 &kp RPAR            ___                 ___                 &kp DEL             ___              
+//            >;
+//        };
+//
+//        backspace { // 2
+//            bindings = <
+//&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LT              &kp GT              ___
+//&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &llt 6 N6           &kp MINUS           &kp HOME            &rlt 6 PG_DN        &rmt LGUI PG_UP     &rmt LALT END       &rmt LCTRL COLON
+//___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 &kp LBRC            &kp RBRC            &kp PIPE
+//                                        ___                 &kp N0              ___                 ___                 &kp LS(DEL)         ___              
+//            >;
+//        };
+
         space { // 1
             bindings = <
-&kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
-&lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &llt 2 CARET        &kp UNDER           &kp LEFT            &rlt 2 DOWN         &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
-___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
-                                        ___                 &kp RPAR            ___                 ___                 &kp DEL             ___              
+&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
+&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &llt 2 N6           &kp MINUS           &kp LEFT            &rlt 2 DOWN         &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
+___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
+                                        ___                 &kp N0              ___                 ___                 &kp DEL             ___              
             >;
         };
 
-        backspace { // 2
+        space_shifted { // 2
             bindings = <
-&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LT              &kp GT              ___
-&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &llt 6 N6           &kp MINUS           &kp HOME            &rlt 6 PG_DN        &rmt LGUI PG_UP     &rmt LALT END       &rmt LCTRL COLON
-___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 &kp LBRC            &kp RBRC            &kp PIPE
-                                        ___                 &kp N0              ___                 ___                 &kp LS(DEL)         ___              
+&kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LT              &kp GT              ___
+&lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &kp CARET           &kp UNDER           &kp HOME            &kp PG_DN           &rmt LGUI PG_UP     &rmt LALT END       &rmt LCTRL COLON
+___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 &kp LBRC            &kp RBRC            &kp PIPE
+                                        ___                 &kp RPAR            ___                 ___                 &kp LS(DEL)         ___              
             >;
         };
 
@@ -180,15 +198,15 @@ ___                 ___                 ___                 ___                 
             >;
         };
 
-        // need a space layer higher than backspace layer
-        space_dup { // 6
-            bindings = <
-&kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
-&kp PLUS            &kp DLLR            &kp PRCNT           &kp CARET           &kp UNDER           &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp SEMI         
-___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
-                                        ___                 &kp RPAR            ___                 ___                 &kp DEL             ___              
-            >;
-        };
+//        // need a space layer higher than backspace layer
+//        space_dup { // 6
+//            bindings = <
+//&kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
+//&kp PLUS            &kp DLLR            &kp PRCNT           &kp CARET           &kp UNDER           &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp SEMI         
+//___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
+//                                        ___                 &kp RPAR            ___                 ___                 &kp DEL             ___              
+//            >;
+//        };
 
         empty {
             bindings = <
