@@ -14,26 +14,26 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <40>;
-            key-positions = <12 13>;
-            bindings = <&mt LG(LALT) ESC>;
-        };
-        combo_tab {
-            timeout-ms = <40>;
-            key-positions = <22 23>;
-            bindings = <&kp TAB>;
-        };
-        combo_ret {
-            timeout-ms = <40>;
-            key-positions = <16 17>;
-            bindings = <&mt LG(LALT) RET>;
-        };
-        combo_repeat {
-            timeout-ms = <40>;
-            key-positions = <23 31>;
-            bindings = <&key_repeat>;
-        };
+//        combo_esc {
+//            timeout-ms = <40>;
+//            key-positions = <12 13>;
+//            bindings = <&mt LG(LALT) ESC>;
+//        };
+//        combo_tab {
+//            timeout-ms = <40>;
+//            key-positions = <22 23>;
+//            bindings = <&kp TAB>;
+//        };
+//        combo_ret {
+//            timeout-ms = <40>;
+//            key-positions = <16 17>;
+//            bindings = <&mt LG(LALT) RET>;
+//        };
+//        combo_repeat {
+//            timeout-ms = <40>;
+//            key-positions = <23 31>;
+//            bindings = <&key_repeat>;
+//        };
         combo_cw {
             timeout-ms = <40>;
             key-positions = <26 27>;
