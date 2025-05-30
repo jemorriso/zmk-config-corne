@@ -131,7 +131,7 @@
 &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P
 &lmt LCTRL A        &lmt LALT S         &lmt LGUI D         &lmt LSHIFT F       &kp G               &kp H               &rmt LSHIFT J       &rmt LGUI K         &rmt LALT L         &rmt LCTRL SQT
 &kp Z               &kp X               &kp C               &kp V               &kp B               &kp N               &kp M               &kp COMMA           &kp DOT             &kp FSLH      
-                                        &blt 4 TAB          &blt 1 SPACE        &blt 5 ESC          &blt 3 RET          &blt 1 BSPC         &key_repeat
+                                        &blt 3 TAB          &blt 1 SPACE        &blt 4 ESC          &blt 2 RET          &blt 1 BSPC         &key_repeat
             >;
         };
 
@@ -155,23 +155,23 @@
 
         space { // 1
             bindings = <
-&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
-&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &llt 2 N6           &kp MINUS           &kp LEFT            &rlt 2 DOWN         &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
-___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
+&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 &kp LBKT            &kp LPAR            &kp RPAR            &kp RBKT
+&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      &kp MINUS           &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
+___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp BSLH
                                         ___                 &kp N0              ___                 ___                 &kp DEL             ___              
             >;
         };
 
-        space_shifted { // 2
-            bindings = <
-&kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LT              &kp GT              ___
-&lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &kp CARET           &kp UNDER           &kp HOME            &kp PG_DN           &rmt LGUI PG_UP     &rmt LALT END       &rmt LCTRL COLON
-___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 &kp LBRC            &kp RBRC            &kp PIPE
-                                        ___                 &kp RPAR            ___                 ___                 &kp LS(DEL)         ___              
-            >;
-        };
+//        space_shifted { // 2
+//            bindings = <
+//&kp TILDE           &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 ___                 &kp LT              &kp GT              ___
+//&lmt LCTRL PLUS     &lmt LALT DLLR      &lmt LGUI PRCNT     &kp CARET           &kp UNDER           &kp HOME            &kp PG_DN           &rmt LGUI PG_UP     &rmt LALT END       &rmt LCTRL COLON
+//___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 &kp LBRC            &kp RBRC            &kp PIPE
+//                                        ___                 &kp RPAR            ___                 ___                 &kp LS(DEL)         ___              
+//            >;
+//        };
 
-        fun { // 3
+        fun { // 2
             bindings = <
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___              
 &kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___              
@@ -180,7 +180,7 @@ ___                 &kp EXCL            &kp AT              &kp HASH            
             >;
         };
 
-        med { // 4
+        med { // 3
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___              
 ___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___              
@@ -189,7 +189,7 @@ ___                 ___                 ___                 ___                 
             >;
         };
 
-        mouse { // 5
+        mouse { // 4
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___              
 ___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     ___              
