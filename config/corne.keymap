@@ -163,7 +163,7 @@
 &kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P
 &lmt LCTRL A        &lmt LALT S         &lmt LGUI D         &lmt LSHIFT F       &kp G               &kp H               &rmt LSHIFT J       &rmt LGUI K         &rmt LALT L         &rmt LCTRL SQT
 &kp Z               &kp X               &kp C               &kp V               &kp B               &kp N               &kp M               &kp COMMA           &kp DOT             &kp FSLH      
-                                        &blt 4 TAB          &blt 2 SPACE        &blt 5 ESC          &blt 3 RET          &blt 1 BSPC         &caps_word
+                                        &blt 6 TAB          &blt 4 SPACE        &blt 5 ESC          &blt 2 RET          &blt 1 BSPC         &lt_cw 3 0
             >;
         };
 
@@ -176,7 +176,7 @@
 //            >;
 //        };
 
-        sym { // 1
+        num { // 1
             bindings = <
 &kp LBKT            &kp N7              &kp N8              &kp N9              &kp RBKT            ___                 ___                 ___                 ___                 ___
 &kp SEMI            &kp N4              &kp N5              &kp N6              &kp EQUAL           ___                 ___                 ___                 ___                 ___
@@ -185,14 +185,14 @@
             >;
         };
 
-        nav { // 2
-            bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___            
-___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___       
-                                        ___                 ___                 ___                 ___                 &kp DEL             ___              
-            >;
-        };
+        sym { // 2
+    bindings = <
+&kp LBRC            &kp AMPS            &kp STAR            &kp LPAR            &kp RBRC            ___                 ___                 ___                 ___                 ___
+&kp COLON           &kp DLLR            &kp PRCNT           &kp CARET           &kp PLUS            ___                 ___                 ___                 ___                 ___
+&kp TILDE           &kp EXCL            &kp AT              &kp HASH            &kp PIPE            ___                 ___                 ___                 ___                 ___
+                                        &kp LPAR            &kp RPAR            &kp UNDER           ___                 ___                 ___              
+    >;
+};
 
         fun { // 3
             bindings = <
@@ -203,12 +203,12 @@ ___                 ___                 ___                 ___                 
             >;
         };
 
-        med { // 4
+        nav { // 4
             bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___              
-___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___              
-___                 ___                 ___                 ___                 ___                 &kp C_PP            &kp C_BRI_DN        &kp C_BRI_UP        &kp C_MUTE          ___              
-                                        ___                 ___                 ___                 ___                 ___                 ___              
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___            
+___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___       
+                                        ___                 ___                 ___                 ___                 &kp DEL             ___              
             >;
         };
 
@@ -218,6 +218,15 @@ ___                 ___                 ___                 ___                 
 ___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     ___              
 ___                 ___                 ___                 ___                 ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     ___              
                                         ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
+            >;
+        };
+
+        med { // 6
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___              
+___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___              
+___                 ___                 ___                 ___                 ___                 &kp C_PP            &kp C_BRI_DN        &kp C_BRI_UP        &kp C_MUTE          ___              
+                                        ___                 ___                 ___                 ___                 ___                 ___              
             >;
         };
 
