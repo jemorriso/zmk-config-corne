@@ -68,6 +68,11 @@
             key-positions = <20 21>;
             bindings = <&tog 1>;
         };
+        combo_med {
+            timeout-ms = <40>;
+            key-positions = <2 12>;
+            bindings = <&mo 7>;
+        };
     };
 };
 
@@ -168,7 +173,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &lmt LCTRL A        &lmt LALT R         &lmt LGUI S         &lmt LSHIFT T       &kp G               &kp M               &rmt LSHIFT N       &rmt LGUI E         &rmt LALT I         &rmt LCTRL O  
 &kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH      
-                                        &blt 7 TAB          &blt 5 SPACE        &blt 6 ESC          &blt 3 RET          &blt 2 BSPC         &ltcw 4 0
+                                        &blt 6 TAB          &blt 4 SPACE        &blt 2 ESC          &blt 2 RET          &blt 3 BSPC         &ltcw 5 0
             >;
         };
 
@@ -181,48 +186,39 @@
             >;
         };
 
-//        space { // 1
-//            bindings = <
-//&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LPAR            &kp RPAR            ___
-//&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      &kp MINUS           &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
-//___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 &kp LBKT            &kp RBKT            &kp BSLH
-//                                        ___                 &kp N0              ___                 ___                 &kp DEL             ___              
-//            >;
-//        };
-
-        num { // 2
-            bindings = <
-&kp LBKT            &kp N7              &kp N8              &kp N9              &kp RBKT            ___                 ___                 ___                 ___                 ___
-&kp SEMI            &kp N4              &kp N5              &kp N6              &kp EQUAL           ___                 ___                 ___                 ___                 ___
-&kp GRAVE           &kp N1              &kp N2              &kp N3              &kp BSLH            ___                 ___                 ___                 ___                 ___
-                                        &kp N9              &kp N0              &kp MINUS           ___                 ___                 ___              
-            >;
-        };
-
-        sym { // 3
+        sym { // 2
     bindings = <
-&kp LBRC            &kp AMPS            &kp STAR            &kp LPAR            &kp RBRC            ___                 ___                 ___                 ___                 ___
-&kp COLON           &kp DLLR            &kp PRCNT           &kp CARET           &kp PLUS            ___                 ___                 ___                 ___                 ___
-&kp TILDE           &kp EXCL            &kp AT              &kp HASH            &kp PIPE            ___                 ___                 ___                 ___                 ___
-                                        &kp LPAR            &kp RPAR            &kp UNDER           ___                 ___                 ___              
+&kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ---                 ___                 &kp MINUS           &kp LPAR            &kp RPAR            &kp EQUAL
+&lmt LCTRL BSLH     &lmt LALT DLLR      &lmt LGUI PRCNT     &lmt LSHIFT CARET   ___                 ___                 &rmt LSHIFT COLON   &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL SEMI
+&kp PIPE            &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp PLUS
+                                        ___                 ___                 ___                 ___                 ___                 ___              
     >;
 };
 
-        fun { // 4
+        num { // 3
             bindings = <
-&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___              
-&kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___              
-&kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___              
-                                        ___                 ___                 ___                 ___                 ___                 ___              
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
+___                 &kp N4              &kp N5              &kp N6              ___                 ___                 ___                 ___                 ___                 ___
+___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 &kp N0              ___                 ___                 ___                 ___              
             >;
         };
 
-        nav { // 5
+        nav { // 4
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___            
 ___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___       
                                         ___                 ___                 ___                 ___                 &kp DEL             ___              
+            >;
+        };
+
+        fun { // 5
+            bindings = <
+&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___              
+&kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___              
+&kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___              
+                                        ___                 ___                 ___                 ___                 ___                 ___              
             >;
         };
 
