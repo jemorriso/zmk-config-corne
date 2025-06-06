@@ -187,13 +187,13 @@
         };
 
         sym { // 2
-    bindings = <
-&kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ---                 ___                 &kp MINUS           &kp LPAR            &kp RPAR            &kp EQUAL
+            bindings = <
+&kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LPAR            &kp RPAR            &kp EQUAL
 &lmt LCTRL BSLH     &lmt LALT DLLR      &lmt LGUI PRCNT     &lmt LSHIFT CARET   ___                 ___                 &rmt LSHIFT COLON   &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL SEMI
 &kp PIPE            &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp PLUS
                                         ___                 ___                 ___                 ___                 ___                 ___              
-    >;
-};
+            >;
+        };
 
         num { // 3
             bindings = <
