@@ -71,7 +71,7 @@
         combo_med {
             timeout-ms = <40>;
             key-positions = <2 12>;
-            bindings = <&mo 7>;
+            bindings = <&mo 6>;
         };
     };
 };
@@ -168,25 +168,16 @@
     keymap {
         compatible = "zmk,keymap";
 
-        qwerty { // 0
-            bindings = <
-&kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P
-&lmt LCTRL A        &lmt LALT S         &lmt LGUI D         &lmt LSHIFT F       &kp G               &kp H               &rmt LSHIFT J       &rmt LGUI K         &rmt LALT L         &rmt LCTRL SQT
-&kp Z               &kp X               &kp C               &kp V               &kp B               &kp N               &kp M               &kp COMMA           &kp DOT             &kp FSLH      
-                                        &blt 6 TAB          &blt 4 SPACE        &blt 2 ESC          &blt 2 RET          &blt 3 BSPC         &ltcw 5 0
-            >;
-        };
-
-        colemak { // 1
+        colemak { // 0
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &lmt LCTRL A        &lmt LALT R         &lmt LGUI S         &lmt LSHIFT T       &kp G               &kp M               &rmt LSHIFT N       &rmt LGUI E         &rmt LALT I         &rmt LCTRL O  
 &kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH      
-                                        &blt 6 TAB          &blt 4 SPACE        &blt 2 ESC          &blt 2 RET          &blt 3 BSPC         &ltcw 5 0
+                                        &blt 5 TAB          &blt 3 SPACE        &blt 1 ESC          &blt 1 RET          &blt 2 BSPC         &ltcw 4 0
             >;
         };
 
-        sym { // 2
+        sym { // 1
             bindings = <
 &kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LPAR            &kp RPAR            &kp EQUAL
 &lmt LCTRL BSLH     &lmt LALT DLLR      &lmt LGUI PRCNT     &lmt LSHIFT CARET   ___                 ___                 &rmt LSHIFT COLON   &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL SEMI
@@ -195,7 +186,7 @@
             >;
         };
 
-        num { // 3
+        num { // 2
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
 ___                 &kp N4              &kp N5              &kp N6              ___                 ___                 ___                 ___                 ___                 ___
@@ -204,7 +195,7 @@ ___                 &kp N1              &kp N2              &kp N3              
             >;
         };
 
-        nav { // 4
+        nav { // 3
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___            
@@ -213,7 +204,7 @@ ___                 ___                 ___                 ___                 
             >;
         };
 
-        fun { // 5
+        fun { // 4
             bindings = <
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___              
 &kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___              
@@ -222,7 +213,7 @@ ___                 ___                 ___                 ___                 
             >;
         };
 
-        mouse { // 6
+        mouse { // 5
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___              
 ___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     ___              
@@ -231,7 +222,7 @@ ___                 ___                 ___                 ___                 
             >;
         };
 
-        med { // 7
+        med { // 6
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___              
 ___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___              
