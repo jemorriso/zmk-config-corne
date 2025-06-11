@@ -183,14 +183,6 @@
             bindings = <&mo>, <&caps_word>;
         };
 
-        ltcw: layer_tap_caps_word {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            bindings = <&mo>, <&caps_word>;
-        };
-
         ltsps: layer_tap_space_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
