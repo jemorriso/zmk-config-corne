@@ -85,7 +85,7 @@
             tap-ms = <0>;
             #binding-cells = <2>;
             bindings
-                = <&macro_press &mo 1>
+                , <&macro_press &mo 1>
                 , <&macro_press &kp LSHIFT>
                 , <&macro_pause_for_release>
                 , <&macro_release &kp LSHIFT>
@@ -217,7 +217,7 @@
 &kp GRAVE           &kp N7              &kp N8              &kp N9              &kp TILDE           ___                 &kp LBKT            &kp LPAR            &kp RPAR            &kp RBKT
 &lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      &kp MINUS           &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
 &kp STAR            &kp N1              &kp N2              &kp N3              &kp PLUS            &kp PIPE            &kp COLON           &kp LBRC            &kp RBRC            &kp BSLH
-                                        &kp PG_UP           &kp N0              &kp PG_DN           &kp HOME            &kp UNDER           &kp END          
+                                        &kp HOME            &kp N0              &kp PG_DN           &kp PG_UP           &kp UNDER           &kp END          
             >;
         };
 
