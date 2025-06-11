@@ -179,9 +179,9 @@
 
         sym { // 1
             bindings = <
-&kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LPAR            &kp RPAR            &kp EQUAL
-&lmt LCTRL BSLH     &lmt LALT DLLR      &lmt LGUI PRCNT     &lmt LSHIFT CARET   ___                 ___                 &rmt LSHIFT COLON   &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL SEMI
-&kp PIPE            &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp PLUS
+&kp GRAVE           &kp AMPS            &kp STAR            &kp PLUS            ___                 ___                 &kp TILDE           &kp LPAR            &kp RPAR            &kp PIPE
+&lmt LCTRL CARET    &lmt LALT DLLR      &lmt LGUI EQUAL     &lmt LSHIFT MINUS   ___                 ___                 &rmt LSHIFT COLON   &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL SEMI
+&kp PRCNT           &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___              
             >;
         };
