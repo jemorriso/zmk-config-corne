@@ -195,7 +195,7 @@
 &kp GRAVE           &kp N7              &kp N8              &kp N9              &kp TILDE           ___                 &kp AMPS            &kp LPAR            &kp RPAR            &kp PIPE
 &lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      &kp MINUS           &kp AT              &rmt LSHIFT COLON   &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL SEMI
 &kp STAR            &kp N1              &kp N2              &kp N3              &kp PLUS            ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp BSLH
-                                        &kp EXCL            &kp N0              &kp HASH            &kp DLLR            &kp PRCNT           &kp CARET        
+                                        &kp EXCL            &kp N0              &kp HASH            &kp PRCNT           &kp CARET           &kp DLLR
             >;
         };
 
