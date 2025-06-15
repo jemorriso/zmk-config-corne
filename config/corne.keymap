@@ -14,21 +14,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-//        combo_esc {
-//            timeout-ms = <40>;
-//            key-positions = <12 13>;
-//            bindings = <&mt LG(LALT) ESC>;
-//        };
-//        combo_tab {
-//            timeout-ms = <40>;
-//            key-positions = <22 23>;
-//            bindings = <&kp TAB>;
-//        };
-//        combo_ret {
-//            timeout-ms = <40>;
-//            key-positions = <16 17>;
-//            bindings = <&mt LG(LALT) RET>;
-//        };
         combo_repeat {
             timeout-ms = <40>;
             key-positions = <22 23>;
@@ -63,11 +48,6 @@
             layers = <1>;
             bindings = <&kp END>;
         };
-//        combo_med {
-//            timeout-ms = <40>;
-//            key-positions = <2 12>;
-//            bindings = <&mo 6>;
-//        };
     };
 };
 
@@ -110,38 +90,6 @@
             hold-trigger-on-release;
         };
 
-        rlt: right_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
-            hold-trigger-on-release;
-        };
-
-        llt: left_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            // quick-tap-ms = <200>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
-            hold-trigger-on-release;
-        };
-
-        ltqt: layer_tap_quick_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            quick-tap-ms = <200>;
-            bindings = <&mo>, <&kp>;
-        };
-
         // lt: layer_tap is default behavior, we make a blt to avoid overriding it 🥪
         blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -149,14 +97,6 @@
             flavor = "balanced";
             tapping-term-ms = <300>;
             bindings = <&mo>, <&kp>;
-        };
-
-        ltcw: layer_tap_caps_word {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            bindings = <&mo>, <&caps_word>;
         };
     };
 
@@ -172,43 +112,6 @@
             >;
         };
 
-//        sym { // 1
-//            bindings = <
-//&kp GRAVE           &kp AMPS            &kp STAR            &kp PLUS            ___                 ___                 &kp TILDE           &kp LPAR            &kp RPAR            &kp PIPE
-//&lmt LCTRL CARET    &lmt LALT DLLR      &lmt LGUI EQUAL     &lmt LSHIFT MINUS   ___                 ___                 &rmt LSHIFT COLON   &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL SEMI
-//&kp PRCNT           &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp BSLH
-//                                        ___                 ___                 ___                 ___                 ___                 ___              
-//            >;
-//        };
-//
-//        num { // 2
-//            bindings = <
-//___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
-//___                 &kp N4              &kp N5              &kp N6              ___                 ___                 ___                 ___                 ___                 ___
-//___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 ___                 ___                 ___
-//                                        ___                 &kp N0              ___                 ___                 ___                 ___              
-//            >;
-//        };
-
-//        num_sym { // 1
-//            bindings = <
-//&kp GRAVE           &kp N7              &kp N8              &kp N9              &kp TILDE           ___                 &kp AMPS            &kp LPAR            &kp RPAR            &kp PIPE
-//&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      &kp MINUS           &kp AT              &rmt LSHIFT COLON   &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL SEMI
-//&kp STAR            &kp N1              &kp N2              &kp N3              &kp PLUS            ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp BSLH
-//                                        &kp EXCL            &kp N0              &kp HASH            &kp PRCNT           &kp CARET           &kp DLLR
-//            >;
-//        };
-
-
-//        space { // 1
-//            bindings = <
-//&kp STAR            &kp N7              &kp N8              &kp N9              &kp PLUS            &kp TILDE           &kp LBRC            &kp LPAR            &kp RPAR            &kp RBRC
-//&lmt LCTRL EQUAL    &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      &kp MINUS           &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL PIPE
-//&kp GRAVE           &kp N1              &kp N2              &kp N3              &kp AT              &kp AMPS            &kp UNDER           &kp LBKT            &kp RBKT            &kp BSLH
-//                                        &kp EXCL            &kp N0              &kp HASH            &kp PRCNT           &kp CARET           &kp DLLR 
-//            >;
-//        };
-
         space { // 1
             bindings = <
 &kp LBKT            &kp N7              &kp N8              &kp N9              &kp RBKT            &kp TILDE           &kp UNDER           &kp MINUS           &kp EQUAL           &kp PLUS  
@@ -217,15 +120,6 @@
                                         &kp EXCL            &kp N0              &kp HASH            &kp PRCNT           &kp CARET           &kp DLLR 
             >;
         };
-
-//        nav { // 2
-//            bindings = <
-//___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-//___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___            
-//___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___       
-//                                        ___                 ___                 ___                 ___                 &kp DEL             ___              
-//            >;
-//        };
 
         fun { // 2
             bindings = <
