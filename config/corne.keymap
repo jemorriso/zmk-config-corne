@@ -21,7 +21,7 @@
 //        };
         combo_med {
             timeout-ms = <40>;
-            key-positions = <12 22>;
+            key-positions = <2 12>;
             bindings = <&mo 7>;
         };
         combo_cut {
