@@ -157,7 +157,7 @@ ___                 ___                 ___                 ___                 
 
         mouse {
             bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 &kp LG(LC(SPACE))   &kp LG(LC(F))       &kp LG(LC(D))       ___              
+___                 ___                 ___                 ___                 ___                 ___                 &kp LG(LC(O))       &kp LG(LC(F))       &kp LG(LC(D))       ___
 ___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     ___              
 ___                 ___                 ___                 ___                 ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &kp LG(LC(FSLH)) 
                                         ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
