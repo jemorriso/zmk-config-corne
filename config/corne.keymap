@@ -173,7 +173,7 @@
             bindings = <
 &kp Q               &kp W               &llt 3 F            &kp P               &kp B               &kp J               &kp L               &rlt 3 U            &kp Y               &kp SQT
 &lmt_rpi LCTRL A    &lmt_rpi LALT R     &lmt_rpi LGUI S     &lmt LSHIFT T       &kp G               &kp M               &rmt LSHIFT N       &rmt_rpi LGUI E     &rmt_rpi LALT I     &rmt_rpi LCTRL O
-&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
+&kp Z               &kp X               &kp C               &llt 2 D            &kp V               &kp K               &rlt 1 H            &kp COMMA           &kp DOT             &kp FSLH
                                         &blt 6 TAB          &blt 2 SPACE        &blt 5 ESC          &blt 4 RET          &blt 1 BSPC         &kp DEL
             >;
         };
