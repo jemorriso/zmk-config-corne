@@ -35,11 +35,11 @@
 //            key-positions = <22 23>;
 //            bindings = <&key_repeat>;
 //        };
-//        combo_med {
-//            timeout-ms = <40>;
-//            key-positions = <3 13>;
-//            bindings = <&mo 7>;
-//        };
+        combo_med {
+            timeout-ms = <40>;
+            key-positions = <3 13>;
+            bindings = <&mo 5>;
+        };
         combo_cut {
             timeout-ms = <40>;
             key-positions = <20 21>;
@@ -174,7 +174,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &lmt_rpi LCTRL A    &lmt_rpi LALT R     &lmt_rpi LGUI S     &lmt LSHIFT T       &kp G               &kp M               &rmt LSHIFT N       &rmt_rpi LGUI E     &rmt_rpi LALT I     &rmt_rpi LCTRL O
 &kp Z               &kp X               &kp C               &llt 2 D            &kp V               &kp K               &rlt 2 H            &kp COMMA           &kp DOT             &kp FSLH
-                                        &blt 5 TAB          &blt 1 SPACE        &blt 4 ESC          &blt 3 RET          &blt 1 BSPC         &kp DEL
+                                        ___                 &blt 1 SPACE        &blt 4 ESC          &blt 3 RET          &blt 1 BSPC         ___
             >;
         };
 
@@ -183,7 +183,7 @@
 &kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
 &lmt LCTRL N0       &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      ___                 &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
 ___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp BSLH
-                                        ___                 ___                 ___                 ___                 ___                 ___              
+                                        ___                 &kp TAB             ___                 ___                 &kp DEL             ___              
             >;
         };
 
@@ -191,7 +191,7 @@ ___                 &kp N1              &kp N2              &kp N3              
             bindings = <
 &kp LS(GRAVE)       &kp LS(N7)          &kp LS(N8)          &kp LS(N9)          ___                 ___                 &kp LS(MINUS)       &kp LS(LBKT)        &kp LS(RBKT)        &kp LS(EQUAL)
 &lmt LCTRL LS(N0)   &lmt LALT LS(N4)    &lmt LGUI LS(N5)    &lmt LSHIFT LS(N6)  ___                 &kp LS(LEFT)        &rmt LSHIFT LS(DOWN) &rmt LGUI LS(UP)   &rmt LALT LS(RIGHT) &rmt LCTRL LS(SEMI)
-___                 &kp LS(N1)          &kp LS(N2)          &kp LS(N3)          ___                 &kp LS(HOMEe        &kp LS(PG_DN)       &kp LS(PG_UP)       &kp LS(END)         &kp LS(BSLH)
+___                 &kp LS(N1)          &kp LS(N2)          &kp LS(N3)          ___                 &kp LS(HOME)        &kp LS(PG_DN)       &kp LS(PG_UP)       &kp LS(END)         &kp LS(BSLH)
                                         ___                 ___                 ___                 ___                 ___                 ___              
             >;
         };
