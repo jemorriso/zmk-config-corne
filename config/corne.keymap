@@ -171,37 +171,27 @@
 
         colemak {
             bindings = <
-&kp Q               &kp W               &llt 3 F            &kp P               &kp B               &kp J               &kp L               &rlt 3 U            &kp Y               &kp SQT
+&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &lmt_rpi LCTRL A    &lmt_rpi LALT R     &lmt_rpi LGUI S     &lmt LSHIFT T       &kp G               &kp M               &rmt LSHIFT N       &rmt_rpi LGUI E     &rmt_rpi LALT I     &rmt_rpi LCTRL O
-&kp Z               &kp X               &kp C               &llt 2 D            &kp V               &kp K               &rlt 1 H            &kp COMMA           &kp DOT             &kp FSLH
-                                        &blt 6 TAB          &blt 2 SPACE        &blt 5 ESC          &blt 4 RET          &blt 1 BSPC         &kp DEL
+&kp Z               &kp X               &kp C               &llt 2 D            &kp V               &kp K               &rlt 2 H            &kp COMMA           &kp DOT             &kp FSLH
+                                        &blt 5 TAB          &blt 1 SPACE        &blt 4 ESC          &blt 3 RET          &blt 1 BSPC         &kp DEL
             >;
         };
 
-        num {
+        space {
             bindings = <
-&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 &kp MINUS           &kp LPAR            &kp RPAR            &kp EQUAL
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 ___                 &rmt LSHIFT COLON   &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL SEMI
-&kp PIPE            &kp N1              &kp N2              &kp N3              ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp PLUS
+&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 &kp EQUAL           &kp LBKT            &kp RBKT            &kp MINUS
+&lmt LCTRL N0       &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      ___                 &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
+___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___              
             >;
         };
 
-
-        nav {
+        space_shift {
             bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 &kp TAB             &kp LS(TAB)         ___
-___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___              
-___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___              
-                                        ___                 ___                 ___                 ___                 &kp DEL             ___
-            >;
-        };
-
-        sym {
-            bindings = <
-&kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LPAR            &kp RPAR            &kp EQUAL
-&lmt LCTRL BSLH     &lmt LALT DLLR      &lmt LGUI PRCNT     &lmt LSHIFT CARET   ___                 ___                 &rmt LSHIFT COLON   &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL SEMI
-&kp PIPE            &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp PLUS
+&kp LS(GRAVE)       &kp LS(N7)          &kp LS(N8)          &kp LS(N9)          ___                 ___                 &kp LS(EQUAL)       &kp LS(LBKT)        &kp LS(RBKT)        &kp LS(MINUS)
+&lmt LCTRL LS(N0)   &lmt LALT LS(N4)    &lmt LGUI LS(N5)    &lmt LSHIFT LS(N6)  ___                 &kp LS(LEFT)        &rmt LSHIFT LS(DOWN) &rmt LGUI LS(UP)   &rmt LALT LS(RIGHT) &rmt LCTRL LS(SEMI)
+___                 &kp LS(N1)          &kp LS(N2)          &kp N3              ___                 &kp LS(HOME)        &kp LS(PG_DN)       &kp LS(PG_UP)       &kp LS(END)         &kp LS(BSLH)
                                         ___                 ___                 ___                 ___                 ___                 ___              
             >;
         };
