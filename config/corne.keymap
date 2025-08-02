@@ -183,7 +183,7 @@
 &kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
 &lmt LCTRL N0       &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      ___                 &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
 ___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp BSLH
-                                        ___                 &kp TAB             ___                 ___                 &kp DEL             ___              
+                                        ___                 &kp TAB             ___                 &kp DEL             ___                 ___
             >;
         };
 
@@ -192,7 +192,7 @@ ___                 &kp N1              &kp N2              &kp N3              
 &kp LS(GRAVE)       &kp LS(N7)          &kp LS(N8)          &kp LS(N9)          ___                 ___                 &kp LS(MINUS)       &kp LS(LBKT)        &kp LS(RBKT)        &kp LS(EQUAL)
 &lmt LCTRL LS(N0)   &lmt LALT LS(N4)    &lmt LGUI LS(N5)    &lmt LSHIFT LS(N6)  ___                 &kp LS(LEFT)        &rmt LSHIFT LS(DOWN) &rmt LGUI LS(UP)   &rmt LALT LS(RIGHT) &rmt LCTRL LS(SEMI)
 ___                 &kp LS(N1)          &kp LS(N2)          &kp LS(N3)          ___                 &kp LS(HOME)        &kp LS(PG_DN)       &kp LS(PG_UP)       &kp LS(END)         &kp LS(BSLH)
-                                        ___                 ___                 ___                 ___                 ___                 ___              
+                                        ___                 &kp LS(TAB)         ___                 &kp LS(DEL)         ___                 ___
             >;
         };
 
