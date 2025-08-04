@@ -169,12 +169,21 @@
     keymap {
         compatible = "zmk,keymap";
 
+        qwerty {
+            bindings = <
+&kp Q               &kp W               &kp E               &kp R               &kp T               &kp Y               &kp U               &kp I               &kp O               &kp P
+&lmt_rpi LCTRL A    &lmt_rpi LALT S     &lmt_rpi LGUI D     &lmt LSHIFT F       &kp G               &kp H               &rmt LSHIFT J       &rmt_rpi LGUI K     &rmt_rpi LALT L     &rmt_rpi LCTRL '
+&kp Z               &kp X               &kp C               &llt 3 V            &kp B               &kp N               &rlt 3 M            &kp COMMA           &kp DOT             &kp FSLH
+                                        ___                 &blt 2 SPACE        &blt 5 ESC          &blt 4 RET          &blt 2 BSPC         ___
+            >;
+        };
+
         colemak {
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &lmt_rpi LCTRL A    &lmt_rpi LALT R     &lmt_rpi LGUI S     &lmt LSHIFT T       &kp G               &kp M               &rmt LSHIFT N       &rmt_rpi LGUI E     &rmt_rpi LALT I     &rmt_rpi LCTRL O
-&kp Z               &kp X               &kp C               &llt 2 D            &kp V               &kp K               &rlt 2 H            &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &blt 1 SPACE        &blt 4 ESC          &blt 3 RET          &blt 1 BSPC         ___
+&kp Z               &kp X               &kp C               &llt 3 D            &kp V               &kp K               &rlt 3 H            &kp COMMA           &kp DOT             &kp FSLH
+                                        ___                 &blt 2 SPACE        &blt 5 ESC          &blt 4 RET          &blt 2 BSPC         ___
             >;
         };
 
@@ -208,7 +217,7 @@ ___                 &kp LS(N1)          &kp LS(N2)          &kp LS(N3)          
         mouse {
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 &mouseless          &kp LG(LC(F))       &kp LG(LC(D))       ___
-___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     ___              
+___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &kp LG(LC(K))
 ___                 ___                 ___                 ___                 ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &kp LG(LC(FSLH)) 
                                         ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
             >;
