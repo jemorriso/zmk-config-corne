@@ -24,6 +24,15 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+        mmv_nw: mmv_nw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mmv MOVE_UP &mmv MOVE_LEFT>
+                , <&macro_pause_for_release>
+                , <&macro_release &mmv MOVE_UP &mmv MOVE_LEFT>
+                ;
+        }
     };
 };
 
