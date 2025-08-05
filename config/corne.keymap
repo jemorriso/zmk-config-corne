@@ -172,7 +172,7 @@
             hold-trigger-on-release;
         };
 
-        lmt_noqt: left_mod_tap {
+        lmt_noqt: left_mod_tap_no_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
@@ -183,7 +183,7 @@
             hold-trigger-on-release;
         };
 
-        rmt_noqt: right_mod_tap {
+        rmt_noqt: right_mod_tap_no_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
 
@@ -194,7 +194,7 @@
             hold-trigger-on-release;
         };
 
-        llt_noqt: left_layer_tap {
+        llt_noqt: left_layer_tap_no_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -204,7 +204,7 @@
             hold-trigger-on-release;
         };
 
-        rlt_noqt: right_layer_tap {
+        rlt_noqt: right_layer_tap_no_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
