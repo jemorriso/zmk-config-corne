@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
+
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -42,7 +44,7 @@
                 , <&macro_release &mmv MOVE_UP &mmv MOVE_RIGHT>
                 ;
         };
-        mmv_sw: mmv_sw {
+        mmv_sw: mmv_sw e
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -66,11 +68,16 @@
 / {
     combos {
         compatible = "zmk,combos";
-//        combo_repeat {
-//            timeout-ms = <40>;
-//            key-positions = <22 23>;
-//            bindings = <&key_repeat>;
-//        };
+        combo_repeat {
+            timeout-ms = <40>;
+            key-positions = <1 2>;
+            bindings = <&key_repeat>;
+        };
+        combo_repeat2 {
+            timeout-ms = <40>;
+            key-positions = <7 8>;
+            bindings = <&key_repeat>;
+        };
         combo_med {
             timeout-ms = <40>;
             key-positions = <3 13>;
@@ -165,6 +172,48 @@
             hold-trigger-on-release;
         };
 
+        lmt_noqt: left_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
+            hold-trigger-on-release;
+        };
+
+        rmt_noqt: right_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+            hold-trigger-on-release;
+        };
+
+        llt_noqt: left_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
+            hold-trigger-on-release;
+        };
+
+        rlt_noqt: right_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+            bindings = <&mo>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+            hold-trigger-on-release;
+        };
+
         // lt: layer_tap is default behavior, we make a blt to avoid overriding it 🥪
         blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -208,9 +257,9 @@
         colemak {
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&lmt_rpi LCTRL A    &lmt_rpi LALT R     &lmt_rpi LGUI S     &lmt LSHIFT T       &kp G               &kp M               &rmt LSHIFT N       &rmt_rpi LGUI E     &rmt_rpi LALT I     &rmt_rpi LCTRL O
-&kp Z               &kp X               &kp C               &llt 3 D            &kp V               &kp K               &rlt 3 H            &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &blt 2 SPACE        &blt 5 ESC          &blt 4 RET          &blt 2 BSPC         ___
+&lmt_rpi LCTRL A    &lmt_rpi LALT R     &lmt_rpi LGUI S     &lmt_noqt LSHIFT T  &kp G               &kp M               &rmt_noqt LSHIFT N  &rmt_rpi LGUI E     &rmt_rpi LALT I     &rmt_rpi LCTRL O
+&kp Z               &kp X               &kp C               &llt_noqt 3 D       &kp V               &kp K               &rlt_noqt 3 H       &kp COMMA           &kp DOT             &kp FSLH
+                                        ___                 &blt_noqt 2 SPACE   &blt 5 ESC          &blt 4 RET          &blt_noqt 2 BSPC    ___
             >;
         };
 
