@@ -44,7 +44,7 @@
                 , <&macro_release &mmv MOVE_UP &mmv MOVE_RIGHT>
                 ;
         };
-        mmv_sw: mmv_sw e
+        mmv_sw: mmv_sw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
