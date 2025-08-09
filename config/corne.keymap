@@ -1,17 +1,10 @@
-/*
- * Copyright (c) 2020 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
-
-
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#define ___ &trans
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/bt.h>
-
-#define ___ &trans
 
 / {
     macros {
@@ -237,6 +230,15 @@
             bindings = <&mo>, <&kp>;
         };
 
+        hplt: hold_preferred_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            bindings = <&mo>, <&kp>;
+        };
+
         lmt_rpi: left_mod_tap_rpi {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
@@ -272,7 +274,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &lmt_rpi LCTRL A    &lmt_rpi LALT R     &lmt_rpi LGUI S     &lmt_noqt LSHIFT T  &kp G               &kp M               &rmt_noqt LSHIFT N  &rmt_rpi LGUI E     &rmt_rpi LALT I     &rmt_rpi LCTRL O
 &kp Z               &kp X               &kp C               &llt_noqt 3 D       &kp V               &kp K               &rlt_noqt 3 H       &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &blt_noqt 2 SPACE   &blt 5 ESC          &blt 4 RET          &blt_noqt 2 BSPC    ___
+                                        ___                 &blt_noqt 2 SPACE   &hplt 5 ESC         &blt 4 RET          &blt_noqt 2 BSPC    ___
             >;
         };
 
@@ -314,10 +316,10 @@ ___                 &kp LS(N1)          &kp LS(N2)          &kp LS(N3)          
 
         mouse {
             bindings = <
-&kp Q               &kp W               &kp F               &kp P               &kp B               &mmv_nw             &mmv_sw             &mmv_ne             &mmv_se             ___
-&kp A               &kp R               &kp S               &kp T               &kp G               &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &kp LG(LC(K))
-&kp Z               &kp X               &kp C               &kp D               &kp V               &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &kp LG(LC(FSLH)) 
-                                        ___                 &kp SPACE           &kp ESC             &mkp RCLK           &mkp LCLK           &mkp MCLK
+&kp Q               &kp W               &kp F               &kp P               &kp B               &mmv_nw             &mmv_sw             &mmv_ne             &mmv_se             &mkp MB5
+&kp A               &kp R               &kp S               &kp T               &kp G               &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &mkp MB4
+&kp Z               &kp X               &kp C               &kp D               &kp V               &msc SCRL_RIGHT     &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_LEFT      &mkp MCLK
+                                        ___                 &kp SPACE           &kp ESC             &mkp RCLK           &mkp LCLK           ___
             >;
         };
 
