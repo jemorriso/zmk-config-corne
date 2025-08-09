@@ -300,20 +300,19 @@ ___                 &kp LS(N1)          &kp LS(N2)          &kp LS(N3)          
 
         fun {
             bindings = <
-&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___              
-&kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___              
-&kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___              
-                                        ___                 ___                 ___                 ___                 ___                 ___              
+&kp F12             &kp F7              &kp F8              &kp F9              ___                 &kp J               &kp L               &kp U               &kp Y               &kp SQT
+&kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp M               &kp N               &kp E               &kp I               &kp O
+&kp F10             &kp F1              &kp F2              &kp F3              ___                 &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
+                                        ___                 ___                 ___                 &kp RET             &kp BSPC            ___
             >;
         };
 
         mouse {
             bindings = <
-/* ___                 ___                 ___                 ___                 ___                 ___                 &mouseless          &kp LG(LC(F))       &kp LG(LC(D))       ___ */
-___                 ___                 ___                 ___                 ___                 &mmv_nw             &mmv_sw             &mmv_ne             &mmv_se             ___
-___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &kp LG(LC(K))
-___                 ___                 ___                 ___                 ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &kp LG(LC(FSLH)) 
-                                        ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
+&kp Q               &kp W               &kp F               &kp P               &kp B               &mmv_nw             &mmv_sw             &mmv_ne             &mmv_se             ___
+&kp A               &kp R               &kp S               &kp T               &kp G               &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &kp LG(LC(K))
+&kp Z               &kp X               &kp C               &kp D               &kp V               &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &kp LG(LC(FSLH)) 
+                                        ___                 &kp SPACE           &kp ESC             &mkp RCLK           &mkp LCLK           &mkp MCLK
             >;
         };
 
