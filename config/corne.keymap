@@ -1,4 +1,4 @@
-/* #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10 */
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 #define ___ &trans
 
 #include <behaviors.dtsi>
@@ -265,6 +265,7 @@
             hold-trigger-on-release;
         };
 
+        // TODO: this is not working
         qsc: quick_scroll {
             compatible = "zmk,behavior-input-two-axis";
             #binding-cells = <1>;
@@ -328,7 +329,7 @@ ___                 &kp LS(N1)          &kp LS(N2)          &kp LS(N3)          
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &mmv_nw             &mmv_sw             &mmv_ne             &mmv_se             &mkp MB5
 &kp A               &kp R               &kp S               &kp T               &kp G               &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &mkp MB4
-&kp Z               &kp X               &kp C               &kp D               &kp V               &qsc SCRL_RIGHT     &qsc SCRL_UP        &qsc SCRL_DOWN      &qsc SCRL_LEFT      &mkp MCLK
+&kp Z               &kp X               &kp C               &kp D               &kp V               &msc SCRL_RIGHT     &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_LEFT      &mkp MCLK
                                         ___                 &kp SPACE           &kp ESC             &mkp RCLK           &mkp LCLK           ___
             >;
         };
