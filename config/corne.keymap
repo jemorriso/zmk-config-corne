@@ -83,6 +83,11 @@
             key-positions = <3 13>;
             bindings = <&mo 6>;
         };
+        combo_mouse {
+            timeout-ms = <40>;
+            key-positions = <2 12>;
+            bindings = <&mo 5>;
+        };
         combo_cut {
             timeout-ms = <40>;
             key-positions = <20 21>;
