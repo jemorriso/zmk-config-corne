@@ -281,8 +281,8 @@
 
         space {
             bindings = <
-&kp GRAVE           &kp N7              &kp N8              &kp N9              &kp EQUAL           ___                 &kp LBKT            &kp LS(N9)          &kp LS(N0)          &kp RBKT
-&lmt LCTRL N0       &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      &kp MINUS           &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
+&kp GRAVE           &kp N7              &kp N8              &kp N9              &kp EQUAL           ___                 &kp LBKT            &kp LS(COMMA)       &kp LS(DOT)         &kp RBKT
+&lmt LCTRL N0       &lmt LALT N4        &lmt LGUI N5        &llt 2 N6           &kp MINUS           &kp LEFT            &rlt 2 DOWN         &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
 ___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp BSLH
                                         ___                 &kp TAB             ___                 &kp DEL             ___                 ___
             >;
@@ -290,8 +290,8 @@ ___                 &kp N1              &kp N2              &kp N3              
 
         space_shift {
             bindings = <
-&kp LS(GRAVE)       &kp LS(N7)          &kp LS(N8)          &kp LS(N9)          &kp LS(EQUAL)       ___                 &kp LS(LBKT)        &kp LS(COMMA)       &kp LS(DOT)         &kp LS(RBKT)
-&lmt LCTRL LS(N0)   &lmt LALT LS(N4)    &lmt LGUI LS(N5)    &lmt LSHIFT LS(N6)  &kp LS(MINUS)       &kp LS(LEFT)        &rmt LSHIFT LS(DOWN) &rmt LGUI LS(UP)   &rmt LALT LS(RIGHT) &rmt LCTRL LS(SEMI)
+&kp LS(GRAVE)       &kp LS(N7)          &kp LS(N8)          &kp LS(N9)          &kp LS(EQUAL)       ___                 &kp LS(LBKT)        &kp LS(N9)          &kp LS(N0)          &kp LS(RBKT)
+&lmt LCTRL LS(N0)   &lmt LALT LS(N4)    &lmt LGUI LS(N5)    &kp LS(N6)          &kp LS(MINUS)       &kp LS(LEFT)        &kp LS(DOWN)        &rmt LGUI LS(UP)    &rmt LALT LS(RIGHT) &rmt LCTRL LS(SEMI)
 ___                 &kp LS(N1)          &kp LS(N2)          &kp LS(N3)          ___                 &kp LS(HOME)        &kp LS(PG_DN)       &kp LS(PG_UP)       &kp LS(END)         &kp LS(BSLH)
                                         ___                 &kp LS(TAB)         ___                 &kp LS(DEL)         ___                 ___
             >;
