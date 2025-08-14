@@ -282,7 +282,7 @@
         space {
             bindings = <
 &kp GRAVE           &kp N7              &kp N8              &kp N9              &kp EQUAL           ___                 &kp LBKT            &kp LS(COMMA)       &kp LS(DOT)         &kp RBKT
-&lmt LCTRL N0       &lmt LALT N4        &lmt LGUI N5        &llt 2 N6           &kp MINUS           &kp LEFT            &rlt 2 DOWN         &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
+&lmt LCTRL N0       &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      &kp MINUS           &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
 ___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp BSLH
                                         ___                 &kp TAB             ___                 &kp DEL             ___                 ___
             >;
