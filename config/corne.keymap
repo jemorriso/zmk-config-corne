@@ -264,7 +264,20 @@
             time-to-max-speed-ms = <0>; // always at max speed
             acceleration-exponent = <0>;
         };
- 
+
+        ltlpar: ltlpar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LT>, <&kp LPAR>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        gtrpar: gtrpar {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp GT>, <&kp RPAR>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -281,7 +294,7 @@
 
         space {
             bindings = <
-&kp GRAVE           &kp N7              &kp N8              &kp N9              &kp EQUAL           ___                 &kp LBKT            &kp LS(COMMA)       &kp LS(DOT)         &kp RBKT
+&kp GRAVE           &kp N7              &kp N8              &kp N9              &kp EQUAL           ___                 &kp LBKT            &ltlpar             &gtrpar             &kp RBKT
 &lmt LCTRL N0       &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      &kp MINUS           &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
 ___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp BSLH
                                         ___                 &kp TAB             ___                 &kp DEL             ___                 ___
