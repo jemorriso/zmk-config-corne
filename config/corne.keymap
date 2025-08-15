@@ -293,7 +293,7 @@
 
         nav {
             bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 &kp TAB             &kp LS(TAB)         ___                 ___              
+___                 ___                 ___                 ___                 ___                 ___                 ___                 &kp TAB             &kp LS(TAB)         ___
 ___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL          
 ___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___              
                                         ___                 ___                 ___                 ___                 ___                 ___              
