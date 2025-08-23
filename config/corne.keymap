@@ -266,38 +266,18 @@
 
         colemak {
             bindings = <
-&kp Q               &kp W               &llt_noqt 1 F       &kp P               &kp B               &kp J               &kp L               &rlt_noqt 1 U       &kp Y               &kp SQT
+&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &lmt_rpi LCTRL A    &lmt_rpi LALT R     &lmt_rpi LGUI S     &lmt_noqt LSHIFT T  &kp G               &kp M               &rmt_noqt LSHIFT N  &rmt_rpi LGUI E     &rmt_rpi LALT I     &rmt_rpi LCTRL O
 &kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &blt 3 SPACE        &hplt 5 ESC         &blt 4 RET          &blt 2 BSPC         ___
+                                        ___                 &blt_noqt 1 SPACE   &hplt 3 ESC         &blt 2 RET          &blt_noqt 1 BSPC    ___
             >;
         };
 
-        sym {
-            bindings = <
-&kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp SEMI            &kp LPAR            &kp RPAR            &kp DQT
-&lmt LCTRL PIPE     &lmt LALT DLLR      &lmt LGUI PRCNT     &lmt LSHIFT CARET   &kp MINUS           &kp UNDER           &rmt LSHIFT LBRC    &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL RBRC
-&kp BSLH            &kp EXCL            &kp AT              &kp HASH            &kp EQUAL           &kp PLUS            &kp COLON           &kp LT              &kp GT              &kp QMARK
+        space {
+&kp TAB             &kp N7              &kp N8              &kp N9              ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
+&lmt LCTRL N0       &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      ___                 &kp LEFT            &rmt LSHIFT DOWN    &rmt LGUI UP        &rmt LALT RIGHT     &rmt LCTRL SEMI
+&kp GRAVE           &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
-            >;
-        };
-
-        num {
-            bindings = <
-&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 &kp SEMI            &kp LPAR            &kp RPAR            &kp DQT
-&lmt LCTRL N0       &lmt LALT N4        &lmt LGUI N5        &lmt LSHIFT N6      &kp MINUS           &kp UNDER           &rmt LSHIFT LBRC    &rmt LGUI LBKT      &rmt LALT RBKT      &rmt LCTRL RBRC
-&kp BSLH            &kp N1              &kp N2              &kp N3              &kp EQUAL           &kp PLUS            &kp COLON           &kp LT              &kp GT              &kp QMARK
-                                        ___                 ___                 ___                 ___                 ___                 ___
-            >;
-        };
-
-        nav {
-            bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 &kp TAB             &kp LS(TAB)         ___
-___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL          
-___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___              
-                                        ___                 ___                 ___                 ___                 ___                 ___              
-            >;
         };
 
         fun {
