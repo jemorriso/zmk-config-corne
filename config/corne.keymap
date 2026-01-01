@@ -81,9 +81,9 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 
         symbol {
             bindings = <
-&kp EXCL            &kp ESC             &kp TAB             &kp PLUS            &kp AMPS            ___                 &kp SEMI            &kp LBKT            &kp RBKT            ___
-&kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           &kp PIPE            &kp HASH            &kp UNDER           &kp LPAR            &kp RPAR            &kp GRAVE
-&lmt LSHIFT TILDE   &lmt LCTRL LT       &lmt LALT GT        &lmt LGUI STAR      &kp PRCNT           &kp AT              &rmt LGUI COLON     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT BSLH
+&kp TILDE           &kp ESC             &kp TAB             &kp PLUS            &kp AMPS            ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
+&kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           &kp EXCL            &kp HASH            &kp UNDER           &kp LPAR            &kp RPAR            &kp SEMI
+&lmt LSHIFT PIPE    &lmt LCTRL LT       &lmt LALT GT        &lmt LGUI STAR      &kp PRCNT           &kp AT              &rmt LGUI COLON     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
