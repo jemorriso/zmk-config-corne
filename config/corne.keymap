@@ -7,6 +7,17 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_function {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&mo 4>;
+        };
+    };
+};
+
+/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
@@ -63,7 +74,7 @@
 
         num_nav {
             bindings = <
-&kp TAB             &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 &kp BSPC
+&kp TAB             &kp N7              &kp N8              &kp N9              &kp LS(TAB)         &kp CAPS            &caps_word          &kp LA(F5)          &kp LA(BSPC)        &kp BSPC
 &kp ESC             &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
 &lmt LSHIFT N0      &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      &rmt LSHIFT DEL
                                         ___                 ___                 ___                 ___                 ___                 ___
