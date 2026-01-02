@@ -42,6 +42,12 @@
     };
 };
 
+// make sticky keys release on the next key press instead of the default key
+// release, this was causing problems with rolling letters
+&sk {
+    quick-release;
+};
+
 / {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
