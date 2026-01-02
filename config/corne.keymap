@@ -15,28 +15,38 @@
             bindings = <&mo 4>;
         };
         combo_esc {
-            timeout-ms = <35>;
+            timeout-ms = <40>;
             key-positions = <1 2>;
             bindings = <&kp ESC>;
         };
         combo_tab {
-            timeout-ms = <35>;
+            timeout-ms = <40>;
             key-positions = <2 3>;
             bindings = <&kp TAB>;
         };
         combo_ret {
-            timeout-ms = <35>;
+            timeout-ms = <40>;
             key-positions = <6 7>;
             bindings = <&kp RET>;
         };
         combo_bspc {
-            timeout-ms = <35>;
+            timeout-ms = <40>;
             key-positions = <7 8>;
             bindings = <&kp BSPC>;
         };
-        combo_alt_bspc {
-            timeout-ms = <35>;
+        combo_del {
+            timeout-ms = <55>;
             key-positions = <8 9>;
+            bindings = <&kp DEL>;
+        };
+        combo_shift_ret {
+            timeout-ms = <55>;
+            key-positions = <6 7 8>;
+            bindings = <&kp LS(RET)>;
+        };
+        combo_alt_bspc {
+            timeout-ms = <55>;
+            key-positions = <7 8 9>;
             bindings = <&kp LA(BSPC)>;
         };
     };
@@ -103,16 +113,16 @@
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp LA(F5)          &kp CAPS            &caps_word          &kp BSPC            &kp RET             ___
-&kp N0              &kp N4              &kp N5              &kp N6              &kp LA(BSPC)        &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        &kp LS(RET)         &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      &rmt LSHIFT DEL
+___                 &kp N7              &kp N8              &kp N9              &kp LA(F5)          &kp CAPS            &caps_word          ___                 ___                 ___
+&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
         symbol {
             bindings = <
-&kp TILDE           &kp ESC             &kp TAB             &kp PLUS            &kp AMPS            ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
+&kp TILDE           ___                 ___                 &kp PLUS            &kp AMPS            ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
 &kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           &kp EXCL            &kp HASH            &kp UNDER           &kp LPAR            &kp RPAR            &kp SEMI
 &lmt LSHIFT PIPE    &lmt LCTRL LT       &lmt LALT GT        &lmt LGUI STAR      &kp PRCNT           &kp AT              &rmt LGUI COLON     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
