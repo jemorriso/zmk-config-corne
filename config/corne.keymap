@@ -41,27 +41,27 @@
         };
         combo_ret {
             timeout-ms = <40>;
-            key-positions = <16 7>;
+            key-positions = <7 8>;
             bindings = <&kp RET>;
         };
         combo_bspc {
             timeout-ms = <40>;
-            key-positions = <7 8>;
+            key-positions = <16 7>;
             bindings = <&kp BSPC>;
         };
         combo_del {
             timeout-ms = <55>;
-            key-positions = <8 9>;
+            key-positions = <6 7>;
             bindings = <&kp DEL>;
         };
         combo_shift_ret {
             timeout-ms = <55>;
-            key-positions = <16 7 8>;
+            key-positions = <6 7 8>;
             bindings = <&kp LS(RET)>;
         };
         combo_alt_bspc {
             timeout-ms = <55>;
-            key-positions = <6 7 8>;
+            key-positions = <16 7 8>;
             bindings = <&kp LA(BSPC)>;
         };
     };
