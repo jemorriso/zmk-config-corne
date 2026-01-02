@@ -19,6 +19,11 @@
             key-positions = <16 33>;
             bindings = <&kp CAPS>;
         };
+        combo_dictation {
+            timeout-ms = <55>;
+            key-positions = <11 12 13>;
+            bindings = <&kp LA(F5)>;
+        };
         combo_esc {
             timeout-ms = <40>;
             key-positions = <1 2>;
@@ -27,11 +32,6 @@
         combo_tab {
             timeout-ms = <40>;
             key-positions = <2 3>;
-            bindings = <&kp TAB>;
-        };
-        combo_dictation {
-            timeout-ms = <40>;
-            key-positions = <11 12 13>;
             bindings = <&kp TAB>;
         };
         combo_shift_tab {
@@ -61,7 +61,7 @@
         };
         combo_alt_bspc {
             timeout-ms = <55>;
-            key-positions = <7 8 9>;
+            key-positions = <16 7 8>;
             bindings = <&kp LA(BSPC)>;
         };
     };
