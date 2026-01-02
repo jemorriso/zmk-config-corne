@@ -223,15 +223,6 @@
             >;
         };
 
-        space {
-            bindings = <
-&kp GRAVE           &kp N7              &kp N8              &kp N9              ___                 ___                 &kp SEMI            &kp MINUS           &kp EQUAL           &kp BSLH
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 ___                 &kp LBKT            &kp LT              &kp GT              &kp RBKT
-                                        ___                 ___                 ___                 ___                 ___                 ___
-            >;
-        };
-
         num_nav {
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
@@ -243,9 +234,9 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 
         symbol {
             bindings = <
-&kp TILDE           ___                 ___                 &kp PLUS            &kp AMPS            ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
-&kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           &kp EXCL            &kp HASH            &kp UNDER           &kp LPAR            &kp RPAR            &kp SEMI
-&lmt LSHIFT PIPE    &lmt LCTRL LT       &lmt LALT GT        &lmt LGUI STAR      &kp PRCNT           &kp AT              &rmt LGUI COLON     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT BSLH
+&kp TILDE           &kp HASH            &kp STAR            &kp PLUS            ___                 ___                 &kp AT              &kp LBKT            &kp RBKT            &kp GRAVE
+&kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           &kp AMPS            &kp PRCNT           &kp UNDER           &kp LPAR            &kp RPAR            &kp SEMI
+&lmt LSHIFT PIPE    &lmt LCTRL LT       &lmt LALT GT        &lmt LGUI EXCL      ___                 ___                 &rmt LGUI COLON     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
