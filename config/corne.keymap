@@ -79,35 +79,6 @@
     };
 
     behaviors {
-        /**
-         * Temporarily switches to a layer (`&mo`) while a modifier is held.
-         * Analogous to QMK's `LM()`, using a parameterized macro.
-         *
-         * Params:
-         *  1. Layer to switch to
-         *  2. Modifier to press while layer is active
-         *
-         * Example:
-         *  `&lm NUM_LAYER LSHIFT`
-         */
-        lm: lm {
-            compatible = "zmk,behavior-macro-two-param";
-            wait-ms = <0>;
-            tap-ms = <0>;
-            #binding-cells = <2>;
-            bindings
-                = <&macro_param_1to1>
-                , <&macro_press &mo MACRO_PLACEHOLDER>
-                , <&macro_param_2to1>
-                , <&macro_press &kp MACRO_PLACEHOLDER>
-                , <&macro_pause_for_release>
-                , <&macro_param_2to1>
-                , <&macro_release &kp MACRO_PLACEHOLDER>
-                , <&macro_param_1to1>
-                , <&macro_release &mo MACRO_PLACEHOLDER>
-                ;
-        };
-
         // urob idea: use mod-morph instead of tap-dance to avoid the delay.
         // The first press activates shift, the second press sees that shift is
         // active and triggers caps_word.
@@ -159,55 +130,6 @@
             require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
-        };
-
-        /**
-         * Sticky layer 1 + sticky shift (for tap behavior).
-         * Activates both &sl 1 and &sk LSHIFT for one keypress.
-         */
-        slm_1_shift: sticky_layer_1_shift {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings
-                = <&macro_press &sl 1>
-                , <&macro_press &sk LSHIFT>
-                ;
-        };
-
-        /**
-         * Momentary layer 1 + held shift (for hold behavior).
-         * Keeps layer 1 and LSHIFT active while held.
-         */
-        lm_1_shift: layer_1_mod_shift {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
-            bindings
-                = <&macro_press &mo 1>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_pause_for_release>
-                , <&macro_release &kp LSHIFT>
-                , <&macro_release &mo 1>
-                ;
-        };
-
-        /**
-         * Hold-tap combining sticky and momentary layer 1 with shift.
-         * Tap: sticky layer 1 + sticky shift (one keypress)
-         * Hold: momentary layer 1 + held shift (multiple keypresses)
-         *
-         * Usage: &ht_1_shift
-         */
-        ht_1_shift: hold_tap_layer_1_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            bindings = <&lm_1_shift>, <&slm_1_shift>;
         };
     };
 
