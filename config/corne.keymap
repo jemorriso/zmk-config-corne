@@ -31,17 +31,17 @@
         };
         combo_tab {
             timeout-ms = <40>;
-            key-positions = <2 3>;
+            key-positions = <2 13>;
             bindings = <&kp TAB>;
         };
         combo_shift_tab {
             timeout-ms = <55>;
-            key-positions = <1 2 3>;
+            key-positions = <1 2 13>;
             bindings = <&kp LS(TAB)>;
         };
         combo_ret {
             timeout-ms = <40>;
-            key-positions = <6 7>;
+            key-positions = <16 7>;
             bindings = <&kp RET>;
         };
         combo_bspc {
@@ -56,12 +56,12 @@
         };
         combo_shift_ret {
             timeout-ms = <55>;
-            key-positions = <6 7 8>;
+            key-positions = <16 7 8>;
             bindings = <&kp LS(RET)>;
         };
         combo_alt_bspc {
             timeout-ms = <55>;
-            key-positions = <16 7 8>;
+            key-positions = <6 7 8>;
             bindings = <&kp LA(BSPC)>;
         };
     };
