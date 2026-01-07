@@ -102,6 +102,20 @@
             hold-trigger-on-release;
         };
 
+        num_morph_minus: num_morph_minus {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N5>, <&kp MINUS>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        num_morph_colon: num_morph_colon {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N8>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
     };
 
     keymap {
@@ -116,10 +130,28 @@
             >;
         };
 
+        space {
+            bindings = <
+___                 &kp N7              &num_morph_colon    &kp N9              ___                 ___                 ___                 ___                 ___                 ___
+&kp N0              &kp N4              &num_morph_minus    &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        space_shift {
+            bindings = <
+___                 &kp N7              &num_morph_colon    &kp N9              ___                 ___                 ___                 ___                 ___                 ___
+&kp N0              &kp N4              &num_morph_minus    &kp N6              ___                 ___                 ___                 ___                 ___                 ___
+___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
         num {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 ___                 ___                 ___                 ___                 ___
+___                 &kp N7              &num_morph_colon    &kp N9              ___                 ___                 ___                 ___                 ___                 ___
+&kp N0              &kp N4              &num_morph_minus    &kp N6              ___                 ___                 ___                 ___                 ___                 ___
 ___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 ___                 ___                 ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
