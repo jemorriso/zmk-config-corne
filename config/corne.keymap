@@ -150,19 +150,19 @@
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
+&kp TAB             &kp N7              &kp N8              &kp N9              ___                 ___                 &kp TAB             &kp BSPC            &kp ESC             &kp BSPC
+&kp ESC             &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
+&lmt LSHIFT N0      &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
+                                        ___                 &kp TAB             &kp ESC             &kp RET             &kp BSPC            ___
             >;
         };
 
         symbol {
             bindings = <
-&kp TILDE           &kp HASH            &kp STAR            &kp PLUS            ___                 ___                 &kp AT              &kp LBKT            &kp RBKT            &kp GRAVE
-&kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           ___                 ___                 &kp UNDER           &kp LPAR            &kp RPAR            &kp SEMI
+&kp TAB             &kp HASH            &kp STAR            &kp PLUS            &kp TILDE           &kp GRAVE           &kp AT              &kp LBKT            &kp RBKT            &kp BSPC
+&kp ESC             &kp CARET           &kp DLLR            &kp MINUS           &kp EQUAL           &kp SEMI            &kp UNDER           &kp LPAR            &kp RPAR            &kp RET
 &lmt LSHIFT PRCNT   &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      ___                 ___                 &rmt LGUI COLON     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT BSLH
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 &kp TAB             &kp ESC             &kp RET             &kp BSPC            ___
             >;
         };
 
