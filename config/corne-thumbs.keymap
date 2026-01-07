@@ -1,0 +1,196 @@
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#define ___ &trans
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/bt.h>
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_tab {
+            timeout-ms = <35>;
+            key-positions = <1 2>;
+            bindings = <&kp TAB>;
+        };
+        combo_del {
+            timeout-ms = <55>;
+            key-positions = <6 7>;
+            bindings = <&kp DEL>;
+        };
+        combo_bspc {
+            timeout-ms = <35>;
+            key-positions = <7 8>;
+            bindings = <&kp BSPC>;
+        };
+        combo_shift_tab {
+            timeout-ms = <55>;
+            key-positions = <1 2 3>;
+            bindings = <&kp LS(TAB)>;
+        };
+        combo_alt_bspc {
+            timeout-ms = <55>;
+            key-positions = <6 7 8>;
+            bindings = <&kp LA(BSPC)>;
+        };
+        combo_esc {
+            timeout-ms = <35>;
+            key-positions = <11 12>;
+            bindings = <&kp ESC>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_ret {
+            timeout-ms = <35>;
+            key-positions = <17 18>;
+            bindings = <&kp RET>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_dictation {
+            timeout-ms = <55>;
+            key-positions = <11 12 13>;
+            bindings = <&kp LA(F5)>;
+        };
+        combo_shift_ret {
+            timeout-ms = <55>;
+            key-positions = <16 17 18>;
+            bindings = <&kp LS(RET)>;
+        };
+        combo_caps {
+            timeout-ms = <35>;
+            key-positions = <16 33>;
+            bindings = <&kp CAPS>;
+        };
+        combo_function {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            bindings = <&mo 4>;
+        };
+    };
+};
+
+// make sticky keys release on the next key press instead of the default key
+// release, this was causing problems with rolling letters
+&sk {
+    quick-release;
+};
+
+/ {
+    chosen {
+        zmk,physical-layout = &foostan_corne_5col_layout;
+    };
+
+    behaviors {
+        // urob idea: use mod-morph instead of tap-dance to avoid the delay.
+        // The first press activates shift, the second press sees that shift is
+        // active and triggers caps_word.
+        shift_morph: shift_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        msft: magic_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&shift_morph>;
+        };
+
+        // lt: layer_tap is default behavior, we make a blt to avoid overriding it 🥪
+        blt: balanced_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            hold-while-undecided;
+        };
+
+        lmt: left_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
+            hold-trigger-on-release;
+        };
+
+        rmt: right_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+            hold-trigger-on-release;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        colemak {
+            bindings = <
+&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
+&kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
+&lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
+                                        ___                 &sl 2               &blt 3 SPACE        &msft LSHIFT 0      &sl 1               ___
+            >;
+        };
+
+        num_nav {
+            bindings = <
+&kp TAB             &kp N7              &kp N8              &kp N9              ___                 ___                 &kp TAB             &kp BSPC            &kp ESC             &kp BSPC
+&kp ESC             &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
+&lmt LSHIFT N0      &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
+                                        ___                 &kp TAB             &kp ESC             &kp RET             &kp BSPC            ___
+            >;
+        };
+
+        symbol {
+            bindings = <
+&kp TAB             &kp HASH            &kp STAR            &kp PLUS            &kp TILDE           &kp GRAVE           &kp AT              &kp LBKT            &kp RBKT            &kp BSPC
+&kp ESC             &kp CARET           &kp DLLR            &kp MINUS           &kp EQUAL           &kp SEMI            &kp UNDER           &kp LPAR            &kp RPAR            &kp RET
+&lmt LSHIFT PRCNT   &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      ___                 ___                 &rmt LGUI COLON     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT BSLH
+                                        ___                 &kp TAB             &kp ESC             &kp RET             &kp BSPC            ___
+            >;
+        };
+
+        med_mouse {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 &mkp MB5
+___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &mkp MB4
+___                 &kp C_PP            &kp C_BRI_DN        &kp C_BRI_UP        &kp C_MUTE          &msc SCRL_RIGHT     &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_LEFT      &mkp MCLK
+                                        ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           ___
+            >;
+        };
+
+        function {
+            bindings = <
+&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
+&kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___
+&kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        empty {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+    };
+};
