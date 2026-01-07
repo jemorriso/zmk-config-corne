@@ -63,7 +63,7 @@
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&lmt_fast LSHIFT Z  &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt_fast LSHIFT FSLH
+&lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
                                         &blt 3 TAB          &blt 1 SPACE        &blt 2 ESC          &blt 2 RET          &blt 1 BSPC         &blt 3 DEL
             >;
         };
