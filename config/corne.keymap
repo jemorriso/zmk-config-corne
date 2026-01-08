@@ -58,7 +58,7 @@
             hold-trigger-on-release;
         };
 
-        lmt_rpi: left_mod_tap {
+        lmt_rpi: left_mod_tap_require_prior_idle {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -69,7 +69,7 @@
             hold-trigger-on-release;
         };
 
-        rmt_rpi: right_mod_tap {
+        rmt_rpi: right_mod_tap_require_prior_idle {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
