@@ -77,7 +77,7 @@
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              &kp LA(BSPC)        ___                 &kp LBKT            &kp LT              &kp GT              &kp RBKT
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp SEMI
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        &kp LS(RET)         ___                 &rmt LGUI MINUS     &rmt LALT EQUAL     &rmt LCTRL GRAVE    &rmt LSHIFT BLSH
+___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        &kp LS(RET)         ___                 &rmt LGUI MINUS     &rmt LALT EQUAL     &rmt LCTRL GRAVE    &rmt LSHIFT BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
