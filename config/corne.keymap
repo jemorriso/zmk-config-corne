@@ -79,7 +79,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 
         space_shift {
             bindings = <
-___                 &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 &kp TILDE           &kp UNDER           &kp EQUAL           &kp PIPE
+___                 &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 &kp TILDE           &kp UNDER           &kp PLUS            &kp PIPE
 &kp RPAR            &kp DLLR            &kp PRCNT           &kp CARET           &kp CAPS            &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp COLON
 ___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &rmt LGUI LBRC      &rmt LALT LPAR      &rmt LCTRL RPAR     &rmt LSHIFT RBRC
                                         &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
