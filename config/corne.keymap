@@ -44,12 +44,32 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
             hold-trigger-on-release;
         };
 
         rmt: right_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+            hold-trigger-on-release;
+        };
+
+        lmt_rpi: left_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
+            hold-trigger-on-release;
+        };
+
+        rmt_rpi: right_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -68,25 +88,25 @@
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &blt 3 TAB          &blt 1 SPACE        &blt 2 ESC          &blt 2 RET          &blt 1 BSPC         &blt 4 DEL
-            >;
-        };
-
-        space {
-            bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp LA(BSPC)        ___                 &kp LBKT            &kp LT              &kp GT              &kp RBKT
-&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp SEMI
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        &kp LS(RET)         ___                 &rmt LGUI MINUS     &rmt LALT EQUAL     &rmt LCTRL GRAVE    &rmt LSHIFT BSLH
-                                        ___                 ___                 ___                 ___                 ___                 ___
+&lmt LSHIFT Z       &lmt_rpi LCTRL X    &lmt_rpi LALT C     &lmt_rpi LGUI D     &kp V               &kp K               &rmt_rpi LGUI H     &rmt_rpi LALT COMMA &rmt_rpi LCTRL DOT  &rmt LSHIFT FSLH
+                                        &blt 3 TAB          &blt 2 SPACE        &blt 1 ESC          &blt 1 RET          &blt 2 BSPC         &blt 4 DEL
             >;
         };
 
         space_shift {
             bindings = <
 ___                 &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 &kp LBRC            &kp LPAR            &kp RPAR            &kp RBRC
-&kp RPAR            &kp DLLR            &kp PRCNT           &kp CARET           &kp CAPS            &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp COLON
-___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &rmt LGUI UNDER     &rmt LALT PLUS      &rmt LCTRL TILDE    &rmt LSHIFT PIPE
+&blt 2 RPAR         &kp DLLR            &kp PRCNT           &kp CARET           &kp CAPS            &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &blt 2 COLON
+___                 &lmt LCTRL EXCL     &lmt LALT AT        &lmt LGUI HASH      ___                 ___                 &rmt LGUI UNDER     &rmt LALT PLUS      &rmt LCTRL TILDE    &rmt LSHIFT PIPE
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        space {
+            bindings = <
+___                 &kp N7              &kp N8              &kp N9              &kp LA(BSPC)        ___                 &kp LBKT            &kp LT              &kp GT              &kp RBKT
+&lmt LSHIFT N0      &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &rmt LSHIFT SEMI
+___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        &kp LS(RET)         ___                 &rmt LGUI MINUS     &rmt LALT EQUAL     &rmt LCTRL GRAVE    &rmt LSHIFT BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
