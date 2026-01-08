@@ -9,10 +9,20 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_function {
+        combo_med {
             timeout-ms = <50>;
-            key-positions = <33 34>;
-            bindings = <&mo 7>;
+            key-positions = <31 32>;
+            bindings = <&mo 4>;
+        };
+        combo_left_nomods {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&mo 5>;
+        };
+        combo_right_nomods {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            bindings = <&mo 5>;
         };
     };
 };
@@ -70,19 +80,19 @@
 
         space {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp LA(BSPC)        ___                 &kp GRAVE           &kp MINUS           &kp EQUAL           &kp BSLH
+___                 &kp N7              &kp N8              &kp N9              &kp LA(BSPC)        ___                 &kp LBKT            &kp LT              &kp GT              &kp RBKT
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp SEMI
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        &kp LS(RET)         ___                 &rmt LGUI LBKT      &rmt LALT LT        &rmt LCTRL GT       &rmt LSHIFT RBKT
-                                        &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
+___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        &kp LS(RET)         ___                 &rmt LGUI MINUS     &rmt LALT EQUAL     &rmt LCTRL GRAVE    &rmt LSHIFT BLSH
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
         space_shift {
             bindings = <
-___                 &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 &kp TILDE           &kp UNDER           &kp PLUS            &kp PIPE
+___                 &kp AMPS            &kp STAR            &kp LPAR            ___                 ___                 &kp LBRC            &kp LPAR            &kp RPAR            &kp RBRC
 &kp RPAR            &kp DLLR            &kp PRCNT           &kp CARET           &kp CAPS            &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp COLON
-___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &rmt LGUI LBRC      &rmt LALT LPAR      &rmt LCTRL RPAR     &rmt LSHIFT RBRC
-                                        &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
+___                 &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &rmt LGUI UNDER     &rmt LALT PLUS      &rmt LCTRL TILDE    &rmt LSHIFT PIPE
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
@@ -101,6 +111,15 @@ ___                 ___                 ___                 ___                 
 ___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
                                         ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        nomods {
+            bindings = <
+&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
+&kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
+&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
+                                        &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
             >;
         };
 
