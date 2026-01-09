@@ -155,18 +155,18 @@ ___                 ___                 ___                 ___                 
 
         mouse {
             bindings = <
-___                 ___                 ___                 ___                 ___                 &msc SCRL_RIGHT     &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_LEFT      &mkp MB5
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 &mkp MB5
 ___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &mkp MB4
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-                                        ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
+___                 ___                 ___                 ___                 ___                 &msc SCRL_RIGHT     &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_LEFT      &mkp MCLK
+                                        ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           ___
             >;
         };
 
         med {
             bindings = <
-___                 ___                 ___                 ___                 ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
-___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
+___                 ___                 ___                 ___                 ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
