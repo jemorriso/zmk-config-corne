@@ -9,21 +9,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_left_fun_mouse {
-            timeout-ms = <50>;
-            key-positions = <3 13>;
-            bindings = <&mo 3>;
-        };
-        combo_right_fun_mouse {
-            timeout-ms = <50>;
-            key-positions = <6 16>;
-            bindings = <&mo 3>;
-        };
-        combo_med {
-            timeout-ms = <50>;
-            key-positions = <2 12>;
-            bindings = <&mo 3>;
-        };
         combo_left_nomods {
             timeout-ms = <50>;
             key-positions = <13 14>;
@@ -51,15 +36,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             hold-while-undecided;
-        };
-
-        bmt: balanced_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            hold-trigger-on-release;
         };
 
         lmt: left_mod_tap {
@@ -113,14 +89,14 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt_rpi LCTRL X    &lmt_rpi LALT C     &lmt_rpi LGUI D     &kp V               &kp K               &rmt_rpi LGUI H     &rmt_rpi LALT COMMA &rmt_rpi LCTRL DOT  &rmt LSHIFT FSLH
-                                        &blt 2 TAB          &bmt LSHIFT SPACE   &blt 1 ESC          &blt 1 RET          &bmt LSHIFT BSPC    &blt 2 DEL
+                                        &blt 3 TAB          &blt 1 SPACE        &blt 2 ESC          &blt 2 RET          &blt 1 BSPC         &blt 4 DEL
             >;
         };
 
         num_nav {
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              ___                 &kp CAPS            &caps_word          &kp LA(BSPC)        &kp LS(RET)         ___
-&blt 2 N0           &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &blt 2 O
+&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
 ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
@@ -129,7 +105,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
         symbol {
             bindings = <
 &kp TILDE           &kp HASH            &kp STAR            &kp PLUS            ___                 ___                 &kp AT              &kp LBKT            &kp RBKT            &kp GRAVE
-&blt 6 EQUAL        &kp CARET           &kp DLLR            &kp MINUS           ___                 ___                 &kp UNDER           &kp LPAR            &kp RPAR            &blt 6 SEMI
+&kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           ___                 ___                 &kp UNDER           &kp LPAR            &kp RPAR            &kp SEMI
 &lmt LSHIFT PRCNT   &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      ___                 ___                 &rmt LGUI COLON     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
@@ -159,15 +135,6 @@ ___                 ___                 ___                 ___                 
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
                                         &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
-            >;
-        };
-
-        num_nav_dup {
-            bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
