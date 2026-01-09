@@ -7,6 +7,17 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_med {
+            timeout-ms = <40>;
+            key-positions = <13 14>;
+            bindings = <&mo 7>;
+        };
+    };
+};
+
+/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
@@ -93,7 +104,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &llt 1 R            &llt 2 S            &kp T               &kp G               &kp M               &kp N               &rlt 1 E            &rlt 3 I            &kp O
 &lmt LSHIFT Z       &lmt_rpi LCTRL X    &lmt_rpi LALT C     &lmt_rpi LGUI D     &kp V               &kp K               &rmt_rpi LGUI H     &rmt_rpi LALT COMMA &rmt_rpi LCTRL DOT  &rmt LSHIFT FSLH
-                                        &blt 6 TAB          &kp SPACE           &blt 7 ESC          &kp RET             &kp BSPC            &blt 5 DEL
+                                        ___                 &kp SPACE           &blt 7 ESC          &kp RET             &kp BSPC            ___
             >;
         };
 
@@ -109,9 +120,9 @@ ___                 &kp N1              &kp N2              &kp N3              
         nav {
             bindings = <
 ___                 ___                 ___                 ___                 ___                 &kp CAPS            &caps_word          &kp LA(BSPC)        &kp LS(RET)         ___
-___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
 ___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 &kp LS(TAB)         &kp TAB             ___
             >;
         };
 
