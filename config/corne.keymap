@@ -7,22 +7,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_left_nomods {
-            timeout-ms = <50>;
-            key-positions = <13 14>;
-            bindings = <&mo 5>;
-        };
-        combo_right_nomods {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&mo 5>;
-        };
-    };
-};
-
-/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
@@ -107,35 +91,62 @@
         colemak {
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&kp A               &llt 1 R            &llt 2 S            &kp T               &kp G               &kp M               &kp N               &rlt 2 E            &rlt 1 I            &kp O
+&kp A               &llt 1 R            &llt 2 S            &kp T               &kp G               &kp M               &kp N               &rlt 1 E            &rlt 3 I            &kp O
 &lmt LSHIFT Z       &lmt_rpi LCTRL X    &lmt_rpi LALT C     &lmt_rpi LGUI D     &kp V               &kp K               &rmt_rpi LGUI H     &rmt_rpi LALT COMMA &rmt_rpi LCTRL DOT  &rmt LSHIFT FSLH
-                                        &blt 3 TAB          &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &blt 4 DEL
+                                        &blt 6 TAB          &kp SPACE           &blt 7 ESC          &kp RET             &kp BSPC            &blt 5 DEL
             >;
         };
 
-        num_nav {
+        num {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 &kp CAPS            &caps_word          &kp LA(BSPC)        &kp LS(RET)         ___
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
+&kp N0              &kp N4              &kp N5              &kp N6              ___                 ___                 ___                 ___                 ___                 ___
+___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 ___                 ___                 ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
-        symbol {
+        nav {
             bindings = <
-&kp TILDE           &kp HASH            &kp STAR            &kp PLUS            ___                 ___                 &kp AT              &kp LBKT            &kp RBKT            &kp GRAVE
-&kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           ___                 ___                 &kp UNDER           &kp LPAR            &kp RPAR            &kp SEMI
-&lmt LSHIFT PRCNT   &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      ___                 ___                 &rmt LGUI COLON     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT BSLH
+___                 ___                 ___                 ___                 ___                 &kp CAPS            &caps_word          &kp LA(BSPC)        &kp LS(RET)         ___
+___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
-        fun_mouse {
+        lsym {
             bindings = <
-&kp F12             &kp F7              &kp F8              &kp F9              ___                 &msc SCRL_RIGHT     &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_LEFT      &mkp MB5
-&kp F11             &kp F4              &kp F5              &kp F6              ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &mkp MB4
-&lmt LSHIFT F10     &lmt LCTRL F1       &lmt LALT F2        &lmt LGUI F3        ___                 ___                 ___                 ___                 ___                 ___
+&kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 ___                 ___                 ___                 ___
+&kp PIPE            &kp DLLR            &kp PRCNT           &kp CARET           ___                 ___                 ___                 ___                 ___                 ___
+&kp BSLH            &kp EXCL            &kp AT              &kp HASH            ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        rsym {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
+___                 ___                 ___                 ___                 ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+___                 ___                 ___                 ___                 ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp PLUS
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        fun {
+            bindings = <
+&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
+&kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___
+&kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        mouse {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 &msc SCRL_RIGHT     &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_LEFT      &mkp MB5
+___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &mkp MB4
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
                                         ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
             >;
         };
