@@ -102,7 +102,7 @@
         colemak {
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&kp A               &llt 4 R            &llt 2 S            &kp T               &kp G               &kp M               &kp N               &rlt 1 E            &rlt 3 I            &kp O
+&lmt LSHIFT A       &llt 4 R            &llt 2 S            &kp T               &kp G               &kp M               &kp N               &rlt 1 E            &rlt 3 I            &rmt LSHIFT O
 &lmt LSHIFT Z       &lmt_rpi LCTRL X    &lmt_rpi LALT C     &lmt_rpi LGUI D     &kp V               &kp K               &rmt_rpi LGUI H     &rmt_rpi LALT COMMA &rmt_rpi LCTRL DOT  &rmt LSHIFT FSLH
                                         ___                 &kp SPACE           &blt 6 ESC          &blt 5 RET          &kp BSPC            ___
             >;
