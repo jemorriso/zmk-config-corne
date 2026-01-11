@@ -119,10 +119,10 @@ ___                 &kp N1              &kp N2              &kp N3              
 
         nav {
             bindings = <
-___                 ___                 ___                 ___                 ___                 &kp CAPS            &caps_word          &kp LA(BSPC)        &kp LS(RET)         ___
+___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp LA(BSPC)
 ___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
-___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
-                                        ___                 ___                 ___                 &kp LS(TAB)         &kp TAB             ___
+___                 ___                 ___                 ___                 ___                 &kp CAPS            &kp TAB             &kp LS(TAB)         &caps_word          &kp LS(RET)
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
