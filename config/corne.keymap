@@ -40,27 +40,8 @@
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
             hold-while-undecided;
-        };
-
-        llt: left_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
-            hold-trigger-on-release;
-        };
-
-        rlt: right_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
-            hold-trigger-on-release;
         };
 
         lmt: left_mod_tap {
@@ -69,6 +50,7 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
             hold-trigger-on-release;
             hold-while-undecided;
@@ -80,30 +62,7 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
-            hold-trigger-on-release;
-            hold-while-undecided;
-        };
-
-        lmt_rpi: left_mod_tap_require_prior_idle {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            require-prior-idle-ms = <125>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
-            hold-trigger-on-release;
-            hold-while-undecided;
-        };
-
-        rmt_rpi: right_mod_tap_require_prior_idle {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            require-prior-idle-ms = <125>;
+            quick-tap-ms = <200>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
             hold-while-undecided;
@@ -115,9 +74,9 @@
 
         colemak {
             bindings = <
-&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&lmt LSHIFT A       &llt 4 R            &llt 2 S            &kp T               &kp G               &kp M               &kp N               &rlt 1 E            &rlt 3 I            &rmt LSHIFT O
-&lmt LSHIFT Z       &lmt_rpi LCTRL X    &lmt_rpi LALT C     &lmt_rpi LGUI D     &kp V               &kp K               &rmt_rpi LGUI H     &rmt_rpi LALT COMMA &rmt_rpi LCTRL DOT  &rmt LSHIFT FSLH
+&kp Q               &lmt LCTRL W        &lmt LMET F         &kp P               &kp B               &kp J               &kp L               &rmt LMET U         &rmt LCTRL Y        &kp SQT
+&lmt LSHIFT A       &kp R               &kp S               &lmt LALT T         &kp G               &kp M               &rmt LALT N         &kp E               &kp I               &rmt LSHIFT O
+&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
                                         ___                 &blt 2 SPACE        &blt 4 ESC          &blt 3 RET          &blt 1 BSPC         ___
             >;
         };
@@ -127,7 +86,7 @@
 ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
 &kp N0              &kp N4              &kp N5              &kp N6              ___                 ___                 ___                 ___                 ___                 ___
 ___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 ___                 ___                 ___
-                                        ___                 ___                 ___                 &kp RET             &kp BSPC            ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
@@ -136,7 +95,7 @@ ___                 &kp N1              &kp N2              &kp N3              
 ___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp LA(BSPC)
 ___                 ___                 ___                 ___                 ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
 ___                 ___                 ___                 ___                 ___                 &kp CAPS            &kp TAB             &kp LS(TAB)         &caps_word          &kp LS(RET)
-                                        ___                 &kp SPACE           &kp ESC             ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
@@ -182,15 +141,6 @@ ___                 ___                 ___                 ___                 
 ___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
 ___                 ___                 ___                 ___                 ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
                                         ___                 ___                 ___                 ___                 ___                 ___
-            >;
-        };
-
-        nomods {
-            bindings = <
-&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
-                                        &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
             >;
         };
 
