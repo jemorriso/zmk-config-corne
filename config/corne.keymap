@@ -74,7 +74,7 @@
 
         colemak {
             bindings = <
-&kp Q               &lmt LCTRL W        &lmt LMET F         &kp P               &kp B               &kp J               &kp L               &rmt LMET U         &rmt LCTRL Y        &kp SQT
+&kp Q               &lmt LCTRL W        &lmt LGUI F         &kp P               &kp B               &kp J               &kp L               &rmt LGUI U         &rmt LCTRL Y        &kp SQT
 &lmt LSHIFT A       &kp R               &kp S               &lmt LALT T         &kp G               &kp M               &rmt LALT N         &kp E               &kp I               &rmt LSHIFT O
 &kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
                                         ___                 &blt 2 SPACE        &blt 4 ESC          &blt 3 RET          &blt 1 BSPC         ___
