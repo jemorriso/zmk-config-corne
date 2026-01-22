@@ -34,7 +34,7 @@
 
     behaviors {
         // lt: layer_tap is default behavior, we make a blt to avoid overriding it 🥪
-        blt: balanced_layer_tap {
+        blt_qt: balanced_layer_tap_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
@@ -44,7 +44,7 @@
             hold-while-undecided;
         };
 
-        lmt: left_mod_tap {
+        lmt_qt: left_mod_tap_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -56,7 +56,7 @@
             hold-while-undecided;
         };
 
-        rmt: right_mod_tap {
+        rmt_qt: right_mod_tap_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -68,7 +68,7 @@
             hold-while-undecided;
         };
 
-        lmt_noqt: left_mod_tap_no_quick_tap {
+        lmt: left_mod_tap{
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -79,7 +79,7 @@
             hold-while-undecided;
         };
 
-        rmt_noqt: right_mod_tap_no_quick_tap {
+        rmt: right_mod_tap{
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
@@ -88,6 +88,26 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
             hold-while-undecided;
+        };
+
+        llt: left_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
+            hold-trigger-on-release;
+        };
+
+        rlt: right_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+            hold-trigger-on-release;
         };
     };
 
@@ -96,10 +116,10 @@
 
         colemak {
             bindings = <
-&kp Q               &lmt LCTRL W        &lmt LGUI F         &kp P               &kp B               &kp J               &kp L               &rmt LGUI U         &rmt LCTRL Y        &kp SQT
-&lmt_noqt LSHIFT A  &kp R               &kp S               &lmt LALT T         &kp G               &kp M               &rmt LALT N         &kp E               &kp I               &rmt_noqt LSHIFT O
+&kp Q               &lmt_qt LCTRL W     &lmt_qt LGUI F      &kp P               &kp B               &kp J               &kp L               &rmt_qt LGUI U      &rmt_qt LCTRL Y     &kp SQT
+&lmt LSHIFT A       &llt 4 R            &llt 2 S            &lmt_qt LALT T      &kp G               &kp M               &rmt_qt LALT N      &rlt 1 E            &rlt 3 I            &rmt LSHIFT O
 &kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &blt 2 SPACE        &blt 4 ESC          &blt 3 RET          &blt 1 BSPC         ___
+                                        ___                 &blt_qt 2 SPACE     &blt_qt 4 ESC       &blt_qt 3 RET       &blt_qt 1 BSPC      ___
             >;
         };
 
