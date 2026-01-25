@@ -119,7 +119,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt_qt LCTRL X     &lmt_qt LALT C      &lmt_qt LGUI D      &kp V               &kp K               &rmt_qt LGUI H      &rmt_qt LALT COMMA  &rmt_qt LCTRL DOT   &rmt LSHIFT FSLH
-                                        ___                 &blt_qt 2 SPACE     &blt_qt 4 ESC       &blt_qt 3 RET       &blt_qt 1 BSPC      ___
+                                        ___                 &blt_qt 2 SPACE     &blt_qt 4 ESC       &blt_qt RET         &blt_qt 1 BSPC      ___
             >;
         };
 
