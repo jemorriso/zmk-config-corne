@@ -44,6 +44,16 @@
             hold-while-undecided;
         };
 
+        blt_qt_hp: balanced_layer_tap_quick_tap_hold_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
+            hold-while-undecided;
+        };
+
         lmt_qt: left_mod_tap_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -119,7 +129,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt_qt LCTRL X     &lmt_qt LALT C      &lmt_qt LGUI D      &kp V               &kp K               &rmt_qt LGUI H      &rmt_qt LALT COMMA  &rmt_qt LCTRL DOT   &rmt LSHIFT FSLH
-                                        ___                 &blt_qt 2 SPACE     &blt_qt 4 ESC       &blt_qt RET         &blt_qt 1 BSPC      ___
+                                        ___                 &blt_qt 2 SPACE     &blt_qt 4 ESC       &blt_qt_hp RET      &blt_qt 1 BSPC      ___
             >;
         };
 
