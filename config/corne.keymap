@@ -23,6 +23,11 @@
     };
 
     behaviors {
+        // NOTE: I removed 'hold-while-undecided' because it caused problems on
+        // quickly repeated shifted chars, I noticed it when typing 'ZZ', the
+        // fix was to remove 'hold-while-undecided' from the mod-tap on 'z',
+        // lmt.
+
         // lt: layer_tap is default behavior, we make a blt to avoid overriding it 🥪
         blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
