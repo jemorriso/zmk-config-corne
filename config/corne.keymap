@@ -7,28 +7,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_med {
-            timeout-ms = <40>;
-            key-positions = <13 14>;
-            bindings = <&mo 4>;
-        };
-    };
-};
-
-/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
     behaviors {
-        // NOTE: I removed 'hold-while-undecided' because it caused problems on
-        // quickly repeated shifted chars, I noticed it when typing 'ZZ', the
-        // fix was to remove 'hold-while-undecided' from the mod-tap on 'z',
-        // lmt.
-
-        // lt: layer_tap is default behavior, we make a blt to avoid overriding it 🥪
         blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -37,41 +20,14 @@
             tapping-term-ms = <300>;
             quick-tap-ms = <200>;
         };
-
-        blt_noqt: balanced_layer_tap_no_quick_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-        };
-
-        blt_hp: balanced_layer_tap_hold_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-            quick-tap-ms = <200>;
-        };
-
-        bmt_noqt: balanced_mod_tap_no_quick_tap {
+        bmt: balanced_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-        };
-
-        bmt_hp: balanced_mod_tap_hold_preferred {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
             quick-tap-ms = <200>;
         };
-
         lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -82,7 +38,6 @@
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
             hold-trigger-on-release;
         };
-
         rmt: right_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -103,7 +58,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &blt 4 TAB          &blt_noqt 2 SPACE   &blt 3 ESC          &blt_hp 1 RET       &bmt_noqt LSHIFT BSPC &kp DEL
+                                        &blt 4 TAB          &blt 2 SPACE        &blt 3 ESC          &blt 1 RET          &bmt LSHIFT BSPC    &kp DEL
             >;
         };
 
