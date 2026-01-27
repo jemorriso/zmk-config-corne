@@ -38,6 +38,14 @@
             quick-tap-ms = <200>;
         };
 
+        blt_noqt: balanced_layer_tap_no_quick_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+        };
+
         blt_hp: balanced_layer_tap_hold_preferred {
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
@@ -45,6 +53,14 @@
             #binding-cells = <2>;
             tapping-term-ms = <300>;
             quick-tap-ms = <200>;
+        };
+
+        bmt_noqt: balanced_mod_tap_no_quick_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
         };
 
         bmt_hp: balanced_mod_tap_hold_preferred {
@@ -87,16 +103,16 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &blt 4 ESC          &blt 1 SPACE        &blt_hp 3 TAB       &bmt_hp LSHIFT DEL  &blt_hp 1 BSPC      &kp RET
+                                        &blt 4 TAB          &blt_noqt 2 SPACE   &blt 3 ESC          &blt_hp 1 RET       &bmt_noqt 1 BSPC    &kp DEL
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &caps_word          &kp CAPS            ___
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 &caps_word          &kp LA(BSPC)        &kp LS(RET)         &kp CAPS
 &kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
 ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        &kp TAB             &kp SPACE           &kp ESC             ___                 ___                 ___
             >;
         };
 
@@ -105,7 +121,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 &kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
 &kp PIPE            &kp DLLR            &kp PRCNT           &kp CARET           ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
 &lmt LSHIFT BSLH    &lmt LCTRL EXCL     &lmt LALT AT        &lmt LGUI HASH      ___                 ___                 &rmt LGUI UNDER     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT PLUS
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 &kp RET             &kp BSPC            &kp DEL
             >;
         };
 
