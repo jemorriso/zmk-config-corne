@@ -87,15 +87,15 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &blt 4 ESC          &blt 3 SPACE        &blt_hp 2 TAB       &bmt_hp LSHIFT DEL  &blt_hp 1 BSPC      &kp RET
+                                        ___                 &blt 3 SPACE        &blt_hp 2 ESC       &bmt_hp LSHIFT DEL  &blt_hp 1 BSPC      ___
             >;
         };
 
         num_nav {
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp LA(BSPC)
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &caps_word          &rmt LGUI TAB       &rmt LGUI LS(TAB)   &rmt LCTRL CAPS     &rmt LSHIFT LS(RET)
+&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
+___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &caps_word          &rmt LGUI TAB       &rmt LALT LS(TAB)   &rmt LCTRL CAPS     &rmt LSHIFT LS(RET)
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
