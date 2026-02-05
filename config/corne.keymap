@@ -1,9 +1,7 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 #define ___ &trans
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/bt.h>
 
 / {
@@ -94,14 +92,14 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &blt 3 ESC          &blt 2 SPACE        &kp TAB             &bmt LSHIFT DEL     &blt 1 BSPC         &hplt 4 RET
+                                        &blt 3 ESC          &blt 2 SPACE        &kp TAB             &bmt LSHIFT F13     &blt 1 BSPC         &kp RET
             >;
         };
 
         num_nav {
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 &caps_word          &kp LA(BSPC)        &kp LS(RET)         &kp CAPS
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
 ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
                                         &kp ESC             &kp SPACE           &kp TAB             ___                 ___                 ___
             >;
@@ -116,20 +114,11 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
             >;
         };
 
-        fun_mouse {
+        fun_med {
             bindings = <
-&kp F12             &kp F7              &kp F8              &kp F9              ___                 &msc SCRL_RIGHT     &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_LEFT      &mkp MB5
-&kp F11             &kp F4              &kp F5              &kp F6              ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     &mkp MB4
-&lmt LSHIFT F10     &lmt LCTRL F1       &lmt LALT F2        &lmt LGUI F3        ___                 &mkp MCLK           ___                 ___                 ___                 ___
-                                        ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           ___
-            >;
-        };
-
-        med {
-            bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
-___                 ___                 ___                 ___                 ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
+&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
+&kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
+&lmt LSHIFT F10     &lmt LCTRL F1       &lmt LALT F2        &lmt LGUI F3        ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
