@@ -110,7 +110,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 &kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
 &kp PIPE            &kp DLLR            &kp PRCNT           &kp CARET           ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
 &lmt LSHIFT BSLH    &lmt LCTRL EXCL     &lmt LALT AT        &lmt LGUI HASH      ___                 ___                 &rmt LGUI UNDER     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT PLUS
-                                        ___                 ___                 ___                 &kp DEL             &kp BSPC            &kp RET
+                                        ___                 ___                 ___                 &kp F13             &kp BSPC            &kp RET
             >;
         };
 
