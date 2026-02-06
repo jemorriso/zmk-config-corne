@@ -28,9 +28,19 @@
             bindings = <&kp BSPC>;
         };
         combo_del {
-            timeout-ms = <55>;
+            timeout-ms = <35>;
             key-positions = <18 19>;
             bindings = <&kp DEL>;
+        };
+        combo_mouseless_overlay {
+            timeout-ms = <35>;
+            key-positions = <2 3>;
+            bindings = <&kp LA(LC(F))>;
+        };
+        combo_mouseless_free_mode {
+            timeout-ms = <35>;
+            key-positions = <6 7>;
+            bindings = <&kp F13>;
         };
     };
 };
