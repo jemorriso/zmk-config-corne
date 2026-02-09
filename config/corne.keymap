@@ -157,8 +157,8 @@
         num_nav {
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 &caps_word          &kp LA(BSPC)        &kp LS(RET)         &kp CAPS
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
+&lmt LSHIFT N0      &lmt LCTRL N4       &lmt LALT N5        &lmt LGUI N6        ___                 &kp LEFT            &rmt LGUI DOWN      &rmt LALT UP        &rmt LCTRL RIGHT    &rmt LSHIFT DEL
+___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -166,8 +166,8 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
         sym {
             bindings = <
 &kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
-&kp PIPE            &kp DLLR            &kp PRCNT           &kp CARET           ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
-&lmt LSHIFT BSLH    &lmt LCTRL EXCL     &lmt LALT AT        &lmt LGUI HASH      ___                 ___                 &rmt LGUI UNDER     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT PLUS
+&lmt LSHIFT PIPE    &lmt LCTRL DLLR     &lmt LALT PRCNT     &lmt LGUI CARET     ___                 ___                 &rmt LGUI COLON     &rmt LALT LPAR      &rmt LCTRL RPAR     &rmt LSHIFT SEMI
+&kp BSLH            &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp PLUS
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -175,8 +175,8 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
         fun_med {
             bindings = <
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
-&kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
-&lmt LSHIFT F10     &lmt LCTRL F1       &lmt LALT F2        &lmt LGUI F3        ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
+&lmt LSHIFT F11     &lmt LCTRL F4       &lmt LALT F5        &lmt LGUI F6        ___                 &kp C_PREV          &rmt LGUI C_VOL_DN  &rmt LALT C_VOL_UP  &rmt LCTRL C_NEXT   ___
+&kp F10             &kp F1              &kp F2              &kp F3              ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
