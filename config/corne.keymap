@@ -11,6 +11,37 @@
 };
 
 / {
+    macros {
+        mf_on: mf_on {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to 4>
+                , <&macro_tap &kp F13>
+                ;
+        };
+
+        mf_off: mf_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to 0>
+                , <&macro_tap &kp F13>
+                ;
+        };
+
+        esc_to_base: esc_to_base {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&to 0>
+                , <&macro_tap &kp ESC>
+                ;
+        };
+    };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
         /* combo_esc { */
@@ -43,10 +74,17 @@
             key-positions = <22 23>;
             bindings = <&kp LA(LC(F))>;
         };
-        combo_mouseless_free_mode {
+        combo_mouseless_free_mode_on {
             timeout-ms = <35>;
             key-positions = <26 27>;
-            bindings = <&kp F13>;
+            bindings = <&mf_on>;
+            layers = <0 1 2 3>;
+        };
+        combo_mouseless_free_mode_off {
+            timeout-ms = <35>;
+            key-positions = <26 27>;
+            bindings = <&mf_off>;
+            layers = <4>;
         };
     };
 };
@@ -181,12 +219,12 @@ ___                 &kp N1              &kp N2              &kp N3              
             >;
         };
 
-        empty {
+        no_mods {
             bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
+&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
+&kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
+&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
+                                        &esc_to_base        &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
             >;
         };
     };
