@@ -124,17 +124,17 @@
         colemak {
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&bmt LSHIFT A       &lmt_rpi LCTRL R    &lmt_rpi LALT S     &lmt_rpi LGUI T     &kp G               &kp M               &rmt_rpi LGUI N     &rmt_rpi LALT E     &rmt_rpi LCTRL I    &bmt LSHIFT O
-&kp Z               &kp X               &kp C               &blt 2 D            &kp V               &kp K               &blt 2 H            &kp COMMA           &kp DOT             &kp FSLH
-                                        &blt 3 ESC          &blt 1 SPACE        &kp TAB             &kp DEL             &blt 1 BSPC         &blt 3 RET
+&kp A               &blt 2 R            &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &blt 2 I            &kp O
+&bmt LSHIFT Z       &bmt LCTRL X        &bmt LALT C         &bmt LGUI D         &kp V               &kp K               &bmt LGUI H         &bmt LALT COMMA     &bmt LCTRL DOT      &bmt LSHIFT FSLH
+                                        &blt 3 ESC          &blt 1 SPACE        &blt 2 TAB          &blt 2 DEL          &blt 1 BSPC         &blt 3 RET
             >;
         };
 
         num_nav {
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 &caps_word          &kp LA(BSPC)        &kp LS(RET)         &kp CAPS
-&bmt LSHIFT N0      &bmt LCTRL N4       &bmt LALT N5        &bmt LGUI N6        ___                 &kp LEFT            &bmt LGUI DOWN      &bmt LALT UP        &bmt LCTRL RIGHT    &bmt LSHIFT DEL
-___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
+&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
+___                 &bmt LCTRL N1       &bmt LALT N2        &bmt LGUI N3        ___                 &kp HOME            &bmt LGUI PG_DN     &bmt LALT PG_UP     &bmt LCTRL END      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -142,8 +142,8 @@ ___                 &kp N1              &kp N2              &kp N3              
         sym {
             bindings = <
 &kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
-&bmt LSHIFT PIPE    &bmt LCTRL DLLR     &bmt LALT PRCNT     &bmt LGUI CARET     ___                 ___                 &bmt LGUI COLON     &bmt LALT LPAR      &bmt LCTRL RPAR     &bmt LSHIFT SEMI
-&kp BSLH            &kp EXCL            &kp AT              &kp HASH            ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp PLUS
+&kp PIPE            &kp DLLR            &kp PRCNT           &kp CARET           ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+&bmt LSHIFT BSLH    &bmt LCTRL EXCL     &bmt LALT AT        &bmt LGUI HASH      ___                 ___                 &bmt LGUI UNDER     &bmt LALT LBRC      &bmt LCTRL RBRC     &bmt LSHIFT PLUS
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -151,8 +151,8 @@ ___                 &kp N1              &kp N2              &kp N3              
         fun_med {
             bindings = <
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
-&bmt LSHIFT F11     &bmt LCTRL F4       &bmt LALT F5        &bmt LGUI F6        ___                 &kp C_PREV          &bmt LGUI C_VOL_DN  &bmt LALT C_VOL_UP  &bmt LCTRL C_NEXT   ___
-&kp F10             &kp F1              &kp F2              &kp F3              ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
+&kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
+&bmt LSHIFT F10     &bmt LCTRL F1       &bmt LALT F2        &bmt LGUI F3        ___                 &kp C_MUTE          &bmt LGUI C_BRI_DN  &bmt LALT C_BRI_UP  &bmt LCTRL C_PP     ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
