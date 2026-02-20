@@ -123,10 +123,10 @@
 
         colemak {
             bindings = <
-&kp Q               &blt 2 W            &blt 1 F            &kp P               &kp B               &kp J               &kp L               &blt 1 U            &blt 2 Y            &kp SQT
+&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &bmt LSHIFT A       &lmt_rpi LCTRL R    &lmt_rpi LALT S     &lmt_rpi LGUI T     &kp G               &kp M               &rmt_rpi LGUI N     &rmt_rpi LALT E     &rmt_rpi LCTRL I    &bmt LSHIFT O
 &kp Z               &kp X               &kp C               &blt 2 D            &kp V               &kp K               &blt 2 H            &kp COMMA           &kp DOT             &kp FSLH
-                                        &blt 3 ESC          &blt 1 SPACE        &blt 2 TAB          &blt 2 DEL          &blt 1 BSPC         &blt 3 RET
+                                        &blt 3 ESC          &blt 1 SPACE        &kp TAB             &kp DEL             &blt 1 BSPC         &blt 3 RET
             >;
         };
 
