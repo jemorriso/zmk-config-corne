@@ -184,7 +184,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
-                                        &esc_to_base        &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
+                                        &kp TAB             &kp SPACE           &kp RET             &esc_to_base        &kp BSPC            &kp DEL
             >;
         };
     };
