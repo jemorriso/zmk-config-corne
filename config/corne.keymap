@@ -79,7 +79,6 @@
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
             quick-tap-ms = <200>;
         };
         blt0: balanced_layer_tap_no_quick_tap {
@@ -87,21 +86,25 @@
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
         };
         bmt0: balanced_mod_tap_no_quick_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+        };
+        hpmt0: hold_preferred_mod_tap_no_quick_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
         };
         lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
             hold-trigger-on-release;
             hold-while-undecided;
@@ -111,7 +114,6 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
             hold-while-undecided;
@@ -121,7 +123,6 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
             require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
             hold-trigger-on-release;
@@ -132,7 +133,6 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
             require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
@@ -148,7 +148,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt_rpi LSHIFT Z   &lmt_rpi LCTRL X    &lmt_rpi LALT C     &lmt_rpi LGUI D     &kp V               &kp K               &rmt_rpi LGUI H     &rmt_rpi LALT COMMA &rmt_rpi LCTRL DOT  &rmt_rpi LSHIFT FSLH
-                                        ___                 &blt0 2 SPACE       &blt 3 RET          &bmt0 LSHIFT ESC    &blt0 1 BSPC        ___
+                                        ___                 &blt0 2 SPACE       &blt 3 ESC          &hpmt0 LSHIFT RET   &blt0 1 BSPC        ___
             >;
         };
 
@@ -157,7 +157,7 @@
 ___                 &kp N7              &kp N8              &kp N9              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp DEL
 &kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp LA(BSPC)
 ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &caps_word          &rmt LGUI TAB       &rmt LALT LS(TAB)   &rmt LCTRL CAPS     &rmt LSHIFT LS(RET)
-                                        ___                 &kp SPACE           &kp RET             &kp ESC             &kp BSPC            ___
+                                        ___                 &kp SPACE           &kp ESC             &kp RET             &kp BSPC            ___
             >;
         };
 
@@ -166,7 +166,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 &kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
 &kp PIPE            &kp DLLR            &kp PRCNT           &kp CARET           ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
 &lmt LSHIFT BSLH    &lmt LCTRL EXCL     &lmt LALT AT        &lmt LGUI HASH      ___                 ___                 &rmt LGUI UNDER     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT PLUS
-                                        ___                 &kp SPACE           &kp RET             &kp ESC             &kp BSPC            ___
+                                        ___                 &kp SPACE           &kp ESC             &kp RET             &kp BSPC            ___
             >;
         };
 
