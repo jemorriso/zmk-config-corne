@@ -4,66 +4,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-// make sticky keys release on the next key press instead of the default key
-// release, this was causing problems with rolling letters
-&sk {
-    quick-release;
-};
-
-/ {
-    macros {
-        mf_on: mf_on {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to 4>
-                , <&macro_tap &kp F13>
-                ;
-        };
-
-        mf_off: mf_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to 0>
-                , <&macro_tap &kp F13>
-                ;
-        };
-
-        esc_to_base: esc_to_base {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&to 0>
-                , <&macro_tap &kp ESC>
-                ;
-        };
-    };
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-        combo_mouseless_overlay {
-            timeout-ms = <35>;
-            key-positions = <2 3>;
-            bindings = <&kp LA(LC(F))>;
-        };
-        combo_mouseless_free_mode_on {
-            timeout-ms = <35>;
-            key-positions = <1 2>;
-            bindings = <&mf_on>;
-            layers = <0 1 2 3>;
-        };
-        combo_mouseless_free_mode_off {
-            timeout-ms = <35>;
-            key-positions = <1 2>;
-            bindings = <&mf_off>;
-            layers = <4>;
-        };
-    };
-};
-
 / {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
@@ -95,13 +35,6 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-        hpmt0: hold_preferred_mod_tap_no_quick_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
         };
         lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -155,16 +88,16 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt_rpi LSHIFT Z   &lmt_rpi LCTRL X    &lmt_rpi LALT C     &lmt_rpi LGUI D     &kp V               &kp K               &rmt_rpi LGUI H     &rmt_rpi LALT COMMA &rmt_rpi LCTRL DOT  &rmt_rpi LSHIFT FSLH
-                                        ___                 &blt0 2 SPACE       &blt 3 ESC          &hpmt0 LSHIFT RET    &blt0 1 BSPC        ___
+                                        &kp ESC             &blt0 2 SPACE       &blt 3 TAB          &blt0 LSHIFT DEL    &blt0 1 BSPC        &kp RET
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp DEL
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp LA(BSPC)
+___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp DEL
+&kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp LA(BSPC)
 ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &caps_word          &rmt LGUI TAB       &rmt LALT LS(TAB)   &rmt LCTRL CAPS     &rmt LSHIFT LS(RET)
-                                        ___                 &kp SPACE           &kp ESC             &kp RET             &kp BSPC            ___
+                                        &kp ESC             &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
             >;
         };
 
@@ -173,7 +106,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 &kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
 &kp PIPE            &kp DLLR            &kp PRCNT           &kp CARET           ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
 &lmt LSHIFT BSLH    &lmt LCTRL EXCL     &lmt LALT AT        &lmt LGUI HASH      ___                 ___                 &rmt LGUI UNDER     &rmt LALT LBRC      &rmt LCTRL RBRC     &rmt LSHIFT PLUS
-                                        ___                 &kp SPACE           &kp ESC             &kp RET             &kp BSPC            ___
+                                        &kp ESC             &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
             >;
         };
 
@@ -183,15 +116,6 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 &kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
 &lmt LSHIFT F10     &lmt LCTRL F1       &lmt LALT F2        &lmt LGUI F3        ___                 &kp C_MUTE          &rmt LGUI C_BRI_DN  &rmt LALT C_BRI_UP  &rmt LCTRL C_PP     ___
                                         ___                 ___                 ___                 ___                 ___                 ___
-            >;
-        };
-
-        mouseless {
-            bindings = <
-&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
-                                        &kp TAB             &kp SPACE           &kp RET             &esc_to_base        &kp BSPC            &kp DEL
             >;
         };
     };
