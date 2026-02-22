@@ -5,6 +5,35 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    macros {
+        arrow: arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp MINUS &kp GT>;
+        };
+        fat_arrow: fat_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp EQUAL &kp GT>;
+        };
+        gt_eq: gt_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp GT &kp EQUAL>;
+        };
+        lt_eq: lt_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LT &kp EQUAL>;
+        };
+    };
+};
+
+/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
@@ -62,7 +91,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lbrm LSHIFT Z      &lbrm LCTRL X       &lbrm LALT C        &lbrm LGUI D        &kp V               &kp K               &rbrm LGUI H        &rbrm LALT COMMA    &rbrm LCTRL DOT     &rbrm LSHIFT FSLH
-                                        &kp ESC             &blt0 2 SPACE       &blt 3 TAB          &bmt0 LSHIFT DEL    &blt0 1 BSPC        &kp RET
+                                        &kp ESC             &blt 2 SPACE        &blt 3 TAB          &bmt LSHIFT DEL     &blt 1 BSPC         &kp RET
             >;
         };
 
@@ -77,8 +106,8 @@ ___                 &lbrm LCTRL N1      &lbrm LALT N2       &lbrm LGUI N3       
 
         sym {
             bindings = <
-&kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           ___                 ___                 &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
-&kp PIPE            &kp DLLR            &kp PRCNT           &kp CARET           ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+&kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           &fat_arrow          &arrow              &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
+&kp PIPE            &kp DLLR            &kp PRCNT           &kp CARET           &lt_eq              &gt_eq              &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
 &lbrm LSHIFT BSLH   &lbrm LCTRL EXCL    &lbrm LALT AT       &lbrm LGUI HASH     ___                 ___                 &rbrm LGUI UNDER    &rbrm LALT LBRC     &rbrm LCTRL RBRC    &rbrm LSHIFT PLUS
                                         &kp ESC             &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
             >;
