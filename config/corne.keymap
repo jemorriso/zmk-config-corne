@@ -5,35 +5,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    macros {
-        arrow: arrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp MINUS &kp GT>;
-        };
-        fat_arrow: fat_arrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp EQUAL &kp GT>;
-        };
-        gt_eq: gt_eq {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp GT &kp EQUAL>;
-        };
-        lt_eq: lt_eq {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp LT &kp EQUAL>;
-        };
-    };
-};
-
-/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
@@ -82,10 +53,10 @@ ___                 &bmt LCTRL N1       &bmt LALT N2        &bmt LGUI N3        
 
         sym {
             bindings = <
-&kp GRAVE           &kp AMPS            &kp STAR            &kp TILDE           &fat_arrow          &arrow              &kp MINUS           &kp LBKT            &kp RBKT            &kp EQUAL
-&kp PIPE            &kp DLLR            &kp PRCNT           &kp CARET           &lt_eq              &gt_eq              &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
-&bmt LSHIFT BSLH    &bmt LCTRL EXCL     &bmt LALT AT        &bmt LGUI HASH      ___                 ___                 &bmt LGUI UNDER     &bmt LALT LBRC      &bmt LCTRL RBRC     &bmt LSHIFT PLUS
-                                        &kp ESC             &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
+&kp AMPS            &kp CARET           &kp DLLR            &kp PIPE            &kp PRCNT           &kp SQT             &kp GRAVE           &kp LPAR            &kp RPAR            &kp DQT
+&kp PLUS            &kp EXCL            &kp QMARK           &kp MINUS           &kp EQUAL           ___                 &kp LBKT            &kp LBRC            &kp RBRC            &kp RBKT
+&bmt LSHIFT TILDE   &bmt LCTRL HASH     &bmt LALT STAR      &bmt LGUI UNDER     &kp AT              &kp DOT             &bmt LGUI SEMI      &bmt LALT LT        &bmt LCTRL GT       &bmt LSHIFT COMMA
+                                        ___                 ___                 ___                 &kp BSLH            &kp FSLH            &kp COLON
             >;
         };
 
@@ -94,7 +65,7 @@ ___                 &bmt LCTRL N1       &bmt LALT N2        &bmt LGUI N3        
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
 &kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
 &bmt LSHIFT F10     &bmt LCTRL F1       &bmt LALT F2        &bmt LGUI F3        ___                 &kp C_MUTE          &bmt LGUI C_BRI_DN  &bmt LALT C_BRI_UP  &bmt LCTRL C_PP     ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        &kp ESC             &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
             >;
         };
     };
