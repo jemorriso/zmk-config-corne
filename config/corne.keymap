@@ -83,9 +83,9 @@
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       &kp LA(BSPC)        &kp BSPC            &kp RET             &kp ESC             &kp DEL
-&kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp LS(RET)
-___                 &bmt LCTRL N1       &bmt LALT N2        &bmt LGUI N3        ___                 &caps_word          &bmt LGUI TAB       &bmt LALT LS(TAB)   &bmt LCTRL CAPS     ___
+___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       ___                 &kp LA(BSPC)        &kp BSPC            &kp ESC             &kp DEL
+&kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
+___                 &bmt LCTRL N1       &bmt LALT N2        &bmt LGUI N3        ___                 &caps_word          &bmt LGUI TAB       &bmt LALT LS(TAB)   &bmt LCTRL CAPS     &bmt LSHIFT LS(RET)
                                         ___                 &kp PG_DN           &kp PG_UP           &kp HOME            &kp END             ___
             >;
         };
