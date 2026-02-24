@@ -21,9 +21,23 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+        hplt: hold_preferred_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
         bmt: balanced_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+        hpmt: hold_preferred_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -38,7 +52,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &bmt LSHIFT Z       &bmt LCTRL X        &bmt LALT C         &bmt LGUI D         &kp V               &kp K               &bmt LGUI H         &bmt LALT COMMA     &bmt LCTRL DOT      &bmt LSHIFT FSLH
-                                        &kp ESC             &blt 2 SPACE        &blt 3 TAB          &bmt LSHIFT DEL     &blt 1 BSPC         &kp RET
+                                        &blt 3 ESC          &blt 2 SPACE        &hplt 2 TAB         &hpmt LSHIFT DEL    &blt 1 BSPC         &kp RET
             >;
         };
 
@@ -53,10 +67,10 @@ ___                 &bmt LCTRL N1       &bmt LALT N2        &bmt LGUI N3        
 
         sym {
             bindings = <
-&kp AMPS            &kp LT              &kp GT              &kp PIPE            &kp TILDE           &kp DOT             &kp DQT             &kp LBKT            &kp RBKT            &kp SQT
-&kp PLUS            &kp LPAR            &kp RPAR            &kp MINUS           &kp STAR            &kp GRAVE           &kp COLON           &kp LBRC            &kp RBRC            &kp HASH
-&bmt LSHIFT BSLH    &bmt LCTRL CARET    &bmt LALT DLLR      &bmt LGUI EQUAL     &kp FSLH            &kp PRCNT           &bmt LGUI SEMI      &bmt LALT COMMA     &bmt LCTRL EXCL     &bmt LSHIFT QMARK
-                                        ___                 ___                 ___                 ___                 &kp UNDER           &kp AT
+___                 &kp CARET           &kp DLLR            &kp PRCNT           ___                 &kp AT              &kp GRAVE           &kp LBKT            &kp RBKT            &kp BSLH
+___                 &kp LT              &kp GT              &kp PLUS            &kp STAR            &kp HASH            &kp COLON           &kp LPAR            &kp RPAR            &kp DQT
+___                 &bmt LCTRL AMPS     &bmt LALT PIPE      &bmt LGUI TILDE     ___                 &kp EXCL            &bmt LGUI SEMI      &bmt LALT LBRC      &bmt LCTRL RBRC     &bmt LSHIFT QMARK
+                                        ___                 ___                 ___                 &kp MINUS           &kp UNDER           &kp EQUAL
             >;
         };
 
