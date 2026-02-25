@@ -47,6 +47,11 @@
             key-positions = <16 17 18 19>;
             bindings = <&kp LS(RET)>;
         };
+        combo_caps {
+            timeout-ms = <35>;
+            key-positions = <32 33>;
+            bindings = <&kp CAPS>;
+        };
     };
 };
 
@@ -137,6 +142,15 @@ ___                 &bmt LCTRL AMPS     &bmt LALT PIPE      &bmt LGUI STAR      
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
 &kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
 &bmt LSHIFT F10     &bmt LCTRL F1       &bmt LALT F2        &bmt LGUI F3        ___                 &kp C_MUTE          &bmt LGUI C_BRI_DN  &bmt LALT C_BRI_UP  &bmt LCTRL C_PP     ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        num_nav_new {
+            bindings = <
+___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       ___                 ___                 ___                 ___                 ___
+&kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+___                 &bmt LCTRL N1       &bmt LALT N2        &bmt LGUI N3        ___                 &kp HOME            &bmt LGUI PG_DN     &bmt LALT PG_UP     &bmt LCTRL END      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
