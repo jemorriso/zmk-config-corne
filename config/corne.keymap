@@ -121,10 +121,10 @@
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp PG_UP           &kp LA(BSPC)        &kp BSPC            &kp RET             &kp LS(RET)         &kp DEL
-&kp N0              &kp N4              &kp N5              &kp N6              &kp PG_DN           &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp ESC
-___                 &bmt LCTRL N1       &bmt LALT N2        &bmt LGUI N3        &kp F13             &kp LA(LC(F))       &bmt LGUI TAB       &bmt LALT LS(TAB)   &bmt LCTRL CAPS     ___
-                                        ___                 &kp HOME            &kp END             ___                 ___                 ___
+___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       ___                 ___                 ___                 ___                 ___
+&kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+___                 &bmt LCTRL N1       &bmt LALT N2        &bmt LGUI N3        ___                 &kp HOME            &bmt LGUI PG_DN     &bmt LALT PG_UP     &bmt LCTRL END      ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
@@ -142,15 +142,6 @@ ___                 &kp CARET           &kp DLLR            &kp PRCNT           
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
 &kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
 &bmt LSHIFT F10     &bmt LCTRL F1       &bmt LALT F2        &bmt LGUI F3        ___                 &kp C_MUTE          &bmt LGUI C_BRI_DN  &bmt LALT C_BRI_UP  &bmt LCTRL C_PP     ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
-            >;
-        };
-
-        num_nav_new {
-            bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       ___                 ___                 ___                 ___                 ___
-&kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
-___                 &bmt LCTRL N1       &bmt LALT N2        &bmt LGUI N3        ___                 &kp HOME            &bmt LGUI PG_DN     &bmt LALT PG_UP     &bmt LCTRL END      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
