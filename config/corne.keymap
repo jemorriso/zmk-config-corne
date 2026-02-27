@@ -9,14 +9,32 @@
         compatible = "zmk,combos";
         combo_tab {
             timeout-ms = <35>;
-            key-positions = <11 12>;
+            key-positions = <1 2>;
             bindings = <&kp TAB>;
             require-prior-idle-ms = <125>;
         };
         combo_shift_tab {
             timeout-ms = <35>;
-            key-positions = <10 11>;
+            key-positions = <0 1>;
             bindings = <&kp LS(TAB)>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_ret {
+            timeout-ms = <35>;
+            key-positions = <7 8>;
+            bindings = <&kp RET>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_shift_ret {
+            timeout-ms = <45>;
+            key-positions = <6 7 8>;
+            bindings = <&kp LS(RET)>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_esc {
+            timeout-ms = <35>;
+            key-positions = <11 12>;
+            bindings = <&kp ESC>;
             require-prior-idle-ms = <125>;
         };
         combo_bspc {
@@ -35,24 +53,6 @@
             timeout-ms = <35>;
             key-positions = <18 19>;
             bindings = <&kp DEL>;
-            require-prior-idle-ms = <125>;
-        };
-        combo_esc {
-            timeout-ms = <35>;
-            key-positions = <1 2>;
-            bindings = <&kp ESC>;
-            require-prior-idle-ms = <125>;
-        };
-        combo_ret {
-            timeout-ms = <35>;
-            key-positions = <7 8>;
-            bindings = <&kp RET>;
-            require-prior-idle-ms = <125>;
-        };
-        combo_shift_ret {
-            timeout-ms = <45>;
-            key-positions = <6 7 8>;
-            bindings = <&kp LS(RET)>;
             require-prior-idle-ms = <125>;
         };
         combo_caps {
