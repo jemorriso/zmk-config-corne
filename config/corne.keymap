@@ -14,7 +14,7 @@
             require-prior-idle-ms = <125>;
         };
         combo_shift_tab {
-            timeout-ms = <45>;
+            timeout-ms = <35>;
             key-positions = <10 11>;
             bindings = <&kp LS(TAB)>;
             require-prior-idle-ms = <125>;
