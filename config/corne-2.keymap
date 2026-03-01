@@ -5,6 +5,72 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_tab {
+            timeout-ms = <35>;
+            key-positions = <1 2>;
+            bindings = <&kp TAB>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_shift_tab {
+            timeout-ms = <45>;
+            key-positions = <1 2 3>;
+            bindings = <&kp LS(TAB)>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_ret {
+            timeout-ms = <35>;
+            key-positions = <7 8>;
+            bindings = <&kp RET>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_shift_ret {
+            timeout-ms = <45>;
+            key-positions = <6 7 8>;
+            bindings = <&kp LS(RET)>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_esc {
+            timeout-ms = <35>;
+            key-positions = <11 12>;
+            bindings = <&kp ESC>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_bspc {
+            timeout-ms = <35>;
+            key-positions = <17 18>;
+            bindings = <&kp BSPC>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_alt_bspc {
+            timeout-ms = <45>;
+            key-positions = <16 17 18>;
+            bindings = <&kp LA(BSPC)>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_del {
+            timeout-ms = <35>;
+            key-positions = <18 19>;
+            bindings = <&kp DEL>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_caps {
+            timeout-ms = <35>;
+            key-positions = <32 33>;
+            bindings = <&kp CAPS>;
+            require-prior-idle-ms = <125>;
+        };
+    };
+};
+
+// make sticky keys release on the next key press instead of the default key
+// release, this was causing problems with rolling letters
+&sk {
+    quick-release;
+};
+
+/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
@@ -14,6 +80,24 @@
     // hold-trigger-key-positions and then try and do a hold. With rpi it's
     // fine since the idle ms is long enough.
     behaviors {
+        // urob idea: use mod-morph instead of tap-dance to avoid the delay.
+        // The first press activates shift, the second press sees that shift is
+        // active and triggers caps_word.
+        shift_morph: shift_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
+        };
+        msft: magic_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&shift_morph>;
+        };
+
         blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -22,25 +106,9 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
         };
-        hplt: hold_preferred_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
         bmt: balanced_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
-        hpmt: hold_preferred_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -78,13 +146,13 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &kp ESC             &blt 3 SPACE        &hplt 2 TAB         &hpmt LSHIFT DEL    &hplt 1 BSPC        &kp RET
+                                        ___                 &blt 3 SPACE        &sl 2               &msft LSHIFT 0      &sl 1               ___
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       ___                 &kp LA(BSPC)        &kp LS(RET)         &caps_word          &kp CAPS
+___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       ___                 ___                 ___                 ___                 ___
 &kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
 ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
