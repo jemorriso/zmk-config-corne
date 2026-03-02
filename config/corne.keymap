@@ -74,7 +74,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &kp ESC             &blt 3 SPACE        &hplt 2 TAB         &hpmt LSHIFT RET    &hplt 1 BSPC        &kp DEL
+                                        &kp TAB             &blt 3 SPACE        &hplt 2 ESC         &hplt 1 RET         &hpmt LSHIFT BSPC   &kp DEL
             >;
         };
 
