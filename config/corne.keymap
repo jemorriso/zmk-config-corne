@@ -74,16 +74,16 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &blt 2 ESC          &bmt LSHIFT SPACE   &blt 1 TAB          &blt 1 DEL          &bmt LSHIFT BSPC    &hplt 2 RET
+                                        &kp ESC             &kp SPACE           &mo 1               &kp LSHIFT          &mo 2               &kp BSPC
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       ___                 &kp LA(BSPC)        &kp LS(RET)         &caps_word          &kp CAPS
-&kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
-                                        &kp ESC             &blt 3 SPACE        &kp TAB             &kp DEL             &blt 3 BSPC         &kp RET
+&kp TAB             &kp N7              &kp N8              &kp N9              &kp LS(TAB)         &kp CAPS            &caps_word          ___                 ___                 &kp BSPC
+&kp ESC             &kp N4              &kp N5              &kp N6              &kp LA(BSPC)        &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
+&lmt LSHIFT N0      &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        &kp LS(RET)         &kp HOME            &rmt LGUI PG_UP     &rmt LALT PG_DN     &rmt LCTRL END      &rmt LSHIFT DEL
+                                        &kp F13             ___                 &kp LA(LC(F))       ___                 ___                 ___
             >;
         };
 
@@ -92,7 +92,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 ___                 &kp LT              &kp GT              &kp PLUS            &kp PIPE            &kp AT              &kp HASH            &kp LBKT            &kp RBKT            &kp DQT
 &kp EQUAL           &kp LBRC            &kp RBRC            &kp MINUS           &kp TILDE           &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp GRAVE
 ___                 &lmt LCTRL CARET    &lmt LALT DLLR      &lmt LGUI STAR      &kp AMPS            &kp BSLH            &rmt LGUI UNDER     &rmt LALT SEMI      &rmt LCTRL EXCL     &rmt LSHIFT QMARK
-                                        &kp ESC             &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
