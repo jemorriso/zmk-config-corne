@@ -1,12 +1,47 @@
 #define ___ &trans
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+
 / {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
+
+    // NOTE: unfortunately hold-trigger-key-positions and
+    // hold-trigger-on-release don't work if you quickly hit a key not in
+    // hold-trigger-key-positions and then try and do a hold. With rpi it's
+    // fine since the idle ms is long enough.
     behaviors {
+        blt: balanced_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+        hplt: hold_preferred_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+        bmt: balanced_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+        hpmt: hold_preferred_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
         lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -30,16 +65,19 @@
             hold-trigger-on-release;
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
+
         colemak {
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &kp ESC             &kp SPACE           &mo 2               &kp LSHIFT          &mo 1               &kp BSPC
+                                        &kp ESC             &blt 3 SPACE        &hplt 2 TAB         &hpmt LSHIFT RET    &hplt 1 BSPC        &kp DEL
             >;
         };
+
         num_nav {
             bindings = <
 &kp TAB             &kp N7              &kp N8              &kp N9              &kp LS(TAB)         &kp CAPS            &caps_word          ___                 ___                 &kp BSPC
@@ -48,6 +86,7 @@
                                         &kp F13             ___                 &kp LA(LC(F))       ___                 ___                 ___
             >;
         };
+
         sym {
             bindings = <
 ___                 &kp LT              &kp GT              &kp PLUS            &kp PIPE            &kp AT              &kp HASH            &kp LBKT            &kp RBKT            &kp DQT
@@ -56,6 +95,7 @@ ___                 &lmt LCTRL CARET    &lmt LALT DLLR      &lmt LGUI STAR      
                                         ___                 ___                 ___                 ___                 &mo 3               ___
             >;
         };
+
         fun_med {
             bindings = <
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
