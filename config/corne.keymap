@@ -14,34 +14,6 @@
     // hold-trigger-key-positions and then try and do a hold. With rpi it's
     // fine since the idle ms is long enough.
     behaviors {
-        blt: balanced_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-        hplt: hold_preferred_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-        bmt: balanced_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-        hpmt: hold_preferred_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
         lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -74,7 +46,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &kp ESC             &kp SPACE           &mo 1               &kp LSHIFT          &mo 2               &kp BSPC
+                                        &kp ESC             &kp SPACE           &mo 2               &kp LSHIFT          &mo 1               &kp BSPC
             >;
         };
 
@@ -92,7 +64,7 @@
 ___                 &kp LT              &kp GT              &kp PLUS            &kp PIPE            &kp AT              &kp HASH            &kp LBKT            &kp RBKT            &kp DQT
 &kp EQUAL           &kp LBRC            &kp RBRC            &kp MINUS           &kp TILDE           &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp GRAVE
 ___                 &lmt LCTRL CARET    &lmt LALT DLLR      &lmt LGUI STAR      &kp AMPS            &kp BSLH            &rmt LGUI UNDER     &rmt LALT SEMI      &rmt LCTRL EXCL     &rmt LSHIFT QMARK
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 &mo 3               ___
             >;
         };
 
