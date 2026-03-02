@@ -20,7 +20,6 @@
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
         };
         hplt: hold_preferred_layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -28,7 +27,6 @@
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
         };
         bmt: balanced_mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -36,7 +34,6 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
         };
         hpmt: hold_preferred_mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -44,7 +41,6 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
         };
         lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
