@@ -80,10 +80,10 @@
 
         num_nav {
             bindings = <
-&kp TAB             &kp N7              &kp N8              &kp N9              &kp LS(TAB)         &kp CAPS            &caps_word          ___                 ___                 &kp BSPC
-&kp ESC             &kp N4              &kp N5              &kp N6              &kp LA(BSPC)        &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
-&lmt LSHIFT N0      &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        &kp LS(RET)         &kp HOME            &rmt LGUI PG_UP     &rmt LALT PG_DN     &rmt LCTRL END      &rmt LSHIFT DEL
-                                        &kp F13             ___                 &kp LA(LC(F))       ___                 ___                 ___
+___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       &kp CAPS            &caps_word          &kp LA(BSPC)        ___                 ___
+&kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp LS(RET)
+___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_UP     &rmt LALT PG_DN     &rmt LCTRL END      ___
+                                        &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
             >;
         };
 
@@ -92,7 +92,7 @@
 ___                 &kp LT              &kp GT              &kp PLUS            &kp PIPE            &kp AT              &kp HASH            &kp LBKT            &kp RBKT            &kp DQT
 &kp EQUAL           &kp LBRC            &kp RBRC            &kp MINUS           &kp TILDE           &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp GRAVE
 ___                 &lmt LCTRL CARET    &lmt LALT DLLR      &lmt LGUI STAR      &kp AMPS            &kp BSLH            &rmt LGUI UNDER     &rmt LALT SEMI      &rmt LCTRL EXCL     &rmt LSHIFT QMARK
-                                        ___                 ___                 ___                 ___                 &mo 3               ___
+                                        &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
             >;
         };
 
