@@ -78,7 +78,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &kp ESC             &blt 3 SPACE        &hplt 2 TAB         &hpmt LSHIFT DEL    &hplt 1 BSPC        &kp RET
+                                        &blt 2 ESC          &blt 1 SPACE        &bmt LSHIFT TAB     &bmt LSHIFT DEL     &blt 1 BSPC         &hplt 2 RET
             >;
         };
 
@@ -87,7 +87,7 @@
 ___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       ___                 &kp LA(BSPC)        &kp LS(RET)         &caps_word          &kp CAPS
 &kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
 ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        &kp ESC             &blt 3 SPACE        &kp TAB             &kp DEL             &blt 3 BSPC         &kp RET
             >;
         };
 
@@ -96,7 +96,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 ___                 &kp LT              &kp GT              &kp PLUS            &kp PIPE            &kp AT              &kp HASH            &kp LBKT            &kp RBKT            &kp DQT
 &kp EQUAL           &kp LBRC            &kp RBRC            &kp MINUS           &kp TILDE           &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp GRAVE
 ___                 &lmt LCTRL CARET    &lmt LALT DLLR      &lmt LGUI STAR      &kp AMPS            &kp BSLH            &rmt LGUI UNDER     &rmt LALT SEMI      &rmt LCTRL EXCL     &rmt LSHIFT QMARK
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        &kp ESC             &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
             >;
         };
 
