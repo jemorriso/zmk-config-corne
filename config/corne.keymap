@@ -20,6 +20,7 @@
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
         };
         hplt: hold_preferred_layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -27,20 +28,7 @@
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-        bmt: balanced_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-        hpmt: hold_preferred_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
         };
         lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -74,16 +62,16 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &kp TAB             &blt 3 SPACE        &hplt 2 ESC         &hplt 1 RET         &hpmt LSHIFT BSPC   &kp DEL
+                                        &kp TAB             &hplt 2 ESC         &blt 4 SPACE        &hplt 3 RET         &hplt 1 BSPC        &kp DEL
             >;
         };
 
-        num_nav {
+        shifted {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       &kp CAPS            &caps_word          &kp LA(BSPC)        ___                 ___
-&kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp LS(RET)
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_UP     &rmt LALT PG_DN     &rmt LCTRL END      ___
-                                        &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
+&kp LS(Q)           &kp LS(W)           &kp LS(F)           &kp LS(P)           &kp LS(B)           &kp LS(J)           &kp LS(L)           &kp LS(U)           &kp LS(Y)           &kp LS(SQT)
+&kp LS(A)           &kp LS(R)           &kp LS(S)           &kp LS(T)           &kp LS(G)           &kp LS(M)           &kp LS(N)           &kp LS(E)           &kp LS(I)           &kp LS(O)
+&kp LS(Z)           &kp LS(X)           &kp LS(C)           &kp LS(D)           &kp LS(V)           &kp LS(K)           &kp LS(H)           &kp LS(COMMA)       &kp LS(DOT)         &kp LS(FSLH)
+                                        &kp LS(TAB)         &hplt 3 LS(ESC)     &kp LS(SPACE)       &kp LS(RET)         &kp LS(BSPC)        &kp LS(DEL)
             >;
         };
 
@@ -92,7 +80,16 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 ___                 &kp LT              &kp GT              &kp PLUS            &kp PIPE            &kp AT              &kp HASH            &kp LBKT            &kp RBKT            &kp DQT
 &kp EQUAL           &kp LBRC            &kp RBRC            &kp MINUS           &kp TILDE           &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp GRAVE
 ___                 &lmt LCTRL CARET    &lmt LALT DLLR      &lmt LGUI STAR      &kp AMPS            &kp BSLH            &rmt LGUI UNDER     &rmt LALT SEMI      &rmt LCTRL EXCL     &rmt LSHIFT QMARK
-                                        &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
+                                        ___                 ___                 ___                 ___                 &mo 3               ___
+            >;
+        };
+
+        num_nav {
+            bindings = <
+___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       &kp CAPS            &caps_word          &kp LA(BSPC)        ___                 ___
+&kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp LS(RET)
+___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_UP     &rmt LALT PG_DN     &rmt LCTRL END      ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
