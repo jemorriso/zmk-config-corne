@@ -23,7 +23,7 @@
     combos {
         compatible = "zmk,combos";
         combo_mfm {
-            timeout-ms = <50>;
+            timeout-ms = <35>;
             key-positions = <13 14>;
             bindings = <&mfm>;
         };
@@ -100,7 +100,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &blt 3 TAB          &kp SPACE           &hplt 2 ESC         &hplt 1 RET         &hpmt LSHIFT BSPC   &kp DEL
+                                        &hplt 2 ESC         &kp SPACE           &blt 3 TAB          &kp DEL             &hpmt LSHIFT BSPC   &hplt 1 RET
             >;
         };
 
@@ -109,7 +109,7 @@
 ___                 &kp N7              &kp N8              &kp N9              &kp LA(LC(F))       &kp CAPS            &caps_word          &kp LA(BSPC)        ___                 ___
 &kp N0              &kp N4              &kp N5              &kp N6              &kp F13             &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp LS(RET)
 ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_UP     &rmt LALT PG_DN     &rmt LCTRL END      ___
-                                        &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
+                                        &kp ESC             &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
             >;
         };
 
@@ -118,7 +118,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 ___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp HASH            &kp LBKT            &kp RBKT            ___
 &kp EQUAL           &kp STAR            &kp PLUS            &kp MINUS           &kp PRCNT           &kp GRAVE           &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
 ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      &kp BSLH            &kp AT              &rmt LGUI UNDER     &rmt LALT LBRC      &rmt LCTRL RBRC     ___
-                                        &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
+                                        &kp ESC             &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
             >;
         };
 
