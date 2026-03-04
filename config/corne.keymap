@@ -5,6 +5,32 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    macros {
+        mfm: mouseless_free_mode {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <30>;
+            tap-ms = <30>;
+            bindings
+                = <&kp F13>
+                , <&macro_pause_for_release>
+                , <&kp F13>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_mfm {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&mfm>;
+        };
+    };
+};
+
+/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
