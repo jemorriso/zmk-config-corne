@@ -115,9 +115,9 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 
         sym {
             bindings = <
-___                 &kp LT              &kp GT              &kp PLUS            &kp PIPE            &kp AT              &kp HASH            &kp LBKT            &kp RBKT            &kp DQT
-&kp EQUAL           &kp LBRC            &kp RBRC            &kp MINUS           &kp TILDE           &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp GRAVE
-___                 &lmt LCTRL CARET    &lmt LALT DLLR      &lmt LGUI STAR      &kp AMPS            &kp BSLH            &rmt LGUI UNDER     &rmt LALT SEMI      &rmt LCTRL EXCL     &rmt LSHIFT QMARK
+___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp HASH            &kp LBKT            &kp RBKT            ___
+&kp EQUAL           &kp STAR            &kp PLUS            &kp MINUS           &kp PRCNT           &kp GRAVE           &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      &kp BSLH            &kp AT              &rmt LGUI UNDER     &rmt LALT LBRC      &rmt LCTRL RBRC     ___
                                         &kp TAB             &kp SPACE           &kp ESC             &kp RET             &kp BSPC            &kp DEL
             >;
         };
