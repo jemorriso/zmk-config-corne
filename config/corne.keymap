@@ -9,12 +9,10 @@
         mfm: mouseless_free_mode {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
             bindings
-                = <&kp F13>
+                = <&macro_tap &kp F13>
                 , <&macro_pause_for_release>
-                , <&kp F13>;
+                , <&macro_tap &kp F13>;
         };
     };
 };
@@ -115,8 +113,8 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
 
         sym {
             bindings = <
-___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp HASH            &kp LBKT            &kp RBKT            ___
-&kp EQUAL           &kp STAR            &kp PLUS            &kp MINUS           &kp PRCNT           &kp GRAVE           &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
+&kp EQUAL           &kp STAR            &kp PLUS            &kp MINUS           &kp PRCNT           &kp HASH            &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
 ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      &kp BSLH            &kp AT              &rmt LGUI UNDER     &rmt LALT LBRC      &rmt LCTRL RBRC     ___
                                         &kp ESC             &kp SPACE           &kp TAB             &kp DEL             &kp BSPC            &kp RET
             >;
