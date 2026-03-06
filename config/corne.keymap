@@ -38,6 +38,19 @@
     // hold-trigger-key-positions and then try and do a hold. With rpi it's
     // fine since the idle ms is long enough.
     behaviors {
+        esc_morph: esc_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp LA(BSPC)>;
+            mods = <(MOD_LSFT)>;
+        };
+        lt_esc: lt_esc {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&spc_morph>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
         blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -98,7 +111,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &hplt 2 ESC         &kp SPACE           &blt 3 TAB          &kp DEL             &hpmt LSHIFT BSPC   &hplt 1 RET
+                                        &lt_esc 2 0         &kp SPACE           &blt 3 TAB          &kp DEL             &hpmt LSHIFT BSPC   &hplt 1 RET
             >;
         };
 
