@@ -29,7 +29,7 @@
         combo_mouseless {
             timeout-ms = <35>;
             key-positions = <2 12>;
-            bindings = <&kp LA(LC(F))>;
+            bindings = <&kp LA(LC(LS(LG(F))>;
             require-prior-idle-ms = <125>;
         };
     };
