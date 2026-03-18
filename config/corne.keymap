@@ -6,7 +6,7 @@
 
 / {
     macros {
-        mfm: mouseless_free_mode {
+        mfmh: mouseless_free_mode_hold {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -16,13 +16,20 @@
                 , <&macro_release &mo 4>
                 , <&macro_tap &kp F13>;
         };
-        mg: mouseless_grid {
+        mfmt: mouseless_free_mode_tap {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp F13>
-                , <&macro_tap &kp LA(LC(LS(LG(F))))>;
+                , <&macro_tap &tog 4>
         };
+        /* mg: mouseless_grid { */
+        /*     compatible = "zmk,behavior-macro"; */
+        /*     #binding-cells = <0>; */
+        /*     bindings */
+        /*         = <&macro_tap &kp F13> */
+        /*         , <&macro_tap &kp LA(LC(LS(LG(F))))>; */
+        /* }; */
     };
 };
 
@@ -92,7 +99,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &hplt 2 ESC         &blt 3 SPACE        &kp F13           &kp LA(LC(LS(LG(F)))) &hpmt LSHIFT BSPC   &hplt 1 RET
+                                        &hplt 2 ESC         &blt 3 SPACE        &mfmt             &kp LA(LC(LS(LG(F)))) &hpmt LSHIFT BSPC   &hplt 1 RET
             >;
         };
 
@@ -128,7 +135,7 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-                                        ___                 ___                 ___                 ___                 &mg                 ___
+                                        &kp ESC             &kp SPACE           ___                 ___                 &kp BSPC            &kp RET
             >;
         };
 
