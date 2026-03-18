@@ -10,11 +10,18 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &mo 4>
-                , <&macro_tap &kp F13>
+                = <&macro_tap &kp F13>
+                , <&macro_press &mo 4>
                 , <&macro_pause_for_release>
-                , <&macro_tap &kp F13>
-                , <&macro_release &mo 4>;
+                , <&macro_release &mo 4>
+                , <&macro_tap &kp F13>;
+        };
+        mg: mouseless_grid {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp F13>
+                , <&macro_tap &kp LA(LC(LS(LG(F))))>;
         };
     };
 };
@@ -121,7 +128,7 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-                                        ___                 ___                 ___                 ___                 &kp LA(LC(LS(LG(F)))) ___
+                                        ___                 ___                 ___                 ___                 &mg                 ___
             >;
         };
 
