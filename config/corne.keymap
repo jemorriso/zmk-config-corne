@@ -21,7 +21,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp F13>
-                , <&macro_tap &tog 4>
+                , <&macro_tap &tog 4>;
         };
     };
 };
