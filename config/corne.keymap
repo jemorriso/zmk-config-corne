@@ -10,9 +10,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_tap &kp F13>
+                = <&macro_press &mo 4>
+                , <&macro_tap &kp F13>
                 , <&macro_pause_for_release>
-                , <&macro_tap &kp F13>;
+                , <&macro_tap &kp F13>
+                , <&macro_release &mo 4>;
         };
     };
 };
@@ -139,6 +141,24 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
 &kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
 &lmt LSHIFT F10     &lmt LCTRL F1       &lmt LALT F2        &lmt LGUI F3        ___                 &kp C_MUTE          &rmt LGUI C_BRI_DN  &rmt LALT C_BRI_UP  &rmt LCTRL C_PP     ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        mouseless {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 &kp LA(LC(LS(LG(F)))) ___
+            >;
+        };
+
+        empty {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
