@@ -29,7 +29,7 @@
         combo_mouseless {
             timeout-ms = <35>;
             key-positions = <2 12>;
-            bindings = <&kp LA(LC(LS(LG(F))>;
+            bindings = <&kp LA(LC(LS(LG(F))))>;
             require-prior-idle-ms = <125>;
         };
     };
@@ -45,6 +45,15 @@
     // hold-trigger-key-positions and then try and do a hold. With rpi it's
     // fine since the idle ms is long enough.
     behaviors {
+
+        tab_mfm: tab_mfm {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&kp ESC>, <&mfm>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
         blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -105,7 +114,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &hplt 2 ESC         &kp SPACE           &blt 3 TAB          &kp DEL             &hpmt LSHIFT BSPC   &hplt 1 RET
+                                        &hplt 2 ESC         &kp SPACE           &tab_mfm            &blt 3 DEL          &hpmt LSHIFT BSPC   &hplt 1 RET
             >;
         };
 
