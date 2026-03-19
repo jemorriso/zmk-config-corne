@@ -137,12 +137,13 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
             >;
         };
 
+        // TODO: consider if I should remove all modifiers from this layer
         mouseless {
             bindings = <
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-                                        &to 0               &kp SPACE           ___                 ___                 &kp BSPC            &kp RET
+___                 ___                 ___                 &kp D               ___                 ___                 ___                 ___                 ___                 ___
+                                        &to 0               &kp SPACE           &mfm_off            ___                 &kp BSPC            &kp RET
             >;
         };
 
@@ -151,7 +152,7 @@ ___                 ___                 ___                 ___                 
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-                                        ___                 ___                 &mfm_off            ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
     };
