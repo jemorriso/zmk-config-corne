@@ -128,7 +128,7 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-                                        &kp ESC             &kp SPACE           ___                 ___                 &kp BSPC            &kp RET
+                                        &to 0               &kp SPACE           ___                 ___                 &kp BSPC            &kp RET
             >;
         };
 
