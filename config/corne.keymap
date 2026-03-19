@@ -23,6 +23,20 @@
                 = <&macro_tap &kp F13>
                 , <&macro_tap &tog 4>;
         };
+        mfm_on: mouseless_free_mode_on {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp F13>
+                , <&macro_tap &to 4>;
+        };
+        mfm_off: mouseless_free_mode_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp F13>
+                , <&macro_tap &to 0>;
+        };
     };
 };
 
@@ -92,7 +106,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &hplt 2 ESC         &blt 3 SPACE        &mfmt             &kp LA(LC(LS(LG(F)))) &hpmt LSHIFT BSPC   &hplt 1 RET
+                                        &hplt 2 ESC         &blt 3 SPACE        &mfm_on           &kp LA(LC(LS(LG(F)))) &hpmt LSHIFT BSPC   &hplt 1 RET
             >;
         };
 
@@ -137,7 +151,7 @@ ___                 ___                 ___                 ___                 
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 &mfm_off            ___                 ___                 ___
             >;
         };
     };
