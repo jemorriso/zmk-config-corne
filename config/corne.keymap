@@ -1,8 +1,40 @@
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 200
+
 #define ___ &trans
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+
+#include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
+
+&mmv {
+    acceleration-exponent = <1>;      // 1
+    time-to-max-speed-ms = <500>;     // 300
+    trigger-period-ms = <8>;
+};
+
+&msc {
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <40>;      // 300
+    trigger-period-ms = <8>;
+};
+
+&mmv_input_listener {
+    precision {
+        layers = <2>;
+        input-processors = <&zip_xy_scaler 1 4>;
+    };
+};
+
+&msc_input_listener {
+    turbo {
+        layers = <2>;
+        input-processors = <&zip_scroll_scaler 4 1>;
+    };
+};
 
 / {
     macros {
@@ -106,7 +138,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &hplt 2 ESC         &blt 3 SPACE        &mfm_on           &kp LA(LC(LS(LG(F)))) &hpmt LSHIFT BSPC   &hplt 1 RET
+                                        &blt 3 ESC          &blt 2 SPACE        &mo 4               &kp PIPE            &blt LSHIFT BSPC    &hplt 1 RET
             >;
         };
 
@@ -115,7 +147,7 @@
 ___                 &kp N7              &kp N8              &kp N9              &kp CAPS            &kp HOME            &kp PG_UP           &kp PG_DN           &kp END             ___
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
 ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 ___                 &rmt LGUI TAB       &rmt LALT LS(TAB)   ___                 ___
-                                        &kp ESC             &kp SPACE           &kp CARET           ___                 &kp BSPC            &kp RET
+                                        &kp ESC             &kp SPACE           ___                 ___                 &kp BSPC            &kp RET
             >;
         };
 
@@ -137,13 +169,12 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
             >;
         };
 
-        // TODO: consider if I should remove all modifiers from this layer
-        mouseless {
+        mouse {
             bindings = <
+___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 &msc SCRL_UP        ___                 &mkp MB5
+___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 ___                 &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-___                 ___                 ___                 &kp D               ___                 ___                 ___                 ___                 ___                 ___
-                                        &to 0               &kp SPACE           &mfm_off            ___                 &kp BSPC            &kp RET
+                                        ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
             >;
         };
 
