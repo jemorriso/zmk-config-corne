@@ -78,6 +78,21 @@
     };
 
     behaviors {
+        mmvc: mouse_move_constant {
+                compatible = "zmk,behavior-input-two-axis";
+                #binding-cells = <0>;
+                x-input-code = <INPUT_REL_X>;
+                y-input-code = <INPUT_REL_Y>;
+                time-to-max-speed-ms = <300>;  // irrelevant
+                acceleration-exponent = <0>;  // changed to zero
+            };
+        };
+
+        mmvc_input_listener: mmvc_input_listener {
+            compatible = "zmk,input-listener";
+            device = <&mmvc>;
+        };
+
         mo_tog: mo_tog {
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
@@ -179,8 +194,8 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
 
         mouse {
             bindings = <
-___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 &msc SCRL_UP        ___                 &mkp MB5
-___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 ___                 &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
+___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 ___                 ___                 &mkp MB5
+___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 &mkp MCLK
                                         ___                 ___                 ___                 ___                 &mkp LCLK           &mkp RCLK
             >;
@@ -188,8 +203,8 @@ ___                 ___                 ___                 ___                 
 
         mouse_2 {
             bindings = <
-___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 &msc SCRL_UP        ___                 &mkp MB5
-___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 ___                 &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
+___                 ___                 &mmv MOVE_UP        ___                 ___                 &mmvc MOVE_X(-300)  &mmvc MOVE_Y(-300)  &mmvc MOVE_Y(300)   &mmvc MOVE_X(300)   &mkp MB5
+___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 &mkp MCLK
                                         ___                 ___                 ___                 ___                 &mkp LCLK           &mkp RCLK
             >;
