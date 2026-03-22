@@ -38,6 +38,43 @@
 
 / {
     macros {
+        mouseless: mouseless {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &to 0>
+                , <&macro_tap &kp LA(LC(LS(LG(F))))>;
+        };
+        homerow: homerow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &to 0>
+                , <&macro_tap &kp LA(LC(LS(LG(H))))>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_homerow {
+            timeout-ms = <35>;
+            key-positions = <2 12>;
+            bindings = <&kp LA(LC(LS(LG(H))))>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_mouseless {
+            timeout-ms = <35>;
+            key-positions = <13 14>;
+            bindings = <&kp LA(LC(LS(LG(F))))>;
+            require-prior-idle-ms = <125>;
+        };
+    };
+};
+
+/ {
+    macros {
         mfmh: mouseless_free_mode_hold {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -195,17 +232,17 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
             bindings = <
 ___                 ___                 &mmv MOVE_UP        ___                 ___                 &mmvc MOVE_X(-1000) &mmvc MOVE_Y(1000)  &mmvc MOVE_Y(-1000) &mmvc MOVE_X(1000)  &mkp MB5
 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 &mkp MCLK
+___                 ___                 ___                 ___                 ___                 ___                 &homerow            &mouseless          ___                 &mkp MCLK
                                         &tog 4              ___                 ___                 ___                 &mkp LCLK           &mkp RCLK
             >;
         };
 
         mouse_2 {
             bindings = <
-___                 ___                 &mmv MOVE_UP        ___                 ___                 &mmvc MOVE_X(-2000) &mmvc MOVE_Y(2000)  &mmvc MOVE_Y(-2000) &mmvc MOVE_X(2000)  &mkp MB5
-___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 &mkp MCLK
-                                        ___                 ___                 ___                 ___                 &mkp LCLK           &mkp RCLK
+___                 ___                 ___                 ___                 ___                 &mmvc MOVE_X(-2000) &mmvc MOVE_Y(2000)  &mmvc MOVE_Y(-2000) &mmvc MOVE_X(2000)  ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
