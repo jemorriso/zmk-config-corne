@@ -80,7 +80,7 @@
     behaviors {
         mmvc: mouse_move_constant {
                 compatible = "zmk,behavior-input-two-axis";
-                #binding-cells = <0>;
+                #binding-cells = <1>;
                 x-input-code = <INPUT_REL_X>;
                 y-input-code = <INPUT_REL_Y>;
                 time-to-max-speed-ms = <300>;  // irrelevant
