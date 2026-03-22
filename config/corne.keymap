@@ -85,7 +85,6 @@
                 y-input-code = <INPUT_REL_Y>;
                 time-to-max-speed-ms = <300>;  // irrelevant
                 acceleration-exponent = <0>;  // changed to zero
-            };
         };
 
         mmvc_input_listener: mmvc_input_listener {
