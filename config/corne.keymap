@@ -1,5 +1,5 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 200
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 #define ___ &trans
 
@@ -24,14 +24,14 @@
 
 &mmv_input_listener {
     precision {
-        layers = <2>;
+        layers = <5>;
         input-processors = <&zip_xy_scaler 1 4>;
     };
 };
 
 &msc_input_listener {
     turbo {
-        layers = <2>;
+        layers = <5>;
         input-processors = <&zip_scroll_scaler 4 1>;
     };
 };
@@ -138,7 +138,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &blt 3 ESC          &blt 2 SPACE        &mo 4               &kp PIPE            &blt LSHIFT BSPC    &hplt 1 RET
+                                        &blt 3 ESC          &blt 2 SPACE        &mo 4               &blt 5 PIPE         &bmt LSHIFT BSPC    &hplt 1 RET
             >;
         };
 
@@ -170,6 +170,15 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
         };
 
         mouse {
+            bindings = <
+___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 &msc SCRL_UP        ___                 &mkp MB5
+___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 ___                 &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
+            >;
+        };
+
+        mouse_2 {
             bindings = <
 ___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 &msc SCRL_UP        ___                 &mkp MB5
 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 ___                 &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
