@@ -78,12 +78,12 @@
     };
 
     behaviors {
-        mo_tog_4: mo_tog_4 {
+        mo_tog: mo_tog {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
-            tapping-term-ms = <150>;
             flavor = "hold-preferred";
-            bindings = <&mo 4>, <&tog 4>;
+            bindings = <&mo>, <&tog>;
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
         };
 
         blt: balanced_layer_tap {
@@ -146,7 +146,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &blt 3 ESC          &blt 2 SPACE        &mo_tog_4           &blt 5 PIPE         &bmt LSHIFT BSPC    &hplt 1 RET
+                                        &blt 3 ESC          &blt 2 SPACE        &mo_tog 4 4         &blt 5 PIPE         &bmt LSHIFT BSPC    &hplt 1 RET
             >;
         };
 
