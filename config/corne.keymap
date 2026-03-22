@@ -193,7 +193,7 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
 
         mouse {
             bindings = <
-___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 ___                 ___                 &mkp MB5
+___                 ___                 &mmv MOVE_UP        ___                 ___                 &mmvc MOVE_X(1000)  &mmvc MOVE_Y(1000)  &mmvc MOVE_Y(-1000) &mmvc MOVE_X(1000)  &mkp MB5
 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 &mkp MCLK
                                         ___                 ___                 ___                 ___                 &mkp LCLK           &mkp RCLK
@@ -202,7 +202,7 @@ ___                 ___                 ___                 ___                 
 
         mouse_2 {
             bindings = <
-___                 ___                 &mmv MOVE_UP        ___                 ___                 &mmvc MOVE_X(-300)  &mmvc MOVE_Y(-300)  &mmvc MOVE_Y(300)   &mmvc MOVE_X(300)   &mkp MB5
+___                 ___                 &mmv MOVE_UP        ___                 ___                 &mmvc MOVE_X(3000)  &mmvc MOVE_Y(3000)  &mmvc MOVE_Y(-3000) &mmvc MOVE_X(3000)  &mkp MB5
 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 &mkp MCLK
                                         ___                 ___                 ___                 ___                 &mkp LCLK           &mkp RCLK
