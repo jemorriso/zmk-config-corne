@@ -107,6 +107,7 @@
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
         };
         hplt: hold_preferred_layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -114,6 +115,7 @@
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
         };
         bmt: balanced_mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -121,6 +123,7 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
         };
         hpmt: hold_preferred_mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -128,6 +131,7 @@
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
         };
         lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -216,9 +220,9 @@
 
         colemak {
             bindings = <
-&kp Q               &llt_fast 1 W       &llt_fast 2 F       &kp P               &kp B               &kp J               &kp L               &rlt_fast 2 U       &rlt_fast 1 Y       &kp SQT
+&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &lmt_fast LSHIFT A  &lmt LCTRL R        &lmt LALT S         &lmt LGUI T         &kp G               &kp M               &rmt LGUI N         &rmt LALT E         &rmt LCTRL I        &rmt_fast LSHIFT O
-&llt 3 Z            &kp X               &kp C               &llt 4 D            &kp V               &kp K               &llt 4 H            &kp COMMA           &kp DOT             &llt 3 FSLH
+&llt 3 Z            &llt_fast 1 X       &llt_fast 2 C       &llt 4 D            &kp V               &kp K               &rlt 4 H            &rlt_fast 2 COMMA   &rlt_fast 1 DOT     &rlt 3 FSLH
                                         &blt 3 ESC          &blt 2 SPACE        &mo_tog 4 4         &kp PIPE            &bmt LSHIFT BSPC    &hplt 1 RET
             >;
         };
@@ -254,7 +258,7 @@ ___                 &kp AMPS            &kp PIPE            &kp EXCL            
             bindings = <
 ___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 ___                 ___                 &mkp MB5
 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
-___                 ___                 ___                 ___                 ___                 &mo 6               &homerow            &mouseless          ___                 &mkp MCLK
+___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mo 6               &homerow            &mouseless          ___                 &mkp MCLK
                                         &tog 4              ___                 ___                 &mo 5               &mkp LCLK           &mkp RCLK
             >;
         };
