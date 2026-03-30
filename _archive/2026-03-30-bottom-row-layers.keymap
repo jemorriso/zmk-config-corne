@@ -36,12 +36,6 @@
     };
 };
 
-// make sticky keys release on the next key press instead of the default key
-// release, this was causing problems with rolling letters
-&sk {
-    quick-release;
-};
-
 / {
     macros {
         mouseless: mouseless {
@@ -76,48 +70,6 @@
             bindings = <&kp LA(LC(LS(LG(F))))>;
             require-prior-idle-ms = <125>;
         };
-        combo_esc {
-            timeout-ms = <35>;
-            key-positions = <11 12>;
-            bindings = <&bmt LS(LCTRL) ESC>;
-            require-prior-idle-ms = <125>;
-        };
-        combo_alt_bspc {
-            timeout-ms = <35>;
-            key-positions = <16 17>;
-            bindings = <&bmt LS(LGUI) LA(BSPC)>;
-            require-prior-idle-ms = <125>;
-        };
-        combo_bspc {
-            timeout-ms = <35>;
-            key-positions = <17 18>;
-            bindings = <&bmt LS(LCTRL) BSPC>;
-            require-prior-idle-ms = <125>;
-        };
-        combo_del {
-            timeout-ms = <35>;
-            key-positions = <18 19>;
-            bindings = <&bmt LC(LALT) DEL>;
-            require-prior-idle-ms = <125>;
-        };
-        combo_tab {
-            timeout-ms = <35>;
-            key-positions = <21 22>;
-            bindings = <&kp TAB>;
-            require-prior-idle-ms = <125>;
-        };
-        combo_shift_tab {
-            timeout-ms = <35>;
-            key-positions = <20 21>;
-            bindings = <&kp LS(TAB)>;
-            require-prior-idle-ms = <125>;
-        };
-        combo_ret {
-            timeout-ms = <35>;
-            key-positions = <27 28>;
-            bindings = <&kp RET>;
-            require-prior-idle-ms = <125>;
-        };
     };
 };
 
@@ -147,24 +99,6 @@
             bindings = <&mo>, <&tog>;
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-        };
-
-        // urob idea: use mod-morph instead of tap-dance to avoid the delay.
-        // The first press activates shift, the second press sees that shift is
-        // active and triggers caps_word.
-        shift_morph: shift_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&sk LSHFT>, <&caps_word>;
-            mods = <(MOD_LSFT)>;
-        };
-        msft: magic_shift {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&shift_morph>;
         };
 
         blt: balanced_layer_tap {
@@ -304,7 +238,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &lmt LALT A         &lmt LCTRL R        &lmt_fast LSHIFT S  &lmt LGUI T         &kp G               &kp M               &rmt LGUI N         &rmt_fast LSHIFT E  &rmt LCTRL I        &rmt LALT O
 &llt 3 Z            &llt_fast 1 X       &llt 4 C            &llt_fast 2 D       &kp V               &kp K               &rlt_fast 2 H       &rlt 4 COMMA        &rlt_fast 1 DOT     &rlt 3 FSLH
-                                        &sl 2               &kp SPACE           &mo_tog 4 4         &blt 3 PIPE         &msft LSHIFT 0      &sl 1
+                                        &kp ESC             &kp SPACE           &mo_tog 4 4         &kp PIPE            &kp BSPC            &kp RET
             >;
         };
 
