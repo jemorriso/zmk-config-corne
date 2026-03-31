@@ -118,6 +118,12 @@
             bindings = <&kp RET>;
             require-prior-idle-ms = <125>;
         };
+        combo_shift_ret {
+            timeout-ms = <35>;
+            key-positions = <26 27>;
+            bindings = <&kp LS(RET)>;
+            require-prior-idle-ms = <125>;
+        };
     };
 };
 
