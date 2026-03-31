@@ -181,25 +181,9 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
         };
-        hplt: hold_preferred_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
         bmt: balanced_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
-        hpmt: hold_preferred_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -226,79 +210,6 @@
             require-prior-idle-ms = <125>;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
-        };
-        llt: left_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
-            hold-trigger-on-release;
-        };
-        rlt: right_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <125>;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
-            hold-trigger-on-release;
-        };
-        lmt_fast: left_mod_tap_fast {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
-            hold-trigger-on-release;
-        };
-        rmt_fast: right_mod_tap_fast {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
-            hold-trigger-on-release;
-        };
-        // TODO not working properly on the bottom row for some reason
-        // llt_fast: left_layer_tap_fast {
-            // compatible = "zmk,behavior-hold-tap";
-            // flavor = "balanced";
-            // bindings = <&mo>, <&kp>;
-            // #binding-cells = <2>;
-            // tapping-term-ms = <200>;
-            // hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
-            // hold-trigger-on-release;
-        // };
-        // rlt_fast: right_layer_tap_fast {
-            // compatible = "zmk,behavior-hold-tap";
-            // flavor = "balanced";
-            // bindings = <&mo>, <&kp>;
-            // #binding-cells = <2>;
-            // tapping-term-ms = <200>;
-            // hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
-            // hold-trigger-on-release;
-        // };
-        llt_fast: left_layer_tap_fast {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-        rlt_fast: right_layer_tap_fast {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
         };
     };
 
@@ -335,7 +246,7 @@ ___                 &kp AMPS            &kp PIPE            &kp EXCL            
         fun_med {
             bindings = <
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
-&lmt LSHIFT         &lmt LCTRL F4       &lmt LALT F5        &lmt LGUI F6        ___                 &kp C_PREV          &rmt LGUI C_VOL_DN  &rmt LALT C_VOL_UP  &rmt LCTRL C_NEXT   ___
+&lmt LSHIFT F10     &lmt LCTRL F4       &lmt LALT F5        &lmt LGUI F6        ___                 &kp C_PREV          &rmt LGUI C_VOL_DN  &rmt LALT C_VOL_UP  &rmt LCTRL C_NEXT   ___
 &kp F10             &kp F1              &kp F2              &kp F3              ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
