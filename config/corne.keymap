@@ -64,6 +64,14 @@
 / {
     combos {
         compatible = "zmk,combos";
+
+        combo_mouse_off {
+            timeout-ms = <35>;
+            key-positions = <11 12>;
+            bindings = <&tog 4>;
+            layers = <4>;
+        };
+
         combo_homerow {
             timeout-ms = <35>;
             key-positions = <2 12>;
@@ -257,7 +265,7 @@ ___                 &kp AMPS            &kp PIPE            &kp EXCL            
 ___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 ___                 ___                 &mkp MB5
 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
 ___                 ___                 ___                 ___                 ___                 &mo 6               &homerow            &mouseless          ___                 &mkp MCLK
-                                        &tog 4              ___                 ___                 &mo 5               &mkp LCLK           &mkp RCLK
+                                        ___                 ___                 ___                 &mo 5               &mkp LCLK           &mkp RCLK
             >;
         };
 
