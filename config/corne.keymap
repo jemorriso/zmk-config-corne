@@ -87,25 +87,25 @@
         combo_esc {
             timeout-ms = <35>;
             key-positions = <11 12>;
-            bindings = <&bmt LA(LCTRL) ESC>;
+            bindings = <&lmt LA(LCTRL) ESC>;
             require-prior-idle-ms = <125>;
         };
         combo_alt_bspc {
             timeout-ms = <35>;
             key-positions = <16 17>;
-            bindings = <&bmt LA(LGUI) LA(BSPC)>;
+            bindings = <&rmt LA(LGUI) LA(BSPC)>;
             require-prior-idle-ms = <125>;
         };
         combo_bspc {
             timeout-ms = <35>;
             key-positions = <17 18>;
-            bindings = <&bmt LA(LCTRL) BSPC>;
+            bindings = <&rmt LA(LCTRL) BSPC>;
             require-prior-idle-ms = <125>;
         };
         combo_del {
             timeout-ms = <35>;
             key-positions = <18 19>;
-            bindings = <&bmt LC(LSHIFT) DEL>;
+            bindings = <&rmt LC(LSHIFT) DEL>;
             require-prior-idle-ms = <125>;
         };
         combo_tab {
