@@ -62,6 +62,80 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_mouse_off {
+            timeout-ms = <35>;
+            key-positions = <11 12>;
+            bindings = <&tog 4>;
+            layers = <4>;
+        };
+
+        combo_homerow {
+            timeout-ms = <35>;
+            key-positions = <2 12>;
+            bindings = <&kp LA(LC(LS(LG(H))))>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_mouseless {
+            timeout-ms = <35>;
+            key-positions = <13 14>;
+            bindings = <&kp LA(LC(LS(LG(F))))>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_esc {
+            timeout-ms = <35>;
+            key-positions = <11 12>;
+            bindings = <&lmt LA(LCTRL) ESC>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_alt_bspc {
+            timeout-ms = <35>;
+            key-positions = <16 17>;
+            bindings = <&rmt LA(LGUI) LA(BSPC)>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_bspc {
+            timeout-ms = <35>;
+            key-positions = <17 18>;
+            bindings = <&rmt LA(LCTRL) BSPC>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_del {
+            timeout-ms = <35>;
+            key-positions = <18 19>;
+            bindings = <&rmt LC(LSHIFT) DEL>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_tab {
+            timeout-ms = <35>;
+            key-positions = <21 22>;
+            bindings = <&kp TAB>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_shift_tab {
+            timeout-ms = <35>;
+            key-positions = <20 21>;
+            bindings = <&kp LS(TAB)>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_ret {
+            timeout-ms = <35>;
+            key-positions = <27 28>;
+            bindings = <&kp RET>;
+            require-prior-idle-ms = <125>;
+        };
+        combo_shift_ret {
+            timeout-ms = <35>;
+            key-positions = <26 27>;
+            bindings = <&kp LS(RET)>;
+            require-prior-idle-ms = <125>;
+        };
+    };
+};
+
+/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
@@ -79,6 +153,32 @@
         mmvc_input_listener: mmvc_input_listener {
             compatible = "zmk,input-listener";
             device = <&mmvc>;
+        };
+
+        mo_tog: mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&tog>;
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
+
+        // urob idea: use mod-morph instead of tap-dance to avoid the delay.
+        // The first press activates shift, the second press sees that shift is
+        // active and triggers caps_word.
+        shift_morph: shift_morph {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+            mods = <(MOD_LSFT)>;
+        };
+        msft: magic_shift {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&shift_morph>;
         };
 
         blt: balanced_layer_tap {
@@ -119,20 +219,6 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
-        hplt: hold_preferred_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-        hpmt: hold_preferred_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
     };
 
     keymap {
@@ -141,17 +227,17 @@
         colemak {
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &hplt 2 ESC         &blt 4 SPACE        &kp TAB             &blt 3 PIPE         &hpmt LSHIFT BSPC   &hplt 1 RET
+&lmt LSHIFT A       &lmt LCTRL R        &lmt LALT S         &lmt LGUI T         &kp G               &kp M               &rmt LGUI N         &rmt LALT E         &rmt LCTRL I        &rmt LSHIFT O
+&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
+                                        &sl 2               &kp SPACE           &mo_tog 4 4         &blt 3 PIPE         &msft LSHIFT 0      &sl 1
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp CAPS            ___                 ___                 ___                 ___                 ___
-&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
+&lmt LSHIFT N0      &lmt LCTRL N4       &lmt LALT N5        &lmt LGUI N6        ___                 &kp LEFT            &rmt LGUI DOWN      &rmt LALT UP        &rmt LCTRL RIGHT    ___
+___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             &kp CAPS
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -159,8 +245,8 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
         sym {
             bindings = <
 ___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
-&kp EQUAL           &kp STAR            &kp PLUS            &kp MINUS           &kp PRCNT           &kp HASH            &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
-___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      &kp BSLH            &kp AT              &rmt LGUI UNDER     &rmt LALT LBRC      &rmt LCTRL RBRC     ___
+&lmt LSHIFT EQUAL   &lmt LCTRL STAR     &lmt LALT PLUS      &lmt LGUI MINUS     &kp PRCNT           &kp HASH            &rmt LGUI COLON     &rmt LALT LPAR      &rmt LCTRL RPAR     &rmt LSHIFT SEMI
+___                 &kp AMPS            &kp PIPE            &kp EXCL            &kp BSLH            &kp AT              &kp UNDER           &kp LBRC            &kp RBRC            ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -168,8 +254,8 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
         fun_med {
             bindings = <
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
-&kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
-&lmt LSHIFT F10     &lmt LCTRL F1       &lmt LALT F2        &lmt LGUI F3        ___                 &kp C_MUTE          &rmt LGUI C_BRI_DN  &rmt LALT C_BRI_UP  &rmt LCTRL C_PP     ___
+&lmt LSHIFT F10     &lmt LCTRL F4       &lmt LALT F5        &lmt LGUI F6        ___                 &kp C_PREV          &rmt LGUI C_VOL_DN  &rmt LALT C_VOL_UP  &rmt LCTRL C_NEXT   ___
+&kp F10             &kp F1              &kp F2              &kp F3              ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -179,7 +265,7 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
 ___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 ___                 ___                 &mkp MB5
 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
 ___                 ___                 ___                 ___                 ___                 &mo 6               &homerow            &mouseless          ___                 &mkp MCLK
-                                        &to 0               ___                 ___                 &mo 5               &mkp LCLK           &mkp RCLK
+                                        ___                 ___                 ___                 &mo 5               &mkp LCLK           &mkp RCLK
             >;
         };
 
