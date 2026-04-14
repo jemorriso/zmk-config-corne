@@ -120,7 +120,7 @@
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
+&lmt LGUI Z         &lmt LCTRL X        &lmt LALT C         &lmt LSHIFT D       &kp V               &kp K               &rmt LSHIFT H       &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LGUI FSLH
                                         ___                 &blt 1 SPACE        &blt 3 ESC          &blt 4 RET          &blt 2 BSPC         ___
             >;
         };
@@ -129,7 +129,7 @@
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              &kp CAPS            ___                 &kp LS(RET)         &kp LS(TAB)         &kp TAB             &kp LA(BSPC)
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
-___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
+___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LSHIFT N3      ___                 &kp HOME            &rmt LSHIFT PG_DN   &rmt LALT PG_UP     &rmt LCTRL END      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -138,7 +138,7 @@ ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        
             bindings = <
 ___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
 &kp EQUAL           &kp STAR            &kp PLUS            &kp MINUS           &kp PRCNT           &kp HASH            &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
-___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      &kp BSLH            &kp AT              &rmt LGUI UNDER     &rmt LALT LBRC      &rmt LCTRL RBRC     ___
+___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LSHIFT EXCL    &kp BSLH            &kp AT              &rmt LSHIFT UNDER   &rmt LALT LBRC      &rmt LCTRL RBRC     ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -147,7 +147,7 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
             bindings = <
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
 &kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
-&lmt LSHIFT F10     &lmt LCTRL F1       &lmt LALT F2        &lmt LGUI F3        ___                 &kp C_MUTE          &rmt LGUI C_BRI_DN  &rmt LALT C_BRI_UP  &rmt LCTRL C_PP     ___
+&lmt LGUI F10       &lmt LCTRL F1       &lmt LALT F2        &lmt LSHIFT F3      ___                 &kp C_MUTE         &rmt LSHIFT C_BRI_DN &rmt LALT C_BRI_UP  &rmt LCTRL C_PP     ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
