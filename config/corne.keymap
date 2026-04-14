@@ -89,14 +89,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
         };
-        bmt: balanced_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
         lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -119,22 +111,6 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
-        hplt: hold_preferred_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
-        hpmt: hold_preferred_mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
     };
 
     keymap {
@@ -145,13 +121,13 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LALT C         &lmt LGUI D         &kp V               &kp K               &rmt LGUI H         &rmt LALT COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        &hplt 2 ESC         &blt 4 SPACE        &kp TAB             &blt 3 PIPE         &hpmt LSHIFT BSPC   &hplt 1 RET
+                                        ___                 &blt 1 SPACE        &blt 4 ESC          &blt 3 RET          &blt 2 BSPC         ___
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp CAPS            ___                 ___                 ___                 ___                 ___
+___                 &kp N7              &kp N8              &kp N9              &kp CAPS            ___                 &kp LS(RET)         &kp LS(TAB)         &kp TAB             &kp LA(BSPC)
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
 ___                 &lmt LCTRL N1       &lmt LALT N2        &lmt LGUI N3        ___                 &kp HOME            &rmt LGUI PG_DN     &rmt LALT PG_UP     &rmt LCTRL END      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
@@ -178,10 +154,10 @@ ___                 &lmt LCTRL AMPS     &lmt LALT PIPE      &lmt LGUI EXCL      
 
         mouse {
             bindings = <
-___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 ___                 ___                 &mkp MB5
-___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4
-___                 ___                 ___                 ___                 ___                 &mo 6               &homerow            &mouseless          ___                 &mkp MCLK
-                                        &to 0               ___                 ___                 &mo 5               &mkp LCLK           &mkp RCLK
+___                 ___                 &mmv MOVE_UP        ___                 &mouseless          ___                 ___                 &mo 5               &mo 6               ___
+___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &homerow            ___                 &mkp LCLK           &mkp RCLK           &mkp MCLK           ___
+___                 &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_UP        &msc SCRL_RIGHT     ___                 ___                 &mkp MB4            &mkp MB5            ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
