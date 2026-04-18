@@ -62,6 +62,19 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_space {
+            timeout-ms = <35>;
+            key-positions = <23 31>;
+            bindings = <&kp SPACE>;
+            require-prior-idle-ms = <125>;
+            slow-release = true;
+        };
+    };
+};
+
+/ {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
@@ -88,6 +101,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
+        };
+        bltf: balanced_layer_tap_fast {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
         lmt: left_mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -121,7 +141,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LALT Z         &lmt LCTRL X        &lmt LGUI C         &lmt LSHIFT D       &kp V               &kp K               &rmt LSHIFT H       &rmt LGUI COMMA     &rmt LCTRL DOT      &rmt LALT FSLH
-                                        ___                 &blt 2 SPACE        &blt 3 ESC          &blt 4 RET          &blt 1 BSPC         ___
+                                        ___                 &bltf 2 SPACE       &blt 3 ESC          &blt 4 RET          &blt 1 BSPC         ___
             >;
         };
 
