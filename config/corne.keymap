@@ -69,7 +69,7 @@
             key-positions = <23 31>;
             bindings = <&kp SPACE>;
             require-prior-idle-ms = <125>;
-            slow-release = true;
+            slow-release;
         };
     };
 };
