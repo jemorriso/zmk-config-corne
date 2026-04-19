@@ -131,6 +131,22 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
+        hplt: hold_preferred_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+        };
+        hpmt: hold_preferred_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -141,7 +157,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LALT Z         &lmt LCTRL X        &lmt LGUI C         &lmt LSHIFT D       &kp V               &kp K               &rmt LSHIFT H       &rmt LGUI COMMA     &rmt LCTRL DOT      &rmt LALT FSLH
-                                        ___                 &bltf 2 SPACE       &blt 3 ESC          &blt 4 RET          &blt 1 BSPC         ___
+                                        ___                 &blt 4 SPACE        &hplt 2 ESC         &hplt 1 RET         &hpmt LSHIFT BSPC   ___
             >;
         };
 
@@ -150,7 +166,7 @@
 ___                 &kp N7              &kp N8              &kp N9              ___                 &kp LA(BSPC)        &kp LS(RET)         &kp LS(TAB)         &kp TAB             ___
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
 ___                 &lmt LCTRL N1       &lmt LGUI N2        &lmt LSHIFT N3      &kp CAPS            &kp HOME            &rmt LSHIFT PG_DN   &rmt LGUI PG_UP     &rmt LCTRL END      ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 &mo 3               ___                 ___                 ___
             >;
         };
 
@@ -159,7 +175,7 @@ ___                 &lmt LCTRL N1       &lmt LGUI N2        &lmt LSHIFT N3      
 ___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
 &kp EQUAL           &kp STAR            &kp PLUS            &kp MINUS           &kp PRCNT           &kp HASH            &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
 ___                 &lmt LCTRL AMPS     &lmt LGUI PIPE      &lmt LSHIFT EXCL    &kp BSLH            &kp AT              &rmt LSHIFT UNDER   &rmt LGUI LBRC      &rmt LCTRL RBRC     ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 &mo 3               ___                 ___
             >;
         };
 
