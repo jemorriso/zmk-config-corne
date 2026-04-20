@@ -139,6 +139,13 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
         };
+        hpltf: hold_preferred_layer_tap_fast {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
         hpmt: hold_preferred_mod_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "hold-preferred";
@@ -157,7 +164,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lmt LSHIFT Z       &lmt LCTRL X        &lmt LGUI C         &lmt LALT D         &kp V               &kp K               &rmt LALT H         &rmt LGUI COMMA     &rmt LCTRL DOT      &rmt LSHIFT FSLH
-                                        ___                 &blt 4 SPACE        &hplt 2 ESC         &hplt 1 RET         &hpmt LSHIFT BSPC   ___
+                                        ___                 &blt 4 SPACE        &hplt 2 ESC         &hpltf 1 RET        &hpmt LSHIFT BSPC   ___
             >;
         };
 
