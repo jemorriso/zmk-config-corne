@@ -149,7 +149,7 @@
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              ___                 &kp LA(BSPC)        &kp LS(RET)         &kp LS(TAB)         &kp TAB             ___
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
-___                 &lmt LCTRL N1       &lmt LGUI N2        &lmt LSHIFT N3      &kp CAPS            &kp HOME            &rmt LSHIFT PG_DN   &rmt LGUI PG_UP     &rmt LCTRL END      ___
+&kp CAPS            &lmt LCTRL N1       &lmt LGUI N2        &lmt LSHIFT N3      ___                 &kp HOME            &rmt LSHIFT PG_DN   &rmt LGUI PG_UP     &rmt LCTRL END      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
