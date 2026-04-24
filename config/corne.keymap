@@ -102,7 +102,7 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
         };
-        bltf: balanced_layer_tap_fast {
+        bltnq: balanced_layer_tap_fast_no_qt {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
@@ -131,6 +131,27 @@
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
         };
+        lmtnr: left_mod_tap_no_rpi {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
+            hold-trigger-on-release;
+        };
+        rmtnr: right_mod_tap_no_rpi {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
+            hold-trigger-on-release;
+        };
     };
 
     keymap {
@@ -140,8 +161,8 @@
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&lmt LALT Z         &lmt LCTRL X        &lmt LGUI C         &lmt LSHIFT D       &kp V               &kp K               &rmt LSHIFT H       &rmt LGUI COMMA     &rmt LCTRL DOT      &rmt LALT FSLH
-                                        ___                 &bltf 2 SPACE       &blt 3 ESC          &blt 4 RET          &blt 1 BSPC         ___
+&lmt LALT Z         &lmt LCTRL X        &lmt LGUI C         &lmtnr LSHIFT D     &kp V               &kp K               &rmtnr LSHIFT H     &rmt LGUI COMMA     &rmt LCTRL DOT      &rmt LALT FSLH
+                                        ___                 &bltnq 2 SPACE      &blt 3 ESC          &blt 4 RET          &blt 1 BSPC         ___
             >;
         };
 
