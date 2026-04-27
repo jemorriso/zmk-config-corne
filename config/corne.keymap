@@ -197,8 +197,8 @@ ___                 &kp N7              &kp N8              &kp N9              
         sym {
             bindings = <
 ___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
-&kp EQUAL           &kp STAR            &kp PLUS            &kp MINUS           &kp PRCNT           &kp HASH            &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
-___                 &lmt LCTRL AMPS     &lmt LGUI PIPE      &lmt LSHIFT EXCL    &kp BSLH            &kp AT              &rmt LSHIFT UNDER   &rmt LGUI LBRC      &rmt LCTRL RBRC     ___
+&kp EQUAL           &kp STAR            &kp PLUS            &kp MINUS           &kp AT              &kp HASH            &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+___                 &lmt LCTRL AMPS     &lmt LGUI PIPE      &lmt LSHIFT EXCL    ___                 &kp PRCNT           &rmt LSHIFT UNDER   &rmt LGUI LBRC      &rmt LCTRL RBRC     &kp BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
