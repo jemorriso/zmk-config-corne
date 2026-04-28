@@ -71,6 +71,20 @@
             require-prior-idle-ms = <125>;
             slow-release;
         };
+        combo_sft {
+            timeout-ms = <35>;
+            key-positions = <26 34>;
+            bindings = <&kp LSHIFT>;
+            require-prior-idle-ms = <125>;
+            slow-release;
+        };
+        combo_sym {
+            timeout-ms = <35>;
+            key-positions = <18 34>;
+            bindings = <&mo 2>;
+            require-prior-idle-ms = <125>;
+            slow-release;
+        };
     };
 };
 
@@ -197,8 +211,8 @@ ___                 &kp N7              &kp N8              &kp N9              
         sym {
             bindings = <
 ___                 &kp LT              &kp GT              &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
-&kp EQUAL           &kp STAR            &kp PLUS            &kp MINUS           &kp AT              &kp HASH            &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
-&lmt LALT AMPS      &lmt LCTRL CARET    &lmt LGUI DLLR      &lmt LSHIFT EXCL    &kp PIPE            &kp PRCNT           &rmt LSHIFT UNDER   &rmt LGUI LBRC      &rmt LCTRL RBRC     &rmt LALT BSLH
+&kp EQUAL           &kp HASH            &kp STAR            &kp MINUS           &kp EXCL            &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+&lmt LALT AMPS      &lmt LCTRL CARET    &lmt LGUI DLLR      &lmt LSHIFT PLUS    &kp PIPE            &kp AT              &rmt LSHIFT UNDER   &rmt LGUI LBRC      &rmt LCTRL RBRC     &rmt LALT BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
