@@ -219,9 +219,9 @@ ___                 &kp LT              &kp GT              &kp TILDE           
 
         fun_med {
             bindings = <
-&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
-&kp F11             &kp F4              &kp F5              &kp F6              ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
-&lmt LALT F10       &lmt LCTRL F1       &lmt LGUI F2        &lmt LSHIFT F3      ___                 &kp C_MUTE         &rmt LSHIFT C_BRI_DN &rmt LGUI C_BRI_UP  &rmt LCTRL C_PP     ___
+&kp F12             &kp F7              &kp F8              &kp F9              &bt BT_PRV          ___                 ___                 ___                 ___                 ___
+&kp F11             &kp F4              &kp F5              &kp F6              &bt BT_NXT          &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
+&lmt LALT F10       &lmt LCTRL F1       &lmt LGUI F2        &lmt LSHIFT F3      &bt BT_CLR          &kp C_MUTE         &rmt LSHIFT C_BRI_DN &rmt LGUI C_BRI_UP  &rmt LCTRL C_PP     ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
