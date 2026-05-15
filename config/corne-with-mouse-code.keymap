@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 30 // 10
+// #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
+// #define ZMK_POINTING_DEFAULT_SCRL_VAL 30 // 10
 
 #define ___ &trans
 
@@ -9,6 +9,32 @@
 
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
+
+// &mmv {
+//     acceleration-exponent = <1>;      // 1
+//     time-to-max-speed-ms = <500>;     // 300
+//     trigger-period-ms = <8>;
+// };
+//
+// &msc {
+//     acceleration-exponent = <1>;      // 0
+//     time-to-max-speed-ms = <40>;      // 300
+//     trigger-period-ms = <8>;
+// };
+
+// &mmv_input_listener {
+//     precision {
+//         layers = <5>;
+//         input-processors = <&zip_xy_scaler 1 4>;
+//     };
+// };
+//
+// &msc_input_listener {
+//     turbo {
+//         layers = <5>;
+//         input-processors = <&zip_scroll_scaler 4 1>;
+//     };
+// };
 
 / {
     combos {
@@ -43,6 +69,20 @@
     };
 
     behaviors {
+        mmvc: mouse_move_constant {
+                compatible = "zmk,behavior-input-two-axis";
+                #binding-cells = <1>;
+                x-input-code = <INPUT_REL_X>;
+                y-input-code = <INPUT_REL_Y>;
+                time-to-max-speed-ms = <300>;  // irrelevant
+                acceleration-exponent = <0>;  // changed to zero
+        };
+
+        mmvc_input_listener: mmvc_input_listener {
+            compatible = "zmk,input-listener";
+            device = <&mmvc>;
+        };
+
         blt: balanced_layer_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -136,9 +176,9 @@
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 &kp LA(BSPC)        &kp LS(TAB)         &kp TAB             ___
+___                 &kp N7              &kp N8              &kp N9              ___                 &kp LA(BSPC)        &kp LS(RET)         &kp LS(TAB)         &kp TAB             ___
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
-___                 &lmt LCTRL N1       &lmt LGUI N2        &lmt LSHIFT N3      &kp CAPS            &kp HOME            &rmt LSHIFT PG_DN   &rmt LGUI PG_UP     &rmt LCTRL END      ___
+&lmt LALT CAPS      &lmt LCTRL N1       &lmt LGUI N2        &lmt LSHIFT N3      ___                 &kp HOME            &rmt LSHIFT PG_DN   &rmt LGUI PG_UP     &rmt LCTRL END      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -163,10 +203,28 @@ ___                 &lmt LCTRL AMPS     &lmt LGUI PIPE      &lmt LSHIFT PLUS    
 
         mouse {
             bindings = <
-___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 ___                 ___                 ___
-___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 ___                 &mkp LCLK           &mkp RCLK           &mkp MCLK           ___
+___                 ___                 &mmv MOVE_UP        ___                 &mouseless          ___                 ___                 &mo 5               &mo 6               ___
+___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &homerow            ___                 &mkp LCLK           &mkp RCLK           &mkp MCLK           ___
 ___                 &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_UP        &msc SCRL_RIGHT     ___                 ___                 &mkp MB4            &mkp MB5            ___
-                                        ___                 &mkp LCLK           &mkp RCLK           ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        mouse_2 {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        mouse_3 {
+            bindings = <
+___                 ___                 &mmvc MOVE_Y(1000)  ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 &mmvc MOVE_X(-1000) &mmvc MOVE_Y(-1000) &mmvc MOVE_X(1000)  ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
