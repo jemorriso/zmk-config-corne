@@ -165,7 +165,7 @@ ___                 &lmt LCTRL AMPS     &lmt LGUI PIPE      &lmt LSHIFT PLUS    
             bindings = <
 ___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 ___                 &mkp LCLK           &mkp RCLK           &mkp MCLK           ___
-___                 &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_UP        &msc SCRL_RIGHT     ___                 ___                 &mkp MB4            &mkp MB5            ___
+___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     ___                 ___                 &mkp MB4            &mkp MB5            ___
                                         ___                 &mkp LCLK           &mkp RCLK           ___                 ___                 ___
             >;
         };
