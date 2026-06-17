@@ -38,14 +38,14 @@
             quick-tap-ms = <CK_QUICK_TAP>;
         };
 
-        // tm: thumb_mod {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     flavor = "balanced";
-        //     bindings = <&kp>, <&kp>;
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <CK_TAPPING_TERM>;
-        //     quick-tap-ms = <CK_QUICK_TAP>;
-        // };
+        tm: thumb_mod {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+        };
 
         lm: left_mod {
             compatible = "zmk,behavior-hold-tap";
@@ -119,8 +119,8 @@
             bindings = <
 &kp Q               &kp W               &ll_fast L_SYM F    &kp P               &kp B               &kp J               &kp L               &rl_fast L_SYM U    &kp Y               &kp SQT
 &lm LALT A          &lm LCTRL R         &lm LGUI S          &lm_fast LSHIFT T   &kp G               &kp M               &rm_fast LSHIFT N   &rm LGUI E          &rm LCTRL I         &rm LALT O
-&kp Z               &kp X               &kp C               &lm LA(LCTRL) D     &kp V               &kp K               &rm LA(LCTRL) H     &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &tl L_NN SPACE      &tl L_FUN ESC       &tl L_MOUSE RET     &tl L_NN BSPC       ___
+&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
+                                        &tm LA(LCTRL) TAB   &tl L_NN SPACE      &tl L_FUN ESC       &tl L_MOUSE RET     &tl L_NN BSPC       &tm LA(LCTRL) DEL
             >;
         };
 
