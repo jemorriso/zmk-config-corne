@@ -120,7 +120,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &ll_fast L_SYM S    &kp T               &kp G               &kp M               &kp N               &rl_fast L_SYM E    &kp I               &kp O
 &lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm_fast LSHIFT D   &kp V               &kp K               &rm_fast LSHIFT H   &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
-                                        &tm LG(LCTRL) TAB   &tl L_NN SPACE      &tl L_FUN ESC       &tl L_MOUSE RET     &tl L_NN BSPC       &tm LG(LCTRL) DEL
+                                        &tm LA(LCTRL) TAB   &tl L_NN SPACE      &tl L_FUN ESC       &tl L_MOUSE RET     &tl L_NN BSPC       &tm LA(LCTRL) DEL
             >;
         };
 
