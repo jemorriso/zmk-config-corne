@@ -28,16 +28,32 @@
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
-    behaviors {
-        tl: thumb_layer {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <CK_TAPPING_TERM>;
-            quick-tap-ms = <CK_QUICK_TAP>;
+    combos {
+        compatible = "zmk,combos";
+        combo_ll_fun {
+            timeout-ms = <CK_COMBO_TIMEOUT>;
+            key-positions = <1 2>;
+            bindings = <&mo L_FUN>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
         };
+        combo_rl_fun {
+            timeout-ms = <CK_COMBO_TIMEOUT>;
+            key-positions = <7 8>;
+            bindings = <&mo L_FUN>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+        };
+    };
 
+    behaviors {
+        // tl: thumb_layer {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     flavor = "balanced";
+        //     bindings = <&mo>, <&kp>;
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <CK_TAPPING_TERM>;
+        //     quick-tap-ms = <CK_QUICK_TAP>;
+        // };
+        //
         // tm: thumb_mod {
         //     compatible = "zmk,behavior-hold-tap";
         //     flavor = "balanced";
@@ -91,6 +107,30 @@
             hold-trigger-on-release;
         };
 
+        ll: left_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rl: right_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
         ll_fast: left_layer_fast {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -117,10 +157,10 @@
 
         colemak {
             bindings = <
-&kp Q               &kp W               &ll_fast L_SYM F    &kp P               &kp B               &kp J               &kp L               &rl_fast L_SYM U    &kp Y               &kp SQT
+&kp Q               &ll_fast L_NN W     &ll_fast L_SYM F    &kp P               &kp B               &kp J               &kp L               &rl_fast L_SYM U    &rl_fast L_NN Y     &kp SQT
 &lm LALT A          &lm LCTRL R         &lm LGUI S          &lm_fast LSHIFT T   &kp G               &kp M               &rm_fast LSHIFT N   &rm LGUI E          &rm LCTRL I         &rm LALT O
-&kp Z               &kp X               &kp C               &lm LA(LCTRL) D     &kp V               &kp K               &rm LA(LCTRL) H     &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &tl L_NN SPACE      &tl L_FUN ESC       &tl L_MOUSE RET     &tl L_NN BSPC       ___
+&ll L_MOUSE Z       &kp X               &kp C               &lm LA(LCTRL) D     &kp V               &kp K               &rm LA(LCTRL) H     &kp COMMA           &kp DOT             &rl L_MOUSE FSLH
+                                        ___                 &kp SPACE           &kp ESC             &kp RET             &kp BSPC            ___
             >;
         };
 
