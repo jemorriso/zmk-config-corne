@@ -91,6 +91,30 @@
             hold-trigger-on-release;
         };
 
+        ll: left_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rl: right_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
         ll_fast: left_layer_fast {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -118,9 +142,9 @@
         colemak {
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&kp A               &kp R               &ll_fast L_SYM S    &kp T               &kp G               &kp M               &kp N               &rl_fast L_SYM E    &kp I               &kp O
+&kp A               &ll_fast L_NN R     &ll_fast L_SYM S    &kp T               &kp G               &kp M               &kp N               &rl_fast L_SYM E    &rl_fast L_NN I     &kp O
 &lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm_fast LSHIFT D   &kp V               &kp K               &rm_fast LSHIFT H   &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
-                                        &tm LA(LCTRL) TAB   &tl L_NN SPACE      &tl L_FUN ESC       &tl L_MOUSE RET     &tl L_NN BSPC       &tm LA(LCTRL) DEL
+                                        ___                 &kp SPACE           &tl L_FUN ESC       &tl L_MOUSE RET     &kp BSPC            ___
             >;
         };
 
@@ -146,7 +170,7 @@ ___                 &lm LCTRL AMPS      &lm LGUI PIPE       &lm LSHIFT PLUS     
             bindings = <
 &kp F12             &kp F7              &kp F8              &kp F9              &bt BT_PRV          ___                 ___                 ___                 ___                 ___
 &kp F11             &kp F4              &kp F5              &kp F6              &bt BT_NXT          &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
-&lm LALT F10        &lm LCTRL F1        &lm LGUI F2         &lm LSHIFT F3       &bt BT_CLR          &kp C_MUTE         &rm LSHIFT C_BRI_DN &rm LGUI C_BRI_UP   &rm LCTRL C_PP      ___
+&lm LALT F10        &lm LCTRL F1        &lm LGUI F2         &lm LSHIFT F3       &bt BT_CLR          &kp C_MUTE          &rm LSHIFT C_BRI_DN &rm LGUI C_BRI_UP   &rm LCTRL C_PP      ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
