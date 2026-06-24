@@ -158,16 +158,16 @@
 
         colemak {
             bindings = <
-&kp Q               &ll L_MOUSE W       &ll_fast L_SYM F    &kp P               &kp B               &kp J               &kp L               &rl_fast L_SYM U    &rl L_MOUSE Y       &kp SQT
+&kp Q               &lm LA(LCTRL) W     &ll_fast L_SYM F    &kp P               &kp B               &kp J               &kp L               &rl_fast L_SYM U    &rm LA(LCTRL) Y     &kp SQT
 &lm LALT A          &lm LCTRL R         &lm LGUI S          &lm_fast LSHIFT T   &kp G               &kp M               &rm_fast LSHIFT N   &rm LGUI E          &rm LCTRL I         &rm LALT O
-&kp Z               &kp X               &kp C               &lm LA(LCTRL) D     &kp V               &kp K               &rm LA(LCTRL) H     &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &tl L_NN SPACE      &kp ESC             &kp RET             &tl L_NN BSPC       ___
+&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
+                                        ___                 &tl L_NN SPACE      &tl L_MOUSE ESC     &tl L_MOUSE RET     &tl L_NN BSPC       ___
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 &kp LA(BSPC)        &kp LS(TAB)         &kp TAB             ___
+___                 &lm LA(LCTRL) N7    &kp N8              &kp N9              ___                 ___                 &kp LA(BSPC)        &kp LS(TAB)         &rm LA(LCTRL) TAB   ___
 &lm LALT N0         &lm LCTRL N4        &lm LGUI N5         &lm LSHIFT N6       &caps_word          &kp LEFT            &rm LSHIFT DOWN     &rm LGUI UP         &rm LCTRL RIGHT     &rm LALT DEL
 ___                 &kp N1              &kp N2              &kp N3              &kp CAPS            &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
                                         ___                 ___                 ___                 ___                 ___                 ___
@@ -176,9 +176,9 @@ ___                 &kp N1              &kp N2              &kp N3              
 
         sym {
             bindings = <
-___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
+___                 &lm LA(LCTRL) CARET &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &rm LA(LCTRL) RBKT  ___
 &lm LALT EQUAL      &lm LCTRL HASH      &lm LGUI STAR       &lm LSHIFT MINUS    &kp EXCL            &kp PRCNT           &rm LSHIFT COLON    &rm LGUI LPAR       &rm LCTRL RPAR      &rm LALT SEMI
-___                 &kp AMPS            &kp PIPE            &kp PLUS            ___                 &kp AT              &kp UNDER           &kp LBRC            &kp RBRC            &kp BSLH
+___                 &kp AMPS            &kp PIPE            &kp PLUS            ___                 &kp AT              &rm LA(LCTRL) UNDER &kp LBRC            &kp RBRC            &kp BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
