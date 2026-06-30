@@ -105,20 +105,20 @@
             >;
         };
 
-        sym {
-            bindings = <
-___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
-&kp EQUAL           &kp HASH            &kp STAR            &kp MINUS           &kp EXCL            &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
-___                 &lm LCTRL AMPS      &lm LGUI PIPE       &lm LSHIFT PLUS     ___                 &kp AT              &rm LSHIFT UNDER    &rm LGUI LBRC       &rm LCTRL RBRC      &rm LALT BSLH
-                                        ___                 ___                 ___                 ___                 ___                 ___
-            >;
-        };
-
         num_nav {
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
 ___                 &lm LCTRL N1        &lm LGUI N2         &lm LSHIFT N3       &kp CAPS            &kp HOME            &rm LSHIFT PG_DN    &rm LGUI PG_UP      &rm LCTRL END       ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        sym {
+            bindings = <
+___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
+&kp EQUAL           &kp HASH            &kp STAR            &kp MINUS           &kp EXCL            &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+___                 &lm LCTRL AMPS      &lm LGUI PIPE       &lm LSHIFT PLUS     ___                 &kp AT              &rm LSHIFT UNDER    &rm LGUI LBRC       &rm LCTRL RBRC      &rm LALT BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
