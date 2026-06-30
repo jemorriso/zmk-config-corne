@@ -1,0 +1,218 @@
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30 // 10
+
+#define ___ &trans
+
+#define L_NN 1
+#define L_SYM 2
+#define L_FUN 3
+#define L_MOUSE 4
+#define L_NUM 5
+#define L_NAV 6
+
+#define CK_COMBO_TIMEOUT 35
+#define CK_PRIOR_IDLE 150
+#define CK_TAPPING_TERM 200
+#define CK_QUICK_TAP 200
+
+#define CK_LEFT_HAND_KEYS 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32
+#define CK_RIGHT_HAND_KEYS 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
+
+/ {
+    chosen {
+        zmk,physical-layout = &foostan_corne_5col_layout;
+    };
+
+    behaviors {
+        tl: thumb_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+        };
+
+        //
+        // tm: thumb_mod {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     flavor = "balanced";
+        //     bindings = <&kp>, <&kp>;
+        //     #binding-cells = <2>;
+        //     tapping-term-ms = <CK_TAPPING_TERM>;
+        //     quick-tap-ms = <CK_QUICK_TAP>;
+        // };
+
+        lm: left_mod {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rm: right_mod {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        lm_fast: left_mod_fast {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rm_fast: right_mod_fast {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        ll: left_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rl: right_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        ll_fast: left_layer_fast {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rl_fast: right_layer_fast {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        colemak {
+            bindings = <
+&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
+&kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
+&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
+                                        ___                 &mo L_SYM           &kp SPACE           &kp LSHIFT          &mo L_NAV           ___
+                                        // ___                 &kp SPACE           &kp ESC             &kp RET             &kp BSPC            ___
+            >;
+        };
+
+        sym {
+            bindings = <
+___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
+&kp EQUAL           &kp HASH            &kp STAR            &kp MINUS           &kp EXCL            &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+___                 &kp AMPS            &kp PIPE            &kp PLUS            ___                 &kp AT              &kp UNDER           &kp LBRC            &kp RBRC            &kp BSLH
+                                        ___                 ___                 ___                 ___                 &mo L_NUM           ___
+            >;
+        };
+
+        nav {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 &kp BSPC            &kp TAB             &kp TAB             ___
+&sk LALT            &sk LGUI            &sk LCTRL           &sk LSHIFT          ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
+___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
+                                        ___                 &mo L_NUM           ___                 ___                 ___                 ___
+            >;
+        };
+
+        num {
+            bindings = <
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
+&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          ___                 &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
+___                 &kp N1              &kp N2              &kp N3              &kp CAPS            ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        fun_med {
+            bindings = <
+&kp F12             &kp F7              &kp F8              &kp F9              &bt BT_PRV          ___                 ___                 ___                 ___                 ___
+&lm LALT F11        &lm LCTRL F4        &lm LGUI F5         &lm LSHIFT F6       &bt BT_NXT          &kp C_PREV          &rm LSHIFT C_VOL_DN &rm LGUI C_VOL_UP   &rm LCTRL C_NEXT    ___
+&kp F10             &kp F1              &kp F2              &kp F3              &bt BT_CLR          &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        mouse {
+            bindings = <
+___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 &msc SCRL_UP        ___                 ___
+___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 ___                 &mkp LCLK           &mkp RCLK           &mkp MCLK           ___
+___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     ___                 ___                 &mkp MB4            &mkp MB5            ___
+                                        ___                 &mkp LCLK           &mkp RCLK           ___                 ___                 ___
+            >;
+        };
+
+        num_nav {
+            bindings = <
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 &kp BSPC            &kp TAB             &kp TAB             ___
+&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
+___                 &kp N1              &kp N2              &kp N3              &kp CAPS            &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        empty {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+    };
+};
