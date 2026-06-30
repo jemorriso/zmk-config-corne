@@ -148,16 +148,6 @@
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
                                         ___                 &mo L_NAV           &kp SPACE           &kp LSHIFT          &mo L_SYM           ___
-                                        // ___                 &kp SPACE           &kp ESC             &kp RET             &kp BSPC            ___
-            >;
-        };
-
-        sym {
-            bindings = <
-___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
-&kp EQUAL           &kp HASH            &kp STAR            &kp MINUS           &kp EXCL            &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
-___                 &kp AMPS            &kp PIPE            &kp PLUS            ___                 &kp AT              &kp UNDER           &kp LBRC            &kp RBRC            &kp BSLH
-                                        ___                 &mo L_NUM           ___                 ___                 ___                 ___
             >;
         };
 
@@ -181,36 +171,18 @@ ___                 ___                 ___                 ___                 
 
         num {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
-&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          ___                 &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
-___                 &kp N1              &kp N2              &kp N3              &kp CAPS            ___                 ___                 ___                 ___                 ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
-            >;
-        };
-
-        fun_med {
-            bindings = <
-&kp F12             &kp F7              &kp F8              &kp F9              &bt BT_PRV          ___                 ___                 ___                 ___                 ___
-&lm LALT F11        &lm LCTRL F4        &lm LGUI F5         &lm LSHIFT F6       &bt BT_NXT          &kp C_PREV          &rm LSHIFT C_VOL_DN &rm LGUI C_VOL_UP   &rm LCTRL C_NEXT    ___
-&kp F10             &kp F1              &kp F2              &kp F3              &bt BT_CLR          &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
+&kp N1              &kp N2              &kp N3              &kp N4              &kp N5              &kp N6              &kp N7              &kp N8              &kp N9              &kp N0
+&sk LALT            &sk LGUI            &sk LCTRL           &sk LSHIFT          &kp F11             &kp F12             &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
+&kp F1              &kp F2              &kp F3              &kp F4              &kp F5              &kp F6              &kp F7              &kp F8              &kp F9              &kp F10
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
         mouse {
             bindings = <
-___                 ___                 &mmv MOVE_UP        ___                 ___                 ___                 ___                 &msc SCRL_UP        ___                 ___
-___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 ___                 &mkp LCLK           &mkp RCLK           &mkp MCLK           ___
-___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     ___                 ___                 &mkp MB4            &mkp MB5            ___
-                                        ___                 &mkp LCLK           &mkp RCLK           ___                 ___                 ___
-            >;
-        };
-
-        num_nav {
-            bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 &kp BSPC            &kp TAB             &kp TAB             ___
-&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
-___                 &kp N1              &kp N2              &kp N3              &kp CAPS            &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
+&bt BT_PRV          ___                 &mmv MOVE_UP        ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
+&bt BT_NXT          &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     ___                 &mkp MB4            &mkp LCLK           &mkp RCLK           &mkp MCLK           &mkp MB5
+&bt BT_CLR          &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };

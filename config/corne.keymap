@@ -209,5 +209,23 @@ ___                 ___                 ___                 ___                 
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
+
+        num_nav {
+            bindings = <
+___                 &lm LA(LCTRL) N7    &kp N8              &kp N9              ___                 ___                 &kp LA(BSPC)        &kp LS(TAB)         &rm LA(LCTRL) TAB   ___
+&lm LALT N0         &lm LCTRL N4        &lm LGUI N5         &lm LSHIFT N6       &caps_word          &kp LEFT            &rm LSHIFT DOWN     &rm LGUI UP         &rm LCTRL RIGHT     &rm LALT DEL
+___                 &kp N1              &kp N2              &kp N3              &kp CAPS            &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        fun_med {
+            bindings = <
+&kp F12             &kp F7              &kp F8              &kp F9              &bt BT_PRV          ___                 ___                 ___                 ___                 ___
+&lm LALT F11        &lm LCTRL F4        &lm LGUI F5         &lm LSHIFT F6       &bt BT_NXT          &kp C_PREV          &rm LSHIFT C_VOL_DN &rm LGUI C_VOL_UP   &rm LCTRL C_NEXT    ___
+&kp F10             &kp F1              &kp F2              &kp F3              &bt BT_CLR          &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
     };
 };
