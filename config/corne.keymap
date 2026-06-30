@@ -24,15 +24,15 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_layer {
+        tri_num {
             if-layers = <L_NAV L_SYM>;
             then-layer = <L_NUM>;
         };
-        tri_layer {
+        tri_fun {
             if-layers = <L_SHIFT L_SYM>;
             then-layer = <L_FUN>;
         };
-        tri_layer {
+        tri_mouse {
             if-layers = <L_NAV L_SHIFT>;
             then-layer = <L_MOUSE>;
         };
