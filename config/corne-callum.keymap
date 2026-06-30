@@ -3,12 +3,10 @@
 
 #define ___ &trans
 
-#define L_NN 1
-#define L_SYM 2
-#define L_FUN 3
+#define L_SYM 1
+#define L_NAV 2
+#define L_NUM 3
 #define L_MOUSE 4
-#define L_NUM 5
-#define L_NAV 6
 
 #define CK_COMBO_TIMEOUT 35
 #define CK_PRIOR_IDLE 150
@@ -30,7 +28,14 @@
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
-    behaviors {
+    combos {
+        compatible = "zmk,combos";
+
+        combo_mouse {
+            key-positions = <31 33>;
+            bindings = <&mo L_MOUSE>;
+            timeout-ms = <CK_COMBO_TIMEOUT>;
+        };
     };
 
     keymap {
@@ -81,31 +86,6 @@ ___                 ___                 ___                 ___                 
             >;
         };
 
-//         num {
-//             bindings = <
-// ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
-// &kp N0              &kp N4              &kp N5              &kp N6              ___                 ___                 &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
-// ___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 ___                 ___                 ___
-//                                         ___                 ___                 ___                 ___                 ___                 ___
-//             >;
-//         };
-//
-//         fun {
-//             bindings = <
-// &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
-// &kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
-// &kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___
-//                                         ___                 ___                 ___                 ___                 ___                 ___
-//             >;
-//         };
 
-        empty {
-            bindings = <
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
-            >;
-        };
     };
 };
