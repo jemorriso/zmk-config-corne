@@ -3,12 +3,19 @@
 
 #define ___ &trans
 
-#define L_SHIFT 1
-#define L_NAV 2
-#define L_SYM 3
-#define L_NUM 4
-#define L_MOUSE 5
-#define L_FUN 6
+#define L_NN 1
+#define L_SYM 2
+#define L_MOUSE 3
+#define L_FUN 4
+#define L_MED 5
+
+#define CK_COMBO_TIMEOUT 35
+#define CK_PRIOR_IDLE 125
+#define CK_TAPPING_TERM 200
+#define CK_QUICK_TAP 200
+
+#define CK_LEFT_HAND_KEYS 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32
+#define CK_RIGHT_HAND_KEYS 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -24,18 +31,66 @@
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
-        tri_num {
-            if-layers = <L_NAV L_SYM>;
-            then-layer = <L_NUM>;
+        tri_med {
+            if-layers = <L_NN L_SYM>;
+            then-layer = <L_MED>;
         };
-        tri_fun {
-            if-layers = <L_SHIFT L_SYM>;
-            then-layer = <L_FUN>;
+    };
+
+    behaviors {
+        lm: left_mod {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
         };
-        tri_mouse {
-            if-layers = <L_NAV L_SHIFT>;
-            then-layer = <L_MOUSE>;
+
+        rm: right_mod {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
         };
+
+        lm_fast: left_mod_fast {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rm_fast: right_mod_fast {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        tl: thumb_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+        };
+
     };
 
     keymap {
@@ -45,64 +100,54 @@
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &mo L_NAV           &mo L_SHIFT         &kp SPACE           &mo L_SYM           ___
-            >;
-        };
-
-        shift {
-            bindings = <
-&kp LS(Q)           &kp LS(W)           &kp LS(F)           &kp LS(P)           &kp LS(B)           &kp LS(J)           &kp LS(L)           &kp LS(U)           &kp LS(Y)           &kp LS(SQT)
-&kp LS(A)           &kp LS(R)           &kp LS(S)           &kp LS(T)           &kp LS(G)           &kp LS(M)           &kp LS(N)           &kp LS(E)           &kp LS(I)           &kp LS(O)
-&kp LS(Z)           &kp LS(X)           &kp LS(C)           &kp LS(D)           &kp LS(V)           &kp LS(K)           &kp LS(H)           &kp LS(COMMA)       &kp LS(DOT)         &kp LS(FSLH)
-                                        ___                 ___                 ___                 ___                 ___                 ___
-            >;
-        };
-
-        nav {
-            bindings = <
-___                 &kp ESC             &kp TAB             &kp LS(TAB)         ___                 ___                 &kp LA(BSPC)        &kp BSPC            &kp DEL             ___
-&sk LALT            &sk LCTRL           &sk LGUI            &sk LSHIFT          ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
-___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
-                                        ___                 ___                 ___                 ___                 ___                 ___
+&lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm_fast LSHIFT D   &kp V               &kp K               &rm_fast LSHIFT H   &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
+                                        &tl L_MOUSE TAB     &tl L_NN SPACE      &tl L_SYM ESC       &tl L_SYM RET       &tl L_NN BSPC       &tl L_FUN DEL
             >;
         };
 
         sym {
             bindings = <
-___                 &kp MINUS           &kp PLUS            &kp STAR            &kp TILDE           &kp GRAVE           &kp AMPS            &kp CARET           &kp DLLR            &kp PIPE
-&kp EQUAL           &kp LBKT            &kp LBRC            &kp LPAR            &kp EXCL            &kp PRCNT           &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
-___                 &kp RBKT            &kp RBRC            &kp RPAR            &kp HASH            &kp AT              &kp UNDER           &kp COLON           &kp SEMI            &kp BSLH
+___                 &kp CARET           &kp DLLR            &kp TILDE           ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            ___
+&kp EQUAL           &kp HASH            &kp STAR            &kp MINUS           &kp EXCL            &kp PRCNT           &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+___                 &lm LCTRL AMPS      &lm LGUI PIPE       &lm LSHIFT PLUS     ___                 &kp AT              &rm LSHIFT UNDER    &rm LGUI LBRC       &rm LCTRL RBRC      &rm LALT BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
-        num {
+        num_nav {
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 ___                 &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
-___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 ___                 ___                 ___
+&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+___                 &lm LCTRL N1        &lm LGUI N2         &lm LSHIFT N3       &kp CAPS            &kp HOME            &rm LSHIFT PG_DN    &rm LGUI PG_UP      &rm LCTRL END       ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
         mouse {
             bindings = <
-___                 ___                 &kp C_BRI_UP        &kp C_BRI_DN        &kp C_PP            ___                 ___                 &mkp MB4            &mkp MB5            ___
-&sk LALT            &sk LCTRL           &sk LGUI            &sk LSHIFT          &kp C_MUTE          &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     ___
-___                 &kp C_PREV          &kp C_VOL_UP        &kp C_VOL_DN        &kp C_NEXT          &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_UP        &msc SCRL_RIGHT     ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 &mkp MB4            &mkp MB5            ___
+___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     ___
+___                 ___                 ___                 ___                 ___                 &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_UP        &msc SCRL_RIGHT     ___
                                         ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
             >;
         };
 
         fun {
             bindings = <
-&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 &bt BT_PRV          &bt BT_NXT          &bt BT_CLR
-&kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
+&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
+&kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___
 &kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
+        med {
+            bindings = <
+&bt BT_CLR          &bt BT_PRV          &bt BT_NXT          ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
+___                 ___                 ___                 ___                 ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
     };
 };
