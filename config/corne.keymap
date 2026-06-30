@@ -7,6 +7,7 @@
 #define L_NAV 2
 #define L_NUM 3
 #define L_MOUSE 4
+#define L_FUN 5
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -20,17 +21,6 @@
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        combo_mouse {
-            key-positions = <32 34>;
-            bindings = <&mo L_MOUSE>;
-            timeout-ms = <40>;
-            slow-release;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -39,7 +29,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &mo L_NAV           &kp LSHIFT          &kp SPACE           &mo L_SYM           ___
+                                        &mo L_MOUSE         &kp LSHIFT          &mo L_NAV           &mo L_SYM           &kp SPACE           &mo L_NUM
             >;
         };
 
@@ -48,37 +38,44 @@
 ___                 &kp MINUS           &kp PLUS            &kp STAR            &kp TILDE           &kp GRAVE           &kp AMPS            &kp CARET           &kp DLLR            &kp PIPE
 &kp EQUAL           &kp LBKT            &kp LBRC            &kp LPAR            &kp EXCL            &kp PRCNT           &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
 ___                 &kp RBKT            &kp RBRC            &kp RPAR            &kp HASH            &kp AT              &kp UNDER           &kp COLON           &kp SEMI            &kp BSLH
-                                        ___                 &mo L_NUM           ___                 ___                 ___                 ___
+                                        ___                 ___                 &mo L_FUN           ___                 ___                 ___
             >;
         };
 
         nav {
             bindings = <
-___                 &kp ESC             &kp TAB             &kp LS(TAB)         ___                 ___                 &kp LA(BSPC)        &kp BSPC            &kp RET             ___
-&sk LALT            &sk LGUI            &sk LCTRL           &sk LSHIFT          ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
+___                 &kp ESC             &kp TAB             &kp LS(TAB)         ___                 ___                 &kp LA(BSPC)        &kp BSPC            &kp DEL             ___
+&sk LALT            &sk LGUI            &sk LCTRL           &sk LSHIFT          ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
 ___                 ___                 ___                 ___                 ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
-                                        ___                 ___                 ___                 ___                 &mo L_NUM           ___
+                                        ___                 ___                 ___                 &mo L_FUN           ___                 ___
             >;
         };
 
         num {
             bindings = <
-&kp N1              &kp N2              &kp N3              &kp N4              &kp N5              &kp N6              &kp N7              &kp N8              &kp N9              &kp N0
-&sk LALT            &sk LGUI            &sk LCTRL           &sk LSHIFT          &kp F11             &kp F12             &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
-&kp F1              &kp F2              &kp F3              &kp F4              &kp F5              &kp F6              &kp F7              &kp F8              &kp F9              &kp F10
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
+&kp N0              &kp N4              &kp N5              &kp N6              ___                 ___                 &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
+___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 ___                 ___                 ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
         mouse {
             bindings = <
-&bt BT_PRV          ___                 &mmv MOVE_UP        ___                 &kp C_BRI_UP        &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          &kp C_PP
-&bt BT_NXT          &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &kp C_BRI_DN        &kp C_MUTE          &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
-&bt BT_CLR          &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &mkp MB4            &mkp LCLK           &mkp RCLK           &mkp MCLK           &mkp MB5
-                                        ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 &kp C_BRI_UP        &kp C_BRI_DN        &kp C_PP            ___                 ___                 &mkp MB4            &mkp MB5            ___
+&sk LALT            &sk LGUI            &sk LCTRL           &sk LSHIFT          &kp C_MUTE          &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     ___
+___                 &kp C_PREV          &kp C_VOL_UP        &kp C_VOL_DN        &kp C_NEXT          &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_UP        &msc SCRL_RIGHT     ___
+                                        ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
             >;
         };
 
-
+        fun {
+            bindings = <
+&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 &bt BT_PRV          &bt BT_NXT          &bt BT_CLR
+&kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 &sk LSHIFT          &sk LGUI            &sk LCTRL           &sk LALT
+&kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
     };
 };
