@@ -62,6 +62,26 @@
             hold-trigger-on-release;
         };
 
+        lm_fast: left_mod_fast {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rm_fast: right_mod_fast {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
         tl: thumb_layer {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -71,23 +91,6 @@
             quick-tap-ms = <CK_QUICK_TAP>;
         };
 
-        hptl: hold_preferred_thumb_layer {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <CK_TAPPING_TERM>;
-            quick-tap-ms = <CK_QUICK_TAP>;
-        };
-
-        hptm: hold_preferred_thumb_mod {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = "hold-preferred";
-            bindings = <&kp>, <&kp>;
-            #binding-cells = <2>;
-            tapping-term-ms = <CK_TAPPING_TERM>;
-            quick-tap-ms = <CK_QUICK_TAP>;
-        };
     };
 
     keymap {
@@ -97,8 +100,8 @@
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm LSHIFT D        &kp V               &kp K               &rm LSHIFT H        &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
-                                        &tl L_MED TAB       &tl L_MOUSE SPACE   &hptl L_SYM ESC     &hptl L_NN RET      &hptm LSHIFT DEL    &tl L_FUN BSPC
+&lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm_fast LSHIFT D   &kp V               &kp K               &rm_fast LSHIFT H   &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
+                                        &tl L_MOUSE TAB     &tl L_NN SPACE      &tl L_SYM ESC       &tl L_SYM RET       &tl L_NN BSPC       &tl L_FUN DEL
             >;
         };
 
