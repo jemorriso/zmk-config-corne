@@ -29,14 +29,6 @@
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_med {
-            if-layers = <L_NN L_SYM>;
-            then-layer = <L_MED>;
-        };
-    };
-
     behaviors {
         lm: left_mod {
             compatible = "zmk,behavior-hold-tap";
