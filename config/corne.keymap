@@ -97,7 +97,7 @@
             bindings = <
 &kp TILDE           &kp PRCNT           &kp LT              &kp GT              &kp GRAVE           &kp CARET           &kp LBRC            &kp RBRC            &kp DLLR            &kp SQT
 &kp EQUAL           &kp STAR            &kp LBKT            &kp RBKT            &kp MINUS           &kp HASH            &kp LPAR            &kp RPAR            &kp SEMI            &kp DQT
-&lm LALT PIPE       &lm LCTRL PLUS      &lm LGUI AMPS       &kp LSHIFT EXCL     &kp FSLH            &kp BSLH            &rm LSHIFT COLON    &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT QMARK
+&lm LALT PIPE       &lm LCTRL PLUS      &lm LGUI AMPS       &lm LSHIFT EXCL     &kp FSLH            &kp BSLH            &rm LSHIFT COLON    &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT QMARK
                                         ___                 &kp UNDER           &kp AT              ___                 ___                 ___
             >;
         };
