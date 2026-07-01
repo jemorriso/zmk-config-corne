@@ -4,10 +4,11 @@
 #define ___ &trans
 
 #define L_NN 1
-#define L_SYM 2
-#define L_MOUSE 3
-#define L_FUN 4
-#define L_MED 5
+#define L_SHIFT 2
+#define L_SYM 3
+#define L_MOUSE 4
+#define L_FUN 5
+#define L_MED 6
 
 #define CK_COMBO_TIMEOUT 35
 #define CK_PRIOR_IDLE 125
@@ -27,6 +28,26 @@
 / {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_fun {
+            if-layers = <L_NN L_SHIFT>;
+            then-layer = <L_FUN>;
+        };
+        tri_med {
+            if-layers = <L_MOUSE L_SYM>;
+            then-layer = <L_MED>;
+        };
+        tri_fun2 {
+            if-layers = <L_NN L_MOUSE>;
+            then-layer = <L_FUN>;
+        };
+        tri_med2 {
+            if-layers = <L_MOUSE L_SHIFT>;
+            then-layer = <L_MED>;
+        };
     };
 
     behaviors {
@@ -91,14 +112,23 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm LSHIFT D        &kp V               &kp K               &rm LSHIFT H        &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
-                                        &tl L_MED TAB       &tl L_MOUSE SPACE   &hptl L_SYM ESC     &hptl L_NN RET      &hptm LSHIFT DEL    &tl L_FUN BSPC
+                                        ___                 &tl L_MOUSE SPACE   &hptl L_SYM ESC     &hptl L_NN RET      &hptl L_SHIFT BSPC  ___
+            >;
+        };
+
+        shift {
+            bindings = <
+&kp LS(Q)           &kp LS(W)           &kp LS(F)           &kp LS(P)           &kp LS(B)           &kp LS(J)           &kp LS(L)           &kp LS(U)           &kp LS(Y)           &kp LS(SQT)
+&kp LS(A)           &kp LS(R)           &kp LS(S)           &kp LS(T)           &kp LS(G)           &kp LS(M)           &kp LS(N)           &kp LS(E)           &kp LS(I)           &kp LS(O)
+&kp LS(Z)           &kp LS(X)           &kp LS(C)           &kp LS(D)           &kp LS(V)           &kp LS(K)           &kp LS(H)           &kp LS(COMMA)       &kp LS(DOT)         &kp LS(FSLH)
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
-&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 &kp LA(BSPC)        &kp LS(TAB)         &kp TAB             ___
+&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
 ___                 &lm LCTRL N1        &lm LGUI N2         &lm LSHIFT N3       &kp CAPS            &kp HOME            &rm LSHIFT PG_DN    &rm LGUI PG_UP      &rm LCTRL END       ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
