@@ -5,8 +5,9 @@
 
 #define L_NN 1
 #define L_SYM 2
-#define L_MM 3
+#define L_MOUSE 3
 #define L_FUN 4
+#define L_MED 5
 
 #define CK_COMBO_TIMEOUT 35
 #define CK_PRIOR_IDLE 125
@@ -26,14 +27,6 @@
 / {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
-    };
-
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_fun {
-            if-layers = <L_NN L_SYM>;
-            then-layer = <L_FUN>;
-        };
     };
 
     behaviors {
@@ -70,6 +63,24 @@
             quick-tap-ms = <CK_QUICK_TAP>;
             require-prior-idle-ms = <CK_PRIOR_IDLE>;
         };
+
+        hptl: hold_preferred_thumb_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+        };
+
+        hptm: hold_preferred_thumb_mod {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+        };
     };
 
     keymap {
@@ -80,15 +91,15 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm LSHIFT D        &kp V               &kp K               &rm LSHIFT H        &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
-                                        ___                 &mo L_NN            &kp LSHIFT          &tl L_MM SPACE      &mo L_SYM           ___
+                                        &tl L_MED TAB       &tl L_MOUSE SPACE   &hptl L_SYM ESC     &hptl L_NN RET      &hptm LSHIFT DEL    &tl L_FUN BSPC
             >;
         };
 
         num_nav {
             bindings = <
-&kp TAB             &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LA(BSPC)        &kp DEL             &kp BSPC
-&kp ESC             &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
-&lm LALT N0         &lm LCTRL N1        &lm LGUI N2         &lm LSHIFT N3       &kp CAPS            &kp HOME            &rm LSHIFT PG_DN    &rm LGUI PG_UP      &rm LCTRL END       ___
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
+&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+___                 &lm LCTRL N1        &lm LGUI N2         &lm LSHIFT N3       &kp CAPS            &kp HOME            &rm LSHIFT PG_DN    &rm LGUI PG_UP      &rm LCTRL END       ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -97,17 +108,17 @@
             bindings = <
 &kp TILDE           &kp PRCNT           &kp LT              &kp GT              &kp GRAVE           &kp CARET           &kp LBRC            &kp RBRC            &kp DLLR            &kp SQT
 &kp EQUAL           &kp STAR            &kp LBKT            &kp RBKT            &kp MINUS           &kp HASH            &kp LPAR            &kp RPAR            &kp SEMI            &kp DQT
-&lm LALT PIPE       &lm LCTRL PLUS      &lm LGUI AMPS       &kp LSHIFT EXCL     &kp FSLH            &kp BSLH            &rm LSHIFT COLON    &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT QMARK
-                                        ___                 &kp UNDER           &kp AT              ___                 ___                 ___
+&lm LCTRL PIPE      &lm LGUI PLUS       &lm LSHIFT AMPS     &kp EXCL            &kp FSLH            &rm LSHIFT BSLH     &rm LGUI COLON      &rm LCTRL COMMA     &rm LALT DOT        &rm LCTRL QMARK
+                                        ___                 ___                 ___                 &kp AT              &kp UNDER           ___
             >;
         };
 
-        mouse_med {
+        mouse {
             bindings = <
-___                 &mkp MB4            &mmv MOVE_UP        &mkp MB5            ___                 ___                 ___                 ___                 ___                 ___
-___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MCLK           &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
-___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &kp C_MUTE          &rm LSHIFT C_BRI_DN &rm LGUI C_BRI_UP   &rm LCTRL C_PP      ___
-                                        ___                 &mkp LCLK           &mkp RCLK           ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 ___                 ___                 &mkp MB4            &mkp MB5            ___
+___                 ___                 ___                 ___                 ___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_UP        &mmv MOVE_RIGHT     ___
+___                 ___                 ___                 ___                 ___                 &msc SCRL_LEFT      &msc SCRL_DOWN      &msc SCRL_UP        &msc SCRL_RIGHT     ___
+                                        ___                 ___                 ___                 &mkp RCLK           &mkp LCLK           &mkp MCLK
             >;
         };
 
@@ -116,6 +127,15 @@ ___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      
 &kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
 &kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___
 &kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        med {
+            bindings = <
+&bt BT_CLR          &bt BT_PRV          &bt BT_NXT          ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
+___                 ___                 ___                 ___                 ___                 &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
