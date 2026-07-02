@@ -80,7 +80,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm LSHIFT D        &kp V               &kp K               &rm LSHIFT H        &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
-                                        ___                 &mo L_SYM           &tl L_MM SPACE      &kp LSHIFT          &mo L_NN            ___
+                                        ___                 &mo L_NN            &kp LSHIFT          &tl L_MM SPACE      &mo L_SYM           ___
             >;
         };
 
@@ -98,7 +98,7 @@
 &kp TILDE           &kp PRCNT           &kp LT              &kp GT              &kp GRAVE           &kp CARET           &kp LBRC            &kp RBRC            &kp DLLR            &kp SQT
 &kp EQUAL           &kp STAR            &kp LBKT            &kp RBKT            &kp MINUS           &kp HASH            &kp LPAR            &kp RPAR            &kp SEMI            &kp DQT
 &lm LALT PIPE       &lm LCTRL PLUS      &lm LGUI AMPS       &lm LSHIFT EXCL     &kp FSLH            &kp BSLH            &rm LSHIFT COLON    &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT QMARK
-                                        ___                 ___                 ___                 &kp AT              &kp UNDER           ___
+                                        ___                 &kp UNDER           &kp AT              &kp AT              &kp UNDER           ___
             >;
         };
 
