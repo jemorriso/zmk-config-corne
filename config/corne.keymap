@@ -80,7 +80,7 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
 &lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm LSHIFT D        &kp V               &kp K               &rm LSHIFT H        &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
-                                        ___                 &mo L_NN            &kp LSHIFT          &tl L_MM SPACE      &mo L_SYM           ___
+                                        ___                 &mo L_SYM           &tl L_MM SPACE      &kp LSHIFT          &mo L_NN            ___
             >;
         };
 
