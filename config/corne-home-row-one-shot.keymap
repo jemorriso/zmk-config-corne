@@ -1,0 +1,157 @@
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500 // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 30 // 10
+
+#define ___ &trans
+
+#define L_NN 1
+#define L_SYM 2
+#define L_MM 3
+#define L_FUN 4
+
+#define CK_COMBO_TIMEOUT 35
+#define CK_PRIOR_IDLE 150
+#define CK_TAPPING_TERM 200
+#define CK_QUICK_TAP 200
+
+#define CK_LEFT_HAND_KEYS 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32
+#define CK_RIGHT_HAND_KEYS 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
+
+// make sticky keys release on the next key press instead of the default key
+// release, this was causing problems with rolling letters
+&sk {
+    quick-release;
+};
+
+/ {
+    chosen {
+        zmk,physical-layout = &foostan_corne_5col_layout;
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_fun {
+            if-layers = <L_NN L_SYM>;
+            then-layer = <L_FUN>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_tab {
+            timeout-ms = <CK_COMBO_TIMEOUT>;
+            key-positions = <1 2>;
+            bindings = <&kp TAB>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+        };
+        combo_bspc {
+            timeout-ms = <CK_COMBO_TIMEOUT>;
+            key-positions = <7 8>;
+            bindings = <&kp BSPC>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+        };
+        combo_esc {
+            timeout-ms = <CK_COMBO_TIMEOUT>;
+            key-positions = <21 22>;
+            bindings = <&kp ESC>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+        };
+        combo_ret {
+            timeout-ms = <CK_COMBO_TIMEOUT>;
+            key-positions = <27 28>;
+            bindings = <&kp RET>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+        };
+    };
+
+    behaviors {
+        lm: left_mod {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rm: right_mod {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        tl: thumb_layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <CK_TAPPING_TERM>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        colemak {
+            bindings = <
+&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
+&lm LALT A          &lm LCTRL R         &lm LGUI S          &lm LSHIFT T        &kp G               &kp M               &rm LSHIFT N        &rm LGUI E          &rm LCTRL I         &rm LALT O
+&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
+                                        ___                 &tl L_MM SPACE      &sl L_SYM           &sl L_NN            &sk LSHIFT          ___
+            >;
+        };
+
+        num_nav {
+            bindings = <
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LA(BSPC)        &kp DEL             ___
+&lm LALT N0         &lm LCTRL N4        &lm LGUI N5         &lm LSHIFT N6       &caps_word          &kp LEFT            &rm LSHIFT DOWN     &rm LGUI UP         &rm LCTRL RIGHT     ___
+___                 &kp N1              &kp N2              &kp N3              &kp CAPS            &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        sym {
+            bindings = <
+&kp TILDE           &kp PRCNT           &kp LT              &kp GT              &kp GRAVE           &kp CARET           &kp LBRC            &kp RBRC            &kp DLLR            &kp SQT
+&lm LALT EQUAL      &lm LCTRL STAR      &lm LGUI LBKT       &lm LSHIFT RBKT     &kp MINUS           &kp HASH            &rm LSHIFT LPAR     &rm LGUI RPAR       &rm LCTRL SEMI      &rm LALT DQT
+&kp PIPE            &kp PLUS            &kp AMPS            &kp EXCL            &kp FSLH            &kp BSLH            &kp COLON           &kp COMMA           &kp DOT             &kp QMARK
+                                        ___                 &kp UNDER           &kp AT              &kp AT              &kp UNDER           ___
+            >;
+        };
+
+        mouse_med {
+            bindings = <
+___                 &mkp MB4            &mmv MOVE_UP        &mkp MB5            ___                 ___                 ___                 ___                 ___                 ___
+___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MCLK           &kp C_PREV          &rm LSHIFT C_VOL_DN &rm LGUI C_VOL_UP   &rm LCTRL C_NEXT    ___
+___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
+                                        ___                 &mkp LCLK           &mkp RCLK           ___                 ___                 ___
+            >;
+        };
+
+        fun {
+            bindings = <
+&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
+&kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___
+&kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+    };
+};
