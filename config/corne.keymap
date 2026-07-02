@@ -9,7 +9,7 @@
 #define L_FUN 4
 
 #define CK_COMBO_TIMEOUT 35
-#define CK_PRIOR_IDLE 150
+#define CK_PRIOR_IDLE 125
 #define CK_TAPPING_TERM 200
 #define CK_QUICK_TAP 200
 
@@ -44,27 +44,27 @@
 
     combos {
         compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <CK_COMBO_TIMEOUT>;
+            key-positions = <11 12>;
+            bindings = <&kp ESC>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+        };
+        combo_bspc {
+            timeout-ms = <CK_COMBO_TIMEOUT>;
+            key-positions = <17 18>;
+            bindings = <&kp BSPC>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+        };
         combo_tab {
             timeout-ms = <CK_COMBO_TIMEOUT>;
             key-positions = <1 2>;
             bindings = <&kp TAB>;
             require-prior-idle-ms = <CK_PRIOR_IDLE>;
         };
-        combo_bspc {
-            timeout-ms = <CK_COMBO_TIMEOUT>;
-            key-positions = <7 8>;
-            bindings = <&kp BSPC>;
-            require-prior-idle-ms = <CK_PRIOR_IDLE>;
-        };
-        combo_esc {
-            timeout-ms = <CK_COMBO_TIMEOUT>;
-            key-positions = <21 22>;
-            bindings = <&kp ESC>;
-            require-prior-idle-ms = <CK_PRIOR_IDLE>;
-        };
         combo_ret {
             timeout-ms = <CK_COMBO_TIMEOUT>;
-            key-positions = <27 28>;
+            key-positions = <7 8>;
             bindings = <&kp RET>;
             require-prior-idle-ms = <CK_PRIOR_IDLE>;
         };
@@ -112,17 +112,17 @@
         colemak {
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&lm LALT A          &lm LCTRL R         &lm LGUI S          &lm LSHIFT T        &kp G               &kp M               &rm LSHIFT N        &rm LGUI E          &rm LCTRL I         &rm LALT O
-&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
+&kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
+&lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm LSHIFT D        &kp V               &kp K               &rm LSHIFT H        &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
                                         ___                 &tl L_MM SPACE      &sl L_SYM           &sl L_NN            &sk LSHIFT          ___
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LA(BSPC)        &kp DEL             ___
-&lm LALT N0         &lm LCTRL N4        &lm LGUI N5         &lm LSHIFT N6       &caps_word          &kp LEFT            &rm LSHIFT DOWN     &rm LGUI UP         &rm LCTRL RIGHT     ___
-___                 &kp N1              &kp N2              &kp N3              &kp CAPS            &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
+&kp TAB             &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LA(BSPC)        &kp DEL             &kp BSPC
+&kp ESC             &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp RET
+&lm LALT N0         &lm LCTRL N1        &lm LGUI N2         &lm LSHIFT N3       &kp CAPS            &kp HOME            &rm LSHIFT PG_DN    &rm LGUI PG_UP      &rm LCTRL END       ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -130,8 +130,8 @@ ___                 &kp N1              &kp N2              &kp N3              
         sym {
             bindings = <
 &kp TILDE           &kp PRCNT           &kp LT              &kp GT              &kp GRAVE           &kp CARET           &kp LBRC            &kp RBRC            &kp DLLR            &kp SQT
-&lm LALT EQUAL      &lm LCTRL STAR      &lm LGUI LBKT       &lm LSHIFT RBKT     &kp MINUS           &kp HASH            &rm LSHIFT LPAR     &rm LGUI RPAR       &rm LCTRL SEMI      &rm LALT DQT
-&kp PIPE            &kp PLUS            &kp AMPS            &kp EXCL            &kp FSLH            &kp BSLH            &kp COLON           &kp COMMA           &kp DOT             &kp QMARK
+&kp EQUAL           &kp STAR            &kp LBKT            &kp RBKT            &kp MINUS           &kp HASH            &kp LPAR            &kp RPAR            &kp SEMI            &kp DQT
+&lm LALT PIPE       &lm LCTRL PLUS      &lm LGUI AMPS       &lm LSHIFT EXCL     &kp FSLH            &kp BSLH            &rm LSHIFT COLON    &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT QMARK
                                         ___                 &kp UNDER           &kp AT              &kp AT              &kp UNDER           ___
             >;
         };
@@ -139,8 +139,8 @@ ___                 &kp N1              &kp N2              &kp N3              
         mouse_med {
             bindings = <
 ___                 &mkp MB4            &mmv MOVE_UP        &mkp MB5            ___                 ___                 ___                 ___                 ___                 ___
-___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MCLK           &kp C_PREV          &rm LSHIFT C_VOL_DN &rm LGUI C_VOL_UP   &rm LCTRL C_NEXT    ___
-___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &kp C_MUTE          &kp C_BRI_DN        &kp C_BRI_UP        &kp C_PP            ___
+___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MCLK           &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
+___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     &kp C_MUTE          &rm LSHIFT C_BRI_DN &rm LGUI C_BRI_UP   &rm LCTRL C_PP      ___
                                         ___                 &mkp LCLK           &mkp RCLK           ___                 ___                 ___
             >;
         };
