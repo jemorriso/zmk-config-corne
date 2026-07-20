@@ -107,16 +107,16 @@
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&lm LALT Z          &lm LCTRL X         &lm LGUI C          &lm_fast LSHIFT D   &kp V               &kp K               &rm_fast LSHIFT H   &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT FSLH
+&lm LGUI Z          &lm LALT X          &lm LCTRL C         &lm_fast LSHIFT D   &kp V               &kp K               &rm_fast LSHIFT H   &rm LCTRL COMMA     &rm LALT DOT        &rm LGUI FSLH
                                         &tl L_MM TAB        &tl L_NN SPACE      &tl L_SYM ESC       &hptl L_SYM RET     &tl L_NN BSPC       &tl L_MM DEL
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 ___                 ___                 ___
-&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
-___                 &lm LCTRL N1        &lm LGUI N2         &lm LSHIFT N3       &kp CAPS            &kp HOME            &rm LSHIFT PG_DN    &rm LGUI PG_UP      &rm LCTRL END       ___
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LS(TAB)         &kp TAB             ___
+&kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
+___                 &lm LALT N1         &lm LCTRL N2        &lm LSHIFT N3       &kp CAPS            &kp HOME            &rm LSHIFT PG_DN    &rm LCTRL PG_UP     &rm LALT END        ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
@@ -125,7 +125,7 @@ ___                 &lm LCTRL N1        &lm LGUI N2         &lm LSHIFT N3       
             bindings = <
 &kp TILDE           &kp PRCNT           &kp LT              &kp GT              &kp GRAVE           &kp CARET           &kp LBRC            &kp RBRC            &kp DLLR            &kp SQT
 &kp EQUAL           &kp STAR            &kp LBKT            &kp RBKT            &kp MINUS           &kp HASH            &kp LPAR            &kp RPAR            &kp SEMI            &kp DQT
-&lm LALT PIPE       &lm LCTRL PLUS      &lm LGUI AMPS       &lm LSHIFT EXCL     &kp FSLH            &kp BSLH            &rm LSHIFT COLON    &rm LGUI COMMA      &rm LCTRL DOT       &rm LALT QMARK
+&lm LGUI PIPE       &lm LALT PLUS       &lm LCTRL AMPS      &lm LSHIFT EXCL     &kp FSLH            &kp BSLH            &rm LSHIFT COLON    &rm LCTRL COMMA     &rm LALT DOT        &rm LGUI QMARK
                                         ___                 ___                 ___                 &kp AT              &kp UNDER           ___
             >;
         };
