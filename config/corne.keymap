@@ -143,7 +143,7 @@
         colemak {
             bindings = <
 &kp Q               &lm LC(LGUI) W      &ll_fast L_SYM F    &kp P               &kp B               &kp J               &kp L               &rl_fast L_SYM U    &rm LC(LGUI) Y      &kp SQT
-&lm LALT A          &lm LCTRL R         &lm LGUI S          &lm_fast LSHIFT T   &kp V               &kp K               &rm_fast LSHIFT N   &rm LGUI E          &rm LCTRL I         &rm LALT O
+&lm LALT A          &lm LCTRL R         &lm LGUI S          &lm_fast LSHIFT T   &kp G               &kp M               &rm_fast LSHIFT N   &rm LGUI E          &rm LCTRL I         &rm LALT O
 &kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &rl L_FUN FSLH
                                         ___                 &tl L_NN SPACE      &tl L_MED ESC       &hptl L_MOUSE RET   &tl L_NN BSPC       ___
             >;
