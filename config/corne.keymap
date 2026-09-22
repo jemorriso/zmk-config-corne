@@ -12,6 +12,24 @@
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
+    behaviors {
+        mod: mod {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        layer: layer {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
         combo_bluetooth {
@@ -42,10 +60,28 @@
 
         colemak {
             bindings = <
-&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&kp A               &kp R               &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
-&kp Z               &kp X               &kp C               &kp D               &kp V               &kp K               &kp H               &kp COMMA           &kp DOT             &kp FSLH
-                                        ___                 &kp SPACE           &kp ESC             &kp RET             &kp BSPC            ___
+&kp Q               &kp W               &layer 3 F          &kp P               &kp B               &kp J               &kp L               &layer 3 U          &kp Y               &kp SQT
+&mod LALT A         &mod LCTRL R        &mod LGUI S         &mod LSHIFT T       &kp G               &kp M               &mod LSHIFT N       &mod LGUI E         &mod LCTRL I        &mod LALT O
+&kp Z               &kp X               &kp C               &mod LS(LC(LALT)) D &kp V               &kp K               &mod LS(LC(LALT)) H &kp COMMA           &kp DOT             &kp FSLH
+                                        ___                 &layer 2 SPACE      &kp ESC             &kp RET             &layer 2 BSPC       ___
+            >;
+        };
+
+        num_nav {
+            bindings = <
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LS(TAB)         &kp TAB             ___
+&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
+___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        sym {
+            bindings = <
+&kp TILDE           &kp HASH            &kp STAR            &kp PLUS            ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            &kp AT
+&kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
+&kp PRCNT           &kp PIPE            &kp AMPS            &kp EXCL            ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp BSLH
+                                        ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
