@@ -34,13 +34,13 @@
         compatible = "zmk,combos";
         combo_bluetooth {
             timeout-ms = <50>;
-            key-positions = <0 1 2 3>;
+            key-positions = <0 1 2 3 30>;
             bindings = <&mo 2>;
             require-prior-idle-ms = <1000>;
         };
         combo_kanata {
             timeout-ms = <50>;
-            key-positions = <6 7 8 9>;
+            key-positions = <0 1 2 3>;
             bindings = <&tog 1>;
             require-prior-idle-ms = <1000>;
         };
@@ -60,27 +60,27 @@
 
         colemak {
             bindings = <
-&kp Q               &kp W               &layer 3 F          &kp P               &kp B               &kp J               &kp L               &layer 3 U          &kp Y               &kp SQT
-&mod LALT A         &mod LCTRL R        &mod LGUI S         &mod LSHIFT T       &kp G               &kp M               &mod LSHIFT N       &mod LGUI E         &mod LCTRL I        &mod LALT O
-&kp Z               &kp X               &kp C               &mod LS(LC(LALT)) D &kp V               &kp K               &mod LS(LC(LALT)) H &kp COMMA           &kp DOT             &kp FSLH
+&kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
+&kp A               &layer 3 R          &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &kp I               &kp O
+&mod LSHIFT Z       &mod LCTRL X        &mod LGUI C         &mod LALT D         &kp V               &kp K               &mod LALT H         &mod LGUI COMMA     &mod LCTRL DOT      &mod LSHIFT FSLH
                                         &kp TAB             &layer 2 SPACE      &kp ESC             &kp RET             &layer 2 BSPC       &kp DEL
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp LS(TAB)         &kp TAB             ___
-&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
-___                 &kp N1              &kp N2              &kp N3              ___                 &kp HOME            &kp PG_DN           &kp PG_UP           &kp END             ___
+___                 &kp N7              &kp N8              &kp N9              ___                 ___                 ___                 &kp PG_UP           &kp PG_DN           ___
+&kp N0              &kp N4              &kp N5              &kp N6              ___                 &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           ___
+___                 &kp N1              &kp N2              &kp N3              ___                 ___                 ___                 &kp HOME            &kp END             ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
 
         sym {
             bindings = <
-&kp TILDE           &kp HASH            &kp STAR            &kp PLUS            ___                 ___                 &kp GRAVE           &kp LBKT            &kp RBKT            &kp AT
+&kp TILDE           &kp HASH            &kp STAR            &kp PLUS            ___                 ___                 &kp AT              &kp LBKT            &kp RBKT            &kp GRAVE
 &kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
-&kp PRCNT           &kp PIPE            &kp AMPS            &kp EXCL            ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp BSLH
+&kp EXCL            &kp PIPE            &kp AMPS            &kp PRCNT           ___                 ___                 &kp UNDER           &kp LBRC            &kp RBRC            &kp BSLH
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
