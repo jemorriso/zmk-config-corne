@@ -4,9 +4,15 @@
 #define L_BASE 0
 #define L_NN 1
 #define L_SYM 2
-#define L_BLUETOOTH 3
+#define L_MOUSE 3
+#define L_MED 4
+#define L_FUN 5
+#define L_BLUETOOTH 6
 
 #define CK_PRIOR_IDLE 150
+#define CK_QUICK_TAP 200
+#define CK_LEFT_HAND_KEYS 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32
+#define CK_RIGHT_HAND_KEYS 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -20,44 +26,103 @@
         zmk,physical-layout = &foostan_corne_5col_layout;
     };
 
+    // l/r = hand, m = modifier, l = layer, i = prior idle; tl = thumb layer.
     behaviors {
-        mod: mod {
+        lm: lm {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
         };
 
-        mod_rpi: mod_rpi {
+        rm: rm {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
         };
 
-        layer: layer {
+        lmi: lmi {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rmi: rmi {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        // Thumb layer-taps are not restricted to the opposite hand.
+        tl: tl {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            quick-tap-ms = <CK_QUICK_TAP>;
         };
 
-        layer_rpi: layer_rpi {
+        ll: ll {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            hold-trigger-key-positions = <CK_RIGHT_HAND_KEYS>;
+            hold-trigger-on-release;
+        };
+
+        rl: rl {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            bindings = <&mo>, <&kp>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <CK_QUICK_TAP>;
+            hold-trigger-key-positions = <CK_LEFT_HAND_KEYS>;
+            hold-trigger-on-release;
         };
     };
 
     combos {
         compatible = "zmk,combos";
+        combo_media {
+            timeout-ms = <40>;
+            key-positions = <12 23>;
+            bindings = <&mo L_MED>;
+            slow-release;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+        };
+        combo_function {
+            timeout-ms = <40>;
+            key-positions = <17 26>;
+            bindings = <&mo L_FUN>;
+            slow-release;
+            require-prior-idle-ms = <CK_PRIOR_IDLE>;
+        };
         combo_bluetooth {
             timeout-ms = <50>;
             key-positions = <0 1 2 3 30>;
@@ -72,9 +137,9 @@
         colemak {
             bindings = <
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
-&kp A               &layer L_SYM R      &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &layer L_SYM I      &kp O
-&mod LSHIFT Z       &mod_rpi LCTRL X    &mod_rpi LGUI C     &mod_rpi LALT D     &kp V               &kp K               &mod_rpi LALT H     &mod_rpi LGUI COMMA &mod_rpi LCTRL DOT  &mod LSHIFT FSLH
-                                        ___                 &layer L_NN SPACE   &kp ESC             &kp RET             &layer L_NN BSPC    ___
+&kp A               &ll L_SYM R         &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &rl L_SYM I         &kp O
+&lm LSHIFT Z        &lmi LCTRL X        &lmi LGUI C         &lmi LALT D         &kp V               &kp K               &rmi LALT H         &rmi LGUI COMMA     &rmi LCTRL DOT      &rm LSHIFT FSLH
+                                        ___                 &tl L_NN SPACE      &kp ESC             &tl L_MOUSE RET     &tl L_NN BSPC       ___
             >;
         };
 
@@ -82,7 +147,7 @@
             bindings = <
 ___                 &kp N7              &kp N8              &kp N9              &kp CAPS            ___                 ___                 &kp PG_UP           &kp PG_DN           ___
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
-___                 &mod LCTRL N1       &mod LGUI N2        &mod LALT N3        ___                 ___                 ___                 &mod LGUI HOME      &mod LCTRL END      ___
+___                 &lm LCTRL N1        &lm LGUI N2         &lm LALT N3         ___                 ___                 ___                 &rm LGUI HOME       &rm LCTRL END       ___
                                         ___                 ___                 ___                 &kp LS(TAB)         &kp TAB             ___
             >;
         };
@@ -91,7 +156,34 @@ ___                 &mod LCTRL N1       &mod LGUI N2        &mod LALT N3        
             bindings = <
 &kp TILDE           &kp HASH            &kp STAR            &kp PLUS            ___                 ___                 &kp AT              &kp LBKT            &kp RBKT            &kp GRAVE
 &kp EQUAL           &kp CARET           &kp DLLR            &kp MINUS           ___                 ___                 &kp COLON           &kp LPAR            &kp RPAR            &kp SEMI
-&mod LSHIFT EXCL    &mod LCTRL PIPE     &mod LGUI AMPS      &mod LALT PRCNT     ___                 ___                 &mod LALT UNDER     &mod LGUI LBRC      &mod LCTRL RBRC     &mod LSHIFT BSLH
+&lm LSHIFT EXCL     &lm LCTRL PIPE      &lm LGUI AMPS       &lm LALT PRCNT      ___                 ___                 &rm LALT UNDER      &rm LGUI LBRC       &rm LCTRL RBRC      &rm LSHIFT BSLH
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        mouse {
+            bindings = <
+___                 &mkp MB4            &mmv MOVE_UP        &mkp MB5            ___                 ___                 ___                 ___                 ___                 ___
+___                 &mmv MOVE_LEFT      &mmv MOVE_DOWN      &mmv MOVE_RIGHT     &mkp MCLK           ___                 ___                 ___                 ___                 ___
+___                 &msc SCRL_LEFT      &msc SCRL_UP        &msc SCRL_DOWN      &msc SCRL_RIGHT     ___                 ___                 ___                 ___                 ___
+                                        ___                 &mkp LCLK           &mkp RCLK           ___                 ___                 ___
+            >;
+        };
+
+        media {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 ___                 ___                 ___                 &kp C_PREV          &kp C_VOL_DN        &kp C_VOL_UP        &kp C_NEXT          ___
+___                 ___                 ___                 ___                 ___                 &kp C_PP            &kp C_BRI_DN        &kp C_BRI_UP        &kp C_MUTE          &kp LC(LS(C_EJECT))
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        function {
+            bindings = <
+&kp F12             &kp F7              &kp F8              &kp F9              ___                 ___                 ___                 ___                 ___                 ___
+&kp F11             &kp F4              &kp F5              &kp F6              ___                 ___                 ___                 ___                 ___                 ___
+&kp F10             &kp F1              &kp F2              &kp F3              ___                 ___                 ___                 ___                 ___                 ___
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
