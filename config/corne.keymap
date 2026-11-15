@@ -30,12 +30,31 @@
         };
     };
 
+    macros {
+        kanata_exit: kanata_exit {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <40>;
+            bindings
+                = <&macro_press &kp LCTRL &kp SPACE &kp ESC>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp ESC &kp SPACE &kp LCTRL>
+                ;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
+        // Hold both outer bottom-row pinky keys to exit Kanata.
+        combo_kanata_exit {
+            timeout-ms = <50>;
+            key-positions = <20 29>;
+            bindings = <&kanata_exit>;
+        };
         combo_bluetooth {
             timeout-ms = <50>;
             key-positions = <0 1 2 3 30>;
-            bindings = <&mo 2>;
+            bindings = <&mo 4>;
             require-prior-idle-ms = <1000>;
         };
         combo_kanata {
