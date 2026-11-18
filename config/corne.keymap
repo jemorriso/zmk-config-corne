@@ -8,6 +8,9 @@
 #define L_MED 4
 #define L_FUN 5
 #define L_BLUETOOTH 6
+#define L_MIRROR 7
+#define L_MIRROR_NN 8
+#define L_SELECTOR 9
 
 #define CK_PRIOR_IDLE 150
 #define CK_QUICK_TAP 200
@@ -21,6 +24,10 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
+&sl {
+    release-after-ms = <1500>;
+};
+
 / {
     chosen {
         zmk,physical-layout = &foostan_corne_5col_layout;
@@ -28,6 +35,25 @@
 
     // l/r = hand, m = modifier, l = layer, i = prior idle; tl = thumb layer.
     behaviors {
+        // Select any modifiers, select a mirror layer last, then release the thumb.
+        sticky_mod: sticky_mod {
+            compatible = "zmk,behavior-sticky-key";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1500>;
+            lazy;
+            ignore-modifiers;
+        };
+
+        // macOS filters short Caps Lock presses; send a fixed-length tap.
+        caps_lock: caps_lock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            tap-ms = <200>;
+            wait-ms = <0>;
+            bindings = <&kp CAPS>;
+        };
+
         lm: lm {
             compatible = "zmk,behavior-hold-tap";
             flavor = "balanced";
@@ -139,13 +165,13 @@
 &kp Q               &kp W               &kp F               &kp P               &kp B               &kp J               &kp L               &kp U               &kp Y               &kp SQT
 &kp A               &ll L_SYM R         &kp S               &kp T               &kp G               &kp M               &kp N               &kp E               &rl L_SYM I         &kp O
 &lm LSHIFT Z        &lmi LCTRL X        &lmi LGUI C         &lmi LALT D         &kp V               &kp K               &rmi LALT H         &rmi LGUI COMMA     &rmi LCTRL DOT      &rm LSHIFT FSLH
-                                        ___                 &tl L_NN SPACE      &kp ESC             &tl L_MOUSE RET     &tl L_NN BSPC       ___
+                                        &mo L_SELECTOR      &tl L_NN SPACE      &kp ESC             &tl L_MOUSE RET     &tl L_NN BSPC       &mo L_SELECTOR
             >;
         };
 
         num_nav {
             bindings = <
-___                 &kp N7              &kp N8              &kp N9              &kp CAPS            ___                 ___                 &kp PG_UP           &kp PG_DN           ___
+___                 &kp N7              &kp N8              &kp N9              &caps_lock          ___                 ___                 &kp PG_UP           &kp PG_DN           ___
 &kp N0              &kp N4              &kp N5              &kp N6              &caps_word          &kp LEFT            &kp DOWN            &kp UP              &kp RIGHT           &kp DEL
 ___                 &lm LCTRL N1        &lm LGUI N2         &lm LALT N3         ___                 ___                 ___                 &rm LGUI HOME       &rm LCTRL END       ___
                                         ___                 ___                 ___                 &kp LS(TAB)         &kp TAB             ___
@@ -193,6 +219,34 @@ ___                 ___                 ___                 ___                 
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 &bt BT_NXT          &bt BT_PRV          ___                 ___
 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 &bt BT_CLR
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        mirror {
+            bindings = <
+&kp SQT             &kp Y               &kp U               &kp L               &kp J               &kp B               &kp P               &kp F               &kp W               &kp Q
+&kp O               &kp I               &kp E               &kp N               &kp M               &kp G               &kp T               &kp S               &kp R               &kp A
+&kp FSLH            &kp DOT             &kp COMMA           &kp H               &kp K               &kp V               &kp D               &kp C               &kp X               &kp Z
+                                        ___                 ___                 ___                 ___                 ___                 ___
+            >;
+        };
+
+        mirror_num_nav {
+            bindings = <
+___                 &kp PG_DN           &kp PG_UP           ___                 ___                 &caps_lock          &kp N9              &kp N8              &kp N7              ___
+&kp DEL             &kp RIGHT           &kp UP              &kp DOWN            &kp LEFT            &caps_word          &kp N6              &kp N5              &kp N4              &kp N0
+___                 &lm LCTRL END       &lm LGUI HOME       ___                 ___                 ___                 &rm LALT N3         &rm LGUI N2         &rm LCTRL N1        ___
+                                        ___                 &kp TAB             &kp LS(TAB)         ___                 ___                 ___
+            >;
+        };
+
+        // Put this one last so that we can select L_MIRROR and then LGUI without going to the mirror layer right away
+        selector {
+            bindings = <
+___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___                 ___
+___                 ___                 &sl L_MIRROR_NN     &sl L_MIRROR        ___                 ___                 &sl L_MIRROR        &sl L_MIRROR_NN     ___                 ___
+&sticky_mod LSHIFT  &sticky_mod LCTRL   &sticky_mod LGUI    &sticky_mod LALT    ___                 ___                 &sticky_mod LALT    &sticky_mod LGUI    &sticky_mod LCTRL   &sticky_mod LSHIFT
                                         ___                 ___                 ___                 ___                 ___                 ___
             >;
         };
